@@ -1,0 +1,15 @@
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.MainWindow.resources
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.vbproj.GenerateResource.cache
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.AssemblyInfoInputs.cache
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.AssemblyInfo.vb
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.vbproj.CoreCompileInputs.cache
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\bin\Debug\netcoreapp3.1\210917_PnPDMTool.exe
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\bin\Debug\netcoreapp3.1\210917_PnPDMTool.deps.json
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\bin\Debug\netcoreapp3.1\210917_PnPDMTool.runtimeconfig.json
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\bin\Debug\netcoreapp3.1\210917_PnPDMTool.runtimeconfig.dev.json
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\bin\Debug\netcoreapp3.1\210917_PnPDMTool.dll
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\bin\Debug\netcoreapp3.1\210917_PnPDMTool.pdb
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.dll
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.pdb
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.genruntimeconfig.cache
