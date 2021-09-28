@@ -23,26 +23,85 @@ Partial Class MainWindow
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.pnlBattleView = New System.Windows.Forms.Panel()
+        Me.UcBattleView1 = New _210917_PnPDMTool.ucBattleView()
+        Me.pnlOpponentsView = New System.Windows.Forms.Panel()
+        Me.pnlMapView = New System.Windows.Forms.Panel()
+        Me.pnlCharacterOverviewLeft = New System.Windows.Forms.Panel()
+        Me.pnlCharacterOverviewRight = New System.Windows.Forms.Panel()
+        Me.pnlBattleView.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlBattleView
         '
-        Me.pnlBattleView.Location = New System.Drawing.Point(102, 90)
+        Me.pnlBattleView.BackColor = System.Drawing.SystemColors.Control
+        Me.pnlBattleView.Controls.Add(Me.UcBattleView1)
+        Me.pnlBattleView.Location = New System.Drawing.Point(13, 13)
+        Me.pnlBattleView.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlBattleView.Name = "pnlBattleView"
-        Me.pnlBattleView.Size = New System.Drawing.Size(454, 445)
+        Me.pnlBattleView.Size = New System.Drawing.Size(350, 500)
         Me.pnlBattleView.TabIndex = 0
+        '
+        'UcBattleView1
+        '
+        Me.UcBattleView1.BackColor = System.Drawing.SystemColors.Control
+        Me.UcBattleView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.UcBattleView1.Location = New System.Drawing.Point(-1, -1)
+        Me.UcBattleView1.Name = "UcBattleView1"
+        Me.UcBattleView1.Size = New System.Drawing.Size(350, 500)
+        Me.UcBattleView1.TabIndex = 0
+        '
+        'pnlOpponentsView
+        '
+        Me.pnlOpponentsView.Location = New System.Drawing.Point(370, 13)
+        Me.pnlOpponentsView.Name = "pnlOpponentsView"
+        Me.pnlOpponentsView.Size = New System.Drawing.Size(350, 500)
+        Me.pnlOpponentsView.TabIndex = 1
+        '
+        'pnlMapView
+        '
+        Me.pnlMapView.Location = New System.Drawing.Point(734, 12)
+        Me.pnlMapView.Name = "pnlMapView"
+        Me.pnlMapView.Size = New System.Drawing.Size(1148, 700)
+        Me.pnlMapView.TabIndex = 2
+        '
+        'pnlCharacterOverviewLeft
+        '
+        Me.pnlCharacterOverviewLeft.Location = New System.Drawing.Point(12, 527)
+        Me.pnlCharacterOverviewLeft.Name = "pnlCharacterOverviewLeft"
+        Me.pnlCharacterOverviewLeft.Size = New System.Drawing.Size(708, 470)
+        Me.pnlCharacterOverviewLeft.TabIndex = 3
+        '
+        'pnlCharacterOverviewRight
+        '
+        Me.pnlCharacterOverviewRight.Location = New System.Drawing.Point(726, 730)
+        Me.pnlCharacterOverviewRight.Name = "pnlCharacterOverviewRight"
+        Me.pnlCharacterOverviewRight.Size = New System.Drawing.Size(1156, 267)
+        Me.pnlCharacterOverviewRight.TabIndex = 4
         '
         'MainWindow
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1399, 1014)
+        Me.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ClientSize = New System.Drawing.Size(1894, 1009)
+        Me.Controls.Add(Me.pnlCharacterOverviewRight)
+        Me.Controls.Add(Me.pnlCharacterOverviewLeft)
+        Me.Controls.Add(Me.pnlMapView)
+        Me.Controls.Add(Me.pnlOpponentsView)
         Me.Controls.Add(Me.pnlBattleView)
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MinimizeBox = False
         Me.Name = "MainWindow"
-        Me.Text = "Form1"
+        Me.Text = "windowMainWindow"
+        Me.pnlBattleView.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents pnlBattleView As Panel
+    Friend WithEvents pnlOpponentsView As Panel
+    Friend WithEvents pnlMapView As Panel
+    Friend WithEvents pnlCharacterOverviewLeft As Panel
+    Friend WithEvents pnlCharacterOverviewRight As Panel
+    Friend WithEvents UcBattleView1 As ucBattleView
 End Class

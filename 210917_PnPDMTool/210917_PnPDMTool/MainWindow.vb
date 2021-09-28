@@ -1,5 +1,6 @@
 ﻿Public Class MainWindow
 #Region "Private Var"
+    Dim ucBattleView As New UserControl
 
 #End Region
 
@@ -22,6 +23,10 @@
 #Region "Init"
     Public Sub Init()
         InitializeComponent()
+        pnlBattleView.Controls.Add(ucBattleView)
+    End Sub
+
+    Private Sub pnlBattleView_Paint(sender As Object, e As PaintEventArgs) Handles pnlBattleView.Paint
 
     End Sub
 

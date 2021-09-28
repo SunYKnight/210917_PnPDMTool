@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\jens3\\.nuget\\packages\\": {},
+    "C:\\Users\\wustj\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projekte\\Privat\\GitHub\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool.vbproj",
+      "projectUniqueName": "C:\\Projekte\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool.vbproj",
       "projectName": "210917_PnPDMTool",
-      "projectPath": "C:\\Projekte\\Privat\\GitHub\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool.vbproj",
-      "packagesPath": "C:\\Users\\jens3\\.nuget\\packages\\",
-      "outputPath": "C:\\Projekte\\Privat\\GitHub\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool\\obj\\",
+      "projectPath": "C:\\Projekte\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool.vbproj",
+      "packagesPath": "C:\\Users\\wustj\\.nuget\\packages\\",
+      "outputPath": "C:\\Projekte\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool\\210917_PnPDMTool\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\jens3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wustj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
