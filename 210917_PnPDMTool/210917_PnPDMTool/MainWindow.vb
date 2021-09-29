@@ -1,6 +1,7 @@
 ﻿Public Class MainWindow
 #Region "Private Var"
     Dim ucBattleView As New UserControl
+    Dim ucOppenentsView As New UserControl
 
 #End Region
 
@@ -14,6 +15,15 @@
         End Set
     End Property
 
+    Public Property PanelOpponentsView As Panel
+        Get
+            Return pnlOpponentsView
+        End Get
+        Set(value As Panel)
+            pnlOpponentsView = value
+        End Set
+    End Property
+
 #End Region
 
 #Region "Private Sub"
@@ -24,9 +34,14 @@
     Public Sub Init()
         InitializeComponent()
         pnlBattleView.Controls.Add(ucBattleView)
+        pnlOpponentsView.Controls.Add(ucOppenentsView)
     End Sub
 
     Private Sub pnlBattleView_Paint(sender As Object, e As PaintEventArgs) Handles pnlBattleView.Paint
+
+    End Sub
+
+    Private Sub pnlOpponentsView_Paint(sender As Object, e As PaintEventArgs) Handles pnlOpponentsView.Paint
 
     End Sub
 

@@ -30,3 +30,4 @@ C:\Projekte\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\
 C:\Projekte\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.pdb
 C:\Projekte\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.genruntimeconfig.cache
 C:\Projekte\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucBattleView.resources
+C:\Projekte\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucOpponentsView.resources

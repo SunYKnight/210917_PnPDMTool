@@ -28,7 +28,9 @@ Partial Class MainWindow
         Me.pnlMapView = New System.Windows.Forms.Panel()
         Me.pnlCharacterOverviewLeft = New System.Windows.Forms.Panel()
         Me.pnlCharacterOverviewRight = New System.Windows.Forms.Panel()
+        Me.UcOpponentsView1 = New _210917_PnPDMTool.ucOpponentsView()
         Me.pnlBattleView.SuspendLayout()
+        Me.pnlOpponentsView.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlBattleView
@@ -52,6 +54,7 @@ Partial Class MainWindow
         '
         'pnlOpponentsView
         '
+        Me.pnlOpponentsView.Controls.Add(Me.UcOpponentsView1)
         Me.pnlOpponentsView.Location = New System.Drawing.Point(370, 13)
         Me.pnlOpponentsView.Name = "pnlOpponentsView"
         Me.pnlOpponentsView.Size = New System.Drawing.Size(350, 500)
@@ -78,6 +81,15 @@ Partial Class MainWindow
         Me.pnlCharacterOverviewRight.Size = New System.Drawing.Size(1156, 267)
         Me.pnlCharacterOverviewRight.TabIndex = 4
         '
+        'UcOpponentsView1
+        '
+        Me.UcOpponentsView1.BackColor = System.Drawing.SystemColors.Control
+        Me.UcOpponentsView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.UcOpponentsView1.Location = New System.Drawing.Point(0, 0)
+        Me.UcOpponentsView1.Name = "UcOpponentsView1"
+        Me.UcOpponentsView1.Size = New System.Drawing.Size(350, 500)
+        Me.UcOpponentsView1.TabIndex = 0
+        '
         'MainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
@@ -94,6 +106,7 @@ Partial Class MainWindow
         Me.Name = "MainWindow"
         Me.Text = "windowMainWindow"
         Me.pnlBattleView.ResumeLayout(False)
+        Me.pnlOpponentsView.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -104,4 +117,5 @@ Partial Class MainWindow
     Friend WithEvents pnlCharacterOverviewLeft As Panel
     Friend WithEvents pnlCharacterOverviewRight As Panel
     Friend WithEvents UcBattleView1 As ucBattleView
+    Friend WithEvents UcOpponentsView1 As ucOpponentsView
 End Class

@@ -13,5 +13,8 @@
     <Compile Update="ucBattleView.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ucOpponentsView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
