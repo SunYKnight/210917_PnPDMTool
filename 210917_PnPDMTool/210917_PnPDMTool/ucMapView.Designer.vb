@@ -28,10 +28,10 @@ Partial Class ucMapView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
-        Me.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.MinimumSize = New System.Drawing.Size(1243, 652)
         Me.Name = "ucMapView"
-        Me.Size = New System.Drawing.Size(1154, 709)
+        Me.Size = New System.Drawing.Size(1245, 654)
         Me.ResumeLayout(False)
 
     End Sub

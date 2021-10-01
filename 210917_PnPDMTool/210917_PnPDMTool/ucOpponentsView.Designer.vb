@@ -31,9 +31,9 @@ Partial Class ucOpponentsView
         'btnAddToBattle
         '
         Me.btnAddToBattle.Font = New System.Drawing.Font("Segoe UI", 7.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnAddToBattle.Location = New System.Drawing.Point(3, 451)
+        Me.btnAddToBattle.Location = New System.Drawing.Point(3, 440)
         Me.btnAddToBattle.Name = "btnAddToBattle"
-        Me.btnAddToBattle.Size = New System.Drawing.Size(150, 46)
+        Me.btnAddToBattle.Size = New System.Drawing.Size(142, 46)
         Me.btnAddToBattle.TabIndex = 0
         Me.btnAddToBattle.Text = "add to battle"
         Me.btnAddToBattle.UseVisualStyleBackColor = True
@@ -41,9 +41,9 @@ Partial Class ucOpponentsView
         'btnEdit
         '
         Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 7.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnEdit.Location = New System.Drawing.Point(159, 451)
+        Me.btnEdit.Location = New System.Drawing.Point(151, 440)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(88, 46)
+        Me.btnEdit.Size = New System.Drawing.Size(70, 46)
         Me.btnEdit.TabIndex = 1
         Me.btnEdit.Text = "edit"
         Me.btnEdit.UseVisualStyleBackColor = True
@@ -51,9 +51,9 @@ Partial Class ucOpponentsView
         'btnNew
         '
         Me.btnNew.Font = New System.Drawing.Font("Segoe UI", 7.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnNew.Location = New System.Drawing.Point(253, 451)
+        Me.btnNew.Location = New System.Drawing.Point(227, 440)
         Me.btnNew.Name = "btnNew"
-        Me.btnNew.Size = New System.Drawing.Size(94, 46)
+        Me.btnNew.Size = New System.Drawing.Size(77, 46)
         Me.btnNew.TabIndex = 2
         Me.btnNew.Text = "new"
         Me.btnNew.UseVisualStyleBackColor = True
@@ -63,7 +63,7 @@ Partial Class ucOpponentsView
         Me.lbOpponents.Font = New System.Drawing.Font("Segoe UI", 10.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lbOpponents.Location = New System.Drawing.Point(0, 0)
         Me.lbOpponents.Name = "lbOpponents"
-        Me.lbOpponents.Size = New System.Drawing.Size(350, 40)
+        Me.lbOpponents.Size = New System.Drawing.Size(307, 40)
         Me.lbOpponents.TabIndex = 3
         Me.lbOpponents.Text = "Opponents"
         Me.lbOpponents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -72,12 +72,14 @@ Partial Class ucOpponentsView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Controls.Add(Me.lbOpponents)
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnAddToBattle)
+        Me.MinimumSize = New System.Drawing.Size(307, 489)
         Me.Name = "ucOpponentsView"
-        Me.Size = New System.Drawing.Size(350, 500)
+        Me.Size = New System.Drawing.Size(307, 489)
         Me.ResumeLayout(False)
 
     End Sub
