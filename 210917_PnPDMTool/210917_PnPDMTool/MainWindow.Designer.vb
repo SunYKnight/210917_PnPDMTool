@@ -25,12 +25,18 @@ Partial Class MainWindow
         Me.pnlBattleView = New System.Windows.Forms.Panel()
         Me.UcBattleView1 = New _210917_PnPDMTool.ucBattleView()
         Me.pnlOpponentsView = New System.Windows.Forms.Panel()
-        Me.pnlMapView = New System.Windows.Forms.Panel()
-        Me.pnlCharacterOverviewLeft = New System.Windows.Forms.Panel()
-        Me.pnlCharacterOverviewRight = New System.Windows.Forms.Panel()
         Me.UcOpponentsView1 = New _210917_PnPDMTool.ucOpponentsView()
+        Me.pnlMapView = New System.Windows.Forms.Panel()
+        Me.pnlCharOverviewLeft = New System.Windows.Forms.Panel()
+        Me.UcCharOverviewLeft1 = New _210917_PnPDMTool.ucCharOverviewLeft()
+        Me.pnlCharOverviewRight = New System.Windows.Forms.Panel()
+        Me.UcCharOverviewRight1 = New _210917_PnPDMTool.ucCharOverviewRight()
+        Me.UcMapView1 = New _210917_PnPDMTool.ucMapView()
         Me.pnlBattleView.SuspendLayout()
         Me.pnlOpponentsView.SuspendLayout()
+        Me.pnlMapView.SuspendLayout()
+        Me.pnlCharOverviewLeft.SuspendLayout()
+        Me.pnlCharOverviewRight.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlBattleView
@@ -47,7 +53,7 @@ Partial Class MainWindow
         '
         Me.UcBattleView1.BackColor = System.Drawing.SystemColors.Control
         Me.UcBattleView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.UcBattleView1.Location = New System.Drawing.Point(-1, -1)
+        Me.UcBattleView1.Location = New System.Drawing.Point(0, 0)
         Me.UcBattleView1.Name = "UcBattleView1"
         Me.UcBattleView1.Size = New System.Drawing.Size(350, 500)
         Me.UcBattleView1.TabIndex = 0
@@ -60,27 +66,6 @@ Partial Class MainWindow
         Me.pnlOpponentsView.Size = New System.Drawing.Size(350, 500)
         Me.pnlOpponentsView.TabIndex = 1
         '
-        'pnlMapView
-        '
-        Me.pnlMapView.Location = New System.Drawing.Point(734, 12)
-        Me.pnlMapView.Name = "pnlMapView"
-        Me.pnlMapView.Size = New System.Drawing.Size(1148, 700)
-        Me.pnlMapView.TabIndex = 2
-        '
-        'pnlCharacterOverviewLeft
-        '
-        Me.pnlCharacterOverviewLeft.Location = New System.Drawing.Point(12, 527)
-        Me.pnlCharacterOverviewLeft.Name = "pnlCharacterOverviewLeft"
-        Me.pnlCharacterOverviewLeft.Size = New System.Drawing.Size(708, 470)
-        Me.pnlCharacterOverviewLeft.TabIndex = 3
-        '
-        'pnlCharacterOverviewRight
-        '
-        Me.pnlCharacterOverviewRight.Location = New System.Drawing.Point(726, 730)
-        Me.pnlCharacterOverviewRight.Name = "pnlCharacterOverviewRight"
-        Me.pnlCharacterOverviewRight.Size = New System.Drawing.Size(1156, 267)
-        Me.pnlCharacterOverviewRight.TabIndex = 4
-        '
         'UcOpponentsView1
         '
         Me.UcOpponentsView1.BackColor = System.Drawing.SystemColors.Control
@@ -90,14 +75,64 @@ Partial Class MainWindow
         Me.UcOpponentsView1.Size = New System.Drawing.Size(350, 500)
         Me.UcOpponentsView1.TabIndex = 0
         '
+        'pnlMapView
+        '
+        Me.pnlMapView.Controls.Add(Me.UcMapView1)
+        Me.pnlMapView.Location = New System.Drawing.Point(726, 13)
+        Me.pnlMapView.Name = "pnlMapView"
+        Me.pnlMapView.Size = New System.Drawing.Size(1156, 711)
+        Me.pnlMapView.TabIndex = 2
+        '
+        'pnlCharOverviewLeft
+        '
+        Me.pnlCharOverviewLeft.Controls.Add(Me.UcCharOverviewLeft1)
+        Me.pnlCharOverviewLeft.Location = New System.Drawing.Point(12, 519)
+        Me.pnlCharOverviewLeft.Name = "pnlCharOverviewLeft"
+        Me.pnlCharOverviewLeft.Size = New System.Drawing.Size(708, 478)
+        Me.pnlCharOverviewLeft.TabIndex = 3
+        '
+        'UcCharOverviewLeft1
+        '
+        Me.UcCharOverviewLeft1.BackColor = System.Drawing.SystemColors.Control
+        Me.UcCharOverviewLeft1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.UcCharOverviewLeft1.Location = New System.Drawing.Point(0, 0)
+        Me.UcCharOverviewLeft1.Name = "UcCharOverviewLeft1"
+        Me.UcCharOverviewLeft1.Size = New System.Drawing.Size(708, 478)
+        Me.UcCharOverviewLeft1.TabIndex = 0
+        '
+        'pnlCharOverviewRight
+        '
+        Me.pnlCharOverviewRight.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.pnlCharOverviewRight.Controls.Add(Me.UcCharOverviewRight1)
+        Me.pnlCharOverviewRight.Location = New System.Drawing.Point(726, 730)
+        Me.pnlCharOverviewRight.Name = "pnlCharOverviewRight"
+        Me.pnlCharOverviewRight.Size = New System.Drawing.Size(1156, 267)
+        Me.pnlCharOverviewRight.TabIndex = 4
+        '
+        'UcCharOverviewRight1
+        '
+        Me.UcCharOverviewRight1.BackColor = System.Drawing.SystemColors.Control
+        Me.UcCharOverviewRight1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.UcCharOverviewRight1.Location = New System.Drawing.Point(0, 0)
+        Me.UcCharOverviewRight1.Name = "UcCharOverviewRight1"
+        Me.UcCharOverviewRight1.Size = New System.Drawing.Size(1156, 267)
+        Me.UcCharOverviewRight1.TabIndex = 0
+        '
+        'UcMapView1
+        '
+        Me.UcMapView1.Location = New System.Drawing.Point(0, 0)
+        Me.UcMapView1.Name = "UcMapView1"
+        Me.UcMapView1.Size = New System.Drawing.Size(1156, 711)
+        Me.UcMapView1.TabIndex = 0
+        '
         'MainWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ClientSize = New System.Drawing.Size(1894, 1009)
-        Me.Controls.Add(Me.pnlCharacterOverviewRight)
-        Me.Controls.Add(Me.pnlCharacterOverviewLeft)
+        Me.Controls.Add(Me.pnlCharOverviewRight)
+        Me.Controls.Add(Me.pnlCharOverviewLeft)
         Me.Controls.Add(Me.pnlMapView)
         Me.Controls.Add(Me.pnlOpponentsView)
         Me.Controls.Add(Me.pnlBattleView)
@@ -107,6 +142,9 @@ Partial Class MainWindow
         Me.Text = "windowMainWindow"
         Me.pnlBattleView.ResumeLayout(False)
         Me.pnlOpponentsView.ResumeLayout(False)
+        Me.pnlMapView.ResumeLayout(False)
+        Me.pnlCharOverviewLeft.ResumeLayout(False)
+        Me.pnlCharOverviewRight.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -114,8 +152,11 @@ Partial Class MainWindow
     Friend WithEvents pnlBattleView As Panel
     Friend WithEvents pnlOpponentsView As Panel
     Friend WithEvents pnlMapView As Panel
-    Friend WithEvents pnlCharacterOverviewLeft As Panel
-    Friend WithEvents pnlCharacterOverviewRight As Panel
+    Friend WithEvents pnlCharOverviewLeft As Panel
+    Friend WithEvents pnlCharOverviewRight As Panel
     Friend WithEvents UcBattleView1 As ucBattleView
     Friend WithEvents UcOpponentsView1 As ucOpponentsView
+    Friend WithEvents UcCharOverviewLeft1 As ucCharOverviewLeft
+    Friend WithEvents UcCharOverviewRight1 As ucCharOverviewRight
+    Friend WithEvents UcMapView1 As ucMapView
 End Class

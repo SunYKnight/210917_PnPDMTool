@@ -13,6 +13,15 @@
     <Compile Update="ucBattleView.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ucCharOverviewLeft.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ucCharOverviewRight.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ucMapView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ucOpponentsView.vb">
       <SubType>UserControl</SubType>
     </Compile>
