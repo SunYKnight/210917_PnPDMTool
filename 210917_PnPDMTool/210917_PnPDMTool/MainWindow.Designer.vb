@@ -116,7 +116,6 @@ Partial Class MainWindow
         Me.Controls.Add(Me.pnlMapView)
         Me.Controls.Add(Me.pnlCharOverviewLeft)
         Me.Controls.Add(Me.pnlCharOverviewRight)
-        Me.MinimizeBox = False
         Me.Name = "MainWindow"
         Me.pnlBattleView.ResumeLayout(False)
         Me.pnlOpponentsView.ResumeLayout(False)
