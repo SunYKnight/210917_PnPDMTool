@@ -27,12 +27,12 @@ Partial Class ucCharOverviewRight
         'ucCharOverviewRight
         '
         Me.AllowDrop = True
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.MinimumSize = New System.Drawing.Size(1243, 326)
+        Me.MinimumSize = New System.Drawing.Size(1259, 257)
         Me.Name = "ucCharOverviewRight"
-        Me.Size = New System.Drawing.Size(1245, 328)
+        Me.Size = New System.Drawing.Size(1259, 257)
         Me.ResumeLayout(False)
 
     End Sub

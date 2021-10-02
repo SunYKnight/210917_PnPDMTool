@@ -31,18 +31,20 @@ Partial Class ucCharOverviewLeft
         '
         Me.lbName.Font = New System.Drawing.Font("Segoe UI", 10.875!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lbName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lbName.Location = New System.Drawing.Point(0, 0)
+        Me.lbName.Location = New System.Drawing.Point(20, 16)
+        Me.lbName.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbName.Name = "lbName"
-        Me.lbName.Size = New System.Drawing.Size(354, 40)
+        Me.lbName.Size = New System.Drawing.Size(191, 19)
         Me.lbName.TabIndex = 0
         Me.lbName.Text = "Name"
         '
         'btnActions
         '
         Me.btnActions.Font = New System.Drawing.Font("Segoe UI", 7.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnActions.Location = New System.Drawing.Point(273, 3)
+        Me.btnActions.Location = New System.Drawing.Point(333, 13)
+        Me.btnActions.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.btnActions.Name = "btnActions"
-        Me.btnActions.Size = New System.Drawing.Size(132, 46)
+        Me.btnActions.Size = New System.Drawing.Size(118, 22)
         Me.btnActions.TabIndex = 1
         Me.btnActions.Text = "actions"
         Me.btnActions.UseVisualStyleBackColor = True
@@ -50,25 +52,25 @@ Partial Class ucCharOverviewLeft
         'btnLegendaryActions
         '
         Me.btnLegendaryActions.Font = New System.Drawing.Font("Segoe UI", 7.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnLegendaryActions.Location = New System.Drawing.Point(411, 3)
+        Me.btnLegendaryActions.Location = New System.Drawing.Point(470, 13)
+        Me.btnLegendaryActions.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.btnLegendaryActions.Name = "btnLegendaryActions"
-        Me.btnLegendaryActions.Size = New System.Drawing.Size(207, 46)
+        Me.btnLegendaryActions.Size = New System.Drawing.Size(137, 22)
         Me.btnLegendaryActions.TabIndex = 2
         Me.btnLegendaryActions.Text = "legendary actions"
         Me.btnLegendaryActions.UseVisualStyleBackColor = True
         '
         'ucCharOverviewLeft
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 32.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Controls.Add(Me.btnLegendaryActions)
         Me.Controls.Add(Me.btnActions)
         Me.Controls.Add(Me.lbName)
-        Me.MinimumSize = New System.Drawing.Size(621, 489)
+        Me.MinimumSize = New System.Drawing.Size(622, 515)
         Me.Name = "ucCharOverviewLeft"
-        Me.Size = New System.Drawing.Size(623, 491)
+        Me.Size = New System.Drawing.Size(622, 515)
         Me.ResumeLayout(False)
 
     End Sub

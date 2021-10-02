@@ -4,10 +4,13 @@
     'Panel and Window Size in the Beginning
     Dim pnlBattleViewMin As Rectangle = New Rectangle(12, 12, 308, 490)
     Dim pnlOpponentsViewMin As Rectangle = New Rectangle(326, 12, 308, 490)
-    Dim pnlMapViewMin As Rectangle = New Rectangle(652, 12, 1230, 640)
-    Dim pnlCharOverviewLeftMin As Rectangle = New Rectangle(12, 508, 621, 489)
-    Dim pnlCharOverviewRightMin As Rectangle = New Rectangle(633, 671, 1249, 326)
+    Dim pnlMapViewMin As Rectangle = New Rectangle(653, 12, 1240, 741)
+    Dim pnlCharOverviewLeftMin As Rectangle = New Rectangle(12, 514, 622, 515)
+    Dim pnlCharOverviewRightMin As Rectangle = New Rectangle(634, 772, 1259, 257)
     Dim windowSizeMin As Size = New Size(1920, 1080)
+    Dim gapSmall As Int32 = 6
+    Dim gapMedium As Int32 = 12
+    Dim gapBig As Int32 = 19
 
 #End Region
 
@@ -23,57 +26,54 @@
     End Sub
 
     Private Sub MainWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Me.Size.Width < 1920 Then
-            Me.Size = New Size(1920 / 2, 1080 / 2)
-        End If
+
     End Sub
 
     Private Sub MainWindow_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
-        'changeSizeAndPositionOfPanels()
+        changeSizeAndPositionOfPanels()
+        changeSizeOfUserControls()
     End Sub
 
     Private Sub changeSizeAndPositionOfPanels()
+        Dim newSize As Size = Me.Size
+
         If Me.Size.Width < 1920 Then
-            Me.Size = New Size(1920, 1080)
-            pnlBattleView.Size = pnlBattleViewMin.Size
-            pnlBattleView.Location = pnlBattleViewMin.Location
-            pnlOpponentsView.Size = pnlOpponentsViewMin.Size
-            pnlOpponentsView.Location = pnlOpponentsViewMin.Location
-            pnlMapView.Size = pnlMapViewMin.Size
-            pnlMapView.Location = pnlMapViewMin.Location
-            pnlCharOverviewLeft.Size = pnlCharOverviewLeftMin.Size
-            pnlCharOverviewLeft.Location = pnlCharOverviewLeftMin.Location
-            pnlCharOverviewRight.Size = pnlCharOverviewRightMin.Size
-            pnlCharOverviewRight.Location = pnlCharOverviewRightMin.Location
-        Else
-            Dim newSize As Size = Me.Size
-            Dim newInnerSize As Size = New Size(newSize.Width - 26, newSize.Height - 71)
-            Dim widthRatio As Single = newSize.Width / 1920
-            Dim heightRatio As Single = newSize.Height / 1080
-
-            'pnlBattleView & pnlOpponentsView (same size)
-            pnlBattleView.Size = New Size(CInt(pnlBattleViewMin.Width * widthRatio), CInt(pnlBattleViewMin.Height * heightRatio))
-            pnlBattleView.Location = New Point(pnlBattleViewMin.X, pnlBattleViewMin.Y)
-            pnlOpponentsView.Size = pnlBattleView.Size
-            pnlOpponentsView.Location = New Point(12 + pnlBattleView.Width + 6, pnlOpponentsViewMin.Y)
-
-            'pnlCharOverviewLeft & pnlCharOverviewRight
-            pnlCharOverviewLeft.Size = New Size(2 * pnlBattleView.Width + 6, newInnerSize.Height - 12 - pnlBattleView.Height - 6 - 12)
-            pnlCharOverviewLeft.Location = New Point(pnlCharOverviewLeftMin.X, 12 + pnlBattleView.Height + 6)
-            pnlCharOverviewRight.Size = New Size(newInnerSize.Width - 12 - pnlCharOverviewLeft.Width - 12, CInt(pnlCharOverviewRightMin.Height * heightRatio))
-            pnlCharOverviewRight.Location = New Point(12 + pnlCharOverviewLeft.Width, newInnerSize.Height - 12 - pnlCharOverviewRight.Height)
-
-            'pnlMapView
-            pnlMapView.Size = New Size(newInnerSize.Width - 12 - pnlCharOverviewLeft.Width - 19 - 12, newInnerSize.Height - 12 - 19 - pnlCharOverviewRight.Height - 12)
-            pnlMapView.Location = New Point(12 + pnlCharOverviewLeft.Width + 19, pnlMapViewMin.Y)
-
-            'userControls
-            ucBattleView1.Size = pnlBattleView.Size
-            ucOpponentsView1.Size = pnlOpponentsView.Size
-            ucCharOverviewLeft1.Size = pnlCharOverviewLeft.Size
-            ucCharOverviewRight1.Size = pnlCharOverviewRight.Size
-            ucMapView1.Size = pnlMapView.Size
+            Me.Size = New Size(1920, newSize.Height)
         End If
+
+        newSize = Me.Size
+
+        If Me.Size.Height < 1080 Then
+            Me.Size = New Size(newSize.Width, 1080)
+        End If
+
+        newSize = Me.Size
+        Dim newInnerSize As Size = New Size(newSize.Width - 15, newSize.Height - 39)
+        Dim widthRatio As Single = newSize.Width / 1920
+        Dim heightRatio As Single = newSize.Height / 1080
+
+        'pnlBattleView & pnlOpponentsView (same size)
+        pnlBattleView.Size = New Size(CInt(pnlBattleViewMin.Width * widthRatio), CInt(pnlBattleViewMin.Height * heightRatio))
+        pnlBattleView.Location = New Point(pnlBattleViewMin.X, pnlBattleViewMin.Y)
+        pnlOpponentsView.Size = pnlBattleView.Size
+        pnlOpponentsView.Location = New Point(gapMedium + pnlBattleView.Width + gapSmall, pnlOpponentsViewMin.Y)
+
+        'pnlCharOverviewLeft & pnlCharOverviewRight
+        pnlCharOverviewLeft.Size = New Size(2 * pnlBattleView.Width + gapSmall, newInnerSize.Height - 3 * gapMedium - pnlBattleView.Height)
+        pnlCharOverviewLeft.Location = New Point(pnlCharOverviewLeftMin.X, 2 * gapMedium + pnlBattleView.Height)
+        pnlCharOverviewRight.Size = New Size(newInnerSize.Width - 2 * gapMedium - pnlCharOverviewLeft.Width, CInt(pnlCharOverviewRightMin.Height * heightRatio))
+        pnlCharOverviewRight.Location = New Point(gapMedium + pnlCharOverviewLeft.Width, newInnerSize.Height - gapMedium - pnlCharOverviewRight.Height)
+
+        'pnlMapView
+        pnlMapView.Size = New Size(newInnerSize.Width - 2 * gapMedium - gapBig - pnlCharOverviewLeft.Width, newInnerSize.Height - pnlCharOverviewRight.Height - 2 * gapMedium - gapBig)
+        pnlMapView.Location = New Point(gapMedium + gapBig + pnlCharOverviewLeft.Width, pnlMapViewMin.Y)
+    End Sub
+    Private Sub changeSizeOfUserControls()
+        ucBattleView1.Size = pnlBattleView.Size
+        ucOpponentsView1.Size = pnlOpponentsView.Size
+        ucCharOverviewLeft1.Size = pnlCharOverviewLeft.Size
+        ucCharOverviewRight1.Size = pnlCharOverviewRight.Size
+        ucMapView1.Size = pnlMapView.Size
     End Sub
 #End Region
 
