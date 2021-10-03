@@ -68,7 +68,6 @@ Partial Class ucCharOverviewLeft
         Me.Controls.Add(Me.btnLegendaryActions)
         Me.Controls.Add(Me.btnActions)
         Me.Controls.Add(Me.lbName)
-        Me.MinimumSize = New System.Drawing.Size(622, 515)
         Me.Name = "ucCharOverviewLeft"
         Me.Size = New System.Drawing.Size(622, 515)
         Me.ResumeLayout(False)

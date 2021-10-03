@@ -81,7 +81,6 @@ Partial Class ucOpponentsView
         Me.Controls.Add(Me.btnNew)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnAddToBattle)
-        Me.MinimumSize = New System.Drawing.Size(308, 490)
         Me.Name = "ucOpponentsView"
         Me.Size = New System.Drawing.Size(308, 490)
         Me.ResumeLayout(False)
