@@ -75,6 +75,8 @@ Partial Class ucOpponentsView
         '
         'listViewOpponents
         '
+        Me.listViewOpponents.BackColor = System.Drawing.Color.White
+        Me.listViewOpponents.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.listViewOpponents.HideSelection = False
         Me.listViewOpponents.Location = New System.Drawing.Point(15, 55)
         Me.listViewOpponents.Name = "listViewOpponents"

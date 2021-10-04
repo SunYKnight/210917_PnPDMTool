@@ -22,7 +22,31 @@ Partial Class ucCharOverviewRight
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.txtInfo2 = New System.Windows.Forms.TextBox()
+        Me.txtInfo3 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
+        '
+        'txtInfo2
+        '
+        Me.txtInfo2.BackColor = System.Drawing.Color.White
+        Me.txtInfo2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtInfo2.Location = New System.Drawing.Point(14, 14)
+        Me.txtInfo2.Multiline = True
+        Me.txtInfo2.Name = "txtInfo2"
+        Me.txtInfo2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtInfo2.Size = New System.Drawing.Size(600, 227)
+        Me.txtInfo2.TabIndex = 0
+        '
+        'txtInfo3
+        '
+        Me.txtInfo3.BackColor = System.Drawing.Color.White
+        Me.txtInfo3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtInfo3.Location = New System.Drawing.Point(640, 14)
+        Me.txtInfo3.Multiline = True
+        Me.txtInfo3.Name = "txtInfo3"
+        Me.txtInfo3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtInfo3.Size = New System.Drawing.Size(600, 227)
+        Me.txtInfo3.TabIndex = 1
         '
         'ucCharOverviewRight
         '
@@ -30,10 +54,15 @@ Partial Class ucCharOverviewRight
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Controls.Add(Me.txtInfo3)
+        Me.Controls.Add(Me.txtInfo2)
         Me.Name = "ucCharOverviewRight"
         Me.Size = New System.Drawing.Size(1259, 257)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
+    Friend WithEvents txtInfo2 As TextBox
+    Friend WithEvents txtInfo3 As TextBox
 End Class

@@ -55,6 +55,8 @@ Partial Class ucBattleView
         '
         'listViewBattle
         '
+        Me.listViewBattle.BackColor = System.Drawing.Color.White
+        Me.listViewBattle.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.listViewBattle.HideSelection = False
         resources.ApplyResources(Me.listViewBattle, "listViewBattle")
         Me.listViewBattle.Name = "listViewBattle"

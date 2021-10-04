@@ -49,7 +49,7 @@ Partial Class MainWindow
         '
         'ucBattleView1
         '
-        Me.ucBattleView1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ucBattleView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.ucBattleView1, "ucBattleView1")
         Me.ucBattleView1.Name = "ucBattleView1"
         '
@@ -62,7 +62,7 @@ Partial Class MainWindow
         '
         'ucOpponentsView1
         '
-        Me.ucOpponentsView1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ucOpponentsView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.ucOpponentsView1, "ucOpponentsView1")
         Me.ucOpponentsView1.Name = "ucOpponentsView1"
         '
@@ -75,7 +75,7 @@ Partial Class MainWindow
         '
         'ucMapView1
         '
-        Me.ucMapView1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ucMapView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.ucMapView1, "ucMapView1")
         Me.ucMapView1.Name = "ucMapView1"
         '
@@ -89,7 +89,7 @@ Partial Class MainWindow
         'ucCharOverviewLeft1
         '
         resources.ApplyResources(Me.ucCharOverviewLeft1, "ucCharOverviewLeft1")
-        Me.ucCharOverviewLeft1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ucCharOverviewLeft1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ucCharOverviewLeft1.Name = "ucCharOverviewLeft1"
         '
         'pnlCharOverviewRight
@@ -102,7 +102,7 @@ Partial Class MainWindow
         'ucCharOverviewRight1
         '
         Me.ucCharOverviewRight1.AllowDrop = True
-        Me.ucCharOverviewRight1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ucCharOverviewRight1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         resources.ApplyResources(Me.ucCharOverviewRight1, "ucCharOverviewRight1")
         Me.ucCharOverviewRight1.Name = "ucCharOverviewRight1"
         '
@@ -110,7 +110,7 @@ Partial Class MainWindow
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Controls.Add(Me.pnlBattleView)
         Me.Controls.Add(Me.pnlOpponentsView)
         Me.Controls.Add(Me.pnlMapView)
