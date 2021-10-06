@@ -28,6 +28,8 @@ Partial Class ucBattleView
         Me.btnEndBattle = New System.Windows.Forms.Button()
         Me.lbBattle = New System.Windows.Forms.Label()
         Me.listViewBattle = New System.Windows.Forms.ListView()
+        Me.btnEditPlayer = New System.Windows.Forms.Button()
+        Me.btnNewPlayer = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnRemove
@@ -62,11 +64,25 @@ Partial Class ucBattleView
         Me.listViewBattle.Name = "listViewBattle"
         Me.listViewBattle.UseCompatibleStateImageBehavior = False
         '
+        'btnEditPlayer
+        '
+        resources.ApplyResources(Me.btnEditPlayer, "btnEditPlayer")
+        Me.btnEditPlayer.Name = "btnEditPlayer"
+        Me.btnEditPlayer.UseVisualStyleBackColor = True
+        '
+        'btnNewPlayer
+        '
+        resources.ApplyResources(Me.btnNewPlayer, "btnNewPlayer")
+        Me.btnNewPlayer.Name = "btnNewPlayer"
+        Me.btnNewPlayer.UseVisualStyleBackColor = True
+        '
         'ucBattleView
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Controls.Add(Me.btnNewPlayer)
+        Me.Controls.Add(Me.btnEditPlayer)
         Me.Controls.Add(Me.listViewBattle)
         Me.Controls.Add(Me.lbBattle)
         Me.Controls.Add(Me.btnEndBattle)
@@ -83,4 +99,6 @@ Partial Class ucBattleView
     Friend WithEvents btnEndBattle As Button
     Friend WithEvents lbBattle As Label
     Friend WithEvents listViewBattle As ListView
+    Friend WithEvents btnEditPlayer As Button
+    Friend WithEvents btnNewPlayer As Button
 End Class

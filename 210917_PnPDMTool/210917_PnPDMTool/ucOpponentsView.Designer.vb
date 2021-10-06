@@ -23,8 +23,8 @@ Partial Class ucOpponentsView
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnAddToBattle = New System.Windows.Forms.Button()
-        Me.btnEdit = New System.Windows.Forms.Button()
-        Me.btnNew = New System.Windows.Forms.Button()
+        Me.btnEditOpponent = New System.Windows.Forms.Button()
+        Me.btnNewOpponent = New System.Windows.Forms.Button()
         Me.lbOpponents = New System.Windows.Forms.Label()
         Me.listViewOpponents = New System.Windows.Forms.ListView()
         Me.SuspendLayout()
@@ -32,35 +32,35 @@ Partial Class ucOpponentsView
         'btnAddToBattle
         '
         Me.btnAddToBattle.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnAddToBattle.Location = New System.Drawing.Point(15, 456)
+        Me.btnAddToBattle.Location = New System.Drawing.Point(15, 445)
         Me.btnAddToBattle.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
         Me.btnAddToBattle.Name = "btnAddToBattle"
-        Me.btnAddToBattle.Size = New System.Drawing.Size(104, 34)
+        Me.btnAddToBattle.Size = New System.Drawing.Size(280, 34)
         Me.btnAddToBattle.TabIndex = 0
         Me.btnAddToBattle.Text = "add to battle"
         Me.btnAddToBattle.UseVisualStyleBackColor = True
         '
-        'btnEdit
+        'btnEditOpponent
         '
-        Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnEdit.Location = New System.Drawing.Point(127, 456)
-        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(87, 33)
-        Me.btnEdit.TabIndex = 1
-        Me.btnEdit.Text = "edit"
-        Me.btnEdit.UseVisualStyleBackColor = True
+        Me.btnEditOpponent.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnEditOpponent.Location = New System.Drawing.Point(153, 410)
+        Me.btnEditOpponent.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.btnEditOpponent.Name = "btnEditOpponent"
+        Me.btnEditOpponent.Size = New System.Drawing.Size(142, 33)
+        Me.btnEditOpponent.TabIndex = 1
+        Me.btnEditOpponent.Text = "edit Opponent"
+        Me.btnEditOpponent.UseVisualStyleBackColor = True
         '
-        'btnNew
+        'btnNewOpponent
         '
-        Me.btnNew.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnNew.Location = New System.Drawing.Point(231, 456)
-        Me.btnNew.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
-        Me.btnNew.Name = "btnNew"
-        Me.btnNew.Size = New System.Drawing.Size(64, 33)
-        Me.btnNew.TabIndex = 2
-        Me.btnNew.Text = "new"
-        Me.btnNew.UseVisualStyleBackColor = True
+        Me.btnNewOpponent.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnNewOpponent.Location = New System.Drawing.Point(15, 410)
+        Me.btnNewOpponent.Margin = New System.Windows.Forms.Padding(2, 1, 2, 1)
+        Me.btnNewOpponent.Name = "btnNewOpponent"
+        Me.btnNewOpponent.Size = New System.Drawing.Size(134, 33)
+        Me.btnNewOpponent.TabIndex = 2
+        Me.btnNewOpponent.Text = "new Opponent"
+        Me.btnNewOpponent.UseVisualStyleBackColor = True
         '
         'lbOpponents
         '
@@ -80,7 +80,7 @@ Partial Class ucOpponentsView
         Me.listViewOpponents.HideSelection = False
         Me.listViewOpponents.Location = New System.Drawing.Point(15, 55)
         Me.listViewOpponents.Name = "listViewOpponents"
-        Me.listViewOpponents.Size = New System.Drawing.Size(280, 376)
+        Me.listViewOpponents.Size = New System.Drawing.Size(280, 341)
         Me.listViewOpponents.TabIndex = 4
         Me.listViewOpponents.UseCompatibleStateImageBehavior = False
         '
@@ -91,8 +91,8 @@ Partial Class ucOpponentsView
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Controls.Add(Me.listViewOpponents)
         Me.Controls.Add(Me.lbOpponents)
-        Me.Controls.Add(Me.btnNew)
-        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btnNewOpponent)
+        Me.Controls.Add(Me.btnEditOpponent)
         Me.Controls.Add(Me.btnAddToBattle)
         Me.Name = "ucOpponentsView"
         Me.Size = New System.Drawing.Size(308, 490)
@@ -101,8 +101,8 @@ Partial Class ucOpponentsView
     End Sub
 
     Friend WithEvents btnAddToBattle As Button
-    Friend WithEvents btnEdit As Button
-    Friend WithEvents btnNew As Button
+    Friend WithEvents btnEditOpponent As Button
+    Friend WithEvents btnNewOpponent As Button
     Friend WithEvents lbOpponents As Label
     Friend WithEvents listViewOpponents As ListView
 End Class

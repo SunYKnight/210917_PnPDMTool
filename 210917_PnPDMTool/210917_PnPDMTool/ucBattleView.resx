@@ -66,7 +66,7 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 454</value>
+    <value>207, 418</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnRemove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -91,7 +91,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnRemove.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="btnNext.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -100,13 +100,13 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 454</value>
+    <value>6, 454</value>
   </data>
   <data name="btnNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 1, 2, 1</value>
   </data>
   <data name="btnNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 30</value>
+    <value>143, 30</value>
   </data>
   <data name="btnNext.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -124,7 +124,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnNext.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="btnEndBattle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -133,13 +133,13 @@
     <value>Segoe UI, 11.25pt</value>
   </data>
   <data name="btnEndBattle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 454</value>
+    <value>153, 454</value>
   </data>
   <data name="btnEndBattle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 1, 2, 1</value>
   </data>
   <data name="btnEndBattle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 30</value>
+    <value>149, 30</value>
   </data>
   <data name="btnEndBattle.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -157,7 +157,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnEndBattle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="lbBattle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 15.75pt, style=Bold</value>
@@ -190,13 +190,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbBattle.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="listViewBattle.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 43</value>
   </data>
   <data name="listViewBattle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 407</value>
+    <value>296, 371</value>
   </data>
   <data name="listViewBattle.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -211,6 +211,78 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listViewBattle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnEditPlayer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnEditPlayer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="btnEditPlayer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnEditPlayer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 418</value>
+  </data>
+  <data name="btnEditPlayer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 1, 2, 1</value>
+  </data>
+  <data name="btnEditPlayer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 30</value>
+  </data>
+  <data name="btnEditPlayer.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnEditPlayer.Text" xml:space="preserve">
+    <value>edit Player</value>
+  </data>
+  <data name="&gt;&gt;btnEditPlayer.Name" xml:space="preserve">
+    <value>btnEditPlayer</value>
+  </data>
+  <data name="&gt;&gt;btnEditPlayer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEditPlayer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnEditPlayer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnNewPlayer.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnNewPlayer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="btnNewPlayer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnNewPlayer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 418</value>
+  </data>
+  <data name="btnNewPlayer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 1, 2, 1</value>
+  </data>
+  <data name="btnNewPlayer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 30</value>
+  </data>
+  <data name="btnNewPlayer.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnNewPlayer.Text" xml:space="preserve">
+    <value>new Player</value>
+  </data>
+  <data name="&gt;&gt;btnNewPlayer.Name" xml:space="preserve">
+    <value>btnNewPlayer</value>
+  </data>
+  <data name="&gt;&gt;btnNewPlayer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnNewPlayer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnNewPlayer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

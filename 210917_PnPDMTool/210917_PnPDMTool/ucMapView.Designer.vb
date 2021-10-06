@@ -39,6 +39,7 @@ Partial Class ucMapView
         Me.pictureBoxInitiative12 = New System.Windows.Forms.PictureBox()
         Me.pictureBoxInitiative13 = New System.Windows.Forms.PictureBox()
         Me.pictureBoxInitiative14 = New System.Windows.Forms.PictureBox()
+        Me.btnNewMap = New System.Windows.Forms.Button()
         CType(Me.pictureBoxMap, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBoxInitiative1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pictureBoxInitiative2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,11 +213,22 @@ Partial Class ucMapView
         Me.pictureBoxInitiative14.TabIndex = 16
         Me.pictureBoxInitiative14.TabStop = False
         '
+        'btnNewMap
+        '
+        Me.btnNewMap.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnNewMap.Location = New System.Drawing.Point(951, 9)
+        Me.btnNewMap.Name = "btnNewMap"
+        Me.btnNewMap.Size = New System.Drawing.Size(98, 30)
+        Me.btnNewMap.TabIndex = 17
+        Me.btnNewMap.Text = "new Map"
+        Me.btnNewMap.UseVisualStyleBackColor = True
+        '
         'ucMapView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Controls.Add(Me.btnNewMap)
         Me.Controls.Add(Me.pictureBoxInitiative14)
         Me.Controls.Add(Me.pictureBoxInitiative13)
         Me.Controls.Add(Me.pictureBoxInitiative12)
@@ -272,4 +284,5 @@ Partial Class ucMapView
     Friend WithEvents pictureBoxInitiative12 As PictureBox
     Friend WithEvents pictureBoxInitiative13 As PictureBox
     Friend WithEvents pictureBoxInitiative14 As PictureBox
+    Friend WithEvents btnNewMap As Button
 End Class

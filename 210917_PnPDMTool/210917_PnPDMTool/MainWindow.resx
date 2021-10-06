@@ -167,15 +167,6 @@
   <data name="&gt;&gt;ucOpponentsView1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ucMapView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ucMapView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1240, 741</value>
-  </data>
-  <data name="ucMapView1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;ucMapView1.Name" xml:space="preserve">
     <value>ucMapView1</value>
   </data>
@@ -188,36 +179,6 @@
   <data name="&gt;&gt;ucMapView1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ucNew1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ucNew1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1240, 754</value>
-  </data>
-  <data name="ucNew1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ucNew1.Name" xml:space="preserve">
-    <value>ucNew1</value>
-  </data>
-  <data name="&gt;&gt;ucNew1.Type" xml:space="preserve">
-    <value>_210917_PnPDMTool.ucNew, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ucNew1.Parent" xml:space="preserve">
-    <value>pnlMapView</value>
-  </data>
-  <data name="&gt;&gt;ucNew1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ucOpponent1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ucOpponent1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1240, 754</value>
-  </data>
-  <data name="ucOpponent1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="&gt;&gt;ucOpponent1.Name" xml:space="preserve">
     <value>ucOpponent1</value>
   </data>
@@ -228,16 +189,7 @@
     <value>pnlMapView</value>
   </data>
   <data name="&gt;&gt;ucOpponent1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ucPlayer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ucPlayer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1240, 741</value>
-  </data>
-  <data name="ucPlayer1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;ucPlayer1.Name" xml:space="preserve">
     <value>ucPlayer1</value>
@@ -249,6 +201,18 @@
     <value>pnlMapView</value>
   </data>
   <data name="&gt;&gt;ucPlayer1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ucNewMap1.Name" xml:space="preserve">
+    <value>ucNewMap1</value>
+  </data>
+  <data name="&gt;&gt;ucNewMap1.Type" xml:space="preserve">
+    <value>_210917_PnPDMTool.ucNewMap, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ucNewMap1.Parent" xml:space="preserve">
+    <value>pnlMapView</value>
+  </data>
+  <data name="&gt;&gt;ucNewMap1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="pnlMapView.Location" type="System.Drawing.Point, System.Drawing">
@@ -271,6 +235,90 @@
   </data>
   <data name="&gt;&gt;pnlMapView.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="ucMapView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ucMapView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1240, 741</value>
+  </data>
+  <data name="ucMapView1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ucMapView1.Name" xml:space="preserve">
+    <value>ucMapView1</value>
+  </data>
+  <data name="&gt;&gt;ucMapView1.Type" xml:space="preserve">
+    <value>_210917_PnPDMTool.ucMapView, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ucMapView1.Parent" xml:space="preserve">
+    <value>pnlMapView</value>
+  </data>
+  <data name="&gt;&gt;ucMapView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ucOpponent1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ucOpponent1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1240, 754</value>
+  </data>
+  <data name="ucOpponent1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ucOpponent1.Name" xml:space="preserve">
+    <value>ucOpponent1</value>
+  </data>
+  <data name="&gt;&gt;ucOpponent1.Type" xml:space="preserve">
+    <value>_210917_PnPDMTool.ucOpponent, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ucOpponent1.Parent" xml:space="preserve">
+    <value>pnlMapView</value>
+  </data>
+  <data name="&gt;&gt;ucOpponent1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ucPlayer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ucPlayer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1240, 741</value>
+  </data>
+  <data name="ucPlayer1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ucPlayer1.Name" xml:space="preserve">
+    <value>ucPlayer1</value>
+  </data>
+  <data name="&gt;&gt;ucPlayer1.Type" xml:space="preserve">
+    <value>_210917_PnPDMTool.ucPlayer, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ucPlayer1.Parent" xml:space="preserve">
+    <value>pnlMapView</value>
+  </data>
+  <data name="&gt;&gt;ucPlayer1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ucNewMap1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ucNewMap1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1240, 754</value>
+  </data>
+  <data name="ucNewMap1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ucNewMap1.Name" xml:space="preserve">
+    <value>ucNewMap1</value>
+  </data>
+  <data name="&gt;&gt;ucNewMap1.Type" xml:space="preserve">
+    <value>_210917_PnPDMTool.ucNewMap, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ucNewMap1.Parent" xml:space="preserve">
+    <value>pnlMapView</value>
+  </data>
+  <data name="&gt;&gt;ucNewMap1.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;ucCharOverviewLeft1.Name" xml:space="preserve">
     <value>ucCharOverviewLeft1</value>
