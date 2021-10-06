@@ -88,7 +88,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative1
         '
-        Me.pictureBoxInitiative1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative1.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative1.Location = New System.Drawing.Point(159, 43)
         Me.pictureBoxInitiative1.Name = "pictureBoxInitiative1"
         Me.pictureBoxInitiative1.Size = New System.Drawing.Size(60, 60)
@@ -97,7 +97,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative2
         '
-        Me.pictureBoxInitiative2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative2.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative2.Location = New System.Drawing.Point(225, 43)
         Me.pictureBoxInitiative2.Name = "pictureBoxInitiative2"
         Me.pictureBoxInitiative2.Size = New System.Drawing.Size(60, 60)
@@ -106,7 +106,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative3
         '
-        Me.pictureBoxInitiative3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative3.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative3.Location = New System.Drawing.Point(291, 43)
         Me.pictureBoxInitiative3.Name = "pictureBoxInitiative3"
         Me.pictureBoxInitiative3.Size = New System.Drawing.Size(60, 60)
@@ -115,7 +115,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative4
         '
-        Me.pictureBoxInitiative4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative4.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative4.Location = New System.Drawing.Point(357, 43)
         Me.pictureBoxInitiative4.Name = "pictureBoxInitiative4"
         Me.pictureBoxInitiative4.Size = New System.Drawing.Size(60, 60)
@@ -124,7 +124,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative5
         '
-        Me.pictureBoxInitiative5.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative5.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative5.Location = New System.Drawing.Point(423, 43)
         Me.pictureBoxInitiative5.Name = "pictureBoxInitiative5"
         Me.pictureBoxInitiative5.Size = New System.Drawing.Size(60, 60)
@@ -133,7 +133,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative6
         '
-        Me.pictureBoxInitiative6.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative6.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative6.Location = New System.Drawing.Point(489, 43)
         Me.pictureBoxInitiative6.Name = "pictureBoxInitiative6"
         Me.pictureBoxInitiative6.Size = New System.Drawing.Size(60, 60)
@@ -142,7 +142,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative7
         '
-        Me.pictureBoxInitiative7.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative7.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative7.Location = New System.Drawing.Point(555, 43)
         Me.pictureBoxInitiative7.Name = "pictureBoxInitiative7"
         Me.pictureBoxInitiative7.Size = New System.Drawing.Size(60, 60)
@@ -151,7 +151,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative8
         '
-        Me.pictureBoxInitiative8.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative8.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative8.Location = New System.Drawing.Point(621, 43)
         Me.pictureBoxInitiative8.Name = "pictureBoxInitiative8"
         Me.pictureBoxInitiative8.Size = New System.Drawing.Size(60, 60)
@@ -160,7 +160,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative9
         '
-        Me.pictureBoxInitiative9.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative9.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative9.Location = New System.Drawing.Point(687, 43)
         Me.pictureBoxInitiative9.Name = "pictureBoxInitiative9"
         Me.pictureBoxInitiative9.Size = New System.Drawing.Size(60, 60)
@@ -169,7 +169,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative10
         '
-        Me.pictureBoxInitiative10.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative10.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative10.Location = New System.Drawing.Point(753, 43)
         Me.pictureBoxInitiative10.Name = "pictureBoxInitiative10"
         Me.pictureBoxInitiative10.Size = New System.Drawing.Size(60, 60)
@@ -178,7 +178,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative11
         '
-        Me.pictureBoxInitiative11.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative11.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative11.Location = New System.Drawing.Point(819, 43)
         Me.pictureBoxInitiative11.Name = "pictureBoxInitiative11"
         Me.pictureBoxInitiative11.Size = New System.Drawing.Size(60, 60)
@@ -187,7 +187,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative12
         '
-        Me.pictureBoxInitiative12.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative12.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative12.Location = New System.Drawing.Point(885, 43)
         Me.pictureBoxInitiative12.Name = "pictureBoxInitiative12"
         Me.pictureBoxInitiative12.Size = New System.Drawing.Size(60, 60)
@@ -196,7 +196,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative13
         '
-        Me.pictureBoxInitiative13.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative13.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative13.Location = New System.Drawing.Point(951, 43)
         Me.pictureBoxInitiative13.Name = "pictureBoxInitiative13"
         Me.pictureBoxInitiative13.Size = New System.Drawing.Size(60, 60)
@@ -205,7 +205,7 @@ Partial Class ucMapView
         '
         'pictureBoxInitiative14
         '
-        Me.pictureBoxInitiative14.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.pictureBoxInitiative14.BackColor = System.Drawing.Color.Gray
         Me.pictureBoxInitiative14.Location = New System.Drawing.Point(1017, 43)
         Me.pictureBoxInitiative14.Name = "pictureBoxInitiative14"
         Me.pictureBoxInitiative14.Size = New System.Drawing.Size(60, 60)

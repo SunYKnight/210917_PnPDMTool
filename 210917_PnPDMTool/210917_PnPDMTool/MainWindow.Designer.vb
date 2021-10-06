@@ -29,10 +29,13 @@ Partial Class MainWindow
         Me.ucOpponentsView1 = New _210917_PnPDMTool.ucOpponentsView()
         Me.pnlMapView = New System.Windows.Forms.Panel()
         Me.ucMapView1 = New _210917_PnPDMTool.ucMapView()
+        Me.ucNew1 = New _210917_PnPDMTool.ucNew()
         Me.pnlCharOverviewLeft = New System.Windows.Forms.Panel()
         Me.ucCharOverviewLeft1 = New _210917_PnPDMTool.ucCharOverviewLeft()
         Me.pnlCharOverviewRight = New System.Windows.Forms.Panel()
         Me.ucCharOverviewRight1 = New _210917_PnPDMTool.ucCharOverviewRight()
+        Me.ucPlayer1 = New _210917_PnPDMTool.ucPlayer()
+        Me.ucOpponent1 = New _210917_PnPDMTool.ucOpponent()
         Me.pnlBattleView.SuspendLayout()
         Me.pnlOpponentsView.SuspendLayout()
         Me.pnlMapView.SuspendLayout()
@@ -49,7 +52,7 @@ Partial Class MainWindow
         '
         'ucBattleView1
         '
-        Me.ucBattleView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ucBattleView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         resources.ApplyResources(Me.ucBattleView1, "ucBattleView1")
         Me.ucBattleView1.Name = "ucBattleView1"
         '
@@ -62,7 +65,7 @@ Partial Class MainWindow
         '
         'ucOpponentsView1
         '
-        Me.ucOpponentsView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ucOpponentsView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         resources.ApplyResources(Me.ucOpponentsView1, "ucOpponentsView1")
         Me.ucOpponentsView1.Name = "ucOpponentsView1"
         '
@@ -70,14 +73,22 @@ Partial Class MainWindow
         '
         Me.pnlMapView.BackColor = System.Drawing.SystemColors.Control
         Me.pnlMapView.Controls.Add(Me.ucMapView1)
+        Me.pnlMapView.Controls.Add(Me.ucNew1)
+        Me.pnlMapView.Controls.Add(Me.ucOpponent1)
+        Me.pnlMapView.Controls.Add(Me.ucPlayer1)
         resources.ApplyResources(Me.pnlMapView, "pnlMapView")
         Me.pnlMapView.Name = "pnlMapView"
         '
         'ucMapView1
         '
-        Me.ucMapView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ucMapView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         resources.ApplyResources(Me.ucMapView1, "ucMapView1")
         Me.ucMapView1.Name = "ucMapView1"
+        '
+        'ucNew1
+        '
+        resources.ApplyResources(Me.ucNew1, "ucNew1")
+        Me.ucNew1.Name = "ucNew1"
         '
         'pnlCharOverviewLeft
         '
@@ -89,7 +100,7 @@ Partial Class MainWindow
         'ucCharOverviewLeft1
         '
         resources.ApplyResources(Me.ucCharOverviewLeft1, "ucCharOverviewLeft1")
-        Me.ucCharOverviewLeft1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ucCharOverviewLeft1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ucCharOverviewLeft1.Name = "ucCharOverviewLeft1"
         '
         'pnlCharOverviewRight
@@ -102,9 +113,19 @@ Partial Class MainWindow
         'ucCharOverviewRight1
         '
         Me.ucCharOverviewRight1.AllowDrop = True
-        Me.ucCharOverviewRight1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ucCharOverviewRight1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         resources.ApplyResources(Me.ucCharOverviewRight1, "ucCharOverviewRight1")
         Me.ucCharOverviewRight1.Name = "ucCharOverviewRight1"
+        '
+        'ucPlayer1
+        '
+        resources.ApplyResources(Me.ucPlayer1, "ucPlayer1")
+        Me.ucPlayer1.Name = "ucPlayer1"
+        '
+        'ucOpponent1
+        '
+        resources.ApplyResources(Me.ucOpponent1, "ucOpponent1")
+        Me.ucOpponent1.Name = "ucOpponent1"
         '
         'MainWindow
         '
@@ -137,4 +158,7 @@ Partial Class MainWindow
     Friend WithEvents ucCharOverviewLeft1 As ucCharOverviewLeft
     Friend WithEvents ucMapView1 As ucMapView
     Friend WithEvents ucCharOverviewRight1 As ucCharOverviewRight
+    Friend WithEvents ucNew1 As ucNew
+    Friend WithEvents ucPlayer1 As ucPlayer
+    Friend WithEvents ucOpponent1 As ucOpponent
 End Class

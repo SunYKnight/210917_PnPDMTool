@@ -10,6 +10,9 @@
     <Compile Update="MainWindow.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ucOpponent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ucBattleView.vb">
       <SubType>UserControl</SubType>
     </Compile>
@@ -22,7 +25,13 @@
     <Compile Update="ucMapView.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ucNew.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ucOpponentsView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ucPlayer.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
