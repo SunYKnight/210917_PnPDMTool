@@ -20,6 +20,27 @@ Public Class ucPlayer
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Dim newPlayer As New Player
+
+        newPlayer.name = txtName.Text
+        newPlayer.image = txtImage.Text
+
+        newPlayer.str = CInt(txtStr.Text)
+        newPlayer.dex = CInt(txtDex.Text)
+        newPlayer.con = CInt(txtCon.Text)
+        newPlayer.wis = CInt(txtWis.Text)
+        newPlayer.int = CInt(txtInt.Text)
+        newPlayer.cha = CInt(txtCha.Text)
+
+        newPlayer.ac = CInt(txtAc.Text)
+        newPlayer.hp = CInt(txtHp.Text)
+
+        'write to xml file
+        Dim writer As New System.Xml.Serialization.XmlSerializer(GetType(Player))
+        Dim file As New System.IO.StreamWriter("C:\Projekte\Player" + newPlayer.name + ".xml")
+        writer.Serialize(file, newPlayer)
+        file.Close()
+
         RaiseEvent btnPlayerSaveClicked()
     End Sub
 #End Region

@@ -1,5 +1,5 @@
-﻿Public Class Players
-    'Grundeinstellungen der Players
+﻿Public Class Opponent
+    'Grundeinstellungen der Opponents
 
 #Region "Private Var"
 
@@ -26,5 +26,4 @@
 #Region "Events"
 
 #End Region
-
 End Class
