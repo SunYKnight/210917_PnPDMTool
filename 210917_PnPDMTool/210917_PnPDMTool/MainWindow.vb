@@ -12,11 +12,24 @@ Public Class MainWindow
 #Region "Init"
     Public Sub Init()
         InitializeComponent()
+
+        ' Create User Control elements
+        ucBattleView1 = New UcBattleView()
+        ucOpponentsView1 = New UcOpponentsView()
+        ucCharOverviewLeft1.changeSize(pnlCharOverviewLeft.Size)
+        ucCharOverviewRight1.changeSize(pnlCharOverviewRight.Size)
+        ucMapView1.changeSize(pnlMapView.Size)
+        ucOpponent1.changeSize(pnlMapView.Size)
+        ucPlayer1.changeSize(pnlMapView.Size)
+        ucNewMap1.changeSize(pnlMapView.Size)
     End Sub
 #End Region
 
 #Region "Private Sub"
     Private Sub MainWindow_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+
+
+        ' Handle window size
         If Me.Size.Width < Me.MinimumSize.Width Then
             Me.Size = New Size(Me.MinimumSize.Width, Me.Size.Height)
         End If
@@ -26,15 +39,9 @@ Public Class MainWindow
         End If
         innerSize = New Size(Me.Size.Width - 15, Me.Size.Height - 39)
 
+        ' Update panel size
         changeSizeOfPanels()
-        ucBattleView1.changeSize(pnlBattleView.Size)
-        ucOpponentsView1.changeSize(pnlOpponentsView.Size)
-        ucCharOverviewLeft1.changeSize(pnlCharOverviewLeft.Size)
-        ucCharOverviewRight1.changeSize(pnlCharOverviewRight.Size)
-        ucMapView1.changeSize(pnlMapView.Size)
-        ucOpponent1.changeSize(pnlMapView.Size)
-        ucPlayer1.changeSize(pnlMapView.Size)
-        ucNewMap1.changeSize(pnlMapView.Size)
+
     End Sub
 
     Private Sub changeSizeOfPanels()
@@ -49,6 +56,17 @@ Public Class MainWindow
         pnlCharOverviewLeft.Location = New Point(gapMedium, 2 * gapMedium + pnlBattleView.Height)
         pnlCharOverviewRight.Location = New Point(gapMedium + pnlCharOverviewLeft.Width, gapMedium + gapBig + pnlMapView.Height)
         pnlMapView.Location = New Point(2 * gapMedium + gapBig + 2 * pnlBattleView.Width, gapMedium)
+
+        ' Update panels
+        ucBattleView1.changeSize(pnlBattleView.Size)
+        ucOpponentsView1.changeSize(pnlOpponentsView.Size)
+        ucCharOverviewLeft1.changeSize(pnlCharOverviewLeft.Size)
+        ucCharOverviewRight1.changeSize(pnlCharOverviewRight.Size)
+        ucMapView1.changeSize(pnlMapView.Size)
+        ucOpponent1.changeSize(pnlMapView.Size)
+        ucPlayer1.changeSize(pnlMapView.Size)
+        ucNewMap1.changeSize(pnlMapView.Size)
+
     End Sub
 
     Private Sub showUcMapView()
@@ -150,6 +168,8 @@ Public Class MainWindow
     Private Sub btnMapSaveClickedHandler() Handles ucNewMap1.btnMapSaveClicked
         showUcMapView()
     End Sub
+
+
 #End Region
 
 End Class

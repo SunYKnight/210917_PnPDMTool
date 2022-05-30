@@ -1,6 +1,6 @@
 ﻿Imports _210917_PnPDMTool.C
 
-Public Class ucCharOverviewLeft
+Public Class UcCharOverviewLeft
 #Region "Private Var"
 
 #End Region
@@ -96,6 +96,10 @@ Public Class ucCharOverviewLeft
         Me.txtHPTitle.Location = New Point(Me.txtACTitle.Location.X + gapSmall + Me.txtACTitle.Width, Me.txtACTitle.Location.Y)
         Me.txtHP.Location = New Point(Me.txtHPTitle.Location.X, Me.txtAC.Location.Y)
         Me.TxtHPmax.Location = New Point(Me.txtHPTitle.Location.X, Me.txtHP.Location.Y + 2 * heightTxt1 - heightTxtSmall)
+    End Sub
+
+    Private Sub btnLegendaryActions_Click(sender As Object, e As EventArgs) Handles btnLegendaryActions.Click
+
     End Sub
 #End Region
 

@@ -1,6 +1,6 @@
 ﻿Imports _210917_PnPDMTool.C
 
-Public Class ucNewMap
+Public Class UcNewMap
 #Region "Private Var"
 
 #End Region

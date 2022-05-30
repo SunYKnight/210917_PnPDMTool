@@ -1,6 +1,6 @@
 ﻿Imports _210917_PnPDMTool.C
 
-Public Class ucPlayer
+Public Class UcPlayer
 
 #Region "Private Var"
 
@@ -114,5 +114,6 @@ Public Class ucPlayer
 #Region "Events"
     Public Event btnPlayerDiscardClicked()
     Public Event btnPlayerSaveClicked()
+
 #End Region
 End Class

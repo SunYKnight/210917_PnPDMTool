@@ -57,47 +57,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;ucBattleView1.Name" xml:space="preserve">
-    <value>ucBattleView1</value>
-  </data>
-  <data name="&gt;&gt;ucBattleView1.Type" xml:space="preserve">
-    <value>_210917_PnPDMTool.ucBattleView, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ucBattleView1.Parent" xml:space="preserve">
-    <value>pnlBattleView</value>
-  </data>
-  <data name="&gt;&gt;ucBattleView1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pnlBattleView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="pnlBattleView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 490</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pnlBattleView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pnlBattleView.Name" xml:space="preserve">
-    <value>pnlBattleView</value>
-  </data>
-  <data name="&gt;&gt;pnlBattleView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlBattleView.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlBattleView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="ucBattleView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="ucBattleView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 490</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ucBattleView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
+  <data name="ucBattleView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 817</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ucBattleView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -113,44 +84,38 @@
   <data name="&gt;&gt;ucBattleView1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ucOpponentsView1.Name" xml:space="preserve">
-    <value>ucOpponentsView1</value>
+  <data name="pnlBattleView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 20</value>
   </data>
-  <data name="&gt;&gt;ucOpponentsView1.Type" xml:space="preserve">
-    <value>_210917_PnPDMTool.ucOpponentsView, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
+  <data name="pnlBattleView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
-  <data name="&gt;&gt;ucOpponentsView1.Parent" xml:space="preserve">
-    <value>pnlOpponentsView</value>
+  <data name="pnlBattleView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 817</value>
   </data>
-  <data name="&gt;&gt;ucOpponentsView1.ZOrder" xml:space="preserve">
+  <data name="pnlBattleView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="pnlOpponentsView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 12</value>
+  <data name="&gt;&gt;pnlBattleView.Name" xml:space="preserve">
+    <value>pnlBattleView</value>
   </data>
-  <data name="pnlOpponentsView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 490</value>
-  </data>
-  <data name="pnlOpponentsView.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pnlOpponentsView.Name" xml:space="preserve">
-    <value>pnlOpponentsView</value>
-  </data>
-  <data name="&gt;&gt;pnlOpponentsView.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnlBattleView.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnlOpponentsView.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnlBattleView.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pnlOpponentsView.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;pnlBattleView.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="ucOpponentsView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ucOpponentsView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
+  </data>
   <data name="ucOpponentsView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 490</value>
+    <value>440, 817</value>
   </data>
   <data name="ucOpponentsView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -167,80 +132,38 @@
   <data name="&gt;&gt;ucOpponentsView1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ucMapView1.Name" xml:space="preserve">
-    <value>ucMapView1</value>
+  <data name="pnlOpponentsView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 20</value>
   </data>
-  <data name="&gt;&gt;ucMapView1.Type" xml:space="preserve">
-    <value>_210917_PnPDMTool.ucMapView, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
+  <data name="pnlOpponentsView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
-  <data name="&gt;&gt;ucMapView1.Parent" xml:space="preserve">
-    <value>pnlMapView</value>
+  <data name="pnlOpponentsView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 817</value>
   </data>
-  <data name="&gt;&gt;ucMapView1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ucOpponent1.Name" xml:space="preserve">
-    <value>ucOpponent1</value>
-  </data>
-  <data name="&gt;&gt;ucOpponent1.Type" xml:space="preserve">
-    <value>_210917_PnPDMTool.ucOpponent, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ucOpponent1.Parent" xml:space="preserve">
-    <value>pnlMapView</value>
-  </data>
-  <data name="&gt;&gt;ucOpponent1.ZOrder" xml:space="preserve">
+  <data name="pnlOpponentsView.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;ucPlayer1.Name" xml:space="preserve">
-    <value>ucPlayer1</value>
+  <data name="&gt;&gt;pnlOpponentsView.Name" xml:space="preserve">
+    <value>pnlOpponentsView</value>
   </data>
-  <data name="&gt;&gt;ucPlayer1.Type" xml:space="preserve">
-    <value>_210917_PnPDMTool.ucPlayer, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ucPlayer1.Parent" xml:space="preserve">
-    <value>pnlMapView</value>
-  </data>
-  <data name="&gt;&gt;ucPlayer1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;ucNewMap1.Name" xml:space="preserve">
-    <value>ucNewMap1</value>
-  </data>
-  <data name="&gt;&gt;ucNewMap1.Type" xml:space="preserve">
-    <value>_210917_PnPDMTool.ucNewMap, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ucNewMap1.Parent" xml:space="preserve">
-    <value>pnlMapView</value>
-  </data>
-  <data name="&gt;&gt;ucNewMap1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pnlMapView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>653, 12</value>
-  </data>
-  <data name="pnlMapView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1240, 741</value>
-  </data>
-  <data name="pnlMapView.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnlMapView.Name" xml:space="preserve">
-    <value>pnlMapView</value>
-  </data>
-  <data name="&gt;&gt;pnlMapView.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnlOpponentsView.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnlMapView.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnlOpponentsView.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pnlMapView.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;pnlOpponentsView.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="ucMapView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ucMapView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
+  </data>
   <data name="ucMapView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1240, 741</value>
+    <value>1771, 1235</value>
   </data>
   <data name="ucMapView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -260,8 +183,11 @@
   <data name="ucOpponent1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ucOpponent1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
+  </data>
   <data name="ucOpponent1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1240, 754</value>
+    <value>1771, 1257</value>
   </data>
   <data name="ucOpponent1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -281,8 +207,11 @@
   <data name="ucPlayer1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ucPlayer1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
+  </data>
   <data name="ucPlayer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1240, 741</value>
+    <value>1771, 1235</value>
   </data>
   <data name="ucPlayer1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -302,8 +231,11 @@
   <data name="ucNewMap1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ucNewMap1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
+  </data>
   <data name="ucNewMap1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1240, 754</value>
+    <value>1771, 1257</value>
   </data>
   <data name="ucNewMap1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -320,38 +252,29 @@
   <data name="&gt;&gt;ucNewMap1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;ucCharOverviewLeft1.Name" xml:space="preserve">
-    <value>ucCharOverviewLeft1</value>
+  <data name="pnlMapView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>933, 20</value>
   </data>
-  <data name="&gt;&gt;ucCharOverviewLeft1.Type" xml:space="preserve">
-    <value>_210917_PnPDMTool.ucCharOverviewLeft, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
+  <data name="pnlMapView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
-  <data name="&gt;&gt;ucCharOverviewLeft1.Parent" xml:space="preserve">
-    <value>pnlCharOverviewLeft</value>
+  <data name="pnlMapView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1771, 1235</value>
   </data>
-  <data name="&gt;&gt;ucCharOverviewLeft1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="pnlMapView.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="pnlCharOverviewLeft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 514</value>
+  <data name="&gt;&gt;pnlMapView.Name" xml:space="preserve">
+    <value>pnlMapView</value>
   </data>
-  <data name="pnlCharOverviewLeft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>622, 515</value>
-  </data>
-  <data name="pnlCharOverviewLeft.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pnlCharOverviewLeft.Name" xml:space="preserve">
-    <value>pnlCharOverviewLeft</value>
-  </data>
-  <data name="&gt;&gt;pnlCharOverviewLeft.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnlMapView.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnlCharOverviewLeft.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnlMapView.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pnlCharOverviewLeft.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;pnlMapView.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="ucCharOverviewLeft1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -359,8 +282,11 @@
   <data name="ucCharOverviewLeft1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ucCharOverviewLeft1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
+  </data>
   <data name="ucCharOverviewLeft1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>622, 515</value>
+    <value>1246, 1405</value>
   </data>
   <data name="ucCharOverviewLeft1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -377,44 +303,38 @@
   <data name="&gt;&gt;ucCharOverviewLeft1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ucCharOverviewRight1.Name" xml:space="preserve">
-    <value>ucCharOverviewRight1</value>
+  <data name="pnlCharOverviewLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 857</value>
   </data>
-  <data name="&gt;&gt;ucCharOverviewRight1.Type" xml:space="preserve">
-    <value>_210917_PnPDMTool.ucCharOverviewRight, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
+  <data name="pnlCharOverviewLeft.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
-  <data name="&gt;&gt;ucCharOverviewRight1.Parent" xml:space="preserve">
-    <value>pnlCharOverviewRight</value>
+  <data name="pnlCharOverviewLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>889, 858</value>
   </data>
-  <data name="&gt;&gt;ucCharOverviewRight1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="pnlCharOverviewLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="pnlCharOverviewRight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>634, 772</value>
+  <data name="&gt;&gt;pnlCharOverviewLeft.Name" xml:space="preserve">
+    <value>pnlCharOverviewLeft</value>
   </data>
-  <data name="pnlCharOverviewRight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1259, 257</value>
-  </data>
-  <data name="pnlCharOverviewRight.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pnlCharOverviewRight.Name" xml:space="preserve">
-    <value>pnlCharOverviewRight</value>
-  </data>
-  <data name="&gt;&gt;pnlCharOverviewRight.Type" xml:space="preserve">
+  <data name="&gt;&gt;pnlCharOverviewLeft.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnlCharOverviewRight.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnlCharOverviewLeft.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pnlCharOverviewRight.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;pnlCharOverviewLeft.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="ucCharOverviewRight1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ucCharOverviewRight1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
+  </data>
   <data name="ucCharOverviewRight1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1259, 257</value>
+    <value>1799, 428</value>
   </data>
   <data name="ucCharOverviewRight1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -431,14 +351,38 @@
   <data name="&gt;&gt;ucCharOverviewRight1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="pnlCharOverviewRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>906, 1287</value>
+  </data>
+  <data name="pnlCharOverviewRight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="pnlCharOverviewRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1799, 428</value>
+  </data>
+  <data name="pnlCharOverviewRight.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnlCharOverviewRight.Name" xml:space="preserve">
+    <value>pnlCharOverviewRight</value>
+  </data>
+  <data name="&gt;&gt;pnlCharOverviewRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlCharOverviewRight.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlCharOverviewRight.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
+    <value>10, 25</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1904, 1041</value>
+    <value>2720, 1735</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1282,12 +1226,8 @@
         9Wuc0Ly0tnhHufx/+PgLZ3SOLPEAAAAASUVORK5CYII=
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1918, 1080</value>
+    <value>2731, 1763</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

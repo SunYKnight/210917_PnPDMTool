@@ -1,6 +1,6 @@
 ﻿Imports _210917_PnPDMTool.C
 
-Public Class ucOpponentsView
+Public Class UcOpponentsView
 
 #Region "Private Var"
 #End Region

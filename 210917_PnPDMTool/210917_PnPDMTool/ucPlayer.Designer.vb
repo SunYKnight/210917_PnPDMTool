@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ucPlayer
+Partial Class UcPlayer
     Inherits System.Windows.Forms.UserControl
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -50,9 +50,10 @@ Partial Class ucPlayer
         'lbPlayer
         '
         Me.lbPlayer.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lbPlayer.Location = New System.Drawing.Point(3, 0)
+        Me.lbPlayer.Location = New System.Drawing.Point(4, 0)
+        Me.lbPlayer.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbPlayer.Name = "lbPlayer"
-        Me.lbPlayer.Size = New System.Drawing.Size(73, 40)
+        Me.lbPlayer.Size = New System.Drawing.Size(104, 67)
         Me.lbPlayer.TabIndex = 2
         Me.lbPlayer.Text = "Player"
         Me.lbPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -60,17 +61,19 @@ Partial Class ucPlayer
         'txtAc
         '
         Me.txtAc.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtAc.Location = New System.Drawing.Point(79, 283)
+        Me.txtAc.Location = New System.Drawing.Point(113, 472)
+        Me.txtAc.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtAc.Name = "txtAc"
-        Me.txtAc.Size = New System.Drawing.Size(50, 27)
+        Me.txtAc.Size = New System.Drawing.Size(70, 37)
         Me.txtAc.TabIndex = 29
         '
         'lbAc
         '
         Me.lbAc.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbAc.Location = New System.Drawing.Point(3, 283)
+        Me.lbAc.Location = New System.Drawing.Point(4, 472)
+        Me.lbAc.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbAc.Name = "lbAc"
-        Me.lbAc.Size = New System.Drawing.Size(50, 27)
+        Me.lbAc.Size = New System.Drawing.Size(71, 45)
         Me.lbAc.TabIndex = 28
         Me.lbAc.Text = "AC"
         Me.lbAc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -78,57 +81,64 @@ Partial Class ucPlayer
         'txtCha
         '
         Me.txtCha.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtCha.Location = New System.Drawing.Point(79, 217)
+        Me.txtCha.Location = New System.Drawing.Point(113, 362)
+        Me.txtCha.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCha.Name = "txtCha"
-        Me.txtCha.Size = New System.Drawing.Size(50, 27)
+        Me.txtCha.Size = New System.Drawing.Size(70, 37)
         Me.txtCha.TabIndex = 27
         '
         'txtInt
         '
         Me.txtInt.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtInt.Location = New System.Drawing.Point(79, 184)
+        Me.txtInt.Location = New System.Drawing.Point(113, 307)
+        Me.txtInt.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtInt.Name = "txtInt"
-        Me.txtInt.Size = New System.Drawing.Size(50, 27)
+        Me.txtInt.Size = New System.Drawing.Size(70, 37)
         Me.txtInt.TabIndex = 26
         '
         'txtWis
         '
         Me.txtWis.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtWis.Location = New System.Drawing.Point(79, 151)
+        Me.txtWis.Location = New System.Drawing.Point(113, 252)
+        Me.txtWis.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtWis.Name = "txtWis"
-        Me.txtWis.Size = New System.Drawing.Size(50, 27)
+        Me.txtWis.Size = New System.Drawing.Size(70, 37)
         Me.txtWis.TabIndex = 25
         '
         'txtCon
         '
         Me.txtCon.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtCon.Location = New System.Drawing.Point(79, 118)
+        Me.txtCon.Location = New System.Drawing.Point(113, 197)
+        Me.txtCon.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtCon.Name = "txtCon"
-        Me.txtCon.Size = New System.Drawing.Size(50, 27)
+        Me.txtCon.Size = New System.Drawing.Size(70, 37)
         Me.txtCon.TabIndex = 24
         '
         'txtDex
         '
         Me.txtDex.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtDex.Location = New System.Drawing.Point(79, 85)
+        Me.txtDex.Location = New System.Drawing.Point(113, 142)
+        Me.txtDex.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDex.Name = "txtDex"
-        Me.txtDex.Size = New System.Drawing.Size(50, 27)
+        Me.txtDex.Size = New System.Drawing.Size(70, 37)
         Me.txtDex.TabIndex = 23
         '
         'txtStr
         '
         Me.txtStr.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtStr.Location = New System.Drawing.Point(79, 52)
+        Me.txtStr.Location = New System.Drawing.Point(113, 87)
+        Me.txtStr.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtStr.Name = "txtStr"
-        Me.txtStr.Size = New System.Drawing.Size(50, 27)
+        Me.txtStr.Size = New System.Drawing.Size(70, 37)
         Me.txtStr.TabIndex = 22
         '
         'lbCha
         '
         Me.lbCha.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbCha.Location = New System.Drawing.Point(3, 217)
+        Me.lbCha.Location = New System.Drawing.Point(4, 362)
+        Me.lbCha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbCha.Name = "lbCha"
-        Me.lbCha.Size = New System.Drawing.Size(70, 27)
+        Me.lbCha.Size = New System.Drawing.Size(100, 45)
         Me.lbCha.TabIndex = 21
         Me.lbCha.Text = "CHA"
         Me.lbCha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -136,9 +146,10 @@ Partial Class ucPlayer
         'lbInt
         '
         Me.lbInt.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbInt.Location = New System.Drawing.Point(3, 184)
+        Me.lbInt.Location = New System.Drawing.Point(4, 307)
+        Me.lbInt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbInt.Name = "lbInt"
-        Me.lbInt.Size = New System.Drawing.Size(70, 27)
+        Me.lbInt.Size = New System.Drawing.Size(100, 45)
         Me.lbInt.TabIndex = 20
         Me.lbInt.Text = "INT"
         Me.lbInt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -146,9 +157,10 @@ Partial Class ucPlayer
         'lbWis
         '
         Me.lbWis.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbWis.Location = New System.Drawing.Point(3, 151)
+        Me.lbWis.Location = New System.Drawing.Point(4, 252)
+        Me.lbWis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbWis.Name = "lbWis"
-        Me.lbWis.Size = New System.Drawing.Size(70, 27)
+        Me.lbWis.Size = New System.Drawing.Size(100, 45)
         Me.lbWis.TabIndex = 19
         Me.lbWis.Text = "WIS"
         Me.lbWis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -156,9 +168,10 @@ Partial Class ucPlayer
         'lbCon
         '
         Me.lbCon.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbCon.Location = New System.Drawing.Point(3, 118)
+        Me.lbCon.Location = New System.Drawing.Point(4, 197)
+        Me.lbCon.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbCon.Name = "lbCon"
-        Me.lbCon.Size = New System.Drawing.Size(70, 27)
+        Me.lbCon.Size = New System.Drawing.Size(100, 45)
         Me.lbCon.TabIndex = 18
         Me.lbCon.Text = "CON"
         Me.lbCon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -166,9 +179,10 @@ Partial Class ucPlayer
         'lbDex
         '
         Me.lbDex.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbDex.Location = New System.Drawing.Point(3, 85)
+        Me.lbDex.Location = New System.Drawing.Point(4, 142)
+        Me.lbDex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbDex.Name = "lbDex"
-        Me.lbDex.Size = New System.Drawing.Size(70, 27)
+        Me.lbDex.Size = New System.Drawing.Size(100, 45)
         Me.lbDex.TabIndex = 17
         Me.lbDex.Text = "DEX"
         Me.lbDex.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -176,9 +190,10 @@ Partial Class ucPlayer
         'lbStr
         '
         Me.lbStr.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbStr.Location = New System.Drawing.Point(3, 52)
+        Me.lbStr.Location = New System.Drawing.Point(4, 87)
+        Me.lbStr.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbStr.Name = "lbStr"
-        Me.lbStr.Size = New System.Drawing.Size(70, 27)
+        Me.lbStr.Size = New System.Drawing.Size(100, 45)
         Me.lbStr.TabIndex = 16
         Me.lbStr.Text = "STR"
         Me.lbStr.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -186,19 +201,21 @@ Partial Class ucPlayer
         'txtImage
         '
         Me.txtImage.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtImage.Location = New System.Drawing.Point(266, 89)
+        Me.txtImage.Location = New System.Drawing.Point(380, 148)
+        Me.txtImage.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtImage.Multiline = True
         Me.txtImage.Name = "txtImage"
         Me.txtImage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtImage.Size = New System.Drawing.Size(963, 27)
+        Me.txtImage.Size = New System.Drawing.Size(1374, 42)
         Me.txtImage.TabIndex = 90
         '
         'lbImage
         '
         Me.lbImage.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbImage.Location = New System.Drawing.Point(190, 89)
+        Me.lbImage.Location = New System.Drawing.Point(271, 148)
+        Me.lbImage.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbImage.Name = "lbImage"
-        Me.lbImage.Size = New System.Drawing.Size(70, 27)
+        Me.lbImage.Size = New System.Drawing.Size(100, 45)
         Me.lbImage.TabIndex = 89
         Me.lbImage.Text = "Image:"
         Me.lbImage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -206,17 +223,19 @@ Partial Class ucPlayer
         'txtName
         '
         Me.txtName.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtName.Location = New System.Drawing.Point(266, 56)
+        Me.txtName.Location = New System.Drawing.Point(380, 93)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(963, 27)
+        Me.txtName.Size = New System.Drawing.Size(1374, 37)
         Me.txtName.TabIndex = 88
         '
         'lbName
         '
         Me.lbName.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbName.Location = New System.Drawing.Point(190, 56)
+        Me.lbName.Location = New System.Drawing.Point(271, 93)
+        Me.lbName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbName.Name = "lbName"
-        Me.lbName.Size = New System.Drawing.Size(70, 27)
+        Me.lbName.Size = New System.Drawing.Size(100, 45)
         Me.lbName.TabIndex = 87
         Me.lbName.Text = "Name:"
         Me.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -224,9 +243,10 @@ Partial Class ucPlayer
         'btnDiscard
         '
         Me.btnDiscard.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnDiscard.Location = New System.Drawing.Point(1064, 697)
+        Me.btnDiscard.Location = New System.Drawing.Point(1520, 1162)
+        Me.btnDiscard.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnDiscard.Name = "btnDiscard"
-        Me.btnDiscard.Size = New System.Drawing.Size(75, 30)
+        Me.btnDiscard.Size = New System.Drawing.Size(107, 50)
         Me.btnDiscard.TabIndex = 92
         Me.btnDiscard.Text = "discard"
         Me.btnDiscard.UseVisualStyleBackColor = True
@@ -234,9 +254,10 @@ Partial Class ucPlayer
         'btnSave
         '
         Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnSave.Location = New System.Drawing.Point(1154, 697)
+        Me.btnSave.Location = New System.Drawing.Point(1649, 1162)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(75, 30)
+        Me.btnSave.Size = New System.Drawing.Size(107, 50)
         Me.btnSave.TabIndex = 91
         Me.btnSave.Text = "save"
         Me.btnSave.UseVisualStyleBackColor = True
@@ -244,9 +265,10 @@ Partial Class ucPlayer
         'lbHP
         '
         Me.lbHP.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbHP.Location = New System.Drawing.Point(3, 316)
+        Me.lbHP.Location = New System.Drawing.Point(4, 527)
+        Me.lbHP.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbHP.Name = "lbHP"
-        Me.lbHP.Size = New System.Drawing.Size(50, 27)
+        Me.lbHP.Size = New System.Drawing.Size(71, 45)
         Me.lbHP.TabIndex = 93
         Me.lbHP.Text = "HP"
         Me.lbHP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -254,14 +276,15 @@ Partial Class ucPlayer
         'txtHp
         '
         Me.txtHp.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtHp.Location = New System.Drawing.Point(79, 316)
+        Me.txtHp.Location = New System.Drawing.Point(113, 527)
+        Me.txtHp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtHp.Name = "txtHp"
-        Me.txtHp.Size = New System.Drawing.Size(50, 27)
+        Me.txtHp.Size = New System.Drawing.Size(70, 37)
         Me.txtHp.TabIndex = 94
         '
         'ucPlayer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.txtHp)
         Me.Controls.Add(Me.lbHP)
@@ -286,8 +309,9 @@ Partial Class ucPlayer
         Me.Controls.Add(Me.lbDex)
         Me.Controls.Add(Me.lbStr)
         Me.Controls.Add(Me.lbPlayer)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "ucPlayer"
-        Me.Size = New System.Drawing.Size(1240, 741)
+        Me.Size = New System.Drawing.Size(1771, 1235)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

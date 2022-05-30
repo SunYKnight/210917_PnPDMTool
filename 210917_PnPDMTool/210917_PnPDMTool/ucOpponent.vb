@@ -1,6 +1,6 @@
 ﻿Imports _210917_PnPDMTool.C
 
-Public Class ucOpponent
+Public Class UcOpponent
 
 #Region "Private Var"
 
@@ -231,5 +231,6 @@ Public Class ucOpponent
     Public Event btnOpponentSaveClicked()
     Public Event btnOpponentActionsClicked()
     Public Event btnOpponentLegendaryActionsClicked()
+
 #End Region
 End Class

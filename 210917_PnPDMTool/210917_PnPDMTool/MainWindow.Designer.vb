@@ -24,18 +24,18 @@ Partial Class MainWindow
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainWindow))
         Me.pnlBattleView = New System.Windows.Forms.Panel()
-        Me.ucBattleView1 = New _210917_PnPDMTool.ucBattleView()
+        Me.ucBattleView1 = New _210917_PnPDMTool.UcBattleView()
         Me.pnlOpponentsView = New System.Windows.Forms.Panel()
-        Me.ucOpponentsView1 = New _210917_PnPDMTool.ucOpponentsView()
+        Me.ucOpponentsView1 = New _210917_PnPDMTool.UcOpponentsView()
         Me.pnlMapView = New System.Windows.Forms.Panel()
-        Me.ucMapView1 = New _210917_PnPDMTool.ucMapView()
-        Me.ucOpponent1 = New _210917_PnPDMTool.ucOpponent()
-        Me.ucPlayer1 = New _210917_PnPDMTool.ucPlayer()
-        Me.ucNewMap1 = New _210917_PnPDMTool.ucNewMap()
+        Me.ucMapView1 = New _210917_PnPDMTool.UcMapView()
+        Me.ucOpponent1 = New _210917_PnPDMTool.UcOpponent()
+        Me.ucPlayer1 = New _210917_PnPDMTool.UcPlayer()
+        Me.ucNewMap1 = New _210917_PnPDMTool.UcNewMap()
         Me.pnlCharOverviewLeft = New System.Windows.Forms.Panel()
-        Me.ucCharOverviewLeft1 = New _210917_PnPDMTool.ucCharOverviewLeft()
+        Me.ucCharOverviewLeft1 = New _210917_PnPDMTool.UcCharOverviewLeft()
         Me.pnlCharOverviewRight = New System.Windows.Forms.Panel()
-        Me.ucCharOverviewRight1 = New _210917_PnPDMTool.ucCharOverviewRight()
+        Me.ucCharOverviewRight1 = New _210917_PnPDMTool.UcCharOverviewRight()
         Me.pnlBattleView.SuspendLayout()
         Me.pnlOpponentsView.SuspendLayout()
         Me.pnlMapView.SuspendLayout()
@@ -153,12 +153,12 @@ Partial Class MainWindow
     Friend WithEvents pnlMapView As Panel
     Friend WithEvents pnlCharOverviewLeft As Panel
     Friend WithEvents pnlCharOverviewRight As Panel
-    Friend WithEvents ucBattleView1 As ucBattleView
-    Friend WithEvents ucOpponentsView1 As ucOpponentsView
-    Friend WithEvents ucCharOverviewLeft1 As ucCharOverviewLeft
-    Friend WithEvents ucMapView1 As ucMapView
-    Friend WithEvents ucCharOverviewRight1 As ucCharOverviewRight
-    Friend WithEvents ucPlayer1 As ucPlayer
-    Friend WithEvents ucOpponent1 As ucOpponent
-    Friend WithEvents ucNewMap1 As ucNewMap
+    Friend WithEvents ucBattleView1 As UcBattleView
+    Friend WithEvents ucOpponentsView1 As UcOpponentsView
+    Friend WithEvents ucCharOverviewLeft1 As UcCharOverviewLeft
+    Friend WithEvents ucMapView1 As UcMapView
+    Friend WithEvents ucCharOverviewRight1 As UcCharOverviewRight
+    Friend WithEvents ucPlayer1 As UcPlayer
+    Friend WithEvents ucOpponent1 As UcOpponent
+    Friend WithEvents ucNewMap1 As UcNewMap
 End Class

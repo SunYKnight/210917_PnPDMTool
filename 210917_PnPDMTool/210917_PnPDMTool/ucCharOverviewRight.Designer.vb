@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ucCharOverviewRight
+Partial Class UcCharOverviewRight
     Inherits System.Windows.Forms.UserControl
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -30,34 +30,37 @@ Partial Class ucCharOverviewRight
         '
         Me.txtInfo2.BackColor = System.Drawing.Color.White
         Me.txtInfo2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtInfo2.Location = New System.Drawing.Point(14, 14)
+        Me.txtInfo2.Location = New System.Drawing.Point(20, 23)
+        Me.txtInfo2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtInfo2.Multiline = True
         Me.txtInfo2.Name = "txtInfo2"
         Me.txtInfo2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo2.Size = New System.Drawing.Size(600, 227)
+        Me.txtInfo2.Size = New System.Drawing.Size(857, 378)
         Me.txtInfo2.TabIndex = 0
         '
         'txtInfo3
         '
         Me.txtInfo3.BackColor = System.Drawing.Color.White
         Me.txtInfo3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtInfo3.Location = New System.Drawing.Point(640, 14)
+        Me.txtInfo3.Location = New System.Drawing.Point(914, 23)
+        Me.txtInfo3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtInfo3.Multiline = True
         Me.txtInfo3.Name = "txtInfo3"
         Me.txtInfo3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtInfo3.Size = New System.Drawing.Size(600, 227)
+        Me.txtInfo3.Size = New System.Drawing.Size(857, 378)
         Me.txtInfo3.TabIndex = 1
         '
         'ucCharOverviewRight
         '
         Me.AllowDrop = True
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Controls.Add(Me.txtInfo3)
         Me.Controls.Add(Me.txtInfo2)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "ucCharOverviewRight"
-        Me.Size = New System.Drawing.Size(1259, 257)
+        Me.Size = New System.Drawing.Size(1799, 428)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

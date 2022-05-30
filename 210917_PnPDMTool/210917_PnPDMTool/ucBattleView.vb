@@ -1,6 +1,6 @@
 ﻿Imports _210917_PnPDMTool.C
 
-Public Class ucBattleView
+Public Class UcBattleView
 #Region "Private Var"
 #End Region
 

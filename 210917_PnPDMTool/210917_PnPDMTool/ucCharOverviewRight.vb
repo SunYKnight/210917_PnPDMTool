@@ -1,6 +1,6 @@
 ﻿Imports _210917_PnPDMTool.C
 
-Public Class ucCharOverviewRight
+Public Class UcCharOverviewRight
 #Region "Private Var"
 
 #End Region
@@ -27,6 +27,7 @@ Public Class ucCharOverviewRight
         Me.txtInfo2.Location = New Point(0, gapSmall)
         Me.txtInfo3.Location = New Point(Me.txtInfo2.Width + gapSmall, gapSmall)
     End Sub
+
 #End Region
 
 #Region "Events"

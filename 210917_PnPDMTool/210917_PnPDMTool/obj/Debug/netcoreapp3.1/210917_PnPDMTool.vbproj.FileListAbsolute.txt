@@ -37,3 +37,12 @@ C:\Projekte\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\
 C:\Projekte\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucOpponent.resources
 C:\Projekte\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucPlayer.resources
 C:\Projekte\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucNewMap.resources
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.vbproj.AssemblyReference.cache
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucBattleView.resources
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucCharOverviewLeft.resources
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucCharOverviewRight.resources
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucMapView.resources
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucNewMap.resources
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucOpponent.resources
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucOpponentsView.resources
+C:\Projekte\Privat\GitHub\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucPlayer.resources
