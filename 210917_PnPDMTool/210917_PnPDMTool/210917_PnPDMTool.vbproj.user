@@ -10,28 +10,28 @@
     <Compile Update="MainWindow.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ucNewMap.vb">
+    <Compile Update="UcNewMap.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ucOpponent.vb">
+    <Compile Update="UcOpponent.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ucBattleView.vb">
+    <Compile Update="UcBattleView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ucCharOverviewLeft.vb">
+    <Compile Update="UcCharOverviewLeft.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ucCharOverviewRight.vb">
+    <Compile Update="UcCharOverviewRight.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ucMapView.vb">
+    <Compile Update="UcMapView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ucOpponentsView.vb">
+    <Compile Update="UcOpponentsView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ucPlayer.vb">
+    <Compile Update="UcPlayer.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

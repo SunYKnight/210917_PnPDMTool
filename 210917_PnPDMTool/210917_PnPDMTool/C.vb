@@ -14,4 +14,32 @@
     Public widthTxtSmall As Int32 = 50
     Public widthTxtMedium As Int32 = 70
     Public widthTxtBig As Int32 = 170
+
+
+#Region "Enum"
+
+    Enum eDmgType
+        Bludgeoning
+        Piercing
+        Slashing
+        Acid
+        Poison
+        Fire
+        Cold
+        Force
+        Lightning
+        Thunder
+        Necrotic
+        Psychic
+        Radiant
+        Count
+    End Enum
+
+    Enum eDmgTypeModifier
+        Normal = 1
+        Vulnerable = 2
+        Resistant = 0.5
+        Immune = 0
+    End Enum
+#End Region
 End Module

@@ -1,7 +1,11 @@
-﻿Public Class Player
+﻿Imports _210917_PnPDMTool.C
+
+Public Class Player
     'Grundeinstellungen der Players
 
 #Region "Private Var"
+
+    Private dmgRecvModifierType(C.eDmgType.Count) As C.eDmgTypeModifier
 #End Region
 
 #Region "Properties"
@@ -15,6 +19,7 @@
     Public Property cha As Int32
     Public Property ac As Int32
     Public Property hp As Int32
+
 #End Region
 
 #Region "Init"
