@@ -29,19 +29,19 @@ Public Class UcOpponentsView
     Public Sub changeSize(newSize As Size)
         Me.Size = newSize
 
-        Me.lbOpponents.Size = New Size(Me.Width, heightTitle)
-        Me.listViewOpponents.Size = New Size(Me.Width - 2 * gapSmall, Me.Height - 3 * gapSmall - 2 * heightButtons - heightTitle)
+        Me.lbOpponents.Size = New Size(Me.Width, HEIGHT_TITLE)
+        Me.listViewOpponents.Size = New Size(Me.Width - 2 * GAP_SMALL, Me.Height - 3 * GAP_SMALL - 2 * HEIGHT_BUTTON - HEIGHT_TITLE)
 
-        Me.btnNewOpponent.Size = New Size(CInt((Me.Width - 3 * gapSmall) / 2), heightButtons)
-        Me.btnEditOpponent.Size = New Size(Me.Width - 3 * gapSmall - Me.btnNewOpponent.Width, heightButtons)
-        Me.btnAddToBattle.Size = New Size(Me.Width - 2 * gapSmall, heightButtons)
+        Me.btnNewOpponent.Size = New Size(CInt((Me.Width - 3 * GAP_SMALL) / 2), HEIGHT_BUTTON)
+        Me.btnEditOpponent.Size = New Size(Me.Width - 3 * GAP_SMALL - Me.btnNewOpponent.Width, HEIGHT_BUTTON)
+        Me.btnAddToBattle.Size = New Size(Me.Width - 2 * GAP_SMALL, HEIGHT_BUTTON)
 
         Me.lbOpponents.Location = New Point(0, 0)
-        Me.listViewOpponents.Location = New Point(gapSmall, heightTitle)
+        Me.listViewOpponents.Location = New Point(GAP_SMALL, HEIGHT_TITLE)
 
-        Me.btnNewOpponent.Location = New Point(gapSmall, Me.Height - 2 * gapSmall - 2 * heightButtons)
-        Me.btnEditOpponent.Location = New Point(2 * gapSmall + Me.btnNewOpponent.Width, Me.btnNewOpponent.Location.Y)
-        Me.btnAddToBattle.Location = New Point(gapSmall, Me.Height - gapSmall - heightButtons)
+        Me.btnNewOpponent.Location = New Point(GAP_SMALL, Me.Height - 2 * GAP_SMALL - 2 * HEIGHT_BUTTON)
+        Me.btnEditOpponent.Location = New Point(2 * GAP_SMALL + Me.btnNewOpponent.Width, Me.btnNewOpponent.Location.Y)
+        Me.btnAddToBattle.Location = New Point(GAP_SMALL, Me.Height - GAP_SMALL - HEIGHT_BUTTON)
     End Sub
 #End Region
 

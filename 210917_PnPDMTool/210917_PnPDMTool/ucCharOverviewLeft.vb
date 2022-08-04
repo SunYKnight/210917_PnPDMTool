@@ -21,18 +21,18 @@ Public Class UcCharOverviewLeft
     Public Sub changeSize(newSize As Size)
         Me.Size = newSize
 
-        Me.lbName.Size = New Size(newSize.Width - gapSmall, heightTitle)
-        Me.btnActions.Size = New Size(CInt((newSize.Width - 3 * gapSmall) * 3 / 10), heightButtons)
+        Me.lbName.Size = New Size(newSize.Width - GAP_SMALL, HEIGHT_TITLE)
+        Me.btnActions.Size = New Size(CInt((newSize.Width - 3 * GAP_SMALL) * 3 / 10), HEIGHT_BUTTON)
         Me.btnLegendaryActions.Size = Me.btnActions.Size
 
-        Me.txtAbilitiesTitle.Size = New Size(Me.btnActions.Width, heightSubTitle)
-        Me.txtAbilities.Size = New Size(CInt(Me.txtAbilitiesTitle.Width / 3), heightTxt6)
+        Me.txtAbilitiesTitle.Size = New Size(Me.btnActions.Width, HEIGHT_SUBTITLE)
+        Me.txtAbilities.Size = New Size(CInt(Me.txtAbilitiesTitle.Width / 3), HEIGHT_TEXT_6)
         Me.txtAbilitiesModifier.Size = Me.txtAbilities.Size
         Me.txtAbilitiesScore.Size = New Size(Me.txtAbilitiesTitle.Width - 2 * Me.txtAbilities.Width, Me.txtAbilities.Height)
 
-        Me.pictureBoxChar.Size = New Size(Me.btnActions.Width, newSize.Height - 4 * gapSmall - 2 * heightButtons - heightTxt6 - heightSubTitle - heightTitle)
+        Me.pictureBoxChar.Size = New Size(Me.btnActions.Width, newSize.Height - 4 * GAP_SMALL - 2 * HEIGHT_BUTTON - HEIGHT_TEXT_6 - HEIGHT_SUBTITLE - HEIGHT_TITLE)
 
-        Me.txtMPLv1.Size = New Size(CInt((newSize.Width - 4 * gapSmall) / 18), heightTxt1)
+        Me.txtMPLv1.Size = New Size(CInt((newSize.Width - 4 * GAP_SMALL) / 18), HEIGHT_TEXT_1)
         Me.txtMPLv2.Size = Me.txtMPLv1.Size
         Me.txtMPLv3.Size = Me.txtMPLv1.Size
         Me.txtMPLv4.Size = Me.txtMPLv1.Size
@@ -50,28 +50,28 @@ Public Class UcCharOverviewLeft
         Me.txtMPLv7Title.Size = Me.txtMPLv1.Size
         Me.txtMPLv8Title.Size = Me.txtMPLv1.Size
         Me.txtMPLv9Title.Size = Me.txtMPLv1.Size
-        Me.txtMPTitle.Size = New Size(Me.txtMPLv1Title.Width * 9, heightSubTitle)
+        Me.txtMPTitle.Size = New Size(Me.txtMPLv1Title.Width * 9, HEIGHT_SUBTITLE)
 
-        Me.txtInfo1.Size = New Size(newSize.Width - Me.btnActions.Width - 3 * gapSmall, newSize.Height - heightTitle - 2 * gapSmall - 2 * heightTxt1 - heightSubTitle)
+        Me.txtInfo1.Size = New Size(newSize.Width - Me.btnActions.Width - 3 * GAP_SMALL, newSize.Height - HEIGHT_TITLE - 2 * GAP_SMALL - 2 * HEIGHT_TEXT_1 - HEIGHT_SUBTITLE)
 
-        Me.txtHPTitle.Size = New Size(CInt((Me.txtInfo1.Width - Me.txtMPTitle.Width - 2 * gapSmall) / 2), heightSubTitle)
-        Me.txtHP.Size = New Size(Me.txtHPTitle.Width, 2 * heightTxt1)
-        Me.TxtHPmax.Size = New Size(Me.txtHPTitle.Width, heightTxtSmall)
-        Me.txtACTitle.Size = New Size(Me.txtInfo1.Width - Me.txtMPTitle.Width - Me.txtHPTitle.Width - 2 * gapSmall, 2 * heightTxt1)
-        Me.txtAC.Size = New Size(Me.txtACTitle.Width, 2 * heightTxt1)
+        Me.txtHPTitle.Size = New Size(CInt((Me.txtInfo1.Width - Me.txtMPTitle.Width - 2 * GAP_SMALL) / 2), HEIGHT_SUBTITLE)
+        Me.txtHP.Size = New Size(Me.txtHPTitle.Width, 2 * HEIGHT_TEXT_1)
+        Me.TxtHPmax.Size = New Size(Me.txtHPTitle.Width, HEIGHT_TEXT_SMALL)
+        Me.txtACTitle.Size = New Size(Me.txtInfo1.Width - Me.txtMPTitle.Width - Me.txtHPTitle.Width - 2 * GAP_SMALL, 2 * HEIGHT_TEXT_1)
+        Me.txtAC.Size = New Size(Me.txtACTitle.Width, 2 * HEIGHT_TEXT_1)
 
-        Me.lbName.Location = New Point(gapSmall, 0)
-        Me.pictureBoxChar.Location = New Point(gapSmall, heightTitle)
-        Me.txtAbilitiesTitle.Location = New Point(gapSmall, heightTitle + Me.pictureBoxChar.Height + gapSmall)
-        Me.txtAbilities.Location = New Point(gapSmall, Me.txtAbilitiesTitle.Location.Y + heightSubTitle)
-        Me.txtAbilitiesScore.Location = New Point(gapSmall + Me.txtAbilities.Width, Me.txtAbilities.Location.Y)
+        Me.lbName.Location = New Point(GAP_SMALL, 0)
+        Me.pictureBoxChar.Location = New Point(GAP_SMALL, HEIGHT_TITLE)
+        Me.txtAbilitiesTitle.Location = New Point(GAP_SMALL, HEIGHT_TITLE + Me.pictureBoxChar.Height + GAP_SMALL)
+        Me.txtAbilities.Location = New Point(GAP_SMALL, Me.txtAbilitiesTitle.Location.Y + HEIGHT_SUBTITLE)
+        Me.txtAbilitiesScore.Location = New Point(GAP_SMALL + Me.txtAbilities.Width, Me.txtAbilities.Location.Y)
         Me.txtAbilitiesModifier.Location = New Point(Me.txtAbilitiesScore.Location.X + Me.txtAbilitiesScore.Width, Me.txtAbilities.Location.Y)
-        Me.btnActions.Location = New Point(gapSmall, newSize.Height - 2 * gapSmall - 2 * heightButtons)
-        Me.btnLegendaryActions.Location = New Point(gapSmall, newSize.Height - gapSmall - heightButtons)
-        Me.txtInfo1.Location = New Point(2 * gapSmall + Me.pictureBoxChar.Width, newSize.Height - gapSmall - Me.txtInfo1.Height)
+        Me.btnActions.Location = New Point(GAP_SMALL, newSize.Height - 2 * GAP_SMALL - 2 * HEIGHT_BUTTON)
+        Me.btnLegendaryActions.Location = New Point(GAP_SMALL, newSize.Height - GAP_SMALL - HEIGHT_BUTTON)
+        Me.txtInfo1.Location = New Point(2 * GAP_SMALL + Me.pictureBoxChar.Width, newSize.Height - GAP_SMALL - Me.txtInfo1.Height)
 
-        Me.txtMPTitle.Location = New Point(2 * gapSmall + Me.pictureBoxChar.Width, heightTitle)
-        Me.txtMPLv1Title.Location = New Point(Me.txtMPTitle.Location.X, Me.txtMPTitle.Location.Y + heightSubTitle)
+        Me.txtMPTitle.Location = New Point(2 * GAP_SMALL + Me.pictureBoxChar.Width, HEIGHT_TITLE)
+        Me.txtMPLv1Title.Location = New Point(Me.txtMPTitle.Location.X, Me.txtMPTitle.Location.Y + HEIGHT_SUBTITLE)
         Me.txtMPLv2Title.Location = New Point(Me.txtMPTitle.Location.X + Me.txtMPLv1.Width, Me.txtMPLv1Title.Location.Y)
         Me.txtMPLv3Title.Location = New Point(Me.txtMPTitle.Location.X + 2 * Me.txtMPLv1.Width, Me.txtMPLv1Title.Location.Y)
         Me.txtMPLv4Title.Location = New Point(Me.txtMPTitle.Location.X + 3 * Me.txtMPLv1.Width, Me.txtMPLv1Title.Location.Y)
@@ -80,7 +80,7 @@ Public Class UcCharOverviewLeft
         Me.txtMPLv7Title.Location = New Point(Me.txtMPTitle.Location.X + 6 * Me.txtMPLv1.Width, Me.txtMPLv1Title.Location.Y)
         Me.txtMPLv8Title.Location = New Point(Me.txtMPTitle.Location.X + 7 * Me.txtMPLv1.Width, Me.txtMPLv1Title.Location.Y)
         Me.txtMPLv9Title.Location = New Point(Me.txtMPTitle.Location.X + 8 * Me.txtMPLv1.Width, Me.txtMPLv1Title.Location.Y)
-        Me.txtMPLv1.Location = New Point(Me.txtMPLv1Title.Location.X, Me.txtMPLv1Title.Location.Y + heightTxt1)
+        Me.txtMPLv1.Location = New Point(Me.txtMPLv1Title.Location.X, Me.txtMPLv1Title.Location.Y + HEIGHT_TEXT_1)
         Me.txtMPLv2.Location = New Point(Me.txtMPLv2Title.Location.X, Me.txtMPLv1.Location.Y)
         Me.txtMPLv3.Location = New Point(Me.txtMPLv3Title.Location.X, Me.txtMPLv1.Location.Y)
         Me.txtMPLv4.Location = New Point(Me.txtMPLv4Title.Location.X, Me.txtMPLv1.Location.Y)
@@ -90,12 +90,12 @@ Public Class UcCharOverviewLeft
         Me.txtMPLv8.Location = New Point(Me.txtMPLv8Title.Location.X, Me.txtMPLv1.Location.Y)
         Me.txtMPLv9.Location = New Point(Me.txtMPLv9Title.Location.X, Me.txtMPLv1.Location.Y)
 
-        Me.txtACTitle.Location = New Point(3 * gapSmall + Me.pictureBoxChar.Width + Me.txtMPTitle.Width, heightTitle)
-        Me.txtAC.Location = New Point(Me.txtACTitle.Location.X, Me.txtACTitle.Height + heightSubTitle)
+        Me.txtACTitle.Location = New Point(3 * GAP_SMALL + Me.pictureBoxChar.Width + Me.txtMPTitle.Width, HEIGHT_TITLE)
+        Me.txtAC.Location = New Point(Me.txtACTitle.Location.X, Me.txtACTitle.Height + HEIGHT_SUBTITLE)
 
-        Me.txtHPTitle.Location = New Point(Me.txtACTitle.Location.X + gapSmall + Me.txtACTitle.Width, Me.txtACTitle.Location.Y)
+        Me.txtHPTitle.Location = New Point(Me.txtACTitle.Location.X + GAP_SMALL + Me.txtACTitle.Width, Me.txtACTitle.Location.Y)
         Me.txtHP.Location = New Point(Me.txtHPTitle.Location.X, Me.txtAC.Location.Y)
-        Me.TxtHPmax.Location = New Point(Me.txtHPTitle.Location.X, Me.txtHP.Location.Y + 2 * heightTxt1 - heightTxtSmall)
+        Me.TxtHPmax.Location = New Point(Me.txtHPTitle.Location.X, Me.txtHP.Location.Y + 2 * HEIGHT_TEXT_1 - HEIGHT_TEXT_SMALL)
     End Sub
 
     Private Sub btnLegendaryActions_Click(sender As Object, e As EventArgs) Handles btnLegendaryActions.Click

@@ -79,7 +79,6 @@ Partial Class UcOpponent
         Me.lbConditionResistance = New System.Windows.Forms.Label()
         Me.lbLegendaryResistance = New System.Windows.Forms.Label()
         Me.lbMagicResistance = New System.Windows.Forms.Label()
-        Me.lbOthers = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnDiscard = New System.Windows.Forms.Button()
         Me.txtName = New System.Windows.Forms.TextBox()
@@ -106,6 +105,7 @@ Partial Class UcOpponent
         Me.txtEnvironment = New System.Windows.Forms.TextBox()
         Me.lbImage = New System.Windows.Forms.Label()
         Me.txtImage = New System.Windows.Forms.TextBox()
+        Me.lbOthers = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lbOpponent
@@ -535,7 +535,7 @@ Partial Class UcOpponent
         'lbSavingThrows
         '
         Me.lbSavingThrows.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbSavingThrows.Location = New System.Drawing.Point(271, 340)
+        Me.lbSavingThrows.Location = New System.Drawing.Point(529, 340)
         Me.lbSavingThrows.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbSavingThrows.Name = "lbSavingThrows"
         Me.lbSavingThrows.Size = New System.Drawing.Size(243, 45)
@@ -546,7 +546,7 @@ Partial Class UcOpponent
         'lbProficiency
         '
         Me.lbProficiency.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbProficiency.Location = New System.Drawing.Point(271, 395)
+        Me.lbProficiency.Location = New System.Drawing.Point(529, 395)
         Me.lbProficiency.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbProficiency.Name = "lbProficiency"
         Me.lbProficiency.Size = New System.Drawing.Size(243, 45)
@@ -557,7 +557,7 @@ Partial Class UcOpponent
         'lbSkills
         '
         Me.lbSkills.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbSkills.Location = New System.Drawing.Point(271, 450)
+        Me.lbSkills.Location = New System.Drawing.Point(529, 450)
         Me.lbSkills.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbSkills.Name = "lbSkills"
         Me.lbSkills.Size = New System.Drawing.Size(243, 45)
@@ -568,7 +568,7 @@ Partial Class UcOpponent
         'lbSenses
         '
         Me.lbSenses.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbSenses.Location = New System.Drawing.Point(271, 505)
+        Me.lbSenses.Location = New System.Drawing.Point(529, 505)
         Me.lbSenses.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbSenses.Name = "lbSenses"
         Me.lbSenses.Size = New System.Drawing.Size(243, 45)
@@ -579,10 +579,10 @@ Partial Class UcOpponent
         'lbLanguages
         '
         Me.lbLanguages.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLanguages.Location = New System.Drawing.Point(271, 560)
+        Me.lbLanguages.Location = New System.Drawing.Point(529, 557)
         Me.lbLanguages.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLanguages.Name = "lbLanguages"
-        Me.lbLanguages.Size = New System.Drawing.Size(243, 45)
+        Me.lbLanguages.Size = New System.Drawing.Size(190, 45)
         Me.lbLanguages.TabIndex = 49
         Me.lbLanguages.Text = "Languages:"
         Me.lbLanguages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -590,7 +590,7 @@ Partial Class UcOpponent
         'lbChallenge
         '
         Me.lbChallenge.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbChallenge.Location = New System.Drawing.Point(271, 615)
+        Me.lbChallenge.Location = New System.Drawing.Point(529, 615)
         Me.lbChallenge.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbChallenge.Name = "lbChallenge"
         Me.lbChallenge.Size = New System.Drawing.Size(243, 45)
@@ -601,7 +601,7 @@ Partial Class UcOpponent
         'lbSpeed
         '
         Me.lbSpeed.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbSpeed.Location = New System.Drawing.Point(271, 670)
+        Me.lbSpeed.Location = New System.Drawing.Point(529, 670)
         Me.lbSpeed.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbSpeed.Name = "lbSpeed"
         Me.lbSpeed.Size = New System.Drawing.Size(243, 45)
@@ -612,7 +612,7 @@ Partial Class UcOpponent
         'lbEffects
         '
         Me.lbEffects.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbEffects.Location = New System.Drawing.Point(271, 725)
+        Me.lbEffects.Location = New System.Drawing.Point(529, 725)
         Me.lbEffects.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbEffects.Name = "lbEffects"
         Me.lbEffects.Size = New System.Drawing.Size(243, 45)
@@ -623,7 +623,7 @@ Partial Class UcOpponent
         'lbDamageImmunities
         '
         Me.lbDamageImmunities.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbDamageImmunities.Location = New System.Drawing.Point(271, 787)
+        Me.lbDamageImmunities.Location = New System.Drawing.Point(529, 787)
         Me.lbDamageImmunities.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbDamageImmunities.Name = "lbDamageImmunities"
         Me.lbDamageImmunities.Size = New System.Drawing.Size(243, 45)
@@ -634,7 +634,7 @@ Partial Class UcOpponent
         'lbDamageResistance
         '
         Me.lbDamageResistance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbDamageResistance.Location = New System.Drawing.Point(271, 842)
+        Me.lbDamageResistance.Location = New System.Drawing.Point(529, 842)
         Me.lbDamageResistance.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbDamageResistance.Name = "lbDamageResistance"
         Me.lbDamageResistance.Size = New System.Drawing.Size(243, 45)
@@ -645,7 +645,7 @@ Partial Class UcOpponent
         'lbDamageVulnerabilities
         '
         Me.lbDamageVulnerabilities.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbDamageVulnerabilities.Location = New System.Drawing.Point(271, 897)
+        Me.lbDamageVulnerabilities.Location = New System.Drawing.Point(529, 897)
         Me.lbDamageVulnerabilities.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbDamageVulnerabilities.Name = "lbDamageVulnerabilities"
         Me.lbDamageVulnerabilities.Size = New System.Drawing.Size(243, 45)
@@ -656,7 +656,7 @@ Partial Class UcOpponent
         'lbConditionImmunities
         '
         Me.lbConditionImmunities.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbConditionImmunities.Location = New System.Drawing.Point(271, 952)
+        Me.lbConditionImmunities.Location = New System.Drawing.Point(529, 952)
         Me.lbConditionImmunities.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbConditionImmunities.Name = "lbConditionImmunities"
         Me.lbConditionImmunities.Size = New System.Drawing.Size(243, 45)
@@ -667,7 +667,7 @@ Partial Class UcOpponent
         'lbConditionResistance
         '
         Me.lbConditionResistance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbConditionResistance.Location = New System.Drawing.Point(271, 1007)
+        Me.lbConditionResistance.Location = New System.Drawing.Point(529, 1007)
         Me.lbConditionResistance.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbConditionResistance.Name = "lbConditionResistance"
         Me.lbConditionResistance.Size = New System.Drawing.Size(243, 45)
@@ -678,7 +678,7 @@ Partial Class UcOpponent
         'lbLegendaryResistance
         '
         Me.lbLegendaryResistance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLegendaryResistance.Location = New System.Drawing.Point(271, 1065)
+        Me.lbLegendaryResistance.Location = New System.Drawing.Point(529, 1065)
         Me.lbLegendaryResistance.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLegendaryResistance.Name = "lbLegendaryResistance"
         Me.lbLegendaryResistance.Size = New System.Drawing.Size(243, 45)
@@ -689,24 +689,13 @@ Partial Class UcOpponent
         'lbMagicResistance
         '
         Me.lbMagicResistance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbMagicResistance.Location = New System.Drawing.Point(271, 1120)
+        Me.lbMagicResistance.Location = New System.Drawing.Point(529, 1120)
         Me.lbMagicResistance.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbMagicResistance.Name = "lbMagicResistance"
         Me.lbMagicResistance.Size = New System.Drawing.Size(243, 45)
         Me.lbMagicResistance.TabIndex = 59
         Me.lbMagicResistance.Text = "Magic Resistance:"
         Me.lbMagicResistance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lbOthers
-        '
-        Me.lbOthers.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbOthers.Location = New System.Drawing.Point(271, 1175)
-        Me.lbOthers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbOthers.Name = "lbOthers"
-        Me.lbOthers.Size = New System.Drawing.Size(243, 45)
-        Me.lbOthers.TabIndex = 60
-        Me.lbOthers.Text = "others:"
-        Me.lbOthers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnSave
         '
@@ -742,177 +731,177 @@ Partial Class UcOpponent
         'txtSavingThrows
         '
         Me.txtSavingThrows.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtSavingThrows.Location = New System.Drawing.Point(523, 340)
+        Me.txtSavingThrows.Location = New System.Drawing.Point(780, 340)
         Me.txtSavingThrows.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSavingThrows.Multiline = True
         Me.txtSavingThrows.Name = "txtSavingThrows"
         Me.txtSavingThrows.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtSavingThrows.Size = New System.Drawing.Size(1243, 42)
+        Me.txtSavingThrows.Size = New System.Drawing.Size(986, 42)
         Me.txtSavingThrows.TabIndex = 64
         '
         'txtProficiency
         '
         Me.txtProficiency.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtProficiency.Location = New System.Drawing.Point(523, 395)
+        Me.txtProficiency.Location = New System.Drawing.Point(780, 395)
         Me.txtProficiency.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtProficiency.Multiline = True
         Me.txtProficiency.Name = "txtProficiency"
         Me.txtProficiency.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtProficiency.Size = New System.Drawing.Size(1243, 42)
+        Me.txtProficiency.Size = New System.Drawing.Size(986, 42)
         Me.txtProficiency.TabIndex = 65
         '
         'txtSkills
         '
         Me.txtSkills.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtSkills.Location = New System.Drawing.Point(523, 450)
+        Me.txtSkills.Location = New System.Drawing.Point(780, 450)
         Me.txtSkills.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSkills.Multiline = True
         Me.txtSkills.Name = "txtSkills"
         Me.txtSkills.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtSkills.Size = New System.Drawing.Size(1243, 42)
+        Me.txtSkills.Size = New System.Drawing.Size(986, 42)
         Me.txtSkills.TabIndex = 66
         '
         'txtSenses
         '
         Me.txtSenses.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtSenses.Location = New System.Drawing.Point(523, 505)
+        Me.txtSenses.Location = New System.Drawing.Point(780, 505)
         Me.txtSenses.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSenses.Multiline = True
         Me.txtSenses.Name = "txtSenses"
         Me.txtSenses.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtSenses.Size = New System.Drawing.Size(1243, 42)
+        Me.txtSenses.Size = New System.Drawing.Size(986, 42)
         Me.txtSenses.TabIndex = 67
         '
         'txtLanguages
         '
         Me.txtLanguages.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLanguages.Location = New System.Drawing.Point(523, 560)
+        Me.txtLanguages.Location = New System.Drawing.Point(780, 560)
         Me.txtLanguages.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLanguages.Multiline = True
         Me.txtLanguages.Name = "txtLanguages"
         Me.txtLanguages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtLanguages.Size = New System.Drawing.Size(1243, 42)
+        Me.txtLanguages.Size = New System.Drawing.Size(986, 42)
         Me.txtLanguages.TabIndex = 68
         '
         'txtChallenge
         '
         Me.txtChallenge.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtChallenge.Location = New System.Drawing.Point(523, 615)
+        Me.txtChallenge.Location = New System.Drawing.Point(780, 615)
         Me.txtChallenge.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtChallenge.Multiline = True
         Me.txtChallenge.Name = "txtChallenge"
         Me.txtChallenge.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtChallenge.Size = New System.Drawing.Size(1243, 42)
+        Me.txtChallenge.Size = New System.Drawing.Size(986, 42)
         Me.txtChallenge.TabIndex = 69
         '
         'txtSpeed
         '
         Me.txtSpeed.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtSpeed.Location = New System.Drawing.Point(523, 670)
+        Me.txtSpeed.Location = New System.Drawing.Point(780, 670)
         Me.txtSpeed.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSpeed.Multiline = True
         Me.txtSpeed.Name = "txtSpeed"
         Me.txtSpeed.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtSpeed.Size = New System.Drawing.Size(1243, 42)
+        Me.txtSpeed.Size = New System.Drawing.Size(986, 42)
         Me.txtSpeed.TabIndex = 70
         '
         'txtEffects
         '
         Me.txtEffects.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtEffects.Location = New System.Drawing.Point(523, 725)
+        Me.txtEffects.Location = New System.Drawing.Point(780, 725)
         Me.txtEffects.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtEffects.Multiline = True
         Me.txtEffects.Name = "txtEffects"
         Me.txtEffects.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtEffects.Size = New System.Drawing.Size(1243, 42)
+        Me.txtEffects.Size = New System.Drawing.Size(986, 42)
         Me.txtEffects.TabIndex = 71
         '
         'txtDamageImmunities
         '
         Me.txtDamageImmunities.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtDamageImmunities.Location = New System.Drawing.Point(523, 787)
+        Me.txtDamageImmunities.Location = New System.Drawing.Point(780, 787)
         Me.txtDamageImmunities.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDamageImmunities.Multiline = True
         Me.txtDamageImmunities.Name = "txtDamageImmunities"
         Me.txtDamageImmunities.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDamageImmunities.Size = New System.Drawing.Size(1243, 42)
+        Me.txtDamageImmunities.Size = New System.Drawing.Size(986, 42)
         Me.txtDamageImmunities.TabIndex = 72
         '
         'txtDamageResistance
         '
         Me.txtDamageResistance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtDamageResistance.Location = New System.Drawing.Point(523, 842)
+        Me.txtDamageResistance.Location = New System.Drawing.Point(780, 842)
         Me.txtDamageResistance.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDamageResistance.Multiline = True
         Me.txtDamageResistance.Name = "txtDamageResistance"
         Me.txtDamageResistance.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDamageResistance.Size = New System.Drawing.Size(1243, 42)
+        Me.txtDamageResistance.Size = New System.Drawing.Size(986, 42)
         Me.txtDamageResistance.TabIndex = 73
         '
         'txtDamageVulnerabilities
         '
         Me.txtDamageVulnerabilities.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtDamageVulnerabilities.Location = New System.Drawing.Point(523, 897)
+        Me.txtDamageVulnerabilities.Location = New System.Drawing.Point(780, 897)
         Me.txtDamageVulnerabilities.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDamageVulnerabilities.Multiline = True
         Me.txtDamageVulnerabilities.Name = "txtDamageVulnerabilities"
         Me.txtDamageVulnerabilities.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtDamageVulnerabilities.Size = New System.Drawing.Size(1243, 42)
+        Me.txtDamageVulnerabilities.Size = New System.Drawing.Size(986, 42)
         Me.txtDamageVulnerabilities.TabIndex = 74
         '
         'txtConditionImmunities
         '
         Me.txtConditionImmunities.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtConditionImmunities.Location = New System.Drawing.Point(523, 952)
+        Me.txtConditionImmunities.Location = New System.Drawing.Point(780, 952)
         Me.txtConditionImmunities.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtConditionImmunities.Multiline = True
         Me.txtConditionImmunities.Name = "txtConditionImmunities"
         Me.txtConditionImmunities.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtConditionImmunities.Size = New System.Drawing.Size(1243, 42)
+        Me.txtConditionImmunities.Size = New System.Drawing.Size(986, 42)
         Me.txtConditionImmunities.TabIndex = 75
         '
         'txtConditionResistance
         '
         Me.txtConditionResistance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtConditionResistance.Location = New System.Drawing.Point(523, 1007)
+        Me.txtConditionResistance.Location = New System.Drawing.Point(780, 1007)
         Me.txtConditionResistance.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtConditionResistance.Multiline = True
         Me.txtConditionResistance.Name = "txtConditionResistance"
         Me.txtConditionResistance.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtConditionResistance.Size = New System.Drawing.Size(1243, 42)
+        Me.txtConditionResistance.Size = New System.Drawing.Size(986, 42)
         Me.txtConditionResistance.TabIndex = 76
         '
         'txtLegendaryResistance
         '
         Me.txtLegendaryResistance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLegendaryResistance.Location = New System.Drawing.Point(523, 1065)
+        Me.txtLegendaryResistance.Location = New System.Drawing.Point(780, 1065)
         Me.txtLegendaryResistance.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLegendaryResistance.Multiline = True
         Me.txtLegendaryResistance.Name = "txtLegendaryResistance"
         Me.txtLegendaryResistance.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtLegendaryResistance.Size = New System.Drawing.Size(1243, 42)
+        Me.txtLegendaryResistance.Size = New System.Drawing.Size(986, 42)
         Me.txtLegendaryResistance.TabIndex = 77
         '
         'txtMagicResistance
         '
         Me.txtMagicResistance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtMagicResistance.Location = New System.Drawing.Point(523, 1120)
+        Me.txtMagicResistance.Location = New System.Drawing.Point(780, 1120)
         Me.txtMagicResistance.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtMagicResistance.Multiline = True
         Me.txtMagicResistance.Name = "txtMagicResistance"
         Me.txtMagicResistance.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtMagicResistance.Size = New System.Drawing.Size(1243, 42)
+        Me.txtMagicResistance.Size = New System.Drawing.Size(986, 42)
         Me.txtMagicResistance.TabIndex = 78
         '
         'txtOthers
         '
         Me.txtOthers.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtOthers.Location = New System.Drawing.Point(523, 1175)
+        Me.txtOthers.Location = New System.Drawing.Point(780, 1175)
         Me.txtOthers.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtOthers.Multiline = True
         Me.txtOthers.Name = "txtOthers"
         Me.txtOthers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtOthers.Size = New System.Drawing.Size(1243, 42)
+        Me.txtOthers.Size = New System.Drawing.Size(986, 42)
         Me.txtOthers.TabIndex = 79
         '
         'btnActions
@@ -990,6 +979,17 @@ Partial Class UcOpponent
         Me.txtImage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtImage.Size = New System.Drawing.Size(1243, 42)
         Me.txtImage.TabIndex = 86
+        '
+        'lbOthers
+        '
+        Me.lbOthers.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lbOthers.Location = New System.Drawing.Point(529, 1175)
+        Me.lbOthers.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbOthers.Name = "lbOthers"
+        Me.lbOthers.Size = New System.Drawing.Size(243, 45)
+        Me.lbOthers.TabIndex = 60
+        Me.lbOthers.Text = "others:"
+        Me.lbOthers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'UcOpponent
         '
@@ -1081,7 +1081,7 @@ Partial Class UcOpponent
         Me.Controls.Add(Me.lbOpponent)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "UcOpponent"
-        Me.Size = New System.Drawing.Size(1771, 1312)
+        Me.Size = New System.Drawing.Size(1771, 1286)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1144,7 +1144,6 @@ Partial Class UcOpponent
     Friend WithEvents lbConditionResistance As Label
     Friend WithEvents lbLegendaryResistance As Label
     Friend WithEvents lbMagicResistance As Label
-    Friend WithEvents lbOthers As Label
     Friend WithEvents btnSave As Button
     Friend WithEvents btnDiscard As Button
     Friend WithEvents txtName As TextBox
@@ -1171,4 +1170,5 @@ Partial Class UcOpponent
     Friend WithEvents txtEnvironment As TextBox
     Friend WithEvents lbImage As Label
     Friend WithEvents txtImage As TextBox
+    Friend WithEvents lbOthers As Label
 End Class

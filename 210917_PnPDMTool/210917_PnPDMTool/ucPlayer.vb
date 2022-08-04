@@ -20,24 +20,23 @@ Public Class UcPlayer
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim newPlayer As New Player
 
-        newPlayer.name = txtName.Text
-        newPlayer.image = txtImage.Text
-
-        newPlayer.str = CInt(txtStr.Text)
-        newPlayer.dex = CInt(txtDex.Text)
-        newPlayer.con = CInt(txtCon.Text)
-        newPlayer.wis = CInt(txtWis.Text)
-        newPlayer.int = CInt(txtInt.Text)
-        newPlayer.cha = CInt(txtCha.Text)
-
-        newPlayer.ac = CInt(txtAc.Text)
-        newPlayer.hp = CInt(txtHp.Text)
+        Dim newPlayer As New Player With {
+            .Name = txtName.Text,
+            .Image = txtImage.Text,
+            .BaseStr = CInt(txtStr.Text),
+            .BaseDex = CInt(txtDex.Text),
+            .BaseCon = CInt(txtCon.Text),
+            .BaseWis = CInt(txtWis.Text),
+            .BaseInt = CInt(txtInt.Text),
+            .BaseCha = CInt(txtCha.Text),
+            .BaseAC = CInt(txtAc.Text),
+            .BaseMaxHP = CInt(txtHp.Text)
+        }
 
         'write to xml file
         Dim writer As New System.Xml.Serialization.XmlSerializer(GetType(Player))
-        Dim file As New System.IO.StreamWriter("C:\Projekte\Player" + newPlayer.name + ".xml")
+        Dim file As New System.IO.StreamWriter("C:\Projekte\Player" + newPlayer.Name + ".xml")
         writer.Serialize(file, newPlayer)
         file.Close()
 
@@ -50,35 +49,35 @@ Public Class UcPlayer
         Me.Size = newSize
 
         'Title
-        Me.lbPlayer.Size = New Size(Me.Width - gapSmall, heightTitle)
-        Me.lbPlayer.Location = New Point(gapSmall, 0)
+        Me.lbPlayer.Size = New Size(Me.Width - GAP_SMALL, HEIGHT_TITLE)
+        Me.lbPlayer.Location = New Point(GAP_SMALL, 0)
 
         'Abilities
-        Me.lbStr.Size = New Size(widthTxtMedium, heightTxtBox)
+        Me.lbStr.Size = New Size(WIDTH_TEXT_MEDIUM, HEIGHT_TEXT_BOX)
         Me.lbDex.Size = Me.lbStr.Size
         Me.lbCon.Size = Me.lbStr.Size
         Me.lbWis.Size = Me.lbStr.Size
         Me.lbInt.Size = Me.lbStr.Size
         Me.lbCha.Size = Me.lbStr.Size
-        Me.txtStr.Size = New Size(widthTxtSmall, heightTxtBox)
+        Me.txtStr.Size = New Size(WIDTH_TEXT_SMALL, HEIGHT_TEXT_BOX)
         Me.txtDex.Size = Me.txtStr.Size
         Me.txtCon.Size = Me.txtStr.Size
         Me.txtWis.Size = Me.txtStr.Size
         Me.txtInt.Size = Me.txtStr.Size
         Me.txtCha.Size = Me.txtStr.Size
 
-        Me.lbStr.Location = New Point(gapSmall, heightTitle + gapMedium)
-        Me.lbDex.Location = New Point(gapSmall, Me.lbStr.Location.Y + heightTxtBox + gapSmall)
-        Me.lbCon.Location = New Point(gapSmall, Me.lbDex.Location.Y + heightTxtBox + gapSmall)
-        Me.lbWis.Location = New Point(gapSmall, Me.lbCon.Location.Y + heightTxtBox + gapSmall)
-        Me.lbInt.Location = New Point(gapSmall, Me.lbWis.Location.Y + heightTxtBox + gapSmall)
-        Me.lbCha.Location = New Point(gapSmall, Me.lbInt.Location.Y + heightTxtBox + gapSmall)
-        Me.txtStr.Location = New Point(gapSmall + widthTxtMedium, Me.lbStr.Location.Y)
-        Me.txtDex.Location = New Point(gapSmall + widthTxtMedium, Me.lbDex.Location.Y)
-        Me.txtCon.Location = New Point(gapSmall + widthTxtMedium, Me.lbCon.Location.Y)
-        Me.txtWis.Location = New Point(gapSmall + widthTxtMedium, Me.lbWis.Location.Y)
-        Me.txtInt.Location = New Point(gapSmall + widthTxtMedium, Me.lbInt.Location.Y)
-        Me.txtCha.Location = New Point(gapSmall + widthTxtMedium, Me.lbCha.Location.Y)
+        Me.lbStr.Location = New Point(GAP_SMALL, HEIGHT_TITLE + GAP_MEDIUM)
+        Me.lbDex.Location = New Point(GAP_SMALL, Me.lbStr.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
+        Me.lbCon.Location = New Point(GAP_SMALL, Me.lbDex.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
+        Me.lbWis.Location = New Point(GAP_SMALL, Me.lbCon.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
+        Me.lbInt.Location = New Point(GAP_SMALL, Me.lbWis.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
+        Me.lbCha.Location = New Point(GAP_SMALL, Me.lbInt.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
+        Me.txtStr.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbStr.Location.Y)
+        Me.txtDex.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbDex.Location.Y)
+        Me.txtCon.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbCon.Location.Y)
+        Me.txtWis.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbWis.Location.Y)
+        Me.txtInt.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbInt.Location.Y)
+        Me.txtCha.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbCha.Location.Y)
 
         'AC & HP
         Me.lbAc.Size = Me.lbStr.Size
@@ -86,28 +85,28 @@ Public Class UcPlayer
         Me.txtAc.Size = Me.txtStr.Size
         Me.txtHp.Size = Me.txtStr.Size
 
-        Me.lbAc.Location = New Point(gapSmall, Me.lbCha.Location.Y + 2 * heightTxtBox + 2 * gapSmall)
-        Me.lbHP.Location = New Point(gapSmall, Me.lbAc.Location.Y + heightTxtBox + gapSmall)
-        Me.txtAc.Location = New Point(gapSmall + widthTxtMedium, Me.lbAc.Location.Y)
-        Me.txtHp.Location = New Point(gapSmall + widthTxtMedium, Me.lbHP.Location.Y)
+        Me.lbAc.Location = New Point(GAP_SMALL, Me.lbCha.Location.Y + 2 * HEIGHT_TEXT_BOX + 2 * GAP_SMALL)
+        Me.lbHP.Location = New Point(GAP_SMALL, Me.lbAc.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
+        Me.txtAc.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbAc.Location.Y)
+        Me.txtHp.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbHP.Location.Y)
 
         'Name and Image
-        Me.lbName.Size = New Size(widthTxtMedium, heightTxtBox)
+        Me.lbName.Size = New Size(WIDTH_TEXT_MEDIUM, HEIGHT_TEXT_BOX)
         Me.lbImage.Size = Me.lbName.Size
-        Me.txtName.Size = New Size(Me.Width - gapSmall - widthTxtSmall - widthTxtMedium - 3 * gapBig - widthTxtMedium - gapSmall, heightTxtBox)
+        Me.txtName.Size = New Size(Me.Width - GAP_SMALL - WIDTH_TEXT_SMALL - WIDTH_TEXT_MEDIUM - 3 * GAP_BIG - WIDTH_TEXT_MEDIUM - GAP_SMALL, HEIGHT_TEXT_BOX)
         Me.txtImage.Size = Me.txtName.Size
 
-        Me.lbName.Location = New Point(gapSmall + widthTxtSmall + widthTxtMedium + 3 * gapBig, Me.lbStr.Location.Y)
+        Me.lbName.Location = New Point(GAP_SMALL + WIDTH_TEXT_SMALL + WIDTH_TEXT_MEDIUM + 3 * GAP_BIG, Me.lbStr.Location.Y)
         Me.lbImage.Location = New Point(Me.lbName.Location.X, Me.lbDex.Location.Y)
-        Me.txtName.Location = New Size(Me.lbName.Location.X + widthTxtMedium, Me.lbName.Location.Y)
+        Me.txtName.Location = New Size(Me.lbName.Location.X + WIDTH_TEXT_MEDIUM, Me.lbName.Location.Y)
         Me.txtImage.Location = New Size(Me.txtName.Location.X, Me.lbImage.Location.Y)
 
         'Buttons
-        Me.btnDiscard.Size = New Size(CInt((Me.Width / 2 - 3 * gapSmall - gapBig) / 6), heightButtons)
+        Me.btnDiscard.Size = New Size(CInt((Me.Width / 2 - 3 * GAP_SMALL - GAP_BIG) / 6), HEIGHT_BUTTON)
         Me.btnSave.Size = Me.btnDiscard.Size
 
-        Me.btnSave.Location = New Point(Me.Width - gapSmall - Me.btnSave.Width, Me.Height - heightButtons - gapSmall)
-        Me.btnDiscard.Location = New Point(Me.Width - 2 * gapSmall - 2 * Me.btnSave.Width, Me.btnSave.Location.Y)
+        Me.btnSave.Location = New Point(Me.Width - GAP_SMALL - Me.btnSave.Width, Me.Height - HEIGHT_BUTTON - GAP_SMALL)
+        Me.btnDiscard.Location = New Point(Me.Width - 2 * GAP_SMALL - 2 * Me.btnSave.Width, Me.btnSave.Location.Y)
     End Sub
 #End Region
 
