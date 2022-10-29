@@ -57,8 +57,6 @@ C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\o
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.UcCharOverviewRight.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.UcMapView.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.UcNewMap.resources
-C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.UcOpponent.resources
-C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.UcOpponentsView.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.UcPlayer.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.vbproj.GenerateResource.cache
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.AssemblyInfoInputs.cache
@@ -68,3 +66,5 @@ C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\o
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.pdb
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.genruntimeconfig.cache
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\210917_PnPDMTool.vbprojAssemblyReference.cache
+C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucMonster.resources
+C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\netcoreapp3.1\_210917_PnPDMTool.ucMonsterView.resources

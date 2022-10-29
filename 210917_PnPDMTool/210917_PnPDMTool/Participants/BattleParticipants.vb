@@ -1,57 +1,55 @@
-﻿Public Class BattleParticipants(Of Participant As {ParticipantsCommon})
+﻿Public Class BattleParticipants(Of t As {PlayableObject})
     'Characters die sich im Battle befinden
 
 #Region "Private Var"
-    Private _type As EBPType = EBPType.None
-    Private _particitpant As Participant
+
+    Private _participent As t
+
 #End Region
 
 #Region "Properties"
     Public ReadOnly Property LiveStr As Int32
         Get
-            Return _particitpant.BaseStr + _particitpant.GetStrBonus()
+            Return _participent.Attributs.Strength.Value + _participent.GetStrBonus()
         End Get
     End Property
     Public ReadOnly Property LiveDex As Int32
         Get
-            Return _particitpant.BaseDex + _particitpant.GetDexBonus()
+            Return _participent.Attributs.Dexterity.Value + _participent.GetDexBonus()
         End Get
     End Property
     Public ReadOnly Property LiveCon As Int32
         Get
-            Return _particitpant.BaseCon + _particitpant.GetConBonus()
+            Return _participent.Attributs.Constitution.Value + _participent.GetConBonus()
         End Get
     End Property
 
     Public ReadOnly Property LiveWis As Int32
         Get
-            Return _particitpant.BaseWis + _particitpant.GetWisBonus()
+            Return _participent.Attributs.Wisdom.Value + _participent.GetWisBonus()
         End Get
     End Property
     Public ReadOnly Property LiveInt As Int32
         Get
-            Return _particitpant.BaseInt + _particitpant.GetIntBonus()
+            Return _participent.Attributs.Intelligence.Value + _participent.GetIntBonus()
         End Get
     End Property
     Public ReadOnly Property LiveCha As Int32
         Get
-            Return _particitpant.BaseCha + _particitpant.GetChaBonus()
+            Return _participent.Attributs.Charisma.Value + _participent.GetChaBonus()
         End Get
     End Property
     Public ReadOnly Property LiveAC As Int32
         Get
-            Return _particitpant.BaseAC + _particitpant.GetACBonus()
+            Return 0
         End Get
     End Property
 #End Region
 
 #Region "Init"
-    Public Sub New(type As EBPType, participant As Participant)
-
-        ' Save Parameter
-        Me._type = type
-        Me._particitpant = participant
-
+    Public Sub New(participent As t)
+        ' Save data
+        Me._participent = participent
     End Sub
 #End Region
 

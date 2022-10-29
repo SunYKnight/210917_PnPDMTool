@@ -26,10 +26,10 @@ Partial Class MainWindow
         Me.pnlBattleView = New System.Windows.Forms.Panel()
         Me.ucBattleView1 = New _210917_PnPDMTool.UcBattleView()
         Me.pnlOpponentsView = New System.Windows.Forms.Panel()
-        Me.ucOpponentsView1 = New _210917_PnPDMTool.UcOpponentsView()
+        Me.ucOpponentsView1 = New _210917_PnPDMTool.ucMonsterView()
         Me.pnlMapView = New System.Windows.Forms.Panel()
         Me.ucMapView1 = New _210917_PnPDMTool.UcMapView()
-        Me.ucOpponent1 = New _210917_PnPDMTool.UcOpponent()
+        Me.ucOpponent1 = New _210917_PnPDMTool.ucMonster()
         Me.ucPlayer1 = New _210917_PnPDMTool.UcPlayer()
         Me.ucNewMap1 = New _210917_PnPDMTool.UcNewMap()
         Me.pnlCharOverviewLeft = New System.Windows.Forms.Panel()
@@ -154,11 +154,11 @@ Partial Class MainWindow
     Friend WithEvents pnlCharOverviewLeft As Panel
     Friend WithEvents pnlCharOverviewRight As Panel
     Friend WithEvents ucBattleView1 As UcBattleView
-    Friend WithEvents ucOpponentsView1 As UcOpponentsView
+    Friend WithEvents ucOpponentsView1 As ucMonsterView
     Friend WithEvents ucCharOverviewLeft1 As UcCharOverviewLeft
     Friend WithEvents ucMapView1 As UcMapView
     Friend WithEvents ucCharOverviewRight1 As UcCharOverviewRight
     Friend WithEvents ucPlayer1 As UcPlayer
-    Friend WithEvents ucOpponent1 As UcOpponent
+    Friend WithEvents ucOpponent1 As ucMonster
     Friend WithEvents ucNewMap1 As UcNewMap
 End Class

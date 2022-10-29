@@ -15,7 +15,7 @@ Public Class MainWindow
 
         ' Create User Control elements
         ucBattleView1 = New UcBattleView()
-        ucOpponentsView1 = New UcOpponentsView()
+        ucOpponentsView1 = New ucMonsterView()
         ucCharOverviewLeft1.changeSize(pnlCharOverviewLeft.Size)
         ucCharOverviewRight1.changeSize(pnlCharOverviewRight.Size)
         ucMapView1.changeSize(pnlMapView.Size)

@@ -18,8 +18,7 @@
 
 #Region "Enum"
 
-    Public Enum EBPType
-        None
+    Public Enum EBattleParticipentType
         Player
         NPC
         Monster
