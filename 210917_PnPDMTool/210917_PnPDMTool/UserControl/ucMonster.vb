@@ -31,6 +31,8 @@ Public Class ucMonster
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
+        UcAttributCollection2.AttributeCollectionToEdit = _monsterToEdit.Attributs
+
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
         txtStr.DataBindings.Add(New Binding("Text", _monsterToEdit, "Attributs.Strength.Value"))
         txtDex.DataBindings.Add(New Binding("Text", _monsterToEdit, "Attributs.Dexterity.Value"))
@@ -266,6 +268,7 @@ Public Class ucMonster
     Public Event btnOpponentSaveClicked()
     Public Event btnOpponentActionsClicked()
     Public Event btnOpponentLegendaryActionsClicked()
+
 
 
 #End Region

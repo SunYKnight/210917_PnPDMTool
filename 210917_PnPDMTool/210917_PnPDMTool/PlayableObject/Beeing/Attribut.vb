@@ -1,12 +1,25 @@
 ﻿Public Class Attribut
 
 #Region "Private Var"
-
+    Private _value As Integer
 #End Region
 
 #Region "Properties"
 
-    Public Property Value As Integer = 8
+    Public Property Bonus As Integer = 0
+    Public ReadOnly Property Modifier As Integer
+        Get
+            Return (Value - 10) \ 2
+        End Get
+    End Property
+    Public Property Value As Integer
+        Get
+            Return _value + Bonus
+        End Get
+        Set(value As Integer)
+            _value = value
+        End Set
+    End Property
 
 #End Region
 
