@@ -22,14 +22,21 @@ Partial Class ucMonster
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim AttributCollection2 As _210917_PnPDMTool.AttributCollection = New _210917_PnPDMTool.AttributCollection()
-        Dim Attribut7 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut8 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut9 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut10 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut11 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut12 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim AttributCollection1 As _210917_PnPDMTool.AttributCollection = New _210917_PnPDMTool.AttributCollection()
+        Dim Attribut1 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut2 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut3 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut4 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut5 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut6 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucMonster))
+        Dim SavingThrowCollection1 As _210917_PnPDMTool.SavingThrowCollection = New _210917_PnPDMTool.SavingThrowCollection()
+        Dim ProficencyType1 As _210917_PnPDMTool.ProficencyType = New _210917_PnPDMTool.ProficencyType()
+        Dim ProficencyType2 As _210917_PnPDMTool.ProficencyType = New _210917_PnPDMTool.ProficencyType()
+        Dim ProficencyType3 As _210917_PnPDMTool.ProficencyType = New _210917_PnPDMTool.ProficencyType()
+        Dim ProficencyType4 As _210917_PnPDMTool.ProficencyType = New _210917_PnPDMTool.ProficencyType()
+        Dim ProficencyType5 As _210917_PnPDMTool.ProficencyType = New _210917_PnPDMTool.ProficencyType()
+        Dim ProficencyType6 As _210917_PnPDMTool.ProficencyType = New _210917_PnPDMTool.ProficencyType()
         Me.lbOpponent = New System.Windows.Forms.Label()
         Me.lbAc = New System.Windows.Forms.Label()
         Me.txtAc = New System.Windows.Forms.TextBox()
@@ -102,7 +109,8 @@ Partial Class ucMonster
         Me.txtImage = New System.Windows.Forms.TextBox()
         Me.lbOthers = New System.Windows.Forms.Label()
         Me.ComboBox_languages = New System.Windows.Forms.ComboBox()
-        Me.UcAttributCollection_opponent_edit = New _210917_PnPDMTool.ucAttributCollection()
+        Me.UcAttributCollectionToEdit = New _210917_PnPDMTool.ucAttributCollection()
+        Me.UcSavingThrowCollectionToEdit = New _210917_PnPDMTool.ucSavingThrowCollection()
         Me.SuspendLayout()
         '
         'lbOpponent
@@ -865,40 +873,63 @@ Partial Class ucMonster
         Me.ComboBox_languages.Size = New System.Drawing.Size(182, 33)
         Me.ComboBox_languages.TabIndex = 87
         '
-        'UcAttributCollection_opponent_edit
+        'UcAttributCollectionToEdit
         '
-        Attribut7.Bonus = 0
-        Attribut7.Value = 0
-        AttributCollection2.Charisma = Attribut7
-        Attribut8.Bonus = 0
-        Attribut8.Value = 0
-        AttributCollection2.Constitution = Attribut8
-        Attribut9.Bonus = 0
-        Attribut9.Value = 0
-        AttributCollection2.Dexterity = Attribut9
-        Attribut10.Bonus = 0
-        Attribut10.Value = 0
-        AttributCollection2.Intelligence = Attribut10
-        Attribut11.Bonus = 0
-        Attribut11.Value = 0
-        AttributCollection2.Strength = Attribut11
-        Attribut12.Bonus = 0
-        Attribut12.Value = 0
-        AttributCollection2.Wisdom = Attribut12
-        Me.UcAttributCollection_opponent_edit.AttributeCollectionToEdit = AttributCollection2
-        Me.UcAttributCollection_opponent_edit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.UcAttributCollection_opponent_edit.BackgroundImage = CType(resources.GetObject("UcAttributCollection_opponent_edit.BackgroundImage"), System.Drawing.Image)
-        Me.UcAttributCollection_opponent_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.UcAttributCollection_opponent_edit.Location = New System.Drawing.Point(30, 70)
-        Me.UcAttributCollection_opponent_edit.Name = "UcAttributCollection_opponent_edit"
-        Me.UcAttributCollection_opponent_edit.Size = New System.Drawing.Size(118, 792)
-        Me.UcAttributCollection_opponent_edit.TabIndex = 88
+        Attribut1.Bonus = 0
+        Attribut1.Value = 0
+        AttributCollection1.Charisma = Attribut1
+        Attribut2.Bonus = 0
+        Attribut2.Value = 0
+        AttributCollection1.Constitution = Attribut2
+        Attribut3.Bonus = 0
+        Attribut3.Value = 0
+        AttributCollection1.Dexterity = Attribut3
+        Attribut4.Bonus = 0
+        Attribut4.Value = 0
+        AttributCollection1.Intelligence = Attribut4
+        Attribut5.Bonus = 0
+        Attribut5.Value = 0
+        AttributCollection1.Strength = Attribut5
+        Attribut6.Bonus = 0
+        Attribut6.Value = 0
+        AttributCollection1.Wisdom = Attribut6
+        Me.UcAttributCollectionToEdit.AttributeCollectionToEdit = AttributCollection1
+        Me.UcAttributCollectionToEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.UcAttributCollectionToEdit.BackgroundImage = CType(resources.GetObject("UcAttributCollectionToEdit.BackgroundImage"), System.Drawing.Image)
+        Me.UcAttributCollectionToEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.UcAttributCollectionToEdit.Location = New System.Drawing.Point(30, 70)
+        Me.UcAttributCollectionToEdit.Name = "UcAttributCollectionToEdit"
+        Me.UcAttributCollectionToEdit.Size = New System.Drawing.Size(118, 792)
+        Me.UcAttributCollectionToEdit.TabIndex = 88
+        '
+        'UcSavingThrowCollectionToEdit
+        '
+        Me.UcSavingThrowCollectionToEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.UcSavingThrowCollectionToEdit.Location = New System.Drawing.Point(186, 70)
+        Me.UcSavingThrowCollectionToEdit.MinimumSize = New System.Drawing.Size(230, 250)
+        Me.UcSavingThrowCollectionToEdit.Name = "UcSavingThrowCollectionToEdit"
+        ProficencyType1.Competence = _210917_PnPDMTool.ProficencyType.ECopmetenceType.None
+        SavingThrowCollection1.Charisma = ProficencyType1
+        ProficencyType2.Competence = _210917_PnPDMTool.ProficencyType.ECopmetenceType.None
+        SavingThrowCollection1.Constitution = ProficencyType2
+        ProficencyType3.Competence = _210917_PnPDMTool.ProficencyType.ECopmetenceType.None
+        SavingThrowCollection1.Dexterity = ProficencyType3
+        ProficencyType4.Competence = _210917_PnPDMTool.ProficencyType.ECopmetenceType.None
+        SavingThrowCollection1.Intelligence = ProficencyType4
+        ProficencyType5.Competence = _210917_PnPDMTool.ProficencyType.ECopmetenceType.None
+        SavingThrowCollection1.Strength = ProficencyType5
+        ProficencyType6.Competence = _210917_PnPDMTool.ProficencyType.ECopmetenceType.None
+        SavingThrowCollection1.Wisdom = ProficencyType6
+        Me.UcSavingThrowCollectionToEdit.SavingThrowCollectionToEdit = SavingThrowCollection1
+        Me.UcSavingThrowCollectionToEdit.Size = New System.Drawing.Size(230, 250)
+        Me.UcSavingThrowCollectionToEdit.TabIndex = 89
         '
         'ucMonster
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.UcAttributCollection_opponent_edit)
+        Me.Controls.Add(Me.UcSavingThrowCollectionToEdit)
+        Me.Controls.Add(Me.UcAttributCollectionToEdit)
         Me.Controls.Add(Me.ComboBox_languages)
         Me.Controls.Add(Me.txtImage)
         Me.Controls.Add(Me.lbImage)
@@ -1051,5 +1082,6 @@ Partial Class ucMonster
     Friend WithEvents txtImage As TextBox
     Friend WithEvents lbOthers As Label
     Friend WithEvents ComboBox_languages As ComboBox
-    Friend WithEvents UcAttributCollection_opponent_edit As ucAttributCollection
+    Friend WithEvents UcAttributCollectionToEdit As ucAttributCollection
+    Friend WithEvents UcSavingThrowCollectionToEdit As ucSavingThrowCollection
 End Class

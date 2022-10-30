@@ -179,8 +179,21 @@
         Truesight
     End Enum
 
-    Public Function CalcRelativeSize(parentSize As Size, facWidth As Double, facHeight As Double) As Size
-        Return New Point(parentSize.Width * facWidth, parentSize.Height * facHeight)
+    Public Function CalcRelativeSize(parentSize As Size, facWidth As Double, facHeight As Double, min As Size) As Size
+        ' Locals
+        Dim s As Size = New Size(parentSize.Width * facWidth, parentSize.Height * facHeight)
+
+        ' Check width 
+        If (s.Width < min.Width) Then
+            s.Width = min.Width
+        End If
+
+        ' Check Height 
+        If (s.Height < min.Height) Then
+            s.Height = min.Height
+        End If
+
+        Return s
     End Function
 
     Public Function CalcRelativeLocation(parentSize As Size, ownSize As Size, facWidth As Double, facHeight As Double) As Point

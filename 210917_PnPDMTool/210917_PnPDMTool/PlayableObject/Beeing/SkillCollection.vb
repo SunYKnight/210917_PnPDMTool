@@ -5,23 +5,23 @@
 
 
 #Region "Properties"
-    Public Property Actobactic As Skill
-    Public Property AnimalHandling As Skill
-    Public Property Arcana As Skill
-    Public Property Deception As Skill
-    Public Property History As Skill
-    Public Property Insight As Skill
-    Public Property Intimidation As Skill
-    Public Property Investigation As Skill
-    Public Property Medicine As Skill
-    Public Property Nature As Skill
-    Public Property Perception As Skill
-    Public Property Performance As Skill
-    Public Property Persuation As Skill
-    Public Property Religion As Skill
-    Public Property SlightOfHand As Skill
-    Public Property Stealth As Skill
-    Public Property Survival As Skill
+    Public Property Acrobatic As ProficencyType = New ProficencyType
+    Public Property AnimalHandling As ProficencyType = New ProficencyType
+    Public Property Arcana As ProficencyType = New ProficencyType
+    Public Property Deception As ProficencyType = New ProficencyType
+    Public Property History As ProficencyType = New ProficencyType
+    Public Property Insight As ProficencyType = New ProficencyType
+    Public Property Intimidation As ProficencyType = New ProficencyType
+    Public Property Investigation As ProficencyType = New ProficencyType
+    Public Property Medicine As ProficencyType = New ProficencyType
+    Public Property Nature As ProficencyType = New ProficencyType
+    Public Property Perception As ProficencyType = New ProficencyType
+    Public Property Performance As ProficencyType = New ProficencyType
+    Public Property Persuation As ProficencyType = New ProficencyType
+    Public Property Religion As ProficencyType = New ProficencyType
+    Public Property SlightOfHand As ProficencyType = New ProficencyType
+    Public Property Stealth As ProficencyType = New ProficencyType
+    Public Property Survival As ProficencyType = New ProficencyType
 #End Region
 
 #Region "Init"

@@ -1,11 +1,19 @@
 ﻿Public Class ProficencyType
+
+#Region "Enum"
+    Public Enum ECopmetenceType
+        None = 0
+        Proficent = 1
+        Expertise = 2
+    End Enum
+#End Region
 #Region "Private Var"
 
 #End Region
 
 
 #Region "Properties"
-    Public Property ProficencyValue As Double = 0
+    Public Property Competence As ECopmetenceType = ECopmetenceType.None
 #End Region
 
 #Region "Init"
@@ -19,8 +27,8 @@
 #End Region
 
 #Region "Pubilc Sub"
-    Public Function Evaluate(dice As DiceType, throwType As DiceType.EThrowType)
-        Return dice.Evaluate(throwType) + Me.ProficencyValue
+    Public Function Evaluate(dice As DiceType, throwType As DiceType.EThrowType, procficencyValue As Integer)
+        Return dice.Evaluate(throwType) + procficencyValue * Competence
     End Function
 #End Region
 

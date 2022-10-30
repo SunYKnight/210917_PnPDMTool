@@ -5,12 +5,12 @@
 
 
 #Region "Properties"
-    Public Property Strength As Skill
-    Public Property Dexterity As Skill
-    Public Property Constitution As Skill
-    Public Property Intelligence As Skill
-    Public Property Wisdom As Skill
-    Public Property Charisma As Skill
+    Public Property Strength As ProficencyType = New ProficencyType
+    Public Property Dexterity As ProficencyType = New ProficencyType
+    Public Property Constitution As ProficencyType = New ProficencyType
+    Public Property Intelligence As ProficencyType = New ProficencyType
+    Public Property Wisdom As ProficencyType = New ProficencyType
+    Public Property Charisma As ProficencyType = New ProficencyType
 #End Region
 
 #Region "Init"

@@ -31,7 +31,8 @@ Public Class ucMonster
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
-        UcAttributCollection_opponent_edit.AttributeCollectionToEdit = _monsterToEdit.Attributs
+        UcAttributCollectionToEdit.AttributeCollectionToEdit = _monsterToEdit.Attributs
+        UcSavingThrowCollectionToEdit.SavingThrowCollectionToEdit = _monsterToEdit.SavingThrows
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
 
@@ -71,8 +72,11 @@ Public Class ucMonster
         Me.lbOpponent.Location = New Point(GAP_SMALL, 0)
 
         ' Attributs
-        Me.UcAttributCollection_opponent_edit.Size = C.CalcRelativeSize(Me.Size, 0.1, 0.7)
-        Me.UcAttributCollection_opponent_edit.Location = C.CalcRelativeLocation(Me.Size, Me.UcAttributCollection_opponent_edit.Size, 0.075, 0.45)
+        Me.UcAttributCollectionToEdit.Size = C.CalcRelativeSize(Me.Size, 0.1, 0.7, Me.UcAttributCollectionToEdit.MinimumSize)
+        Me.UcAttributCollectionToEdit.Location = C.CalcRelativeLocation(Me.Size, Me.UcAttributCollectionToEdit.Size, 0.075, 0.45)
+
+        Me.UcSavingThrowCollectionToEdit.Size = C.CalcRelativeSize(Me.Size, 0.175, 0.2, Me.UcSavingThrowCollectionToEdit.MinimumSize)
+        Me.UcSavingThrowCollectionToEdit.Location = C.CalcRelativeLocation(Me.Size, Me.UcAttributCollectionToEdit.Size, 0.2, 0.45)
 
 
 
