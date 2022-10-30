@@ -31,15 +31,10 @@ Public Class ucMonster
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
-        UcAttributCollection2.AttributeCollectionToEdit = _monsterToEdit.Attributs
+        UcAttributCollection_opponent_edit.AttributeCollectionToEdit = _monsterToEdit.Attributs
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
-        txtStr.DataBindings.Add(New Binding("Text", _monsterToEdit, "Attributs.Strength.Value"))
-        txtDex.DataBindings.Add(New Binding("Text", _monsterToEdit, "Attributs.Dexterity.Value"))
-        txtCha.DataBindings.Add(New Binding("Text", _monsterToEdit, "Attributs.Charisma.Value"))
-        txtCon.DataBindings.Add(New Binding("Text", _monsterToEdit, "Attributs.Constitution.Value"))
-        txtWis.DataBindings.Add(New Binding("Text", _monsterToEdit, "Attributs.Wisdom.Value"))
-        txtInt.DataBindings.Add(New Binding("Text", _monsterToEdit, "Attributs.Intelligence.Value"))
+
         ' comboBoxItem = New ComboBoxItemCheck()
         ' ComboBox_languages.Items.Add(comboBoxItem)
         'CheckedListBox_languages.DataSource = [Enum].GetNames(GetType(ELanguages))
@@ -66,64 +61,48 @@ Public Class ucMonster
 #End Region
 
 #Region "Pubilc Sub"
-    Public Sub changeSize(newSize As Size)
-        Me.Size = newSize
+
+    Private Sub ResizeHandle(sender As Object, e As EventArgs) Handles MyBase.Resize
+        Dim labelSize = New Size(WIDTH_TEXT_MEDIUM, HEIGHT_TEXT_BOX)
+        Dim textBoxSize = New Size(WIDTH_TEXT_SMALL, HEIGHT_TEXT_BOX)
 
         'Title
         Me.lbOpponent.Size = New Size(Me.Width - GAP_SMALL, HEIGHT_TITLE)
         Me.lbOpponent.Location = New Point(GAP_SMALL, 0)
 
-        'Abilities
-        Me.lbStr.Size = New Size(WIDTH_TEXT_MEDIUM, HEIGHT_TEXT_BOX)
-        Me.lbDex.Size = Me.lbStr.Size
-        Me.lbCon.Size = Me.lbStr.Size
-        Me.lbWis.Size = Me.lbStr.Size
-        Me.lbInt.Size = Me.lbStr.Size
-        Me.lbCha.Size = Me.lbStr.Size
-        Me.lbAc.Size = Me.lbStr.Size
-        Me.txtStr.Size = New Size(WIDTH_TEXT_SMALL, HEIGHT_TEXT_BOX)
-        Me.txtDex.Size = Me.txtStr.Size
-        Me.txtCon.Size = Me.txtStr.Size
-        Me.txtWis.Size = Me.txtStr.Size
-        Me.txtInt.Size = Me.txtStr.Size
-        Me.txtCha.Size = Me.txtStr.Size
-        Me.txtAc.Size = Me.txtStr.Size
+        ' Attributs
+        Me.UcAttributCollection_opponent_edit.Size = C.CalcRelativeSize(Me.Size, 0.1, 0.7)
+        Me.UcAttributCollection_opponent_edit.Location = C.CalcRelativeLocation(Me.Size, Me.UcAttributCollection_opponent_edit.Size, 0.075, 0.45)
 
-        Me.lbStr.Location = New Point(GAP_SMALL, HEIGHT_TITLE + GAP_MEDIUM)
-        Me.lbDex.Location = New Point(GAP_SMALL, Me.lbStr.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
-        Me.lbCon.Location = New Point(GAP_SMALL, Me.lbDex.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
-        Me.lbWis.Location = New Point(GAP_SMALL, Me.lbCon.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
-        Me.lbInt.Location = New Point(GAP_SMALL, Me.lbWis.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
-        Me.lbCha.Location = New Point(GAP_SMALL, Me.lbInt.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
-        Me.lbAc.Location = New Point(GAP_SMALL, Me.lbCha.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
-        Me.txtStr.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbStr.Location.Y)
-        Me.txtDex.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbDex.Location.Y)
-        Me.txtCon.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbCon.Location.Y)
-        Me.txtWis.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbWis.Location.Y)
-        Me.txtInt.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbInt.Location.Y)
-        Me.txtCha.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbCha.Location.Y)
-        Me.txtAc.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbAc.Location.Y)
+
+
+    End Sub
+
+    Public Sub changeSize(newSize As Size)
+        Me.Size = newSize
+        Dim labelSize = New Size(WIDTH_TEXT_MEDIUM, HEIGHT_TEXT_BOX)
+        Dim textBoxSize = New Size(WIDTH_TEXT_SMALL, HEIGHT_TEXT_BOX)
 
         'MP
         Me.lbMp.Size = New Size(WIDTH_TEXT_SMALL + WIDTH_TEXT_MEDIUM, HEIGHT_TEXT_BOX)
-        Me.lbLv1.Size = Me.lbStr.Size
-        Me.lbLv2.Size = Me.lbStr.Size
-        Me.lbLv3.Size = Me.lbStr.Size
-        Me.lbLv4.Size = Me.lbStr.Size
-        Me.lbLv5.Size = Me.lbStr.Size
-        Me.lbLv6.Size = Me.lbStr.Size
-        Me.lbLv7.Size = Me.lbStr.Size
-        Me.lbLv8.Size = Me.lbStr.Size
-        Me.lbLv9.Size = Me.lbStr.Size
-        Me.txtLv1.Size = Me.txtStr.Size
-        Me.txtLv2.Size = Me.txtStr.Size
-        Me.txtLv3.Size = Me.txtStr.Size
-        Me.txtLv4.Size = Me.txtStr.Size
-        Me.txtLv5.Size = Me.txtStr.Size
-        Me.txtLv6.Size = Me.txtStr.Size
-        Me.txtLv7.Size = Me.txtStr.Size
-        Me.txtLv8.Size = Me.txtStr.Size
-        Me.txtLv9.Size = Me.txtStr.Size
+        Me.lbLv1.Size = labelSize
+        Me.lbLv2.Size = labelSize
+        Me.lbLv3.Size = labelSize
+        Me.lbLv4.Size = labelSize
+        Me.lbLv5.Size = labelSize
+        Me.lbLv6.Size = labelSize
+        Me.lbLv7.Size = labelSize
+        Me.lbLv8.Size = labelSize
+        Me.lbLv9.Size = labelSize
+        Me.txtLv1.Size = textBoxSize
+        Me.txtLv2.Size = textBoxSize
+        Me.txtLv3.Size = textBoxSize
+        Me.txtLv4.Size = textBoxSize
+        Me.txtLv5.Size = textBoxSize
+        Me.txtLv6.Size = textBoxSize
+        Me.txtLv7.Size = textBoxSize
+        Me.txtLv8.Size = textBoxSize
+        Me.txtLv9.Size = textBoxSize
 
         Me.lbMp.Location = New Point(GAP_SMALL, Me.lbAc.Location.Y + 2 * HEIGHT_TEXT_BOX + 2 * GAP_SMALL)
         Me.lbLv1.Location = New Point(GAP_SMALL, Me.lbMp.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
@@ -146,13 +125,13 @@ Public Class ucMonster
         Me.txtLv9.Location = New Point(GAP_SMALL + WIDTH_TEXT_MEDIUM, Me.lbLv9.Location.Y)
 
         'max. HP
-        Me.lbMaxHp.Size = Me.lbMp.Size
-        Me.lbNumber.Size = Me.lbStr.Size
-        Me.lbDice.Size = Me.lbStr.Size
-        Me.lbModifier.Size = Me.lbStr.Size
-        Me.txtNumber.Size = Me.txtStr.Size
-        Me.txtDice.Size = Me.txtStr.Size
-        Me.txtModifier.Size = Me.txtStr.Size
+        Me.lbMaxHp.Size = labelSize
+        Me.lbNumber.Size = labelSize
+        Me.lbDice.Size = labelSize
+        Me.lbModifier.Size = labelSize
+        Me.txtNumber.Size = labelSize
+        Me.txtDice.Size = labelSize
+        Me.txtModifier.Size = labelSize
 
         Me.lbMaxHp.Location = New Point(GAP_SMALL, Me.lbLv9.Location.Y + 2 * HEIGHT_TEXT_BOX + 2 * GAP_SMALL)
         Me.lbNumber.Location = New Point(GAP_SMALL, Me.lbMaxHp.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
@@ -183,12 +162,12 @@ Public Class ucMonster
         Me.lbMagicResistance.Size = Me.lbName.Size
         Me.lbOthers.Size = Me.lbName.Size
 
-        Me.lbName.Location = New Point(GAP_SMALL + Me.lbMp.Width + 3 * GAP_BIG, Me.lbStr.Location.Y)
-        Me.lbEnvironment.Location = New Point(Me.lbName.Location.X, Me.lbDex.Location.Y)
-        Me.lbImage.Location = New Point(Me.lbName.Location.X, Me.lbCon.Location.Y)
+        'Me.lbName.Location = New Point(GAP_SMALL + Me.lbMp.Width + 3 * GAP_BIG, Me.lbStr.Location.Y)
+        'Me.lbEnvironment.Location = New Point(Me.lbName.Location.X, Me.lbDex.Location.Y)
+        'Me.lbImage.Location = New Point(Me.lbName.Location.X, Me.lbCon.Location.Y)
 
-        Me.lbInformations.Location = New Point(Me.lbName.Location.X, Me.lbInt.Location.Y)
-        Me.lbSavingThrows.Location = New Point(Me.lbName.Location.X, Me.lbCha.Location.Y)
+        'Me.lbInformations.Location = New Point(Me.lbName.Location.X, Me.lbInt.Location.Y)
+        'Me.lbSavingThrows.Location = New Point(Me.lbName.Location.X, Me.lbCha.Location.Y)
         Me.lbProficiency.Location = New Point(Me.lbName.Location.X, Me.lbAc.Location.Y)
         Me.lbSkills.Location = New Point(Me.lbName.Location.X, Me.lbAc.Location.Y + HEIGHT_TEXT_BOX + GAP_SMALL)
         Me.lbSenses.Location = New Point(Me.lbName.Location.X, Me.lbMp.Location.Y)

@@ -22,13 +22,13 @@ Partial Class ucMonster
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim AttributCollection3 As _210917_PnPDMTool.AttributCollection = New _210917_PnPDMTool.AttributCollection()
-        Dim Attribut13 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut14 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut15 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut16 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut17 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut18 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim AttributCollection2 As _210917_PnPDMTool.AttributCollection = New _210917_PnPDMTool.AttributCollection()
+        Dim Attribut7 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut8 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut9 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut10 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut11 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut12 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucMonster))
         Me.lbOpponent = New System.Windows.Forms.Label()
         Me.lbAc = New System.Windows.Forms.Label()
@@ -102,19 +102,7 @@ Partial Class ucMonster
         Me.txtImage = New System.Windows.Forms.TextBox()
         Me.lbOthers = New System.Windows.Forms.Label()
         Me.ComboBox_languages = New System.Windows.Forms.ComboBox()
-        Me.UcAttributCollection2 = New _210917_PnPDMTool.ucAttributCollection()
-        Me.txtInt = New System.Windows.Forms.TextBox()
-        Me.txtWis = New System.Windows.Forms.TextBox()
-        Me.txtCon = New System.Windows.Forms.TextBox()
-        Me.txtDex = New System.Windows.Forms.TextBox()
-        Me.txtStr = New System.Windows.Forms.TextBox()
-        Me.lbStr = New System.Windows.Forms.Label()
-        Me.lbDex = New System.Windows.Forms.Label()
-        Me.lbCon = New System.Windows.Forms.Label()
-        Me.lbWis = New System.Windows.Forms.Label()
-        Me.lbInt = New System.Windows.Forms.Label()
-        Me.lbCha = New System.Windows.Forms.Label()
-        Me.txtCha = New System.Windows.Forms.TextBox()
+        Me.UcAttributCollection_opponent_edit = New _210917_PnPDMTool.ucAttributCollection()
         Me.SuspendLayout()
         '
         'lbOpponent
@@ -131,10 +119,10 @@ Partial Class ucMonster
         'lbAc
         '
         Me.lbAc.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbAc.Location = New System.Drawing.Point(14, 455)
+        Me.lbAc.Location = New System.Drawing.Point(263, 455)
         Me.lbAc.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbAc.Name = "lbAc"
-        Me.lbAc.Size = New System.Drawing.Size(71, 45)
+        Me.lbAc.Size = New System.Drawing.Size(72, 45)
         Me.lbAc.TabIndex = 14
         Me.lbAc.Text = "AC"
         Me.lbAc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -142,46 +130,46 @@ Partial Class ucMonster
         'txtAc
         '
         Me.txtAc.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtAc.Location = New System.Drawing.Point(123, 455)
+        Me.txtAc.Location = New System.Drawing.Point(372, 455)
         Me.txtAc.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtAc.Name = "txtAc"
-        Me.txtAc.Size = New System.Drawing.Size(70, 37)
+        Me.txtAc.Size = New System.Drawing.Size(71, 37)
         Me.txtAc.TabIndex = 15
         '
         'txtNumber
         '
         Me.txtNumber.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtNumber.Location = New System.Drawing.Point(123, 1068)
+        Me.txtNumber.Location = New System.Drawing.Point(372, 1068)
         Me.txtNumber.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtNumber.Name = "txtNumber"
-        Me.txtNumber.Size = New System.Drawing.Size(70, 37)
+        Me.txtNumber.Size = New System.Drawing.Size(71, 37)
         Me.txtNumber.TabIndex = 17
         '
         'txtDice
         '
         Me.txtDice.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtDice.Location = New System.Drawing.Point(123, 1120)
+        Me.txtDice.Location = New System.Drawing.Point(372, 1120)
         Me.txtDice.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtDice.Name = "txtDice"
-        Me.txtDice.Size = New System.Drawing.Size(70, 37)
+        Me.txtDice.Size = New System.Drawing.Size(71, 37)
         Me.txtDice.TabIndex = 18
         '
         'txtModifier
         '
         Me.txtModifier.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtModifier.Location = New System.Drawing.Point(123, 1175)
+        Me.txtModifier.Location = New System.Drawing.Point(372, 1175)
         Me.txtModifier.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtModifier.Name = "txtModifier"
-        Me.txtModifier.Size = New System.Drawing.Size(70, 37)
+        Me.txtModifier.Size = New System.Drawing.Size(71, 37)
         Me.txtModifier.TabIndex = 19
         '
         'lbDice
         '
         Me.lbDice.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbDice.Location = New System.Drawing.Point(14, 1125)
+        Me.lbDice.Location = New System.Drawing.Point(263, 1125)
         Me.lbDice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbDice.Name = "lbDice"
-        Me.lbDice.Size = New System.Drawing.Size(71, 45)
+        Me.lbDice.Size = New System.Drawing.Size(72, 45)
         Me.lbDice.TabIndex = 20
         Me.lbDice.Text = "Dice"
         Me.lbDice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -189,10 +177,10 @@ Partial Class ucMonster
         'lbNumber
         '
         Me.lbNumber.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbNumber.Location = New System.Drawing.Point(14, 1068)
+        Me.lbNumber.Location = New System.Drawing.Point(263, 1068)
         Me.lbNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbNumber.Name = "lbNumber"
-        Me.lbNumber.Size = New System.Drawing.Size(100, 45)
+        Me.lbNumber.Size = New System.Drawing.Size(101, 45)
         Me.lbNumber.TabIndex = 21
         Me.lbNumber.Text = "Number"
         Me.lbNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -200,10 +188,10 @@ Partial Class ucMonster
         'lbModifier
         '
         Me.lbModifier.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbModifier.Location = New System.Drawing.Point(14, 1177)
+        Me.lbModifier.Location = New System.Drawing.Point(263, 1177)
         Me.lbModifier.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbModifier.Name = "lbModifier"
-        Me.lbModifier.Size = New System.Drawing.Size(100, 45)
+        Me.lbModifier.Size = New System.Drawing.Size(101, 45)
         Me.lbModifier.TabIndex = 22
         Me.lbModifier.Text = "Modifier"
         Me.lbModifier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -211,10 +199,10 @@ Partial Class ucMonster
         'lbMp
         '
         Me.lbMp.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lbMp.Location = New System.Drawing.Point(14, 538)
+        Me.lbMp.Location = New System.Drawing.Point(263, 538)
         Me.lbMp.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbMp.Name = "lbMp"
-        Me.lbMp.Size = New System.Drawing.Size(151, 45)
+        Me.lbMp.Size = New System.Drawing.Size(152, 45)
         Me.lbMp.TabIndex = 23
         Me.lbMp.Text = "MP"
         Me.lbMp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -222,10 +210,10 @@ Partial Class ucMonster
         'lbLv1
         '
         Me.lbLv1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLv1.Location = New System.Drawing.Point(14, 583)
+        Me.lbLv1.Location = New System.Drawing.Point(263, 583)
         Me.lbLv1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLv1.Name = "lbLv1"
-        Me.lbLv1.Size = New System.Drawing.Size(71, 45)
+        Me.lbLv1.Size = New System.Drawing.Size(72, 45)
         Me.lbLv1.TabIndex = 24
         Me.lbLv1.Text = "LV1"
         Me.lbLv1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -233,10 +221,10 @@ Partial Class ucMonster
         'lbLv2
         '
         Me.lbLv2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLv2.Location = New System.Drawing.Point(14, 628)
+        Me.lbLv2.Location = New System.Drawing.Point(263, 628)
         Me.lbLv2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLv2.Name = "lbLv2"
-        Me.lbLv2.Size = New System.Drawing.Size(71, 45)
+        Me.lbLv2.Size = New System.Drawing.Size(72, 45)
         Me.lbLv2.TabIndex = 25
         Me.lbLv2.Text = "LV2"
         Me.lbLv2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -244,10 +232,10 @@ Partial Class ucMonster
         'lbLv3
         '
         Me.lbLv3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLv3.Location = New System.Drawing.Point(14, 673)
+        Me.lbLv3.Location = New System.Drawing.Point(263, 673)
         Me.lbLv3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLv3.Name = "lbLv3"
-        Me.lbLv3.Size = New System.Drawing.Size(71, 45)
+        Me.lbLv3.Size = New System.Drawing.Size(72, 45)
         Me.lbLv3.TabIndex = 26
         Me.lbLv3.Text = "LV3"
         Me.lbLv3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -255,10 +243,10 @@ Partial Class ucMonster
         'lbLv4
         '
         Me.lbLv4.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLv4.Location = New System.Drawing.Point(14, 718)
+        Me.lbLv4.Location = New System.Drawing.Point(263, 718)
         Me.lbLv4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLv4.Name = "lbLv4"
-        Me.lbLv4.Size = New System.Drawing.Size(71, 45)
+        Me.lbLv4.Size = New System.Drawing.Size(72, 45)
         Me.lbLv4.TabIndex = 27
         Me.lbLv4.Text = "LV4"
         Me.lbLv4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -266,10 +254,10 @@ Partial Class ucMonster
         'lbLv5
         '
         Me.lbLv5.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLv5.Location = New System.Drawing.Point(14, 763)
+        Me.lbLv5.Location = New System.Drawing.Point(263, 763)
         Me.lbLv5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLv5.Name = "lbLv5"
-        Me.lbLv5.Size = New System.Drawing.Size(71, 45)
+        Me.lbLv5.Size = New System.Drawing.Size(72, 45)
         Me.lbLv5.TabIndex = 28
         Me.lbLv5.Text = "LV5"
         Me.lbLv5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -277,10 +265,10 @@ Partial Class ucMonster
         'lbLv6
         '
         Me.lbLv6.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLv6.Location = New System.Drawing.Point(14, 808)
+        Me.lbLv6.Location = New System.Drawing.Point(263, 808)
         Me.lbLv6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLv6.Name = "lbLv6"
-        Me.lbLv6.Size = New System.Drawing.Size(71, 45)
+        Me.lbLv6.Size = New System.Drawing.Size(72, 45)
         Me.lbLv6.TabIndex = 29
         Me.lbLv6.Text = "LV6"
         Me.lbLv6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -288,10 +276,10 @@ Partial Class ucMonster
         'lbLv7
         '
         Me.lbLv7.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLv7.Location = New System.Drawing.Point(14, 853)
+        Me.lbLv7.Location = New System.Drawing.Point(263, 853)
         Me.lbLv7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLv7.Name = "lbLv7"
-        Me.lbLv7.Size = New System.Drawing.Size(71, 45)
+        Me.lbLv7.Size = New System.Drawing.Size(72, 45)
         Me.lbLv7.TabIndex = 30
         Me.lbLv7.Text = "LV7"
         Me.lbLv7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -299,10 +287,10 @@ Partial Class ucMonster
         'lbLv8
         '
         Me.lbLv8.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLv8.Location = New System.Drawing.Point(14, 898)
+        Me.lbLv8.Location = New System.Drawing.Point(263, 898)
         Me.lbLv8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLv8.Name = "lbLv8"
-        Me.lbLv8.Size = New System.Drawing.Size(71, 45)
+        Me.lbLv8.Size = New System.Drawing.Size(72, 45)
         Me.lbLv8.TabIndex = 31
         Me.lbLv8.Text = "LV8"
         Me.lbLv8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -310,10 +298,10 @@ Partial Class ucMonster
         'lbLv9
         '
         Me.lbLv9.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbLv9.Location = New System.Drawing.Point(14, 943)
+        Me.lbLv9.Location = New System.Drawing.Point(263, 943)
         Me.lbLv9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbLv9.Name = "lbLv9"
-        Me.lbLv9.Size = New System.Drawing.Size(71, 45)
+        Me.lbLv9.Size = New System.Drawing.Size(72, 45)
         Me.lbLv9.TabIndex = 32
         Me.lbLv9.Text = "LV9"
         Me.lbLv9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -321,91 +309,91 @@ Partial Class ucMonster
         'txtLv1
         '
         Me.txtLv1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLv1.Location = New System.Drawing.Point(123, 588)
+        Me.txtLv1.Location = New System.Drawing.Point(372, 588)
         Me.txtLv1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLv1.Name = "txtLv1"
-        Me.txtLv1.Size = New System.Drawing.Size(70, 37)
+        Me.txtLv1.Size = New System.Drawing.Size(71, 37)
         Me.txtLv1.TabIndex = 33
         '
         'txtLv2
         '
         Me.txtLv2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLv2.Location = New System.Drawing.Point(123, 633)
+        Me.txtLv2.Location = New System.Drawing.Point(372, 633)
         Me.txtLv2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLv2.Name = "txtLv2"
-        Me.txtLv2.Size = New System.Drawing.Size(70, 37)
+        Me.txtLv2.Size = New System.Drawing.Size(71, 37)
         Me.txtLv2.TabIndex = 34
         '
         'txtLv3
         '
         Me.txtLv3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLv3.Location = New System.Drawing.Point(123, 678)
+        Me.txtLv3.Location = New System.Drawing.Point(372, 678)
         Me.txtLv3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLv3.Name = "txtLv3"
-        Me.txtLv3.Size = New System.Drawing.Size(70, 37)
+        Me.txtLv3.Size = New System.Drawing.Size(71, 37)
         Me.txtLv3.TabIndex = 35
         '
         'txtLv4
         '
         Me.txtLv4.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLv4.Location = New System.Drawing.Point(123, 723)
+        Me.txtLv4.Location = New System.Drawing.Point(372, 723)
         Me.txtLv4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLv4.Name = "txtLv4"
-        Me.txtLv4.Size = New System.Drawing.Size(70, 37)
+        Me.txtLv4.Size = New System.Drawing.Size(71, 37)
         Me.txtLv4.TabIndex = 36
         '
         'txtLv5
         '
         Me.txtLv5.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLv5.Location = New System.Drawing.Point(123, 768)
+        Me.txtLv5.Location = New System.Drawing.Point(372, 768)
         Me.txtLv5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLv5.Name = "txtLv5"
-        Me.txtLv5.Size = New System.Drawing.Size(70, 37)
+        Me.txtLv5.Size = New System.Drawing.Size(71, 37)
         Me.txtLv5.TabIndex = 37
         '
         'txtLv6
         '
         Me.txtLv6.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLv6.Location = New System.Drawing.Point(123, 813)
+        Me.txtLv6.Location = New System.Drawing.Point(372, 813)
         Me.txtLv6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLv6.Name = "txtLv6"
-        Me.txtLv6.Size = New System.Drawing.Size(70, 37)
+        Me.txtLv6.Size = New System.Drawing.Size(71, 37)
         Me.txtLv6.TabIndex = 38
         '
         'txtLv7
         '
         Me.txtLv7.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLv7.Location = New System.Drawing.Point(123, 858)
+        Me.txtLv7.Location = New System.Drawing.Point(372, 858)
         Me.txtLv7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLv7.Name = "txtLv7"
-        Me.txtLv7.Size = New System.Drawing.Size(70, 37)
+        Me.txtLv7.Size = New System.Drawing.Size(71, 37)
         Me.txtLv7.TabIndex = 39
         '
         'txtLv8
         '
         Me.txtLv8.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLv8.Location = New System.Drawing.Point(123, 903)
+        Me.txtLv8.Location = New System.Drawing.Point(372, 903)
         Me.txtLv8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLv8.Name = "txtLv8"
-        Me.txtLv8.Size = New System.Drawing.Size(70, 37)
+        Me.txtLv8.Size = New System.Drawing.Size(71, 37)
         Me.txtLv8.TabIndex = 40
         '
         'txtLv9
         '
         Me.txtLv9.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLv9.Location = New System.Drawing.Point(123, 948)
+        Me.txtLv9.Location = New System.Drawing.Point(372, 948)
         Me.txtLv9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLv9.Name = "txtLv9"
-        Me.txtLv9.Size = New System.Drawing.Size(70, 37)
+        Me.txtLv9.Size = New System.Drawing.Size(71, 37)
         Me.txtLv9.TabIndex = 41
         '
         'lbMaxHp
         '
         Me.lbMaxHp.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lbMaxHp.Location = New System.Drawing.Point(14, 1018)
+        Me.lbMaxHp.Location = New System.Drawing.Point(263, 1018)
         Me.lbMaxHp.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbMaxHp.Name = "lbMaxHp"
-        Me.lbMaxHp.Size = New System.Drawing.Size(151, 45)
+        Me.lbMaxHp.Size = New System.Drawing.Size(152, 45)
         Me.lbMaxHp.TabIndex = 43
         Me.lbMaxHp.Text = "max. HP"
         Me.lbMaxHp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -877,160 +865,40 @@ Partial Class ucMonster
         Me.ComboBox_languages.Size = New System.Drawing.Size(182, 33)
         Me.ComboBox_languages.TabIndex = 87
         '
-        'UcAttributCollection2
+        'UcAttributCollection_opponent_edit
         '
-        Attribut13.Bonus = 0
-        Attribut13.Value = 0
-        AttributCollection3.Charisma = Attribut13
-        Attribut14.Bonus = 0
-        Attribut14.Value = 0
-        AttributCollection3.Constitution = Attribut14
-        Attribut15.Bonus = 0
-        Attribut15.Value = 0
-        AttributCollection3.Dexterity = Attribut15
-        Attribut16.Bonus = 0
-        Attribut16.Value = 0
-        AttributCollection3.Intelligence = Attribut16
-        Attribut17.Bonus = 0
-        Attribut17.Value = 0
-        AttributCollection3.Strength = Attribut17
-        Attribut18.Bonus = 0
-        Attribut18.Value = 0
-        AttributCollection3.Wisdom = Attribut18
-        Me.UcAttributCollection2.AttributeCollectionToEdit = AttributCollection3
-        Me.UcAttributCollection2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.UcAttributCollection2.BackgroundImage = CType(resources.GetObject("UcAttributCollection2.BackgroundImage"), System.Drawing.Image)
-        Me.UcAttributCollection2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.UcAttributCollection2.Location = New System.Drawing.Point(304, 92)
-        Me.UcAttributCollection2.Name = "UcAttributCollection2"
-        Me.UcAttributCollection2.Size = New System.Drawing.Size(118, 792)
-        Me.UcAttributCollection2.TabIndex = 88
-        '
-        'txtInt
-        '
-        Me.txtInt.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtInt.Location = New System.Drawing.Point(123, 355)
-        Me.txtInt.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtInt.Name = "txtInt"
-        Me.txtInt.Size = New System.Drawing.Size(70, 37)
-        Me.txtInt.TabIndex = 12
-        '
-        'txtWis
-        '
-        Me.txtWis.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtWis.Location = New System.Drawing.Point(123, 310)
-        Me.txtWis.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtWis.Name = "txtWis"
-        Me.txtWis.Size = New System.Drawing.Size(70, 37)
-        Me.txtWis.TabIndex = 11
-        '
-        'txtCon
-        '
-        Me.txtCon.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtCon.Location = New System.Drawing.Point(123, 265)
-        Me.txtCon.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtCon.Name = "txtCon"
-        Me.txtCon.Size = New System.Drawing.Size(70, 37)
-        Me.txtCon.TabIndex = 10
-        '
-        'txtDex
-        '
-        Me.txtDex.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtDex.Location = New System.Drawing.Point(123, 220)
-        Me.txtDex.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtDex.Name = "txtDex"
-        Me.txtDex.Size = New System.Drawing.Size(70, 37)
-        Me.txtDex.TabIndex = 9
-        '
-        'txtStr
-        '
-        Me.txtStr.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtStr.Location = New System.Drawing.Point(123, 175)
-        Me.txtStr.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtStr.Name = "txtStr"
-        Me.txtStr.Size = New System.Drawing.Size(70, 37)
-        Me.txtStr.TabIndex = 8
-        '
-        'lbStr
-        '
-        Me.lbStr.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbStr.Location = New System.Drawing.Point(14, 175)
-        Me.lbStr.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbStr.Name = "lbStr"
-        Me.lbStr.Size = New System.Drawing.Size(71, 45)
-        Me.lbStr.TabIndex = 2
-        Me.lbStr.Text = "STR"
-        Me.lbStr.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lbDex
-        '
-        Me.lbDex.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbDex.Location = New System.Drawing.Point(14, 220)
-        Me.lbDex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbDex.Name = "lbDex"
-        Me.lbDex.Size = New System.Drawing.Size(71, 45)
-        Me.lbDex.TabIndex = 3
-        Me.lbDex.Text = "DEX"
-        Me.lbDex.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lbCon
-        '
-        Me.lbCon.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbCon.Location = New System.Drawing.Point(14, 265)
-        Me.lbCon.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbCon.Name = "lbCon"
-        Me.lbCon.Size = New System.Drawing.Size(71, 45)
-        Me.lbCon.TabIndex = 4
-        Me.lbCon.Text = "CON"
-        Me.lbCon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lbWis
-        '
-        Me.lbWis.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbWis.Location = New System.Drawing.Point(14, 310)
-        Me.lbWis.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbWis.Name = "lbWis"
-        Me.lbWis.Size = New System.Drawing.Size(71, 45)
-        Me.lbWis.TabIndex = 5
-        Me.lbWis.Text = "WIS"
-        Me.lbWis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lbInt
-        '
-        Me.lbInt.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbInt.Location = New System.Drawing.Point(14, 355)
-        Me.lbInt.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbInt.Name = "lbInt"
-        Me.lbInt.Size = New System.Drawing.Size(71, 45)
-        Me.lbInt.TabIndex = 6
-        Me.lbInt.Text = "INT"
-        Me.lbInt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lbCha
-        '
-        Me.lbCha.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbCha.Location = New System.Drawing.Point(14, 400)
-        Me.lbCha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbCha.Name = "lbCha"
-        Me.lbCha.Size = New System.Drawing.Size(71, 45)
-        Me.lbCha.TabIndex = 7
-        Me.lbCha.Text = "CHA"
-        Me.lbCha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtCha
-        '
-        Me.txtCha.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtCha.Location = New System.Drawing.Point(123, 400)
-        Me.txtCha.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtCha.Name = "txtCha"
-        Me.txtCha.Size = New System.Drawing.Size(70, 37)
-        Me.txtCha.TabIndex = 13
+        Attribut7.Bonus = 0
+        Attribut7.Value = 0
+        AttributCollection2.Charisma = Attribut7
+        Attribut8.Bonus = 0
+        Attribut8.Value = 0
+        AttributCollection2.Constitution = Attribut8
+        Attribut9.Bonus = 0
+        Attribut9.Value = 0
+        AttributCollection2.Dexterity = Attribut9
+        Attribut10.Bonus = 0
+        Attribut10.Value = 0
+        AttributCollection2.Intelligence = Attribut10
+        Attribut11.Bonus = 0
+        Attribut11.Value = 0
+        AttributCollection2.Strength = Attribut11
+        Attribut12.Bonus = 0
+        Attribut12.Value = 0
+        AttributCollection2.Wisdom = Attribut12
+        Me.UcAttributCollection_opponent_edit.AttributeCollectionToEdit = AttributCollection2
+        Me.UcAttributCollection_opponent_edit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.UcAttributCollection_opponent_edit.BackgroundImage = CType(resources.GetObject("UcAttributCollection_opponent_edit.BackgroundImage"), System.Drawing.Image)
+        Me.UcAttributCollection_opponent_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.UcAttributCollection_opponent_edit.Location = New System.Drawing.Point(30, 70)
+        Me.UcAttributCollection_opponent_edit.Name = "UcAttributCollection_opponent_edit"
+        Me.UcAttributCollection_opponent_edit.Size = New System.Drawing.Size(118, 792)
+        Me.UcAttributCollection_opponent_edit.TabIndex = 88
         '
         'ucMonster
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.UcAttributCollection2)
+        Me.Controls.Add(Me.UcAttributCollection_opponent_edit)
         Me.Controls.Add(Me.ComboBox_languages)
         Me.Controls.Add(Me.txtImage)
         Me.Controls.Add(Me.lbImage)
@@ -1102,18 +970,6 @@ Partial Class ucMonster
         Me.Controls.Add(Me.txtNumber)
         Me.Controls.Add(Me.txtAc)
         Me.Controls.Add(Me.lbAc)
-        Me.Controls.Add(Me.txtCha)
-        Me.Controls.Add(Me.txtInt)
-        Me.Controls.Add(Me.txtWis)
-        Me.Controls.Add(Me.txtCon)
-        Me.Controls.Add(Me.txtDex)
-        Me.Controls.Add(Me.txtStr)
-        Me.Controls.Add(Me.lbCha)
-        Me.Controls.Add(Me.lbInt)
-        Me.Controls.Add(Me.lbWis)
-        Me.Controls.Add(Me.lbCon)
-        Me.Controls.Add(Me.lbDex)
-        Me.Controls.Add(Me.lbStr)
         Me.Controls.Add(Me.lbOpponent)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "ucMonster"
@@ -1195,17 +1051,5 @@ Partial Class ucMonster
     Friend WithEvents txtImage As TextBox
     Friend WithEvents lbOthers As Label
     Friend WithEvents ComboBox_languages As ComboBox
-    Friend WithEvents UcAttributCollection2 As ucAttributCollection
-    Friend WithEvents txtInt As TextBox
-    Friend WithEvents txtWis As TextBox
-    Friend WithEvents txtCon As TextBox
-    Friend WithEvents txtDex As TextBox
-    Friend WithEvents txtStr As TextBox
-    Friend WithEvents lbStr As Label
-    Friend WithEvents lbDex As Label
-    Friend WithEvents lbCon As Label
-    Friend WithEvents lbWis As Label
-    Friend WithEvents lbInt As Label
-    Friend WithEvents lbCha As Label
-    Friend WithEvents txtCha As TextBox
+    Friend WithEvents UcAttributCollection_opponent_edit As ucAttributCollection
 End Class

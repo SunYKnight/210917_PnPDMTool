@@ -179,8 +179,12 @@
         Truesight
     End Enum
 
-    Public Function CalcLocation(parentSize As Size, ownSize As Size, facWidth As Double, facHeight As Double) As Point
-        Return New Point(parentSize.Width * facWidth - ownSize.Width / 2, parentSize.Height * facHeight - ownSize.Height)
+    Public Function CalcRelativeSize(parentSize As Size, facWidth As Double, facHeight As Double) As Size
+        Return New Point(parentSize.Width * facWidth, parentSize.Height * facHeight)
+    End Function
+
+    Public Function CalcRelativeLocation(parentSize As Size, ownSize As Size, facWidth As Double, facHeight As Double) As Point
+        Return New Point(parentSize.Width * facWidth - ownSize.Width / 2, parentSize.Height * facHeight - ownSize.Height / 2)
     End Function
 
 

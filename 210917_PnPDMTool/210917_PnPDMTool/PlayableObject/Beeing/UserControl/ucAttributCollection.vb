@@ -98,38 +98,38 @@
 
 #Region "Events Handle"
     Private Sub ResizeHandle(sender As Object, e As EventArgs) Handles MyBase.Resize
-        Dim ValLocFac As Integer = 1100
-        Dim ModLocFac As Integer = 1600
-        Dim FacInc As Integer = 1575
+        Dim ValLocFac As Integer = 900
+        Dim ModLocFac As Integer = 1550
+        Dim FacInc As Integer = 1570
 
         ' Adjust positon 
-        TextBox_Val_Str.Location = C.CalcLocation(Me.Size, TextBox_Val_Str.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Str.Location = C.CalcLocation(Me.Size, Label_Mod_Str.Size, 5000 / 10000, ModLocFac / 10000)
+        TextBox_Val_Str.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Str.Size, 5000 / 10000, ValLocFac / 10000)
+        Label_Mod_Str.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Str.Size, 5000 / 10000, ModLocFac / 10000)
         ValLocFac += FacInc
         ModLocFac += FacInc
 
-        TextBox_Val_Dex.Location = C.CalcLocation(Me.Size, TextBox_Val_Dex.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Dex.Location = C.CalcLocation(Me.Size, Label_Mod_Dex.Size, 5000 / 10000, ModLocFac / 10000)
+        TextBox_Val_Dex.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Dex.Size, 5000 / 10000, ValLocFac / 10000)
+        Label_Mod_Dex.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Dex.Size, 5000 / 10000, ModLocFac / 10000)
         ValLocFac += FacInc
         ModLocFac += FacInc
 
-        TextBox_Val_Con.Location = C.CalcLocation(Me.Size, TextBox_Val_Con.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Con.Location = C.CalcLocation(Me.Size, Label_Mod_Con.Size, 5000 / 10000, ModLocFac / 10000)
+        TextBox_Val_Con.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Con.Size, 5000 / 10000, ValLocFac / 10000)
+        Label_Mod_Con.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Con.Size, 5000 / 10000, ModLocFac / 10000)
         ValLocFac += FacInc
         ModLocFac += FacInc
 
-        TextBox_Val_Int.Location = C.CalcLocation(Me.Size, TextBox_Val_Int.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Int.Location = C.CalcLocation(Me.Size, Label_Mod_Int.Size, 5000 / 10000, ModLocFac / 10000)
+        TextBox_Val_Int.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Int.Size, 5000 / 10000, ValLocFac / 10000)
+        Label_Mod_Int.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Int.Size, 5000 / 10000, ModLocFac / 10000)
         ValLocFac += FacInc
         ModLocFac += FacInc
 
-        TextBox_Val_Wis.Location = C.CalcLocation(Me.Size, TextBox_Val_Wis.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Wis.Location = C.CalcLocation(Me.Size, Label_Mod_Wis.Size, 5000 / 10000, ModLocFac / 10000)
+        TextBox_Val_Wis.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Wis.Size, 5000 / 10000, ValLocFac / 10000)
+        Label_Mod_Wis.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Wis.Size, 5000 / 10000, ModLocFac / 10000)
         ValLocFac += FacInc
         ModLocFac += FacInc
 
-        TextBox_Val_Cha.Location = C.CalcLocation(Me.Size, TextBox_Val_Cha.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Cha.Location = C.CalcLocation(Me.Size, Label_Mod_Cha.Size, 5000 / 10000, ModLocFac / 10000)
+        TextBox_Val_Cha.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Cha.Size, 5000 / 10000, ValLocFac / 10000)
+        Label_Mod_Cha.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Cha.Size, 5000 / 10000, ModLocFac / 10000)
 
     End Sub
 #End Region
