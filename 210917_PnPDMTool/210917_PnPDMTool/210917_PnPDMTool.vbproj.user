@@ -10,6 +10,12 @@
     <Compile Update="MainWindow.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserControl\TabListDetails\ucTabDetails.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControl\TabListLists\ucTabListsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="PlayableObject\Beeing\UserControl\ucAttributCollection.vb">
       <SubType>UserControl</SubType>
     </Compile>
@@ -19,25 +25,25 @@
     <Compile Update="PlayableObject\Beeing\UserControl\ucSkillCollection.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucBattleView.vb">
+    <Compile Update="UserControl\TabListLists\ucBattleView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucCharOverviewLeft.vb">
+    <Compile Update="UserControl\TabListDetails\ucCharDetailsGeneral.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucCharOverviewRight.vb">
+    <Compile Update="UserControl\TabListDetails\ucCharDetailsActions.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControl\ucMapView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucMonster.vb">
+    <Compile Update="UserControl\ucEditMonster\ucEditMonsterOld.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucMonsterGeneral.vb">
+    <Compile Update="UserControl\ucEditMonster\ucEditMonsterGeneral.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucMonsterView.vb">
+    <Compile Update="UserControl\TabListLists\ucMonsterView.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControl\ucNewMap.vb">
@@ -46,5 +52,10 @@
     <Compile Update="UserControl\ucPlayer.vb">
       <SubType>UserControl</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="My Project\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

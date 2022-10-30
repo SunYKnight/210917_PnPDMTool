@@ -1,5 +1,9 @@
 ﻿Public Class Attribut
 
+#Region "Enum"
+
+#End Region
+
 #Region "Private Var"
     Private _value As Integer
 #End Region

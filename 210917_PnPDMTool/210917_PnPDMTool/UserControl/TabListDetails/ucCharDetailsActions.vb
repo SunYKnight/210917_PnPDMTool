@@ -1,6 +1,6 @@
 ﻿Imports _210917_PnPDMTool.C
 
-Public Class UcCharOverviewRight
+Public Class ucCharDetailsActions
 #Region "Private Var"
 
 #End Region

@@ -1,6 +1,6 @@
 ﻿Imports _210917_PnPDMTool.C
 
-Public Class ucMonster
+Public Class ucEditMonsterOld
 
 #Region "Private Var"
     Private _monsterToEdit As MonsterType
