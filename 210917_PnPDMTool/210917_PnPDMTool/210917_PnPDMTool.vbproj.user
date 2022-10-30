@@ -14,15 +14,36 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="PlayableObject\Beeing\UserControl\ucSavingThrowCollection.vb">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="PlayableObject\Beeing\UserControl\ucSkillCollection.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControl\ucBattleView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControl\ucCharOverviewLeft.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControl\ucCharOverviewRight.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControl\ucMapView.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserControl\ucMonster.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControl\ucMonsterGeneral.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControl\ucMonsterView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControl\ucNewMap.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControl\ucPlayer.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

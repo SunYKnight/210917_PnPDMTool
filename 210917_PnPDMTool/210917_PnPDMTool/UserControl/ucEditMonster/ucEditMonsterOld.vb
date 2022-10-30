@@ -31,8 +31,6 @@ Public Class ucMonster
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
-        UcAttributCollectionToEdit.AttributeCollectionToEdit = _monsterToEdit.Attributs
-        UcSavingThrowCollectionToEdit.SavingThrowCollectionToEdit = _monsterToEdit.SavingThrows
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
 
@@ -62,25 +60,6 @@ Public Class ucMonster
 #End Region
 
 #Region "Pubilc Sub"
-
-    Private Sub ResizeHandle(sender As Object, e As EventArgs) Handles MyBase.Resize
-        Dim labelSize = New Size(WIDTH_TEXT_MEDIUM, HEIGHT_TEXT_BOX)
-        Dim textBoxSize = New Size(WIDTH_TEXT_SMALL, HEIGHT_TEXT_BOX)
-
-        'Title
-        Me.lbOpponent.Size = New Size(Me.Width - GAP_SMALL, HEIGHT_TITLE)
-        Me.lbOpponent.Location = New Point(GAP_SMALL, 0)
-
-        ' Attributs
-        Me.UcAttributCollectionToEdit.Size = C.CalcRelativeSize(Me.Size, 0.1, 0.7, Me.UcAttributCollectionToEdit.MinimumSize)
-        Me.UcAttributCollectionToEdit.Location = C.CalcRelativeLocation(Me.Size, Me.UcAttributCollectionToEdit.Size, 0.075, 0.45)
-
-        Me.UcSavingThrowCollectionToEdit.Size = C.CalcRelativeSize(Me.Size, 0.175, 0.2, Me.UcSavingThrowCollectionToEdit.MinimumSize)
-        Me.UcSavingThrowCollectionToEdit.Location = C.CalcRelativeLocation(Me.Size, Me.UcAttributCollectionToEdit.Size, 0.2, 0.45)
-
-
-
-    End Sub
 
     Public Sub changeSize(newSize As Size)
         Me.Size = newSize
@@ -251,7 +230,6 @@ Public Class ucMonster
     Public Event btnOpponentSaveClicked()
     Public Event btnOpponentActionsClicked()
     Public Event btnOpponentLegendaryActionsClicked()
-
 
 
 #End Region

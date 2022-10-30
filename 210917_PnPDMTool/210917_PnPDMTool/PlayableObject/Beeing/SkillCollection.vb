@@ -8,6 +8,7 @@
     Public Property Acrobatic As ProficencyType = New ProficencyType
     Public Property AnimalHandling As ProficencyType = New ProficencyType
     Public Property Arcana As ProficencyType = New ProficencyType
+    Public Property Athletics As ProficencyType = New ProficencyType
     Public Property Deception As ProficencyType = New ProficencyType
     Public Property History As ProficencyType = New ProficencyType
     Public Property Insight As ProficencyType = New ProficencyType
