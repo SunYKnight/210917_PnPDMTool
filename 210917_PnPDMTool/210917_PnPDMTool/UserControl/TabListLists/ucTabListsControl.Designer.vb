@@ -24,11 +24,11 @@ Partial Class ucTabListsControl
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage_Battle = New System.Windows.Forms.TabPage()
+        Me.UcBattleView1 = New _210917_PnPDMTool.UcBattleView()
         Me.TabPage_Monster = New System.Windows.Forms.TabPage()
+        Me.UcMonsterView1 = New _210917_PnPDMTool.ucMonsterView()
         Me.TabPage_NPC = New System.Windows.Forms.TabPage()
         Me.TabPage_Player = New System.Windows.Forms.TabPage()
-        Me.UcBattleView1 = New _210917_PnPDMTool.UcBattleView()
-        Me.UcMonsterView1 = New _210917_PnPDMTool.ucMonsterView()
         Me.TabControl1.SuspendLayout()
         Me.TabPage_Battle.SuspendLayout()
         Me.TabPage_Monster.SuspendLayout()
@@ -58,6 +58,16 @@ Partial Class ucTabListsControl
         Me.TabPage_Battle.Text = "Battle"
         Me.TabPage_Battle.UseVisualStyleBackColor = True
         '
+        'UcBattleView1
+        '
+        Me.UcBattleView1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.UcBattleView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.UcBattleView1.Location = New System.Drawing.Point(3, 3)
+        Me.UcBattleView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.UcBattleView1.Name = "UcBattleView1"
+        Me.UcBattleView1.Size = New System.Drawing.Size(439, 813)
+        Me.UcBattleView1.TabIndex = 0
+        '
         'TabPage_Monster
         '
         Me.TabPage_Monster.Controls.Add(Me.UcMonsterView1)
@@ -69,34 +79,6 @@ Partial Class ucTabListsControl
         Me.TabPage_Monster.Text = "Monster"
         Me.TabPage_Monster.UseVisualStyleBackColor = True
         '
-        'TabPage_NPC
-        '
-        Me.TabPage_NPC.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage_NPC.Name = "TabPage_NPC"
-        Me.TabPage_NPC.Size = New System.Drawing.Size(772, 662)
-        Me.TabPage_NPC.TabIndex = 2
-        Me.TabPage_NPC.Text = "NPC"
-        Me.TabPage_NPC.UseVisualStyleBackColor = True
-        '
-        'TabPage_Player
-        '
-        Me.TabPage_Player.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage_Player.Name = "TabPage_Player"
-        Me.TabPage_Player.Size = New System.Drawing.Size(772, 662)
-        Me.TabPage_Player.TabIndex = 3
-        Me.TabPage_Player.Text = "Player"
-        Me.TabPage_Player.UseVisualStyleBackColor = True
-        '
-        'UcBattleView1
-        '
-        Me.UcBattleView1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.UcBattleView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.UcBattleView1.Location = New System.Drawing.Point(3, 3)
-        Me.UcBattleView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.UcBattleView1.Name = "UcBattleView1"
-        Me.UcBattleView1.Size = New System.Drawing.Size(439, 813)
-        Me.UcBattleView1.TabIndex = 0
-        '
         'UcMonsterView1
         '
         Me.UcMonsterView1.BackColor = System.Drawing.SystemColors.ActiveCaption
@@ -107,7 +89,25 @@ Partial Class ucTabListsControl
         Me.UcMonsterView1.Size = New System.Drawing.Size(439, 813)
         Me.UcMonsterView1.TabIndex = 0
         '
-        'ucTabListControl
+        'TabPage_NPC
+        '
+        Me.TabPage_NPC.Location = New System.Drawing.Point(4, 34)
+        Me.TabPage_NPC.Name = "TabPage_NPC"
+        Me.TabPage_NPC.Size = New System.Drawing.Size(445, 819)
+        Me.TabPage_NPC.TabIndex = 2
+        Me.TabPage_NPC.Text = "NPC"
+        Me.TabPage_NPC.UseVisualStyleBackColor = True
+        '
+        'TabPage_Player
+        '
+        Me.TabPage_Player.Location = New System.Drawing.Point(4, 34)
+        Me.TabPage_Player.Name = "TabPage_Player"
+        Me.TabPage_Player.Size = New System.Drawing.Size(445, 819)
+        Me.TabPage_Player.TabIndex = 3
+        Me.TabPage_Player.Text = "Player"
+        Me.TabPage_Player.UseVisualStyleBackColor = True
+        '
+        'ucTabListsControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -115,7 +115,7 @@ Partial Class ucTabListsControl
         Me.BackColor = System.Drawing.SystemColors.ControlDark
         Me.Controls.Add(Me.TabControl1)
         Me.MinimumSize = New System.Drawing.Size(100, 100)
-        Me.Name = "ucTabListControl"
+        Me.Name = "ucTabListsControl"
         Me.Size = New System.Drawing.Size(453, 857)
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage_Battle.ResumeLayout(False)

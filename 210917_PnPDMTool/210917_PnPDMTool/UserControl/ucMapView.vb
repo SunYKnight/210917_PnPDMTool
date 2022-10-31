@@ -10,7 +10,14 @@ Public Class UcMapView
 #End Region
 
 #Region "Init"
+    Public Sub New()
 
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        InitializeComponent()
+
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+
+    End Sub
 #End Region
 
 #Region "Private Sub"
@@ -67,5 +74,6 @@ Public Class UcMapView
 
 #Region "Events"
     Public Event btnNewMapClicked()
+    Public Event LoggingNotification(txt As String)
 #End Region
 End Class

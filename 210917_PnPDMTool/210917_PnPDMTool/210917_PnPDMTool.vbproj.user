@@ -34,6 +34,9 @@
     <Compile Update="UserControl\TabListDetails\ucCharDetailsActions.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UserControl\ucEditMonster\ucTabEditBeeing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControl\ucMapView.vb">
       <SubType>UserControl</SubType>
     </Compile>

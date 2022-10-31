@@ -30,3 +30,4 @@ C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\o
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucCharDetailsGeneral.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucTabDetailsControl.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucTabListsControl.resources
+C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucTabEditBeeing.resources

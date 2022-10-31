@@ -2,6 +2,14 @@
 
 Public Class ucMonsterView
 
+#Region "Enum"
+    Public Enum eGuiEvent
+        newMonster
+        editMonster
+        addToBattle
+    End Enum
+#End Region
+
 #Region "Private Var"
 #End Region
 
@@ -23,15 +31,15 @@ Public Class ucMonsterView
 
 #Region "Private Sub"
     Private Sub btnNewOpponent_Click(sender As Object, e As EventArgs) Handles btnNewOpponent.Click
-        RaiseEvent btnNewOpponentClicked()
+        RaiseEvent guiEvent(eGuiEvent.newMonster, Nothing)
     End Sub
 
     Private Sub btnEditOpponent_Click(sender As Object, e As EventArgs) Handles btnEditOpponent.Click
-        RaiseEvent btnEditOpponentClicked()
+        RaiseEvent guiEvent(eGuiEvent.editMonster, Nothing)
     End Sub
 
     Private Sub btnAddToBattle_Click(sender As Object, e As EventArgs) Handles btnAddToBattle.Click
-        RaiseEvent btnAddToBattleClicked()
+        RaiseEvent guiEvent(eGuiEvent.addToBattle, Nothing)
     End Sub
 #End Region
 
@@ -56,9 +64,7 @@ Public Class ucMonsterView
 #End Region
 
 #Region "Events"
-    Public Event btnNewOpponentClicked()
-    Public Event btnEditOpponentClicked()
-    Public Event btnAddToBattleClicked()
+    Public Event guiEvent(evt As eGuiEvent, arg As Object)
 #End Region
 
 End Class

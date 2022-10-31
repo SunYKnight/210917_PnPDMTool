@@ -1,6 +1,15 @@
 ﻿Imports _210917_PnPDMTool.C
 
 Public Class UcBattleView
+#Region "Enum"
+    Public Enum eGuiEvent
+        newPlayableObject
+        editPlayableObject
+        removePlayableObject
+        nextTurn
+        endBattle
+    End Enum
+#End Region
 #Region "Private Var"
 #End Region
 
@@ -20,23 +29,23 @@ Public Class UcBattleView
 
 #Region "Private Sub"
     Private Sub btnNewPlayer_Click(sender As Object, e As EventArgs) Handles btnNewPlayer.Click
-        RaiseEvent btnNewPlayerClicked()
+        RaiseEvent guiEvent(eGuiEvent.newPlayableObject, Nothing)
     End Sub
 
     Private Sub btnEditPlayer_Click(sender As Object, e As EventArgs) Handles btnEditPlayer.Click
-        RaiseEvent btnEditPlayerClicked()
+        RaiseEvent guiEvent(eGuiEvent.editPlayableObject, Nothing)
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
-        RaiseEvent btnRemoveClicked()
+        RaiseEvent guiEvent(eGuiEvent.removePlayableObject, Nothing)
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        RaiseEvent btnNextClicked()
+        RaiseEvent guiEvent(eGuiEvent.nextTurn, Nothing)
     End Sub
 
     Private Sub btnEndBattle_Click(sender As Object, e As EventArgs) Handles btnEndBattle.Click
-        RaiseEvent btnEndBattleClicked()
+        RaiseEvent guiEvent(eGuiEvent.endBattle, Nothing)
     End Sub
 #End Region
 
@@ -67,10 +76,6 @@ Public Class UcBattleView
 #End Region
 
 #Region "Events"
-    Public Event btnNewPlayerClicked()
-    Public Event btnEditPlayerClicked()
-    Public Event btnRemoveClicked()
-    Public Event btnNextClicked()
-    Public Event btnEndBattleClicked()
+    Public Event guiEvent(evt As eGuiEvent, arg As Object)
 #End Region
 End Class

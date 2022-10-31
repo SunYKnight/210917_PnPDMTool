@@ -4,9 +4,10 @@ Public Class MainWindow
 #Region "Private Var"
     Dim innerSize As Size
 
-    Private _ucTabDetails As ucTabDetailsControl
-    Private _ucTabList As ucTabListsControl
-    Private _ucMapView As UcMapView
+    Private WithEvents _ucTabBeeingDetails As ucTabDetailsControl = New ucTabDetailsControl()
+    Private WithEvents _ucTabBeeingLists As ucTabListsControl = New ucTabListsControl()
+    Private WithEvents _ucMapView As UcMapView = New UcMapView()
+    Private WithEvents _ucTabBeeingEdit As ucTabEditBeeing = New ucTabEditBeeing
 #End Region
 
 #Region "Properties"
@@ -17,13 +18,14 @@ Public Class MainWindow
     Public Sub New()
         InitializeComponent()
 
-        _ucTabList = New ucTabListsControl()
-        _ucTabDetails = New ucTabDetailsControl()
-        _ucMapView = New UcMapView()
 
-        FlowLayoutPanel_Left.Controls.Add(_ucTabList)
-        FlowLayoutPanel_Left.Controls.Add(_ucTabDetails)
+        ' Add to layout
+        FlowLayoutPanel_Left.Controls.Add(_ucTabBeeingLists)
+        FlowLayoutPanel_Left.Controls.Add(_ucTabBeeingDetails)
         FlowLayoutPanel_Center.Controls.Add(_ucMapView)
+
+        ' Notification
+        LoggingNotificationHandle("MainWindow Load Complete!")
 
     End Sub
 #End Region
@@ -53,6 +55,17 @@ Public Class MainWindow
 
 #Region "Events"
 
+#End Region
+
+#Region "Event Handle"
+
+    Private Sub EditMonsterHandle(avt As ucTabListsControl.eGuiEvent, arg As Object) Handles _ucTabBeeingLists.guiEvent
+
+    End Sub
+
+    Private Sub LoggingNotificationHandle(txt As String) Handles _ucTabBeeingLists.LoggingNotification, _ucTabBeeingDetails.LoggingNotification, _ucMapView.LoggingNotification
+        _ucTabBeeingDetails.Log(txt)
+    End Sub
 #End Region
 
 End Class
