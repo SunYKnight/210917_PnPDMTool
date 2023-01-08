@@ -4,7 +4,7 @@
 #End Region
 
 #Region "Private Var"
-    Private _ucEditMonsterGeneral As ucEditMonsterGeneral
+    Private _ucEditMonsterGeneral As ucBeeingsParameter
     Private _tabPageGeneral As TabPage
     Private _tapcEditMonster As TabControl
     Private WithEvents _btnSave As Button
@@ -42,7 +42,7 @@
         _btnLayout.Controls.Add(_btnExit)
 
         ' _ucEditMonsterGeneral
-        _ucEditMonsterGeneral = New ucEditMonsterGeneral With {
+        _ucEditMonsterGeneral = New ucBeeingsParameter With {
             .Dock = DockStyle.Fill
         }
 
@@ -63,6 +63,8 @@
         ' _mainLayout
         _mainLayout.Controls.Add(_tapcEditMonster)
         _mainLayout.Controls.Add(_btnLayout)
+
+        Me.MinimumSize = New Size(_ucEditMonsterGeneral.MinimumSize.Width, _ucEditMonsterGeneral.MinimumSize.Height + _btnLayout.Height)
 
     End Sub
 #End Region

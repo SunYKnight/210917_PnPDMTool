@@ -43,7 +43,7 @@
     <Compile Update="Frontend\UserControl\ucEditMonster\ucEditMonsterOld.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Frontend\UserControl\ucEditMonster\ucEditMonsterGeneral.vb">
+    <Compile Update="Frontend\UserControl\ucEditMonster\ucBeeingsParameter.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\TabListLists\ucMonsterView.vb">

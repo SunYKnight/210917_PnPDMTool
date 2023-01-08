@@ -1,12 +1,14 @@
 ﻿Imports _210917_PnPDMTool.C
-Public Class ucEditMonsterGeneral
+Imports _210917_PnPDMTool.ucAttributCollection
+
+Public Class ucBeeingsParameter
 
 #Region "Private Var"
     Private _monsterToEdit As MonsterType
 #End Region
 
 #Region "Properties"
-    Public Overrides Property MinimumSize As Size = New Size(750, 800)
+    Public Overrides Property MinimumSize As Size = New Size(1200, 800)
 #End Region
 
 #Region "Init"
@@ -35,6 +37,10 @@ Public Class ucEditMonsterGeneral
         UcSkillCollection1.SkillCollectionToEdit = _monsterToEdit.Skills
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+        ComboBox_Size.DataSource = System.Enum.GetValues(GetType(C.ESize))
+
+        ' Update data
+        UpdateDatabinding()
 
         ' comboBoxItem = New ComboBoxItemCheck()
         ' ComboBox_languages.Items.Add(comboBoxItem)
@@ -44,7 +50,26 @@ Public Class ucEditMonsterGeneral
 #End Region
 
 #Region "Private Sub"
+    Private Sub UpdateDatabinding()
+        ' Locals
+        Dim dataSrc = System.Enum.GetNames(GetType(eAttributes))
 
+        TextBox_name.DataBindings.Clear()
+        TextBox_name.DataBindings.Add(New Binding("Text", _monsterToEdit, "Name"))
+
+        ComboBox_Size.DataBindings.Clear()
+        ComboBox_Size.DataBindings.Add(New Binding("Text", _monsterToEdit, "Size"))
+
+        ComboBox_aligment_personality.DataBindings.Clear()
+        ComboBox_aligment_personality.DataBindings.Add(New Binding("Text", _monsterToEdit.Aligment, "Personality"))
+
+        ComboBox_aligment_behaviour.DataBindings.Clear()
+        ComboBox_aligment_behaviour.DataBindings.Add(New Binding("Text", _monsterToEdit.Aligment, "Behaviour"))
+
+        PictureBox_image.DataBindings.Clear()
+        PictureBox_image.DataBindings.Add(New Binding("Image", _monsterToEdit.Aligment, "Behaviour", True))
+
+    End Sub
 #End Region
 
 #Region "Pubilc Sub"
@@ -64,9 +89,8 @@ Public Class ucEditMonsterGeneral
         Me.UcSkillCollection1.Size = C.CalcRelativeSize(Me.Size, 0.1, 0.7, Me.UcSkillCollection1.MinimumSize)
         Me.UcSkillCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcSkillCollection1.Size, 0.15, 0.5)
 
-
-
     End Sub
+
 
 #End Region
 

@@ -24,10 +24,10 @@ C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\o
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\210917_PnPDMTool.pdb
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\210917_PnPDMTool.genruntimeconfig.cache
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\ref\210917_PnPDMTool.dll
-C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucEditMonsterGeneral.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucEditMonsterOld.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucCharDetailsActions.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucCharDetailsGeneral.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucTabDetailsControl.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucTabListsControl.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucTabEditBeeing.resources
+C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucBeeingsParameter.resources

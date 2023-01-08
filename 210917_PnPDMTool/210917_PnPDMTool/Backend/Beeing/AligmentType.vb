@@ -2,15 +2,15 @@
 
 #Region "Enum"
     Enum EPersonality
-        Lawful = 100
+        Lawful = 1
         Neutral = 0
-        Chaotic = -100
+        Chaotic = -1
     End Enum
 
     Enum EBehaviour
-        Good = 100
+        Good = 1
         Neutral = 0
-        Evil = -100
+        Evil = -1
     End Enum
 #End Region
 #Region "Private Var"
