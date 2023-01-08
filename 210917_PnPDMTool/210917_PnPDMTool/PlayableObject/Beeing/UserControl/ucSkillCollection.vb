@@ -6,6 +6,8 @@
 
 #Region "Properties"
 
+    Public Overrides Property MinimumSize As Size = New Size(500, 500)
+
     Public Property SkillCollectionToEdit As SkillCollection
         Get
             Return _skillCollection

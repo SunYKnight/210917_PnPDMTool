@@ -59,7 +59,6 @@ Partial Class UcBattleView
         '
         Me.listViewBattle.BackColor = System.Drawing.Color.White
         Me.listViewBattle.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.listViewBattle.HideSelection = False
         resources.ApplyResources(Me.listViewBattle, "listViewBattle")
         Me.listViewBattle.Name = "listViewBattle"
         Me.listViewBattle.UseCompatibleStateImageBehavior = False
@@ -76,7 +75,7 @@ Partial Class UcBattleView
         Me.btnNewPlayer.Name = "btnNewPlayer"
         Me.btnNewPlayer.UseVisualStyleBackColor = True
         '
-        'ucBattleView
+        'UcBattleView
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -88,7 +87,7 @@ Partial Class UcBattleView
         Me.Controls.Add(Me.btnEndBattle)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnRemove)
-        Me.Name = "ucBattleView"
+        Me.Name = "UcBattleView"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

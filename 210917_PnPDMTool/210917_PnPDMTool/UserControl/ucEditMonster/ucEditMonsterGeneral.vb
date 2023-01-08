@@ -6,7 +6,7 @@ Public Class ucEditMonsterGeneral
 #End Region
 
 #Region "Properties"
-
+    Public Overrides Property MinimumSize As Size = New Size(750, 800)
 #End Region
 
 #Region "Init"
@@ -55,14 +55,14 @@ Public Class ucEditMonsterGeneral
 
 
         ' Attributs
-        Me.UcAttributCollection1.Size = C.CalcRelativeSize(Me.Size, 0.1, 0.7, Me.UcAttributCollection1.MinimumSize)
-        Me.UcAttributCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcAttributCollection1.Size, 0.2, 0.45)
+        Me.UcAttributCollection1.Size = C.CalcRelativeSize(Me.Size, 0.25, 0.8, Me.UcAttributCollection1.MinimumSize)
+        Me.UcAttributCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcAttributCollection1.Size, 0.5, 0.85)
 
         Me.UcSavingThrowCollection1.Size = C.CalcRelativeSize(Me.Size, 0.175, 0.2, Me.UcSavingThrowCollection1.MinimumSize)
-        Me.UcSavingThrowCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcSavingThrowCollection1.Size, 0.4, 0.45)
+        Me.UcSavingThrowCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcSavingThrowCollection1.Size, 0.5, 0.2)
 
         Me.UcSkillCollection1.Size = C.CalcRelativeSize(Me.Size, 0.1, 0.7, Me.UcSkillCollection1.MinimumSize)
-        Me.UcSkillCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcSkillCollection1.Size, 0.1, 0.75)
+        Me.UcSkillCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcSkillCollection1.Size, 0.15, 0.5)
 
 
 

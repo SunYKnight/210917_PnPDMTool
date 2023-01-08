@@ -4,9 +4,9 @@ Public Class MainWindow
 #Region "Private Var"
     Dim innerSize As Size
 
-    Private WithEvents _ucTabBeeingDetails As ucTabDetailsControl = New ucTabDetailsControl()
-    Private WithEvents _ucTabBeeingLists As ucTabListsControl = New ucTabListsControl()
-    Private WithEvents _ucMapView As UcMapView = New UcMapView()
+    Private WithEvents _ucTabBeeingDetails As ucTabDetailsControl = New ucTabDetailsControl
+    Private WithEvents _ucTabBeeingLists As ucTabListsControl = New ucTabListsControl
+    Private WithEvents _ucMapView As UcMapView = New UcMapView
     Private WithEvents _ucTabBeeingEdit As ucTabEditBeeing = New ucTabEditBeeing
 #End Region
 
@@ -59,8 +59,18 @@ Public Class MainWindow
 
 #Region "Event Handle"
 
-    Private Sub EditMonsterHandle(avt As ucTabListsControl.eGuiEvent, arg As Object) Handles _ucTabBeeingLists.guiEvent
-
+    Private Sub EditMonsterHandle(evt As ucTabListsControl.eGuiEvent, arg As Object) Handles _ucTabBeeingLists.guiEvent
+        Select Case evt
+            Case ucTabListsControl.eGuiEvent.nextTurn
+            Case ucTabListsControl.eGuiEvent.removePlayableObject
+            Case ucTabListsControl.eGuiEvent.newPlayableObject
+            Case ucTabListsControl.eGuiEvent.newMonster
+                FlowLayoutPanel_Center.Controls.Clear()
+                FlowLayoutPanel_Center.Controls.Add(_ucTabBeeingEdit)
+                FlowLayoutPanel_Center.Update()
+            Case ucTabListsControl.eGuiEvent.endBattle
+            Case Else
+        End Select
     End Sub
 
     Private Sub LoggingNotificationHandle(txt As String) Handles _ucTabBeeingLists.LoggingNotification, _ucTabBeeingDetails.LoggingNotification, _ucMapView.LoggingNotification

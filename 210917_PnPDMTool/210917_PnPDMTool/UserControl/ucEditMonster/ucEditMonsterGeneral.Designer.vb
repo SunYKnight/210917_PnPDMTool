@@ -29,7 +29,6 @@ Partial Class ucEditMonsterGeneral
         Dim Attribut4 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
         Dim Attribut5 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
         Dim Attribut6 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucEditMonsterGeneral))
         Dim SkillCollection1 As _210917_PnPDMTool.SkillCollection = New _210917_PnPDMTool.SkillCollection()
         Dim ProficencyType1 As _210917_PnPDMTool.ProficencyType = New _210917_PnPDMTool.ProficencyType()
         Dim ProficencyType2 As _210917_PnPDMTool.ProficencyType = New _210917_PnPDMTool.ProficencyType()
@@ -83,20 +82,20 @@ Partial Class ucEditMonsterGeneral
         AttributCollection1.Wisdom = Attribut6
         Me.UcAttributCollection1.AttributeCollectionToEdit = AttributCollection1
         Me.UcAttributCollection1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.UcAttributCollection1.BackgroundImage = CType(resources.GetObject("UcAttributCollection1.BackgroundImage"), System.Drawing.Image)
         Me.UcAttributCollection1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.UcAttributCollection1.Location = New System.Drawing.Point(25, 96)
+        Me.UcAttributCollection1.Location = New System.Drawing.Point(317, 286)
+        Me.UcAttributCollection1.MinimumSize = New System.Drawing.Size(170, 265)
         Me.UcAttributCollection1.Name = "UcAttributCollection1"
-        Me.UcAttributCollection1.Size = New System.Drawing.Size(124, 729)
+        Me.UcAttributCollection1.Size = New System.Drawing.Size(170, 265)
         Me.UcAttributCollection1.TabIndex = 0
         '
         'UcSkillCollection1
         '
         Me.UcSkillCollection1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.UcSkillCollection1.Location = New System.Drawing.Point(155, 96)
+        Me.UcSkillCollection1.Location = New System.Drawing.Point(12, 15)
         Me.UcSkillCollection1.MinimumSize = New System.Drawing.Size(285, 720)
         Me.UcSkillCollection1.Name = "UcSkillCollection1"
-        Me.UcSkillCollection1.Size = New System.Drawing.Size(285, 729)
+        Me.UcSkillCollection1.Size = New System.Drawing.Size(285, 720)
         ProficencyType1.Competence = _210917_PnPDMTool.ProficencyType.ECopmetenceType.None
         SkillCollection1.Acrobatic = ProficencyType1
         ProficencyType2.Competence = _210917_PnPDMTool.ProficencyType.ECopmetenceType.None
@@ -139,7 +138,7 @@ Partial Class ucEditMonsterGeneral
         'UcSavingThrowCollection1
         '
         Me.UcSavingThrowCollection1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.UcSavingThrowCollection1.Location = New System.Drawing.Point(416, 575)
+        Me.UcSavingThrowCollection1.Location = New System.Drawing.Point(303, 15)
         Me.UcSavingThrowCollection1.MinimumSize = New System.Drawing.Size(230, 250)
         Me.UcSavingThrowCollection1.Name = "UcSavingThrowCollection1"
         ProficencyType19.Competence = _210917_PnPDMTool.ProficencyType.ECopmetenceType.None
@@ -158,14 +157,14 @@ Partial Class ucEditMonsterGeneral
         Me.UcSavingThrowCollection1.Size = New System.Drawing.Size(230, 250)
         Me.UcSavingThrowCollection1.TabIndex = 2
         '
-        'ucMonster2
+        'ucEditMonsterGeneral
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.UcSavingThrowCollection1)
         Me.Controls.Add(Me.UcSkillCollection1)
         Me.Controls.Add(Me.UcAttributCollection1)
-        Me.Name = "ucMonster2"
+        Me.Name = "ucEditMonsterGeneral"
         Me.Size = New System.Drawing.Size(1315, 936)
         Me.ResumeLayout(False)
 

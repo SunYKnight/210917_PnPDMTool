@@ -4,6 +4,7 @@
 #End Region
 
 #Region "Properties"
+    Public Overrides Property MinimumSize As Size = New Size(200, 200)
 
     Public Property SavingThrowCollectionToEdit As SavingThrowCollection
         Get

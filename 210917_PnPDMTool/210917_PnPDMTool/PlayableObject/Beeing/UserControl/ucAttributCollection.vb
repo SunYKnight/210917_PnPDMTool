@@ -1,10 +1,29 @@
 ﻿Public Class ucAttributCollection
 
+#Region "Enum"
+    Public Enum eAttributes
+        Strength
+        Dexterity
+        Constitution
+        Intelligence
+        Wisdom
+        Charisma
+    End Enum
+
+
+#End Region
+
 #Region "Private Var"
     Private _attributeCOllection As AttributCollection
+    Private main_layout As FlowLayoutPanel
+    Private lbAttr As Label()
+    Private tbAttrVal As TextBox()
+
 #End Region
 
 #Region "Properties"
+
+    Public Overrides Property MinimumSize As Size = New Size(170, 265)
 
     Public Property AttributeCollectionToEdit As AttributCollection
         Get
@@ -43,46 +62,70 @@
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
 
+        ' Set Paramter
+        main_layout = New FlowLayoutPanel()
+        main_layout.AutoSize = True
+        main_layout.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        main_layout.MinimumSize = New Size(500, 100)
+        main_layout.FlowDirection = FlowDirection.TopDown
+
+        ' Add Layout
+        Me.Controls.Add(main_layout)
+
+        ' Create empty controlls
+        lbAttr = New Label(System.Enum.GetNames(GetType(eAttributes)).Length) {}
+        tbAttrVal = New TextBox(System.Enum.GetNames(GetType(eAttributes)).Length) {}
+
+        ' Load all Arrtibutes
+        For Each attr In System.Enum.GetValues(GetType(eAttributes))
+            Dim layout As FlowLayoutPanel = New FlowLayoutPanel
+
+            ' Set attribute text
+            lbAttr(attr) = New Label()
+            lbAttr(attr).Text = CType(attr, eAttributes).ToString()
+            lbAttr(attr).Size = New Size(110, 30)
+
+            ' Set attribute value
+            tbAttrVal(attr) = New TextBox()
+            tbAttrVal(attr).Size = New Size(30, 30)
+
+            ' Set Parameter
+            layout.AutoSize = True
+            layout.AutoSizeMode = AutoSizeMode.GrowAndShrink
+            layout.MinimumSize = New Size(500, 1)
+            layout.FlowDirection = FlowDirection.LeftToRight
+
+            ' Add items
+            layout.Controls.Add(lbAttr(attr))
+            layout.Controls.Add(tbAttrVal(attr))
+
+            ' Add to main layout
+            main_layout.Controls.Add(layout)
+
+        Next
+
+        ' Update data
+        UpdateDatabinding()
+
     End Sub
 
 #End Region
 
 #Region "Private Sub"
     Private Sub UpdateDatabinding()
-
-
+        ' Locals
+        Dim dataSrc = System.Enum.GetNames(GetType(eAttributes))
 
         ' Check if UI Exist
-        If (Not IsNothing(TextBox_Val_Cha)) Then
-            ' Clear Values
-            TextBox_Val_Cha.DataBindings.Clear()
-            TextBox_Val_Con.DataBindings.Clear()
-            TextBox_Val_Dex.DataBindings.Clear()
-            TextBox_Val_Int.DataBindings.Clear()
-            TextBox_Val_Str.DataBindings.Clear()
-            TextBox_Val_Wis.DataBindings.Clear()
-            ' Clear Modifier
-            Label_Mod_Cha.DataBindings.Clear()
-            Label_Mod_Con.DataBindings.Clear()
-            Label_Mod_Dex.DataBindings.Clear()
-            Label_Mod_Int.DataBindings.Clear()
-            Label_Mod_Str.DataBindings.Clear()
-            Label_Mod_Wis.DataBindings.Clear()
+        If (Not IsNothing(tbAttrVal)) Then
 
-            ' Set Values
-            TextBox_Val_Cha.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Charisma.Value"))
-            TextBox_Val_Con.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Constitution.Value"))
-            TextBox_Val_Dex.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Dexterity.Value"))
-            TextBox_Val_Int.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Intelligence.Value"))
-            TextBox_Val_Str.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Strength.Value"))
-            TextBox_Val_Wis.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Wisdom.Value"))
-            ' Set Modifiers
-            Label_Mod_Cha.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Charisma.Modifier"))
-            Label_Mod_Con.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Constitution.Modifier"))
-            Label_Mod_Dex.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Dexterity.Modifier"))
-            Label_Mod_Int.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Intelligence.Modifier"))
-            Label_Mod_Str.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Strength.Modifier"))
-            Label_Mod_Wis.DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, "Wisdom.Modifier"))
+            For Each attr In System.Enum.GetValues(GetType(eAttributes))
+                ' Clear Values
+                tbAttrVal(attr).DataBindings.Clear()
+                ' Set Databinding
+                tbAttrVal(attr).DataBindings.Add(New Binding("Text", AttributeCollectionToEdit, dataSrc(attr) + ".Value"))
+            Next
+
         End If
 
     End Sub
@@ -97,41 +140,7 @@
 #End Region
 
 #Region "Events Handle"
-    Private Sub ResizeHandle(sender As Object, e As EventArgs) Handles MyBase.Resize
-        Dim ValLocFac As Integer = 900
-        Dim ModLocFac As Integer = 1550
-        Dim FacInc As Integer = 1570
 
-        ' Adjust positon 
-        TextBox_Val_Str.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Str.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Str.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Str.Size, 5000 / 10000, ModLocFac / 10000)
-        ValLocFac += FacInc
-        ModLocFac += FacInc
-
-        TextBox_Val_Dex.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Dex.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Dex.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Dex.Size, 5000 / 10000, ModLocFac / 10000)
-        ValLocFac += FacInc
-        ModLocFac += FacInc
-
-        TextBox_Val_Con.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Con.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Con.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Con.Size, 5000 / 10000, ModLocFac / 10000)
-        ValLocFac += FacInc
-        ModLocFac += FacInc
-
-        TextBox_Val_Int.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Int.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Int.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Int.Size, 5000 / 10000, ModLocFac / 10000)
-        ValLocFac += FacInc
-        ModLocFac += FacInc
-
-        TextBox_Val_Wis.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Wis.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Wis.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Wis.Size, 5000 / 10000, ModLocFac / 10000)
-        ValLocFac += FacInc
-        ModLocFac += FacInc
-
-        TextBox_Val_Cha.Location = C.CalcRelativeLocation(Me.Size, TextBox_Val_Cha.Size, 5000 / 10000, ValLocFac / 10000)
-        Label_Mod_Cha.Location = C.CalcRelativeLocation(Me.Size, Label_Mod_Cha.Size, 5000 / 10000, ModLocFac / 10000)
-
-    End Sub
 #End Region
 
 

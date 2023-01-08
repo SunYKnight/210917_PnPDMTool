@@ -5,6 +5,7 @@
 
 
 #Region "Properties"
+
     Public Property Strength As Attribut = New Attribut
     Public Property Dexterity As Attribut = New Attribut
     Public Property Constitution As Attribut = New Attribut
