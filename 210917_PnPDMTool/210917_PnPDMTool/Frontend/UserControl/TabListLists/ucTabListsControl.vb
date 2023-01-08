@@ -9,6 +9,7 @@
         newMonster
         editMonster
     End Enum
+
 #End Region
 
 #Region "Private Var"

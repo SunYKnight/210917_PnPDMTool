@@ -3,7 +3,7 @@
     Inherits BeeingType
 
 #Region "Private Var"
-    Private _dmgRecvModifierType(C.EDmgType.Count) As C.EDmgTypeModifier
+    Private _dmgRecvModifierType(System.Enum.GetValues(GetType(C.EDmgType)).Length) As C.EDmgTypeModifier
 
     Private _dices As DiceCollection
 

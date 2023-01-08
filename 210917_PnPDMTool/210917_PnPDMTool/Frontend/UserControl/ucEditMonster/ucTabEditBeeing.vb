@@ -7,8 +7,8 @@
     Private _ucEditMonsterGeneral As ucEditMonsterGeneral
     Private _tabPageGeneral As TabPage
     Private _tapcEditMonster As TabControl
-    Private _btnSave As Button
-    Private _btnExit As Button
+    Private WithEvents _btnSave As Button
+    Private WithEvents _btnExit As Button
     Private _btnLayout As FlowLayoutPanel
 #End Region
 
@@ -24,34 +24,39 @@
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
 
         ' Button Save
-        _btnSave = New Button
-        _btnSave.Text = "Save"
+        _btnSave = New Button With {
+            .Text = "Save"
+        }
 
         ' Button Exit
-        _btnExit = New Button
-        _btnExit.Text = "Exit"
+        _btnExit = New Button With {
+            .Text = "Exit"
+        }
 
         ' Button layout
-        _btnLayout = New FlowLayoutPanel
-        _btnLayout.FlowDirection = FlowDirection.RightToLeft
-        ' _btnLayout.Dock = DockStyle.Bottom
-        _btnLayout.MinimumSize = New Size(200, 100)
+        _btnLayout = New FlowLayoutPanel With {
+            .FlowDirection = FlowDirection.RightToLeft,
+            .MinimumSize = New Size(200, 100)
+        }
         _btnLayout.Controls.Add(_btnSave)
         _btnLayout.Controls.Add(_btnExit)
 
         ' _ucEditMonsterGeneral
-        _ucEditMonsterGeneral = New ucEditMonsterGeneral
-        _ucEditMonsterGeneral.Dock = DockStyle.Fill
+        _ucEditMonsterGeneral = New ucEditMonsterGeneral With {
+            .Dock = DockStyle.Fill
+        }
 
         ' _tabPageGeneral
-        _tabPageGeneral = New TabPage
-        _tabPageGeneral.Text = "General"
-        _tabPageGeneral.Dock = DockStyle.Fill
+        _tabPageGeneral = New TabPage With {
+            .Text = "General",
+            .Dock = DockStyle.Fill
+        }
         _tabPageGeneral.Controls.Add(_ucEditMonsterGeneral)
 
         ' _tapcEditMonster
-        _tapcEditMonster = New TabControl
-        _tapcEditMonster.MinimumSize = _ucEditMonsterGeneral.MinimumSize
+        _tapcEditMonster = New TabControl With {
+            .MinimumSize = _ucEditMonsterGeneral.MinimumSize
+        }
         ' _tapcEditMonster.Dock = DockStyle.Fill
         _tapcEditMonster.Controls.Add(_tabPageGeneral)
 
@@ -71,9 +76,17 @@
 #End Region
 
 #Region "Events"
-
+    Public Event ButtonSaveClicked()
+    Public Event ButtonExitClicked()
 #End Region
 
 #Region "Event Handle"
+    Private Sub ButtonExitClickedHandler() Handles _btnExit.Click
+        RaiseEvent ButtonExitClicked()
+    End Sub
+
+    Private Sub ButtonSaveClickedHandler() Handles _btnSave.Click
+        RaiseEvent ButtonSaveClicked()
+    End Sub
 #End Region
 End Class

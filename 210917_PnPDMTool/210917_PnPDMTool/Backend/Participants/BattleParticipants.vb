@@ -3,7 +3,7 @@
 
 #Region "Private Var"
 
-    Private _participent As t
+    Private _participent As Object ' Handle as 
 
 #End Region
 
@@ -44,6 +44,7 @@
             Return 0
         End Get
     End Property
+
 #End Region
 
 #Region "Init"

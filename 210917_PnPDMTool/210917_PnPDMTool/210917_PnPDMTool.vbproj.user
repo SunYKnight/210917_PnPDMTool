@@ -7,52 +7,52 @@
     <ActiveDebugProfile>210917_PnPDMTool</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="MainWindow.vb">
+    <Compile Update="Frontend\MainWindow\MainWindow.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UserControl\TabListDetails\ucTabDetails.vb">
+    <Compile Update="Frontend\UserControl\TabListDetails\ucTabDetails.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\TabListLists\ucTabListsControl.vb">
+    <Compile Update="Frontend\UserControl\TabListLists\ucTabListsControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="PlayableObject\Beeing\UserControl\ucAttributCollection.vb">
+    <Compile Update="Frontend\UserControl\ucAttributCollection.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="PlayableObject\Beeing\UserControl\ucSavingThrowCollection.vb">
+    <Compile Update="Frontend\UserControl\ucSavingThrowCollection.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="PlayableObject\Beeing\UserControl\ucSkillCollection.vb">
+    <Compile Update="Frontend\UserControl\ucSkillCollection.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\TabListLists\ucBattleView.vb">
+    <Compile Update="Frontend\UserControl\TabListLists\ucBattleView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\TabListDetails\ucCharDetailsGeneral.vb">
+    <Compile Update="Frontend\UserControl\TabListDetails\ucCharDetailsGeneral.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\TabListDetails\ucCharDetailsActions.vb">
+    <Compile Update="Frontend\UserControl\TabListDetails\ucCharDetailsActions.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucEditMonster\ucTabEditBeeing.vb">
+    <Compile Update="Frontend\UserControl\ucEditMonster\ucTabEditBeeing.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucMapView.vb">
+    <Compile Update="Frontend\UserControl\ucMapView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucEditMonster\ucEditMonsterOld.vb">
+    <Compile Update="Frontend\UserControl\ucEditMonster\ucEditMonsterOld.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucEditMonster\ucEditMonsterGeneral.vb">
+    <Compile Update="Frontend\UserControl\ucEditMonster\ucEditMonsterGeneral.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\TabListLists\ucMonsterView.vb">
+    <Compile Update="Frontend\UserControl\TabListLists\ucMonsterView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucNewMap.vb">
+    <Compile Update="Frontend\UserControl\ucNewMap.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControl\ucPlayer.vb">
+    <Compile Update="Frontend\UserControl\ucPlayer.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
