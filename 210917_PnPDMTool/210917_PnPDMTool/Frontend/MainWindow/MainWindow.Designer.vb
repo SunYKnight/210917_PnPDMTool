@@ -48,6 +48,7 @@ Partial Class MainWindow
         Me.Controls.Add(Me.FlowLayoutPanel_Left)
         Me.Name = "MainWindow"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ucOpponent1 As ucEditMonsterOld

@@ -21,13 +21,13 @@
 #End Region
 
 #Region "Pubilc Sub"
-    Public Function Evaluate(count As Integer, dice As DiceType) As Integer
+    Public Function Evaluate(dice As DiceType, type As DiceType.EThrowType) As Integer
         ' Locals
         Dim result As Integer = 0
 
         ' Evaluate Set
-        For i = 0 To count
-            result += dice.Evaluate(DiceType.EThrowType.Normal)
+        For i = 0 To Me.DiceCount
+            result += dice.Evaluate(type)
         Next
 
         Return result

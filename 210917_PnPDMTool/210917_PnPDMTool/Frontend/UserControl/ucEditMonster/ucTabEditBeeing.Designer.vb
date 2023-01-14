@@ -27,6 +27,7 @@ Partial Class ucTabEditBeeing
         '
         '_mainLayout
         '
+        Me._mainLayout.AutoSize = True
         Me._mainLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me._mainLayout.Dock = System.Windows.Forms.DockStyle.Fill
         Me._mainLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
@@ -39,12 +40,14 @@ Partial Class ucTabEditBeeing
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Controls.Add(Me._mainLayout)
-        Me.MaximumSize = New System.Drawing.Size(750, 1000)
+        Me.MinimumSize = New System.Drawing.Size(750, 1000)
         Me.Name = "ucTabEditBeeing"
         Me.Size = New System.Drawing.Size(750, 1000)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 

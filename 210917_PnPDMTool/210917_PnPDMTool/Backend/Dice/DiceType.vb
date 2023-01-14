@@ -47,7 +47,6 @@
         ' Get result
         result1 = Generator.Next(1, Eyes + 1)
 
-
         ' relect roll type
         Select Case type
             Case EThrowType.Advantage

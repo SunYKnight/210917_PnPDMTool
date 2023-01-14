@@ -1,14 +1,15 @@
-﻿Imports _210917_PnPDMTool.C
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports _210917_PnPDMTool.C
 Imports _210917_PnPDMTool.ucAttributCollection
 
-Public Class ucBeeingsParameter
+Public Class ucBeeingsParameterGeneral
 
 #Region "Private Var"
     Private _monsterToEdit As MonsterType
 #End Region
 
 #Region "Properties"
-    Public Overrides Property MinimumSize As Size = New Size(1200, 800)
+    Public Overridable Property MinimumSize As Size = New Size(1200, 900)
 #End Region
 
 #Region "Init"
@@ -79,15 +80,39 @@ Public Class ucBeeingsParameter
         Dim textBoxSize = New Size(WIDTH_TEXT_SMALL, HEIGHT_TEXT_BOX)
 
 
-        ' Attributs
-        Me.UcAttributCollection1.Size = C.CalcRelativeSize(Me.Size, 0.25, 0.8, Me.UcAttributCollection1.MinimumSize)
-        Me.UcAttributCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcAttributCollection1.Size, 0.5, 0.85)
+        '' Attributs
+        'Me.UcAttributCollection1.Size = C.CalcRelativeSize(Me.Size, 0.25, 0.8, Me.UcAttributCollection1.MinimumSize)
+        'Me.UcAttributCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcAttributCollection1.Size, 0.6, 0.85)
 
-        Me.UcSavingThrowCollection1.Size = C.CalcRelativeSize(Me.Size, 0.175, 0.2, Me.UcSavingThrowCollection1.MinimumSize)
-        Me.UcSavingThrowCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcSavingThrowCollection1.Size, 0.5, 0.2)
+        'Me.UcSavingThrowCollection1.Size = C.CalcRelativeSize(Me.Size, 0.175, 0.2, Me.UcSavingThrowCollection1.MinimumSize)
+        'Me.UcSavingThrowCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcSavingThrowCollection1.Size, 0.6, 0.2)
 
-        Me.UcSkillCollection1.Size = C.CalcRelativeSize(Me.Size, 0.1, 0.7, Me.UcSkillCollection1.MinimumSize)
-        Me.UcSkillCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcSkillCollection1.Size, 0.15, 0.5)
+        'Me.UcSkillCollection1.Size = C.CalcRelativeSize(Me.Size, 0.1, 0.7, Me.UcSkillCollection1.MinimumSize)
+        'Me.UcSkillCollection1.Location = C.CalcRelativeLocation(Me.Size, Me.UcSkillCollection1.Size, 0.85, 0.5)
+
+        'Me.TextBox_name.Location = C.CalcRelativeLocation(Me.Size, Me.TextBox_name.Size, 0.15, 0.1)
+        'Me.ComboBox_Size.Location = C.CalcRelativeLocation(Me.Size, Me.ComboBox_Size.Size, 0.15, 0.15)
+        'Me.ComboBox_aligment_personality.Location = C.CalcRelativeLocation(Me.Size, Me.ComboBox_aligment_personality.Size, 0.2, 0.15)
+        'Me.ComboBox_aligment_behaviour.Location = C.CalcRelativeLocation(Me.Size, Me.ComboBox_aligment_behaviour.Size, 0.2, 0.2)
+        'Me.PictureBox_image.Location = C.CalcRelativeLocation(Me.Size, Me.PictureBox_image.Size, 0.15, 0.5)
+
+    End Sub
+
+    Private Sub PictureBox_image_Click(sender As Object, e As EventArgs) Handles PictureBox_image.DoubleClick
+        Dim dialog As New OpenFileDialog()
+        If dialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Dim fi As New System.IO.FileInfo(dialog.FileName)
+            Try
+                Using fs As New System.IO.FileStream(fi.FullName, IO.FileMode.Open)
+                    PictureBox_image.Image = New Bitmap(Image.FromStream(fs))
+                End Using
+            Catch ex As Exception
+                Dim msg As String = "Filename: " & fi.FullName &
+                    Environment.NewLine & Environment.NewLine &
+                    "Exception: " & ex.ToString
+                MessageBox.Show(msg, "Error Opening Image File")
+            End Try
+        End If
 
     End Sub
 

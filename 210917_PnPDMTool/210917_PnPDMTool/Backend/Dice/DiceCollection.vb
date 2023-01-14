@@ -2,6 +2,7 @@
 
 #Region "Private Var"
     Private WithEvents _d4 As DiceType
+    Private WithEvents _d6 As DiceType
     Private WithEvents _d8 As DiceType
     Private WithEvents _d10 As DiceType
     Private WithEvents _d12 As DiceType
@@ -12,7 +13,8 @@
 
 #Region "Properties"
 
-    Public ReadOnly D4 As DiceType = d4
+    Public ReadOnly D4 As DiceType = _d4
+    Public ReadOnly D6 As DiceType = _d6
     Public ReadOnly D8 As DiceType = _d8
     Public ReadOnly D10 As DiceType = _d10
     Public ReadOnly D12 As DiceType = _d12
@@ -25,6 +27,7 @@
     Public Sub Init()
         ' Create dices
         _d4 = New DiceType(4)
+        _d6 = New DiceType(6)
         _d8 = New DiceType(8)
         _d10 = New DiceType(10)
         _d12 = New DiceType(12)
@@ -34,8 +37,7 @@
 #End Region
 
 #Region "Private Sub"
-    Private Sub DiceRolledHandle(dice As DiceType, result As Integer) Handles _d4.DiceRolled, _d8.DiceRolled, _d12.DiceRolled, _d10.DiceRolled, _d20.DiceRolled, _d100.DiceRolled
-
+    Private Sub DiceRolledHandle(dice As DiceType, result As Integer) Handles _d4.DiceRolled, _d6.DiceRolled, _d8.DiceRolled, _d12.DiceRolled, _d10.DiceRolled, _d20.DiceRolled, _d100.DiceRolled
 
     End Sub
 #End Region

@@ -4,9 +4,7 @@
 #End Region
 
 #Region "Private Var"
-    Private _ucEditMonsterGeneral As ucBeeingsParameter
-    Private _tabPageGeneral As TabPage
-    Private _tapcEditMonster As TabControl
+    Private WithEvents _ucBeeing As ucBeeing
     Private WithEvents _btnSave As Button
     Private WithEvents _btnExit As Button
     Private _btnLayout As FlowLayoutPanel
@@ -36,35 +34,21 @@
         ' Button layout
         _btnLayout = New FlowLayoutPanel With {
             .FlowDirection = FlowDirection.RightToLeft,
-            .MinimumSize = New Size(200, 100)
+            .MinimumSize = New Size(200, 100),
+            .AutoSize = True
         }
         _btnLayout.Controls.Add(_btnSave)
         _btnLayout.Controls.Add(_btnExit)
 
-        ' _ucEditMonsterGeneral
-        _ucEditMonsterGeneral = New ucBeeingsParameter With {
-            .Dock = DockStyle.Fill
-        }
-
-        ' _tabPageGeneral
-        _tabPageGeneral = New TabPage With {
-            .Text = "General",
-            .Dock = DockStyle.Fill
-        }
-        _tabPageGeneral.Controls.Add(_ucEditMonsterGeneral)
-
-        ' _tapcEditMonster
-        _tapcEditMonster = New TabControl With {
-            .MinimumSize = _ucEditMonsterGeneral.MinimumSize
-        }
-        ' _tapcEditMonster.Dock = DockStyle.Fill
-        _tapcEditMonster.Controls.Add(_tabPageGeneral)
+        ' UC Beeing
+        _ucBeeing = New ucBeeing()
 
         ' _mainLayout
-        _mainLayout.Controls.Add(_tapcEditMonster)
+        _mainLayout.Controls.Add(_ucBeeing)
         _mainLayout.Controls.Add(_btnLayout)
+        _mainLayout.AutoSize = True
 
-        Me.MinimumSize = New Size(_ucEditMonsterGeneral.MinimumSize.Width, _ucEditMonsterGeneral.MinimumSize.Height + _btnLayout.Height)
+        Me.MinimumSize = New Size(_ucBeeing.MinimumSize.Width, _ucBeeing.MinimumSize.Height + _btnLayout.Height)
 
     End Sub
 #End Region

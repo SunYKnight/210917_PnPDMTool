@@ -1,15 +1,18 @@
-﻿Public Class Attack
-#Region "Private Var"
+﻿Public Class ActionLegendary
+#Region "Enum"
 
 #End Region
 
+#Region "Private Var"
+
+#End Region
 
 #Region "Properties"
 
 #End Region
 
 #Region "Init"
-    Public Sub Init()
+    Public Sub New()
 
     End Sub
 #End Region
@@ -26,4 +29,7 @@
 
 #End Region
 
+#Region "GUI Handle"
+
+#End Region
 End Class

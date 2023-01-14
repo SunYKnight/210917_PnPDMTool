@@ -1,5 +1,6 @@
-﻿Public Class BattleParticipants(Of t As {PlayableObject})
+﻿Public Class BattleParticipants
     'Characters die sich im Battle befinden
+    Inherits PlayableObject
 
 #Region "Private Var"
 
@@ -45,12 +46,13 @@
         End Get
     End Property
 
+    Public Property LiveHP As Int32 = 0
+
 #End Region
 
 #Region "Init"
-    Public Sub New(participent As t)
-        ' Save data
-        Me._participent = participent
+    Public Sub New(type As EBattleParticipentType)
+        MyBase.New(type)
     End Sub
 #End Region
 

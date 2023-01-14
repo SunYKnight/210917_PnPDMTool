@@ -138,6 +138,7 @@
         Necrotic
         Psychic
         Radiant
+        Magic
     End Enum
 
 

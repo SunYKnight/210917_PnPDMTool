@@ -7,7 +7,7 @@ Public Class MainWindow
     Private WithEvents _ucTabBeeingDetails As ucTabDetailsControl = New ucTabDetailsControl
     Private WithEvents _ucTabBeeingLists As ucTabListsControl = New ucTabListsControl
     Private WithEvents _ucMapView As UcMapView = New UcMapView
-    Private WithEvents _ucTabBeeingEdit As ucTabEditBeeing = New ucTabEditBeeing
+    Private WithEvents _ucTabBeeingEdit As New ucTabEditBeeing
 #End Region
 
 #Region "Properties"
@@ -24,8 +24,13 @@ Public Class MainWindow
         FlowLayoutPanel_Left.Controls.Add(_ucTabBeeingDetails)
         FlowLayoutPanel_Center.Controls.Add(_ucMapView)
 
+        ' Call resize handler
+        Me.Size = Me.Size
+
         ' Notification
         LoggingNotificationHandle("MainWindow Load Complete!")
+
+
 
     End Sub
 #End Region

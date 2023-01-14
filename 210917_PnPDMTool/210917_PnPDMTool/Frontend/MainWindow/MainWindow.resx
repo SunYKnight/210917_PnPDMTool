@@ -57,6 +57,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FlowLayoutPanel_Left.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="FlowLayoutPanel_Left.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
@@ -69,9 +73,8 @@
     <value>0, 0</value>
   </data>
   <data name="FlowLayoutPanel_Left.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 944</value>
+    <value>0, 944</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="FlowLayoutPanel_Left.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -87,6 +90,9 @@
   <data name="&gt;&gt;FlowLayoutPanel_Left.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="FlowLayoutPanel_Center.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="FlowLayoutPanel_Center.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
@@ -94,10 +100,10 @@
     <value>Fill</value>
   </data>
   <data name="FlowLayoutPanel_Center.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 0</value>
+    <value>0, 0</value>
   </data>
   <data name="FlowLayoutPanel_Center.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1178, 944</value>
+    <value>1478, 944</value>
   </data>
   <data name="FlowLayoutPanel_Center.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

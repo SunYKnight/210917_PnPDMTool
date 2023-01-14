@@ -12,6 +12,8 @@
     Public Property Attributs As AttributCollection = New AttributCollection
     Public Property Aligment As AligmentType = New AligmentType
     Public Property Size As ESize = ESize.Medium
+    Public Property Speed As Integer
+    Public Property AC As Integer
 #End Region
 
 #Region "Init"

@@ -5,16 +5,15 @@
 #Region "Private Var"
     Private _dmgRecvModifierType(System.Enum.GetValues(GetType(C.EDmgType)).Length) As C.EDmgTypeModifier
 
-    Private _dices As DiceCollection
+
 
     Private _type As EBattleParticipentType
 
 #End Region
 
 #Region "Properties"
-
+    Public Property Dices As New DiceCollection
     Public Property Proficencies As ProficencyCollection = New ProficencyCollection
-
     Public Property ID As Int64
 
 #End Region
@@ -27,10 +26,6 @@
 
         ' Generate ID
         ID = IdentificationNumber.GetNewID()
-
-        ' Generate dices 
-        _dices = New DiceCollection
-
 
     End Sub
 #End Region
