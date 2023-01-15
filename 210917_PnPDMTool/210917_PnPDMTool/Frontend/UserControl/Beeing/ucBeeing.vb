@@ -27,7 +27,17 @@
 #End Region
 
 #Region "Pubilc Sub"
+    Public Function Save() As Object
+        Return New Object
+    End Function
 
+    Public Function GetOutputType() As Type
+        Return GetType(BeeingType)
+    End Function
+
+    Public Function Discard() As Object
+        Return New Object
+    End Function
 #End Region
 
 #Region "Events"

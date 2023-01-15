@@ -31,6 +31,9 @@
     <Compile Update="Frontend\UserControl\ucAttributCollection.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Frontend\UserControl\ucEdit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Frontend\UserControl\ucSavingThrowCollection.vb">
       <SubType>UserControl</SubType>
     </Compile>

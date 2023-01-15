@@ -4,10 +4,8 @@
 #End Region
 
 #Region "Private Var"
-    Private WithEvents _ucBeeing As ucBeeing
-    Private WithEvents _btnSave As Button
-    Private WithEvents _btnExit As Button
-    Private _btnLayout As FlowLayoutPanel
+    Private WithEvents _ucEdit As ucEdit(Of ucBeeing)
+    Private WithEvents _ucBeeing As New ucBeeing()
 #End Region
 
 #Region "Properties"
@@ -20,35 +18,10 @@
         InitializeComponent()
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+        _ucEdit = New ucEdit(Of ucBeeing)(_ucBeeing)
+        _mainLayout.Controls.Add(_ucEdit)
 
-        ' Button Save
-        _btnSave = New Button With {
-            .Text = "Save"
-        }
-
-        ' Button Exit
-        _btnExit = New Button With {
-            .Text = "Exit"
-        }
-
-        ' Button layout
-        _btnLayout = New FlowLayoutPanel With {
-            .FlowDirection = FlowDirection.RightToLeft,
-            .MinimumSize = New Size(200, 100),
-            .AutoSize = True
-        }
-        _btnLayout.Controls.Add(_btnSave)
-        _btnLayout.Controls.Add(_btnExit)
-
-        ' UC Beeing
-        _ucBeeing = New ucBeeing()
-
-        ' _mainLayout
-        _mainLayout.Controls.Add(_ucBeeing)
-        _mainLayout.Controls.Add(_btnLayout)
-        _mainLayout.AutoSize = True
-
-        Me.MinimumSize = New Size(_ucBeeing.MinimumSize.Width, _ucBeeing.MinimumSize.Height + _btnLayout.Height)
+        Me.MinimumSize = _ucBeeing.MinimumSize
 
     End Sub
 #End Region
@@ -67,11 +40,11 @@
 #End Region
 
 #Region "Event Handle"
-    Private Sub ButtonExitClickedHandler() Handles _btnExit.Click
+    Private Sub ButtonExitClickedHandler() Handles _ucEdit.Discard
         RaiseEvent ButtonExitClicked()
     End Sub
 
-    Private Sub ButtonSaveClickedHandler() Handles _btnSave.Click
+    Private Sub ButtonSaveClickedHandler() Handles _ucEdit.Discard
         RaiseEvent ButtonSaveClicked()
     End Sub
 #End Region
