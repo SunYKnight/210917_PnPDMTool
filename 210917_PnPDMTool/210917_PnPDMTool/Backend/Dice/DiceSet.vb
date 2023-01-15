@@ -6,10 +6,14 @@
 #End Region
 
 #Region "Properties"
-    Private Property DiceCount As Integer
+    Public Property DiceCount As Integer = 0
 #End Region
 
 #Region "Init"
+    Public Sub New()
+
+    End Sub
+
     Public Sub New(count As Integer)
         ' Save class parameter
         Me.DiceCount = count

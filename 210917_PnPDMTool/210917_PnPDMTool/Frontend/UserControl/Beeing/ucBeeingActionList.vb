@@ -46,11 +46,13 @@ Public Class ucBeeingActionList
         ListView_Actions.Update()
     End Sub
 
-    Private Sub Button_new_Click(sender As Object, e As EventArgs) Handles Button_new.Click
-
-    End Sub
-
-    Private Sub Button_edit_Click(sender As Object, e As EventArgs) Handles Button_edit.Click
+    Private Sub EditAction(action As ActionType)
+        Dim editWindow = New Form()
+        Dim ucAction As New ucAction
+        Dim ucEditAction As New ucEdit(Of ucAction)(ucAction)
+        editWindow.Controls.Add(ucEditAction)
+        editWindow.MinimumSize = ucEditAction.MinimumSize
+        editWindow.Show()
 
     End Sub
 #End Region
@@ -64,6 +66,12 @@ Public Class ucBeeingActionList
 #End Region
 
 #Region "GUI Handle"
+    Private Sub Button_new_Click(sender As Object, e As EventArgs) Handles Button_new.Click
+        EditAction(New ActionType(ActionType.eType.Attack))
+    End Sub
 
+    Private Sub Button_edit_Click(sender As Object, e As EventArgs) Handles Button_edit.Click
+
+    End Sub
 #End Region
 End Class

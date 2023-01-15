@@ -96,6 +96,40 @@
   <data name="FlowLayoutPanel_Center.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
+  <data name="UcBattleView1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="UcBattleView1.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="UcBattleView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 5</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="UcBattleView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="UcBattleView1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 500</value>
+  </data>
+  <data name="UcBattleView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 500</value>
+  </data>
+  <data name="UcBattleView1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;UcBattleView1.Name" xml:space="preserve">
+    <value>UcBattleView1</value>
+  </data>
+  <data name="&gt;&gt;UcBattleView1.Type" xml:space="preserve">
+    <value>_210917_PnPDMTool.UcBattleView, 210917_PnPDMTool, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;UcBattleView1.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel_Center</value>
+  </data>
+  <data name="&gt;&gt;UcBattleView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="FlowLayoutPanel_Center.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>

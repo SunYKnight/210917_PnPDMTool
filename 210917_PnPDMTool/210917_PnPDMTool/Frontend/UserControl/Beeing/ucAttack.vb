@@ -10,7 +10,7 @@ Public Class ucAttack
 #End Region
 
 #Region "Properties"
-    Public Property VM As New AttackType
+    Public Property VM As New AttackType()
 #End Region
 
 #Region "Init"
@@ -52,22 +52,22 @@ Public Class ucAttack
 
         ' Dmg Dice D4
         NumericUpDown_dmgDiceD4.DataBindings.Clear()
-        NumericUpDown_dmgDiceD4.DataBindings.Add(New Binding("Value", VM, "DmgDiceD4.DiceCount"))
+        NumericUpDown_dmgDiceD4.DataBindings.Add(New Binding("Value", VM.DmgDiceD4, "DiceCount"))
         ' Dmg Dice D6
         NumericUpDown_dmgDiceD6.DataBindings.Clear()
-        NumericUpDown_dmgDiceD6.DataBindings.Add(New Binding("Value", VM, "DmgDiceD6.DiceCount"))
+        NumericUpDown_dmgDiceD6.DataBindings.Add(New Binding("Value", VM.DmgDiceD6, "DiceCount"))
         ' Dmg Dice D8
         NumericUpDown_dmgDiceD8.DataBindings.Clear()
-        NumericUpDown_dmgDiceD8.DataBindings.Add(New Binding("Value", VM, "DmgDiceD8.DiceCount"))
+        NumericUpDown_dmgDiceD8.DataBindings.Add(New Binding("Value", VM.DmgDiceD8, "DiceCount"))
         ' Dmg Dice D12
         NumericUpDown_dmgDiceD12.DataBindings.Clear()
-        NumericUpDown_dmgDiceD12.DataBindings.Add(New Binding("Value", VM, "DmgDiceD12.DiceCount"))
+        NumericUpDown_dmgDiceD12.DataBindings.Add(New Binding("Value", VM.DmgDiceD12, "DiceCount"))
         ' Dmg Dice D20
         NumericUpDown_dmgDiceD20.DataBindings.Clear()
-        NumericUpDown_dmgDiceD20.DataBindings.Add(New Binding("Value", VM, "DmgDiceD20.DiceCount"))
+        NumericUpDown_dmgDiceD20.DataBindings.Add(New Binding("Value", VM.DmgDiceD20, "DiceCount"))
         ' Dmg Dice D100
         NumericUpDown_dmgDiceD100.DataBindings.Clear()
-        NumericUpDown_dmgDiceD100.DataBindings.Add(New Binding("Value", VM, "DmgDiceD100.DiceCount"))
+        NumericUpDown_dmgDiceD100.DataBindings.Add(New Binding("Value", VM.DmgDiceD100, "DiceCount"))
     End Sub
 #End Region
 

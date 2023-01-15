@@ -11,12 +11,12 @@
     Public Property HitBonus As Integer = 0
     Public Property DmgBonus As Integer = 0
 
-    Public DmgDiceD4 As DiceSet = New DiceSet(0)
-    Public DmgDiceD6 As DiceSet = New DiceSet(0)
-    Public DmgDiceD8 As DiceSet = New DiceSet(0)
-    Public DmgDiceD12 As DiceSet = New DiceSet(0)
-    Public DmgDiceD20 As DiceSet = New DiceSet(0)
-    Public DmgDiceD100 As DiceSet = New DiceSet(0)
+    Public Property DmgDiceD4 As DiceSet = New DiceSet()
+    Public Property DmgDiceD6 As DiceSet = New DiceSet()
+    Public Property DmgDiceD8 As DiceSet = New DiceSet()
+    Public Property DmgDiceD12 As DiceSet = New DiceSet()
+    Public Property DmgDiceD20 As DiceSet = New DiceSet()
+    Public Property DmgDiceD100 As DiceSet = New DiceSet()
 
 #End Region
 
@@ -42,7 +42,7 @@
         Dim dmg As Integer = 0
         ' Evaluate all damage dices
         dmg += DmgDiceD4.Evaluate(dices.D4, type)
-        dmg += DmgDiceD8.Evaluate(dices.D6, type)
+        dmg += DmgDiceD6.Evaluate(dices.D6, type)
         dmg += DmgDiceD8.Evaluate(dices.D8, type)
         dmg += DmgDiceD12.Evaluate(dices.D12, type)
         dmg += DmgDiceD20.Evaluate(dices.D20, type)

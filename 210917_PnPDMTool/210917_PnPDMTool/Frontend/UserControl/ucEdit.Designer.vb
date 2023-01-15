@@ -36,14 +36,14 @@ Partial Class ucEdit(Of t As {UserControl})
         Me.FlowLayoutPanel1.Controls.Add(Me.Button_Save)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 654)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 660)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(995, 40)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1000, 40)
         Me.FlowLayoutPanel1.TabIndex = 1
         '
         'Button_Disccard
         '
-        Me.Button_Disccard.Location = New System.Drawing.Point(880, 3)
+        Me.Button_Disccard.Location = New System.Drawing.Point(885, 3)
         Me.Button_Disccard.Name = "Button_Disccard"
         Me.Button_Disccard.Size = New System.Drawing.Size(112, 34)
         Me.Button_Disccard.TabIndex = 1
@@ -52,7 +52,7 @@ Partial Class ucEdit(Of t As {UserControl})
         '
         'Button_Save
         '
-        Me.Button_Save.Location = New System.Drawing.Point(762, 3)
+        Me.Button_Save.Location = New System.Drawing.Point(767, 3)
         Me.Button_Save.Name = "Button_Save"
         Me.Button_Save.Size = New System.Drawing.Size(112, 34)
         Me.Button_Save.TabIndex = 2
@@ -64,7 +64,7 @@ Partial Class ucEdit(Of t As {UserControl})
         Me.FlowLayoutPanel_editUC.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel_editUC.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel_editUC.Name = "FlowLayoutPanel_editUC"
-        Me.FlowLayoutPanel_editUC.Size = New System.Drawing.Size(995, 654)
+        Me.FlowLayoutPanel_editUC.Size = New System.Drawing.Size(1000, 660)
         Me.FlowLayoutPanel_editUC.TabIndex = 2
         '
         'ucEdit
@@ -73,8 +73,9 @@ Partial Class ucEdit(Of t As {UserControl})
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.FlowLayoutPanel_editUC)
         Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.MinimumSize = New System.Drawing.Size(1000, 700)
         Me.Name = "ucEdit"
-        Me.Size = New System.Drawing.Size(995, 694)
+        Me.Size = New System.Drawing.Size(1000, 700)
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
