@@ -2,7 +2,7 @@
 Imports _210917_PnPDMTool.C
 Imports _210917_PnPDMTool.ucAttributCollection
 
-Public Class ucBeeingsParameterGeneral
+Public Class ucBeeingParameterGeneral
 
 #Region "Private Var"
     Private _monsterToEdit As MonsterType

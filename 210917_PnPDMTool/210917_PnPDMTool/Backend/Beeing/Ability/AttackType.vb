@@ -1,4 +1,4 @@
-﻿Public Class Attack
+﻿Public Class AttackType
 #Region "Private Var"
 
 #End Region

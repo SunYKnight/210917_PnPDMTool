@@ -1,6 +1,6 @@
 ﻿Imports _210917_PnPDMTool.ucAttributCollection
 
-Public Class ucAttack
+Public Class ucAction
 #Region "Enum"
 
 #End Region

@@ -1,4 +1,4 @@
-﻿Public Class Action
+﻿Public Class ActionType
 #Region "Enum"
     Enum eType
         Attack
@@ -9,22 +9,21 @@
 #End Region
 
 #Region "Private Var"
-    Private _type As eType
 
 #End Region
 
 #Region "Properties"
+    Public Property Name As String = ""
     Public Property Description As String = ""
-    Public Property Range As Single = 0
-
-    Public Property AttackList As List(Of Attack)
+    Public Property Type As eType
+    Public Property AttackList As List(Of AttackType)
 
 #End Region
 
 #Region "Init"
     Public Sub New(t As eType)
 
-        _type = t
+        Type = t
 
     End Sub
 #End Region
@@ -34,10 +33,17 @@
 #End Region
 
 #Region "Pubilc Sub"
+    Public Function ToListString() As String()
+        Dim str(2) As String
+        str(0) = Name
+        str(1) = Type.ToString
+        Return str
+    End Function
+
     Public Sub Use(self As BattleParticipants, target As BattleParticipants)
         Dim attackRollValue As Integer
         Dim dmgRollValue As Integer
-        Select Case _type
+        Select Case Type
 
             Case eType.Attack
                 For Each attack In AttackList

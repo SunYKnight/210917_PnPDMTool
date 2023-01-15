@@ -1,4 +1,4 @@
-﻿Public Class Ability
+﻿Public Class BaseEditUC
 #Region "Enum"
 
 #End Region
@@ -8,7 +8,7 @@
 #End Region
 
 #Region "Properties"
-    Public Property Description As String = ""
+
 #End Region
 
 #Region "Init"
@@ -22,9 +22,13 @@
 #End Region
 
 #Region "Pubilc Sub"
-    Public Sub Use(self As PlayableObject)
+    Public Overridable Function Save() As Object
+        Return New Object
+    End Function
 
-    End Sub
+    Public Overridable Function Discard() As Object
+        Return New Object
+    End Function
 #End Region
 
 #Region "Events"

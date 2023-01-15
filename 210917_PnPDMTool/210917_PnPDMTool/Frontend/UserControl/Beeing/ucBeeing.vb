@@ -4,11 +4,12 @@
 #End Region
 
 #Region "Private Var"
-    Private _ucBeeingsParamterGeneral As New ucBeeingsParameterGeneral
+    Private _ucBeeingParamterGeneral As New ucBeeingParameterGeneral
+    Private _ucBeeingActionList As New ucBeeingActionList
 #End Region
 
 #Region "Properties"
-    Public Overrides Property MinimumSize As Size = _ucBeeingsParamterGeneral.MinimumSize
+    Public Overrides Property MinimumSize As Size = _ucBeeingParamterGeneral.MinimumSize
 #End Region
 
 #Region "Init"
@@ -16,7 +17,8 @@
         InitializeComponent()
 
         ' Add Tab pages control
-        TabControl_beeing.TabPages.Item(0).Controls.Add(_ucBeeingsParamterGeneral)
+        TabControl_beeing.TabPages.Item(0).Controls.Add(_ucBeeingParamterGeneral)
+        TabControl_beeing.TabPages.Item(1).Controls.Add(_ucBeeingActionList)
     End Sub
 #End Region
 
