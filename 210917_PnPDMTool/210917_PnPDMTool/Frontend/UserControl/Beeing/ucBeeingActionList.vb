@@ -32,6 +32,7 @@ Public Class ucBeeingActionList
         ' Adding ListView Columns
         ListView_Actions.Columns.Add("Name", 100, HorizontalAlignment.Left)
         ListView_Actions.Columns.Add("Type", 100, HorizontalAlignment.Left)
+        ListView_Actions.Columns.Add("Desc", 100, HorizontalAlignment.Left)
 
         ' Handle Items
         ListView_Actions.Items.Clear()
@@ -65,14 +66,21 @@ Public Class ucBeeingActionList
 
 #Region "Events"
     Private Sub editWindowSaveHandle(obj As Object, type As Type) Handles _editUc.Save
+        Dim action As ActionType = CType(obj, ActionType)
+
         ' Close Window
         _editWindow.Hide()
+        _editUc.Dispose()
+        ' Macke sure name is unique
+        If ActionList.FindAll(Function(p) p.Name = action.Name).Count > 0 Then
+            ActionList.Remove(ActionList.Find(Function(p) p.Name = action.Name))
+        End If
         ' Add Element
-        ActionList.Add(obj)
+        ActionList.Add(action)
         ' Update list
         UpdateListView()
-        _editUc.Dispose()
     End Sub
+
     Private Sub editWindowDiscardHandle(obj As Object) Handles _editUc.Discard
         ' Close Window
         _editWindow.Hide()
@@ -86,7 +94,10 @@ Public Class ucBeeingActionList
     End Sub
 
     Private Sub Button_edit_Click(sender As Object, e As EventArgs) Handles Button_edit.Click
-        ' Todo
+        ' Check if any item is selected
+        If (ListView_Actions.SelectedItems.Count > 0) Then
+            EditAction(ActionList.Find(Function(p) p.Name = ListView_Actions.SelectedItems(0).SubItems(0).Text))
+        End If
     End Sub
 #End Region
 End Class

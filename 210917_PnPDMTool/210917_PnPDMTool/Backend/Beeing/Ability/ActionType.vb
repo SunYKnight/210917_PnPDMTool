@@ -34,9 +34,10 @@
 
 #Region "Pubilc Sub"
     Public Function ToListString() As String()
-        Dim str(2) As String
+        Dim str(3) As String
         str(0) = Name
         str(1) = Type.ToString
+        str(2) = Description
         Return str
     End Function
 

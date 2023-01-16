@@ -31,8 +31,10 @@ Partial Class ucBeeingActionList
         '
         'ListView_Actions
         '
+        Me.ListView_Actions.Activation = System.Windows.Forms.ItemActivation.OneClick
         Me.ListView_Actions.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView_Actions.Location = New System.Drawing.Point(0, 0)
+        Me.ListView_Actions.MultiSelect = False
         Me.ListView_Actions.Name = "ListView_Actions"
         Me.ListView_Actions.Size = New System.Drawing.Size(827, 460)
         Me.ListView_Actions.TabIndex = 0

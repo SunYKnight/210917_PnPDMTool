@@ -42,7 +42,7 @@ Partial Class ucAction
         Me.RichTextBox_Description.Location = New System.Drawing.Point(112, 39)
         Me.RichTextBox_Description.MaxLength = 1000
         Me.RichTextBox_Description.Name = "RichTextBox_Description"
-        Me.RichTextBox_Description.Size = New System.Drawing.Size(420, 100)
+        Me.RichTextBox_Description.Size = New System.Drawing.Size(732, 100)
         Me.RichTextBox_Description.TabIndex = 0
         Me.RichTextBox_Description.Text = ""
         '
@@ -92,7 +92,7 @@ Partial Class ucAction
         Me.RichTextBox_name.MaxLength = 100
         Me.RichTextBox_name.Multiline = False
         Me.RichTextBox_name.Name = "RichTextBox_name"
-        Me.RichTextBox_name.Size = New System.Drawing.Size(420, 33)
+        Me.RichTextBox_name.Size = New System.Drawing.Size(732, 33)
         Me.RichTextBox_name.TabIndex = 23
         Me.RichTextBox_name.Text = ""
         '
@@ -108,9 +108,11 @@ Partial Class ucAction
         '
         'ListView_attackList
         '
+        Me.ListView_attackList.Activation = System.Windows.Forms.ItemActivation.OneClick
         Me.ListView_attackList.Location = New System.Drawing.Point(112, 184)
+        Me.ListView_attackList.MultiSelect = False
         Me.ListView_attackList.Name = "ListView_attackList"
-        Me.ListView_attackList.Size = New System.Drawing.Size(420, 250)
+        Me.ListView_attackList.Size = New System.Drawing.Size(732, 250)
         Me.ListView_attackList.TabIndex = 26
         Me.ListView_attackList.UseCompatibleStateImageBehavior = False
         Me.ListView_attackList.View = System.Windows.Forms.View.Details
@@ -158,7 +160,7 @@ Partial Class ucAction
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RichTextBox_Description)
         Me.Name = "ucAction"
-        Me.Size = New System.Drawing.Size(537, 481)
+        Me.Size = New System.Drawing.Size(861, 481)
         CType(Me.AttackBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

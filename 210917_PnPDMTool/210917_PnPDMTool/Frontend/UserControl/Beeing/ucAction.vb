@@ -61,17 +61,17 @@ Public Class ucAction
         ' Handle Header
         ListView_attackList.Columns.Clear()
         ' Adding ListView Columns
-        ListView_attackList.Columns.Add("Name", 100, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("Hit", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Name", 40, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Hit", 40, HorizontalAlignment.Left)
         ListView_attackList.Columns.Add("Type", 100, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("Range", 100, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D4", 100, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D6", 100, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D8", 100, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D12", 100, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D20", 100, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D100", 100, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("Dmg", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Range", 40, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D4", 40, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D6", 40, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D8", 40, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D12", 40, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D20", 40, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D100", 40, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Dmg", 40, HorizontalAlignment.Left)
         ListView_attackList.Columns.Add("Description", 100, HorizontalAlignment.Left)
 
         ' Handle Items
@@ -112,13 +112,20 @@ Public Class ucAction
 
 #Region "Events"
     Private Sub editWindowSaveHandle(obj As Object, type As Type) Handles _editUc.Save
+        ' Locals
+        Dim attack As AttackType = CType(obj, AttackType)
+
         ' Close Window
         _editWindow.Hide()
+        _editUc.Dispose()
+        ' Macke sure name is unique
+        If Action.AttackList.FindAll(Function(p) p.Name = Action.Name).Count > 0 Then
+            Action.AttackList.Remove(Action.AttackList.Find(Function(p) p.Name = Action.Name))
+        End If
         ' Add Element
-        Action.AttackList.Add(obj)
+        Action.AttackList.Add(attack)
         ' Update list
         UpdateListView()
-        _editUc.Dispose()
     End Sub
     Private Sub editWindowDiscardHandle(obj As Object) Handles _editUc.Discard
         ' Close Window
@@ -133,7 +140,10 @@ Public Class ucAction
     End Sub
 
     Private Sub Button_edit_Click(sender As Object, e As EventArgs) Handles Button_edit.Click
-        ' Todo
+        ' Check if any item is selected
+        If (ListView_attackList.SelectedItems.Count > 0) Then
+            EditAttack(Action.AttackList.Find(Function(p) p.Name = ListView_attackList.SelectedItems(0).SubItems(0).Text))
+        End If
     End Sub
 #End Region
 End Class
