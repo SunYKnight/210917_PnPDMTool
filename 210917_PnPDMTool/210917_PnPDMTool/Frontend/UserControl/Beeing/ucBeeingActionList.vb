@@ -6,7 +6,8 @@ Public Class ucBeeingActionList
 #End Region
 
 #Region "Private Var"
-
+    Private _editWindow As New Form()
+    Private WithEvents _editUc As ucEdit(Of ucAction)
 #End Region
 
 #Region "Properties"
@@ -17,12 +18,8 @@ Public Class ucBeeingActionList
     Public Sub New()
         InitializeComponent()
 
-        Dim test_action As New ActionType(ActionType.eType.Attack) With {
-            .Name = "Test",
-            .Description = "Test Description"
-        }
-
-        ActionList.Add(test_action)
+        ' Set edit window Size
+        _editWindow.MinimumSize = New Size(WIDTH_CONTROL_EDIT, HEIGHT_CONTROL_EDIT)
 
         UpdateListView()
     End Sub
@@ -38,21 +35,26 @@ Public Class ucBeeingActionList
 
         ' Handle Items
         ListView_Actions.Items.Clear()
-        ' Create Items
-        For Each action In ActionList
-            ListView_Actions.Items.Add(New ListViewItem(action.ToListString))
-        Next
+
+        ' Check for empty list 
+        If (ActionList.Count > 0) Then
+            ' Create Items
+            For Each action In ActionList
+                ListView_Actions.Items.Add(New ListViewItem(action.ToListString))
+            Next
+        End If
+
 
         ListView_Actions.Update()
     End Sub
 
     Private Sub EditAction(action As ActionType)
-        Dim editWindow = New Form()
-        Dim ucAction As New ucAction
-        Dim ucEditAction As New ucEdit(Of ucAction)(ucAction)
-        editWindow.Controls.Add(ucEditAction)
-        editWindow.MinimumSize = ucEditAction.MinimumSize
-        editWindow.Show()
+        ' Update uc Edit 
+        _editUc = New ucEdit(Of ucAction)(New ucAction(action))
+
+        _editWindow.Controls.Clear()
+        _editWindow.Controls.Add(_editUc)
+        _editWindow.Show()
 
     End Sub
 #End Region
@@ -62,7 +64,20 @@ Public Class ucBeeingActionList
 #End Region
 
 #Region "Events"
-
+    Private Sub editWindowSaveHandle(obj As Object, type As Type) Handles _editUc.Save
+        ' Close Window
+        _editWindow.Hide()
+        ' Add Element
+        ActionList.Add(obj)
+        ' Update list
+        UpdateListView()
+        _editUc.Dispose()
+    End Sub
+    Private Sub editWindowDiscardHandle(obj As Object) Handles _editUc.Discard
+        ' Close Window
+        _editWindow.Hide()
+        _editUc.Dispose()
+    End Sub
 #End Region
 
 #Region "GUI Handle"
@@ -71,7 +86,7 @@ Public Class ucBeeingActionList
     End Sub
 
     Private Sub Button_edit_Click(sender As Object, e As EventArgs) Handles Button_edit.Click
-
+        ' Todo
     End Sub
 #End Region
 End Class

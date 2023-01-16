@@ -5,6 +5,7 @@
 
 
 #Region "Properties"
+    Public Property Name As String = ""
     Public Property Description As String = ""
     Public Property DmgType As EDmgType = EDmgType.Bludgeoning
     Public Property Range As Double = 0
@@ -50,6 +51,37 @@
 
         Return dmg
     End Function
+
+    Public Function ToListString() As String()
+        Dim str(11) As String
+        Dim idx As Integer = 0
+        str(idx) = Name
+        idx += 1
+        str(idx) = HitBonus.ToString
+        idx += 1
+        str(idx) = DmgType.ToString
+        idx += 1
+        str(idx) = Range.ToString
+        idx += 1
+        str(idx) = DmgDiceD4.DiceCount.ToString
+        idx += 1
+        str(idx) = DmgDiceD6.DiceCount.ToString
+        idx += 1
+        str(idx) = DmgDiceD8.DiceCount.ToString
+        idx += 1
+        str(idx) = DmgDiceD12.DiceCount.ToString
+        idx += 1
+        str(idx) = DmgDiceD20.DiceCount.ToString
+        idx += 1
+        str(idx) = DmgDiceD100.DiceCount.ToString
+        idx += 1
+        str(idx) = DmgBonus.ToString
+        idx += 1
+        str(idx) = Description
+        idx += 1
+        Return str
+    End Function
+
 #End Region
 
 #Region "Events"

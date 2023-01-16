@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class ucAction
+Partial Class ucAttack
     Inherits System.Windows.Forms.UserControl
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -46,6 +46,8 @@ Partial Class ucAction
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox_name = New System.Windows.Forms.TextBox()
         CType(Me.AttackBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_range, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_hitBonus, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,7 +62,7 @@ Partial Class ucAction
         '
         'RichTextBox_Description
         '
-        Me.RichTextBox_Description.Location = New System.Drawing.Point(112, 0)
+        Me.RichTextBox_Description.Location = New System.Drawing.Point(112, 45)
         Me.RichTextBox_Description.Name = "RichTextBox_Description"
         Me.RichTextBox_Description.Size = New System.Drawing.Size(420, 100)
         Me.RichTextBox_Description.TabIndex = 0
@@ -69,7 +71,7 @@ Partial Class ucAction
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Location = New System.Drawing.Point(0, 45)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(106, 25)
         Me.Label1.TabIndex = 1
@@ -83,7 +85,7 @@ Partial Class ucAction
         '
         Me.Label2.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(0, 118)
+        Me.Label2.Location = New System.Drawing.Point(0, 163)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(98, 25)
         Me.Label2.TabIndex = 2
@@ -92,7 +94,7 @@ Partial Class ucAction
         'ComboBox_DmgType
         '
         Me.ComboBox_DmgType.FormattingEnabled = True
-        Me.ComboBox_DmgType.Location = New System.Drawing.Point(112, 115)
+        Me.ComboBox_DmgType.Location = New System.Drawing.Point(112, 160)
         Me.ComboBox_DmgType.Name = "ComboBox_DmgType"
         Me.ComboBox_DmgType.Size = New System.Drawing.Size(207, 33)
         Me.ComboBox_DmgType.TabIndex = 3
@@ -101,7 +103,7 @@ Partial Class ucAction
         '
         Me.Label3.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(325, 118)
+        Me.Label3.Location = New System.Drawing.Point(325, 163)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 25)
         Me.Label3.TabIndex = 4
@@ -110,7 +112,7 @@ Partial Class ucAction
         'NumericUpDown_range
         '
         Me.NumericUpDown_range.Increment = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.NumericUpDown_range.Location = New System.Drawing.Point(424, 115)
+        Me.NumericUpDown_range.Location = New System.Drawing.Point(424, 160)
         Me.NumericUpDown_range.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.NumericUpDown_range.Name = "NumericUpDown_range"
         Me.NumericUpDown_range.Size = New System.Drawing.Size(108, 31)
@@ -118,7 +120,7 @@ Partial Class ucAction
         '
         'NumericUpDown_hitBonus
         '
-        Me.NumericUpDown_hitBonus.Location = New System.Drawing.Point(112, 154)
+        Me.NumericUpDown_hitBonus.Location = New System.Drawing.Point(112, 199)
         Me.NumericUpDown_hitBonus.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
         Me.NumericUpDown_hitBonus.Minimum = New Decimal(New Integer() {30, 0, 0, -2147483648})
         Me.NumericUpDown_hitBonus.Name = "NumericUpDown_hitBonus"
@@ -129,7 +131,7 @@ Partial Class ucAction
         '
         Me.Label4.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 156)
+        Me.Label4.Location = New System.Drawing.Point(3, 201)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(93, 25)
         Me.Label4.TabIndex = 6
@@ -137,7 +139,7 @@ Partial Class ucAction
         '
         'NumericUpDown_dmgBonus
         '
-        Me.NumericUpDown_dmgBonus.Location = New System.Drawing.Point(308, 154)
+        Me.NumericUpDown_dmgBonus.Location = New System.Drawing.Point(308, 199)
         Me.NumericUpDown_dmgBonus.Minimum = New Decimal(New Integer() {100, 0, 0, -2147483648})
         Me.NumericUpDown_dmgBonus.Name = "NumericUpDown_dmgBonus"
         Me.NumericUpDown_dmgBonus.Size = New System.Drawing.Size(62, 31)
@@ -147,7 +149,7 @@ Partial Class ucAction
         '
         Me.Label5.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(192, 156)
+        Me.Label5.Location = New System.Drawing.Point(192, 201)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(110, 25)
         Me.Label5.TabIndex = 8
@@ -157,7 +159,7 @@ Partial Class ucAction
         '
         Me.Label6.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(-3, 221)
+        Me.Label6.Location = New System.Drawing.Point(-3, 266)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(95, 25)
         Me.Label6.TabIndex = 10
@@ -165,7 +167,7 @@ Partial Class ucAction
         '
         'NumericUpDown_dmgDiceD4
         '
-        Me.NumericUpDown_dmgDiceD4.Location = New System.Drawing.Point(112, 219)
+        Me.NumericUpDown_dmgDiceD4.Location = New System.Drawing.Point(112, 264)
         Me.NumericUpDown_dmgDiceD4.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
         Me.NumericUpDown_dmgDiceD4.Minimum = New Decimal(New Integer() {30, 0, 0, -2147483648})
         Me.NumericUpDown_dmgDiceD4.Name = "NumericUpDown_dmgDiceD4"
@@ -174,7 +176,7 @@ Partial Class ucAction
         '
         'NumericUpDown_dmgDiceD6
         '
-        Me.NumericUpDown_dmgDiceD6.Location = New System.Drawing.Point(183, 219)
+        Me.NumericUpDown_dmgDiceD6.Location = New System.Drawing.Point(183, 264)
         Me.NumericUpDown_dmgDiceD6.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
         Me.NumericUpDown_dmgDiceD6.Minimum = New Decimal(New Integer() {30, 0, 0, -2147483648})
         Me.NumericUpDown_dmgDiceD6.Name = "NumericUpDown_dmgDiceD6"
@@ -183,7 +185,7 @@ Partial Class ucAction
         '
         'NumericUpDown_dmgDiceD8
         '
-        Me.NumericUpDown_dmgDiceD8.Location = New System.Drawing.Point(254, 219)
+        Me.NumericUpDown_dmgDiceD8.Location = New System.Drawing.Point(254, 264)
         Me.NumericUpDown_dmgDiceD8.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
         Me.NumericUpDown_dmgDiceD8.Minimum = New Decimal(New Integer() {30, 0, 0, -2147483648})
         Me.NumericUpDown_dmgDiceD8.Name = "NumericUpDown_dmgDiceD8"
@@ -192,7 +194,7 @@ Partial Class ucAction
         '
         'NumericUpDown_dmgDiceD12
         '
-        Me.NumericUpDown_dmgDiceD12.Location = New System.Drawing.Point(325, 219)
+        Me.NumericUpDown_dmgDiceD12.Location = New System.Drawing.Point(325, 264)
         Me.NumericUpDown_dmgDiceD12.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
         Me.NumericUpDown_dmgDiceD12.Minimum = New Decimal(New Integer() {30, 0, 0, -2147483648})
         Me.NumericUpDown_dmgDiceD12.Name = "NumericUpDown_dmgDiceD12"
@@ -201,7 +203,7 @@ Partial Class ucAction
         '
         'NumericUpDown_dmgDiceD20
         '
-        Me.NumericUpDown_dmgDiceD20.Location = New System.Drawing.Point(396, 219)
+        Me.NumericUpDown_dmgDiceD20.Location = New System.Drawing.Point(396, 264)
         Me.NumericUpDown_dmgDiceD20.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
         Me.NumericUpDown_dmgDiceD20.Minimum = New Decimal(New Integer() {30, 0, 0, -2147483648})
         Me.NumericUpDown_dmgDiceD20.Name = "NumericUpDown_dmgDiceD20"
@@ -210,7 +212,7 @@ Partial Class ucAction
         '
         'NumericUpDown_dmgDiceD100
         '
-        Me.NumericUpDown_dmgDiceD100.Location = New System.Drawing.Point(467, 219)
+        Me.NumericUpDown_dmgDiceD100.Location = New System.Drawing.Point(467, 264)
         Me.NumericUpDown_dmgDiceD100.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
         Me.NumericUpDown_dmgDiceD100.Minimum = New Decimal(New Integer() {30, 0, 0, -2147483648})
         Me.NumericUpDown_dmgDiceD100.Name = "NumericUpDown_dmgDiceD100"
@@ -221,7 +223,7 @@ Partial Class ucAction
         '
         Me.Label7.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(112, 191)
+        Me.Label7.Location = New System.Drawing.Point(112, 236)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(35, 25)
         Me.Label7.TabIndex = 17
@@ -231,7 +233,7 @@ Partial Class ucAction
         '
         Me.Label8.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(183, 191)
+        Me.Label8.Location = New System.Drawing.Point(183, 236)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(35, 25)
         Me.Label8.TabIndex = 18
@@ -241,7 +243,7 @@ Partial Class ucAction
         '
         Me.Label9.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(254, 191)
+        Me.Label9.Location = New System.Drawing.Point(254, 236)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(35, 25)
         Me.Label9.TabIndex = 19
@@ -251,7 +253,7 @@ Partial Class ucAction
         '
         Me.Label10.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(325, 191)
+        Me.Label10.Location = New System.Drawing.Point(325, 236)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(45, 25)
         Me.Label10.TabIndex = 20
@@ -261,7 +263,7 @@ Partial Class ucAction
         '
         Me.Label11.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(396, 191)
+        Me.Label11.Location = New System.Drawing.Point(396, 236)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(45, 25)
         Me.Label11.TabIndex = 21
@@ -271,16 +273,34 @@ Partial Class ucAction
         '
         Me.Label12.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(467, 191)
+        Me.Label12.Location = New System.Drawing.Point(467, 236)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(55, 25)
         Me.Label12.TabIndex = 22
         Me.Label12.Text = "D100"
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(0, 3)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(63, 25)
+        Me.Label13.TabIndex = 23
+        Me.Label13.Text = "Name:"
+        '
+        'TextBox_name
+        '
+        Me.TextBox_name.Location = New System.Drawing.Point(112, 3)
+        Me.TextBox_name.Name = "TextBox_name"
+        Me.TextBox_name.Size = New System.Drawing.Size(420, 31)
+        Me.TextBox_name.TabIndex = 24
+        '
         'ucAttack
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.TextBox_name)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -305,7 +325,7 @@ Partial Class ucAction
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RichTextBox_Description)
         Me.Name = "ucAttack"
-        Me.Size = New System.Drawing.Size(538, 257)
+        Me.Size = New System.Drawing.Size(538, 317)
         CType(Me.AttackBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_range, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_hitBonus, System.ComponentModel.ISupportInitialize).EndInit()
@@ -345,4 +365,6 @@ Partial Class ucAction
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents TextBox_name As TextBox
 End Class

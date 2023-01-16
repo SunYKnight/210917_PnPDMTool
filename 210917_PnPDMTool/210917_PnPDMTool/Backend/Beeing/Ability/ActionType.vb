@@ -16,7 +16,7 @@
     Public Property Name As String = ""
     Public Property Description As String = ""
     Public Property Type As eType
-    Public Property AttackList As List(Of AttackType)
+    Public Property AttackList As New List(Of AttackType)
 
 #End Region
 

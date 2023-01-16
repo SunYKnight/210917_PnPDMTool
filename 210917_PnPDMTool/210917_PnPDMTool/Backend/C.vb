@@ -15,6 +15,9 @@
     Public WIDTH_TEXT_MEDIUM As Int32 = 70
     Public WIDTH_TEXT_BIG As Int32 = 170
 
+    Public WIDTH_CONTROL_EDIT As Integer = 750
+    Public HEIGHT_CONTROL_EDIT As Integer = 750
+
 
 #Region "Enum"
 

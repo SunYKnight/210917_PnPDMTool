@@ -6,80 +6,134 @@ Public Class ucAction
 #End Region
 
 #Region "Private Var"
-
+    Private _editWindow As New Form()
+    Private WithEvents _editUc As ucEdit(Of ucAttack)
 #End Region
 
 #Region "Properties"
-    Public Property VM As New AttackType()
+    Public Property Action As ActionType
 #End Region
 
 #Region "Init"
-    Public Sub New()
-        InitializeComponent()
+    Public Sub New(action As ActionType)
+        ' Save action
+        Me.Action = action
 
-        ' Get Combobox values
-        ComboBox_DmgType.DataSource = System.Enum.GetValues(GetType(EDmgType))
-
-        ' Update databinding
-        UpdateDatabinding()
+        ' Call common New
+        NewCommon()
     End Sub
+
 #End Region
 
 #Region "Private Sub"
-    Private Sub UpdateDatabinding()
+    Private Sub NewCommon()
         ' Locals
         Dim dataSrc = System.Enum.GetNames(GetType(eAttributes))
 
+        ' Initilaize components
+        InitializeComponent()
+
+        ' Set edit window Size
+        _editWindow.MinimumSize = New Size(WIDTH_CONTROL_EDIT, HEIGHT_CONTROL_EDIT)
+
+        ' Get Combobox values
+        ComboBox_Type.DataSource = System.Enum.GetValues(GetType(ActionType.eType))
+
+        ' Set minimum size
+        Me.MinimumSize = New Size(WIDTH_CONTROL_EDIT, HEIGHT_CONTROL_EDIT)
+
+        ' Name
+        RichTextBox_name.DataBindings.Clear()
+        RichTextBox_name.DataBindings.Add(New Binding("Text", Action, "Name"))
+
         ' Description
         RichTextBox_Description.DataBindings.Clear()
-        RichTextBox_Description.DataBindings.Add(New Binding("Text", VM, "Description"))
+        RichTextBox_Description.DataBindings.Add(New Binding("Text", Action, "Description"))
 
-        ' Damage Type
-        ComboBox_DmgType.DataBindings.Clear()
-        ComboBox_DmgType.DataBindings.Add(New Binding("SelectedIndex", VM, "DmgType"))
+        ' Type
+        ComboBox_Type.DataBindings.Clear()
+        ComboBox_Type.DataBindings.Add(New Binding("SelectedIndex", Action, "Type"))
 
-        ' Range
-        NumericUpDown_range.DataBindings.Clear()
-        NumericUpDown_range.DataBindings.Add(New Binding("Value", VM, "Range"))
-
-        ' Hit Bonus
-        NumericUpDown_hitBonus.DataBindings.Clear()
-        NumericUpDown_hitBonus.DataBindings.Add(New Binding("Value", VM, "HitBonus"))
-
-        ' Dmg Bonus
-        NumericUpDown_dmgBonus.DataBindings.Clear()
-        NumericUpDown_dmgBonus.DataBindings.Add(New Binding("Value", VM, "DmgBonus"))
-
-        ' Dmg Dice D4
-        NumericUpDown_dmgDiceD4.DataBindings.Clear()
-        NumericUpDown_dmgDiceD4.DataBindings.Add(New Binding("Value", VM.DmgDiceD4, "DiceCount"))
-        ' Dmg Dice D6
-        NumericUpDown_dmgDiceD6.DataBindings.Clear()
-        NumericUpDown_dmgDiceD6.DataBindings.Add(New Binding("Value", VM.DmgDiceD6, "DiceCount"))
-        ' Dmg Dice D8
-        NumericUpDown_dmgDiceD8.DataBindings.Clear()
-        NumericUpDown_dmgDiceD8.DataBindings.Add(New Binding("Value", VM.DmgDiceD8, "DiceCount"))
-        ' Dmg Dice D12
-        NumericUpDown_dmgDiceD12.DataBindings.Clear()
-        NumericUpDown_dmgDiceD12.DataBindings.Add(New Binding("Value", VM.DmgDiceD12, "DiceCount"))
-        ' Dmg Dice D20
-        NumericUpDown_dmgDiceD20.DataBindings.Clear()
-        NumericUpDown_dmgDiceD20.DataBindings.Add(New Binding("Value", VM.DmgDiceD20, "DiceCount"))
-        ' Dmg Dice D100
-        NumericUpDown_dmgDiceD100.DataBindings.Clear()
-        NumericUpDown_dmgDiceD100.DataBindings.Add(New Binding("Value", VM.DmgDiceD100, "DiceCount"))
+        UpdateListView()
     End Sub
+
+    Private Sub UpdateListView()
+        ' Handle Header
+        ListView_attackList.Columns.Clear()
+        ' Adding ListView Columns
+        ListView_attackList.Columns.Add("Name", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Hit", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Type", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Range", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D4", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D6", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D8", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D12", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D20", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D100", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Dmg", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Description", 100, HorizontalAlignment.Left)
+
+        ' Handle Items
+        ListView_attackList.Items.Clear()
+
+        ' Check for empty list 
+        If (Action.AttackList.Count > 0) Then
+            ' Create Items
+            For Each atk In Action.AttackList
+                ListView_attackList.Items.Add(New ListViewItem(atk.ToListString))
+            Next
+        End If
+
+        ListView_attackList.Update()
+    End Sub
+
+    Private Sub EditAttack(attack As AttackType)
+        ' Update uc Edit 
+        _editUc = New ucEdit(Of ucAttack)(New ucAttack(attack))
+
+        ' Update edit Window
+        _editWindow.Controls.Clear()
+        _editWindow.Controls.Add(_editUc)
+        _editWindow.Show()
+    End Sub
+
 #End Region
 
 #Region "Pubilc Sub"
+    Public Function Save() As Object
+        Return Action
+    End Function
 
+    Public Function GetOutputType() As Type
+        Return GetType(ActionType)
+    End Function
 #End Region
 
 #Region "Events"
-
+    Private Sub editWindowSaveHandle(obj As Object, type As Type) Handles _editUc.Save
+        ' Close Window
+        _editWindow.Hide()
+        ' Add Element
+        Action.AttackList.Add(obj)
+        ' Update list
+        UpdateListView()
+        _editUc.Dispose()
+    End Sub
+    Private Sub editWindowDiscardHandle(obj As Object) Handles _editUc.Discard
+        ' Close Window
+        _editWindow.Hide()
+        _editUc.Dispose()
+    End Sub
 #End Region
 
 #Region "GUI Handle"
+    Private Sub Button_new_Click(sender As Object, e As EventArgs) Handles Button_add.Click
+        EditAttack(New AttackType())
+    End Sub
 
+    Private Sub Button_edit_Click(sender As Object, e As EventArgs) Handles Button_edit.Click
+        ' Todo
+    End Sub
 #End Region
 End Class
