@@ -49,13 +49,7 @@
     <Compile Update="Frontend\UserControl\TabListDetails\ucCharDetailsActions.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Frontend\UserControl\ucEditMonster\ucTabEditBeeing.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Frontend\UserControl\ucMapView.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Frontend\UserControl\ucEditMonster\ucEditMonsterOld.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\Beeing\ucBeeingParameterGeneral.vb">

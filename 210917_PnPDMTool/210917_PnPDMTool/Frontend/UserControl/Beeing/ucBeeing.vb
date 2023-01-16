@@ -4,17 +4,25 @@
 #End Region
 
 #Region "Private Var"
-    Private _ucBeeingParamterGeneral As New ucBeeingParameterGeneral
-    Private _ucBeeingActionList As New ucBeeingActionList
+    Private _ucBeeingParamterGeneral As ucBeeingParameterGeneral
+    Private _ucBeeingActionList As ucBeeingActionList
 #End Region
 
 #Region "Properties"
-    Public Overrides Property MinimumSize As Size = _ucBeeingParamterGeneral.MinimumSize
+    ' Public Overrides Property MinimumSize As Size = _ucBeeingParamterGeneral.MinimumSize
+    Public Property Beeing As BeeingType
 #End Region
 
 #Region "Init"
-    Public Sub New()
+    Public Sub New(beeing As BeeingType)
+        ' Required function call
         InitializeComponent()
+
+        ' Save beeing
+        Me.Beeing = beeing
+
+        _ucBeeingParamterGeneral = New ucBeeingParameterGeneral(beeing)
+        _ucBeeingActionList = New ucBeeingActionList(beeing.ActionList)
 
         ' Add Tab pages control
         TabControl_beeing.TabPages.Item(0).Controls.Add(_ucBeeingParamterGeneral)
@@ -28,7 +36,7 @@
 
 #Region "Pubilc Sub"
     Public Function Save() As Object
-        Return New Object
+        Return Beeing
     End Function
 
     Public Function GetOutputType() As Type
@@ -36,7 +44,7 @@
     End Function
 
     Public Function Discard() As Object
-        Return New Object
+        Return Beeing
     End Function
 #End Region
 

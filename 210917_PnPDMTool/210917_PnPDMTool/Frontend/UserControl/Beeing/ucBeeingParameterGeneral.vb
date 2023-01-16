@@ -5,25 +5,18 @@ Imports _210917_PnPDMTool.ucAttributCollection
 Public Class ucBeeingParameterGeneral
 
 #Region "Private Var"
-    Private _monsterToEdit As MonsterType
 #End Region
 
 #Region "Properties"
     Public Overridable Property MinimumSize As Size = New Size(1200, 900)
+    Public Property Beeing As BeeingType
 #End Region
 
 #Region "Init"
-    Public Sub New()
-        ' Create new instance
-        _monsterToEdit = New MonsterType()
 
-        ' Call common Constructor
-        NewCommon()
-    End Sub
+    Public Sub New(monster As BeeingType)
 
-    Public Sub New(monster As MonsterType)
-        ' Copy instance
-        _monsterToEdit = monster
+        Me.Beeing = monster
 
         ' Call common Constructor
         NewCommon()
@@ -33,9 +26,9 @@ Public Class ucBeeingParameterGeneral
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
-        UcAttributCollection1.AttributeCollectionToEdit = _monsterToEdit.Attributs
-        UcSavingThrowCollection1.SavingThrowCollectionToEdit = _monsterToEdit.SavingThrows
-        UcSkillCollection1.SkillCollectionToEdit = _monsterToEdit.Skills
+        UcAttributCollection1.AttributeCollectionToEdit = Beeing.Attributs
+        UcSavingThrowCollection1.SavingThrowCollectionToEdit = Beeing.SavingThrows
+        UcSkillCollection1.SkillCollectionToEdit = Beeing.Skills
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
         ComboBox_Size.DataSource = System.Enum.GetValues(GetType(C.ESize))
@@ -56,19 +49,19 @@ Public Class ucBeeingParameterGeneral
         Dim dataSrc = System.Enum.GetNames(GetType(eAttributes))
 
         TextBox_name.DataBindings.Clear()
-        TextBox_name.DataBindings.Add(New Binding("Text", _monsterToEdit, "Name"))
+        TextBox_name.DataBindings.Add(New Binding("Text", Beeing, "Name"))
 
         ComboBox_Size.DataBindings.Clear()
-        ComboBox_Size.DataBindings.Add(New Binding("Text", _monsterToEdit, "Size"))
+        ComboBox_Size.DataBindings.Add(New Binding("Text", Beeing, "Size"))
 
         ComboBox_aligment_personality.DataBindings.Clear()
-        ComboBox_aligment_personality.DataBindings.Add(New Binding("Text", _monsterToEdit.Aligment, "Personality"))
+        ComboBox_aligment_personality.DataBindings.Add(New Binding("Text", Beeing.Aligment, "Personality"))
 
         ComboBox_aligment_behaviour.DataBindings.Clear()
-        ComboBox_aligment_behaviour.DataBindings.Add(New Binding("Text", _monsterToEdit.Aligment, "Behaviour"))
+        ComboBox_aligment_behaviour.DataBindings.Add(New Binding("Text", Beeing.Aligment, "Behaviour"))
 
         PictureBox_image.DataBindings.Clear()
-        PictureBox_image.DataBindings.Add(New Binding("Image", _monsterToEdit.Aligment, "Behaviour", True))
+        PictureBox_image.DataBindings.Add(New Binding("Image", Beeing.Aligment, "Behaviour", True))
 
     End Sub
 #End Region

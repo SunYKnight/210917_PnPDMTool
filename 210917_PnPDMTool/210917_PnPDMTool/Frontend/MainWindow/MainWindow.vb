@@ -7,11 +7,11 @@ Public Class MainWindow
     Private WithEvents _ucTabBeeingDetails As ucTabDetailsControl = New ucTabDetailsControl
     Private WithEvents _ucTabBeeingLists As ucTabListsControl = New ucTabListsControl
     Private WithEvents _ucMapView As UcMapView = New UcMapView
-    Private WithEvents _ucTabBeeingEdit As New ucTabEditBeeing
+    Private WithEvents _ucEditBeeing As ucEdit(Of ucBeeing)
 #End Region
 
 #Region "Properties"
-
+    Public Property BeeingList As New List(Of BeeingType)
 #End Region
 
 #Region "Init"
@@ -30,7 +30,11 @@ Public Class MainWindow
         ' Notification
         LoggingNotificationHandle("MainWindow Load Complete!")
 
+        ' Load Data 
+        ' TODO
 
+        ' Update Data
+        _ucTabBeeingLists.UcMonsterView1.UpdateListView(BeeingList)
 
     End Sub
 #End Region
@@ -70,15 +74,45 @@ Public Class MainWindow
             Case ucTabListsControl.eGuiEvent.removePlayableObject
             Case ucTabListsControl.eGuiEvent.newPlayableObject
             Case ucTabListsControl.eGuiEvent.newMonster
+                _ucEditBeeing = New ucEdit(Of ucBeeing)(New ucBeeing(New BeeingType))
                 FlowLayoutPanel_Center.Controls.Clear()
-                FlowLayoutPanel_Center.Controls.Add(_ucTabBeeingEdit)
+                FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
+                FlowLayoutPanel_Center.Update()
+            Case ucTabListsControl.eGuiEvent.editMonster
+                ' Todo change to selected Beeing
+                _ucEditBeeing = New ucEdit(Of ucBeeing)(New ucBeeing(New BeeingType))
+                FlowLayoutPanel_Center.Controls.Clear()
+                FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
                 FlowLayoutPanel_Center.Update()
             Case ucTabListsControl.eGuiEvent.endBattle
             Case Else
         End Select
     End Sub
 
-    Private Sub EditMonsterExitEvent() Handles _ucTabBeeingEdit.ButtonExitClicked
+    Private Sub EditMonsterSaveEvent(obj As Object, type As Type) Handles _ucEditBeeing.Save
+        ' Locals
+        Dim beeing As BeeingType = CType(obj, BeeingType)
+
+        ' Close Window
+        _ucEditBeeing.Dispose()
+        ' Macke sure name is unique
+        If BeeingList.FindAll(Function(p) p.Name = beeing.Name).Count > 0 Then
+            BeeingList.Remove(BeeingList.Find(Function(p) p.Name = beeing.Name))
+        End If
+        ' Add Element
+        BeeingList.Add(beeing)
+        ' Update list
+        _ucTabBeeingLists.UcMonsterView1.UpdateListView(BeeingList)
+
+        FlowLayoutPanel_Center.Controls.Clear()
+        FlowLayoutPanel_Center.Controls.Add(_ucMapView)
+        FlowLayoutPanel_Center.Update()
+    End Sub
+
+    Private Sub EditMonsterDiscardEvent(obj As Object) Handles _ucEditBeeing.Discard
+
+        ' Find dublicated in Beeing list
+
         FlowLayoutPanel_Center.Controls.Clear()
         FlowLayoutPanel_Center.Controls.Add(_ucMapView)
         FlowLayoutPanel_Center.Update()

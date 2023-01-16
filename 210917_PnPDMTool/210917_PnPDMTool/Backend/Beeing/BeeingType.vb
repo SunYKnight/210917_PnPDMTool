@@ -14,6 +14,9 @@
     Public Property Size As ESize = ESize.Medium
     Public Property Speed As Integer
     Public Property AC As Integer
+
+    ' Lists
+    Public Property ActionList As New List(Of ActionType)
 #End Region
 
 #Region "Init"
@@ -27,7 +30,11 @@
 #End Region
 
 #Region "Pubilc Sub"
-
+    Public Function ToListString() As String()
+        Dim str(1) As String
+        str(0) = Name
+        Return str
+    End Function
 #End Region
 
 #Region "Events"

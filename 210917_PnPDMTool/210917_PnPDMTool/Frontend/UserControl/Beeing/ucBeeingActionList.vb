@@ -11,12 +11,14 @@ Public Class ucBeeingActionList
 #End Region
 
 #Region "Properties"
-    Public Property ActionList As New List(Of ActionType)
+    Public Property ActionList As List(Of ActionType)
 #End Region
 
 #Region "Init"
-    Public Sub New()
+    Public Sub New(actionList As List(Of ActionType))
         InitializeComponent()
+
+        Me.ActionList = actionList
 
         ' Set edit window Size
         _editWindow.MinimumSize = New Size(WIDTH_CONTROL_EDIT, HEIGHT_CONTROL_EDIT)
