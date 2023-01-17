@@ -1,6 +1,7 @@
 ﻿Public Class BeeingType
 #Region "Private Var"
-
+    Private _dmgEffects() As C.eDmgTypeModifier
+    Private _condImmunities() As C.eDmgTypeModifier
 #End Region
 
 
@@ -12,15 +13,65 @@
     Public Property Attributs As AttributCollection = New AttributCollection
     Public Property Aligment As AligmentType = New AligmentType
     Public Property Size As ESize = ESize.Medium
-    Public Property Speed As Integer
-    Public Property AC As Integer
+    Public Property SpeedWalk As Integer = 0
+    Public Property SpeedBurrowing As Integer = 0
+    Public Property SpeedSwimming As Integer = 0
+    Public Property SpeedFlying As Integer = 0
+    Public Property SpeedClimb As Integer = 0
+    Public Property AC As Integer = 8
+    Public Property Proficency As Integer = 2
+    Public Property Challenge As Single = 1
+
+
+    Public Property MonsterClass As eMonsterType = eMonsterType.Abberation
+
+    Public Property HpDiceD4 As DiceSet = New DiceSet()
+    Public Property HpDiceD6 As DiceSet = New DiceSet()
+    Public Property HpDiceD8 As DiceSet = New DiceSet()
+    Public Property HpDiceD12 As DiceSet = New DiceSet()
+    Public Property HpDiceD20 As DiceSet = New DiceSet()
+    Public Property HpDiceD100 As DiceSet = New DiceSet()
+    Public Property HPBonus As Integer = 0
 
     ' Lists
     Public Property ActionList As New List(Of ActionType)
+    Public Property DmgImmunities(idx As Integer) As C.eDmgTypeModifier
+        Get
+            Return _dmgEffects(idx)
+        End Get
+        Set(value As C.eDmgTypeModifier)
+            _dmgEffects(idx) = value
+        End Set
+    End Property
+    Public Property ConditionImmunities(idx As Integer) As C.eDmgTypeModifier
+        Get
+            Return _condImmunities(idx)
+        End Get
+        Set(value As C.eDmgTypeModifier)
+            _condImmunities(idx) = value
+        End Set
+    End Property
+    Public Property Languages As New List(Of C.eLanguages)
 #End Region
 
 #Region "Init"
-    Public Sub Init()
+    Public Sub New()
+        Dim idx = 0
+
+        ' Create Damage Immunities
+        ReDim _dmgEffects(System.Enum.GetValues(GetType(C.EDmgType)).Length)
+        For Each dmgType In System.Enum.GetValues(GetType(C.EDmgType))
+            DmgImmunities(idx) = eDmgTypeModifier.Normal
+            idx += 1
+        Next
+
+        ' Create Condition Immunities
+        idx = 0
+        ReDim _condImmunities(System.Enum.GetValues(GetType(C.ECondidtion)).Length)
+        For Each dmgType In System.Enum.GetValues(GetType(C.ECondidtion))
+            ConditionImmunities(idx) = eDmgTypeModifier.Normal
+            idx += 1
+        Next
 
     End Sub
 #End Region

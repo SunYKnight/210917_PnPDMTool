@@ -3,7 +3,7 @@
     Inherits BeeingType
 
 #Region "Private Var"
-    Private _dmgRecvModifierType(System.Enum.GetValues(GetType(C.EDmgType)).Length) As C.EDmgTypeModifier
+    Private _dmgRecvModifierType(System.Enum.GetValues(GetType(C.EDmgType)).Length) As C.eDmgTypeModifier
 
 
 

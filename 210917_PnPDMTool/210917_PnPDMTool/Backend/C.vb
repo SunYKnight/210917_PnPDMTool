@@ -44,87 +44,87 @@
         Unconscious
     End Enum
 
-    <Flags()> Public Enum ELanguages
-        Abyssal = 1 << 1
-        Celestial = 1 << 2
-        Common = 1 << 3
-        Draconic = 1 << 4
-        Dwarfish = 1 << 5
-        Elvish = 1 << 6
-        Giant = 1 << 7
-        Infernal = 1 << 8
-        Primordial = 1 << 9
-        Sylvan = 1 << 10
-        Aarakocra = 1 << 11
-        All = 1 << 12
-        Aquan = 1 << 13
-        Blink_Dog = 1 << 14
-        Bothii = 1 << 15
-        Bullywug = 1 << 16
-        Citanes = 1 << 17
-        Dealkyr = 1 << 18
-        Deep_Speech = 1 << 19
-        Djaynaian = 1 << 20
-        Druidic = 1 << 21
-        Giant_Eagle = 1 << 22
-        Giant_Elk = 1 << 23
-        Giant_Owl = 1 << 24
-        Gith = 1 << 25
-        Gnoll = 1 << 26
-        Gnomish = 1 << 27
-        Goblin = 1 << 28
-        Godstongue = 1 << 29
-        Grell = 1 << 30
-        Grippli = 1 << 31
-        Grung = 1 << 32
-        Halfling = 1 << 33
-        Halri = 1 << 34
-        Hook_Horror = 1 << 35
-        Ice_Toad = 1 << 36
-        Ignan = 1 << 37
-        Ixtxachitl = 1 << 38
-        Kraul = 1 << 39
-        Leonin = 1 << 40
-        Loxodon = 1 << 41
-        Marquesian = 1 << 42
-        Maynah = 1 << 43
-        Minotaur = 1 << 44
-        Modron = 1 << 45
-        Nwarian = 1 << 46
-        Naush = 1 << 47
-        Netherese = 1 << 48
-        Olman = 1 << 49
-        Orc = 1 << 50
-        Otyugh = 1 << 51
-        Quirapu = 1 << 52
-        Quori = 1 << 53
-        Riedran = 1 << 54
-        Sahuagin = 1 << 55
-        Sensan = 1 << 56
-        Shankhi = 1 << 57
-        Skitterwidget = 1 << 58
-        Slaad = 1 << 59
-        Sphinx = 1 << 60
-        Telepathy = 1 << 61
-        Terran = 1 << 62
-        Thayan = 1 << 63
-        Thieves_Cant = 1 << 64
-        Thri_kreen = 1 << 65
-        Tletahtolli = 1 << 66
-        Tlincalli = 1 << 67
-        Troglodyte = 1 << 68
-        Umber_Hulk = 1 << 69
-        Undercommon = 1 << 70
-        Vedalken = 1 << 71
-        Vegepygmy = 1 << 72
-        Winter_Wolf = 1 << 73
-        Worg = 1 << 74
-        Xingyu = 1 << 75
-        Yeti = 1 << 76
-        Yikaria = 1 << 77
-        Zabaani = 1 << 78
-        Zemnian = 1 << 79
-        Ziklight = 1 << 80
+    Public Enum eLanguages
+        Abyssal
+        Celestial
+        Common
+        Draconic
+        Dwarfish
+        Elvish
+        Giant
+        Infernal
+        Primordial
+        Sylvan
+        Aarakocra
+        All
+        Aquan
+        Blink_Dog
+        Bothii
+        Bullywug
+        Citanes
+        Dealkyr
+        Deep_Speech
+        Djaynaian
+        Druidic
+        Giant_Eagle
+        Giant_Elk
+        Giant_Owl
+        Gith
+        Gnoll
+        Gnomish
+        Goblin
+        Godstongue
+        Grell
+        Grippli
+        Grung
+        Halfling
+        Halri
+        Hook_Horror
+        Ice_Toad
+        Ignan
+        Ixtxachitl
+        Kraul
+        Leonin
+        Loxodon 
+        Marquesian
+        Maynah
+        Minotaur
+        Modron
+        Nwarian
+        Naush
+        Netherese
+        Olman
+        Orc
+        Otyugh
+        Quirapu
+        Quori
+        Riedran
+        Sahuagin
+        Sensan
+        Shankhi
+        Skitterwidget
+        Slaad
+        Sphinx
+        Telepathy
+        Terran
+        Thayan
+        Thieves_Cant
+        Thri_kreen
+        Tletahtolli
+        Tlincalli
+        Troglodyte
+        Umber_Hulk
+        Undercommon
+        Vedalken
+        Vegepygmy
+        Winter_Wolf
+        Worg
+        Xingyu
+        Yeti
+        Yikaria
+        Zabaani
+        Zemnian
+        Ziklight
     End Enum
 
     Public Enum EDmgType
@@ -141,11 +141,11 @@
         Necrotic
         Psychic
         Radiant
-        Magic
+        Magical
     End Enum
 
 
-    Public Enum EDmgTypeModifier
+    Public Enum eDmgTypeModifier
         Normal = 1
         Vulnerable = 2
         Resistant = 0.5
@@ -180,6 +180,22 @@
         Darkvision
         Tremorsense
         Truesight
+    End Enum
+
+    Public Enum eMonsterType
+        Abberation
+        Beast
+        Celestial
+        Construct
+        Dragon
+        Elemental
+        Fey
+        Fiend
+        Giant
+        Monstrosity
+        Ooze
+        Plant
+        Undead
     End Enum
 
     Public Function CalcRelativeSize(parentSize As Size, facWidth As Double, facHeight As Double, min As Size) As Size
