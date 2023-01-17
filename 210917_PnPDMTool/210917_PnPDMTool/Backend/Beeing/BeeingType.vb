@@ -1,7 +1,5 @@
 ﻿Public Class BeeingType
 #Region "Private Var"
-    Private _dmgEffects() As C.eDmgTypeModifier
-    Private _condImmunities() As C.eDmgTypeModifier
 #End Region
 
 
@@ -35,22 +33,8 @@
 
     ' Lists
     Public Property ActionList As New List(Of ActionType)
-    Public Property DmgImmunities(idx As Integer) As C.eDmgTypeModifier
-        Get
-            Return _dmgEffects(idx)
-        End Get
-        Set(value As C.eDmgTypeModifier)
-            _dmgEffects(idx) = value
-        End Set
-    End Property
-    Public Property ConditionImmunities(idx As Integer) As C.eDmgTypeModifier
-        Get
-            Return _condImmunities(idx)
-        End Get
-        Set(value As C.eDmgTypeModifier)
-            _condImmunities(idx) = value
-        End Set
-    End Property
+    Public Property DmgImmunities As C.eDmgTypeModifier() = New eDmgTypeModifier() {0}
+    Public Property ConditionImmunities As C.eDmgTypeModifier() = New eDmgTypeModifier() {0}
     Public Property Languages As New List(Of C.eLanguages)
 #End Region
 
@@ -59,7 +43,7 @@
         Dim idx = 0
 
         ' Create Damage Immunities
-        ReDim _dmgEffects(System.Enum.GetValues(GetType(C.EDmgType)).Length)
+        ReDim DmgImmunities(System.Enum.GetValues(GetType(C.EDmgType)).Length)
         For Each dmgType In System.Enum.GetValues(GetType(C.EDmgType))
             DmgImmunities(idx) = eDmgTypeModifier.Normal
             idx += 1
@@ -67,7 +51,7 @@
 
         ' Create Condition Immunities
         idx = 0
-        ReDim _condImmunities(System.Enum.GetValues(GetType(C.ECondidtion)).Length)
+        ReDim ConditionImmunities(System.Enum.GetValues(GetType(C.ECondidtion)).Length)
         For Each dmgType In System.Enum.GetValues(GetType(C.ECondidtion))
             ConditionImmunities(idx) = eDmgTypeModifier.Normal
             idx += 1

@@ -143,7 +143,34 @@ Public Class ucBeeingParameterGeneral
 
         ' Dmg Effects
         ComboBox_dmgAcid.DataBindings.Clear()
-        ComboBox_dmgAcid.DataBindings.Add(New Binding("Value", Beeing, "DmgImmunities(0)", True))
+        ComboBox_dmgAcid.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Acid), "", True))
+        ComboBox_dmgBludgeoning.DataBindings.Clear()
+        ComboBox_dmgBludgeoning.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Bludgeoning), "", True))
+        ComboBox_dmgCold.DataBindings.Clear()
+        ComboBox_dmgCold.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Cold), "", True))
+        ComboBox_dmgFire.DataBindings.Clear()
+        ComboBox_dmgFire.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Fire), "", True))
+        ComboBox_dmgForce.DataBindings.Clear()
+        ComboBox_dmgForce.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Force), "", True))
+        ComboBox_dmgLightning.DataBindings.Clear()
+        ComboBox_dmgLightning.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Lightning), "", True))
+        ComboBox_dmgMagical.DataBindings.Clear()
+        ComboBox_dmgMagical.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Magical), "", True))
+        ComboBox_dmgNecrotic.DataBindings.Clear()
+        ComboBox_dmgNecrotic.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Necrotic), "", True))
+        ComboBox_dmgPiercing.DataBindings.Clear()
+        ComboBox_dmgPiercing.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Piercing), "", True))
+        ComboBox_dmgPoison.DataBindings.Clear()
+        ComboBox_dmgPoison.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Poison), "", True))
+        ComboBox_dmgPsychic.DataBindings.Clear()
+        ComboBox_dmgPsychic.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Psychic), "", True))
+        ComboBox_dmgRadiant.DataBindings.Clear()
+        ComboBox_dmgRadiant.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Radiant), "", True))
+        ComboBox_dmgSlashing.DataBindings.Clear()
+        ComboBox_dmgSlashing.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Slashing), "", True))
+        ComboBox_dmgThunder.DataBindings.Clear()
+        ComboBox_dmgThunder.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Thunder), "", True))
+
 
 
     End Sub
