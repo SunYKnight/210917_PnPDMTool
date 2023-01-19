@@ -7,7 +7,7 @@
 #Region "Properties"
     Public Property Name As String = ""
     Public Property Description As String = ""
-    Public Property DmgType As EDmgType = EDmgType.Bludgeoning
+    Public Property DmgType As eDmgType = eDmgType.Bludgeoning
     Public Property Range As Double = 0
     Public Property HitBonus As Integer = 0
     Public Property DmgBonus As Integer = 0

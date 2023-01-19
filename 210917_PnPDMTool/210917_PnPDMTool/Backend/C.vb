@@ -15,8 +15,8 @@
     Public WIDTH_TEXT_MEDIUM As Int32 = 70
     Public WIDTH_TEXT_BIG As Int32 = 170
 
-    Public WIDTH_CONTROL_EDIT As Integer = 750
-    Public HEIGHT_CONTROL_EDIT As Integer = 750
+    Public WIDTH_CONTROL_EDIT As Integer = 1500
+    Public HEIGHT_CONTROL_EDIT As Integer = 1200
 
 
 #Region "Enum"
@@ -27,7 +27,7 @@
         Monster
     End Enum
 
-    Public Enum ECondidtion
+    Public Enum eCondidtion
         Blinded
         Charmed
         Deafened
@@ -127,7 +127,7 @@
         Ziklight
     End Enum
 
-    Public Enum EDmgType
+    Public Enum eDmgType
         Bludgeoning
         Piercing
         Slashing
@@ -145,11 +145,11 @@
     End Enum
 
 
-    Public Enum eDmgTypeModifier
-        Normal = 1
-        Vulnerable = 2
-        Resistant = 0.5
-        Immune = 0
+    Public Enum eImmunitiesModifier
+        Normal
+        Vulnerable
+        Resistant
+        Immune
     End Enum
 
     Public Enum EEnvironment

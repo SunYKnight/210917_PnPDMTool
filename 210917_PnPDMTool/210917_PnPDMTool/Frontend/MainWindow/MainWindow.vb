@@ -79,11 +79,16 @@ Public Class MainWindow
                 FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
                 FlowLayoutPanel_Center.Update()
             Case ucTabListsControl.eGuiEvent.editMonster
+                ' Check if any item is selected
+                If (_ucTabBeeingLists.UcMonsterView1.listView_Opponents.SelectedItems.Count > 0) Then
+                    Dim beeing = BeeingList.Find(Function(p) p.Name = _ucTabBeeingLists.UcMonsterView1.listView_Opponents.SelectedItems(0).SubItems(0).Text)
+                    _ucEditBeeing = New ucEdit(Of ucBeeing)(New ucBeeing(beeing))
+                    FlowLayoutPanel_Center.Controls.Clear()
+                    FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
+                    FlowLayoutPanel_Center.Update()
+                End If
                 ' Todo change to selected Beeing
-                _ucEditBeeing = New ucEdit(Of ucBeeing)(New ucBeeing(New BeeingType))
-                FlowLayoutPanel_Center.Controls.Clear()
-                FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
-                FlowLayoutPanel_Center.Update()
+
             Case ucTabListsControl.eGuiEvent.endBattle
             Case Else
         End Select

@@ -9,7 +9,7 @@
 #End Region
 
 #Region "Properties"
-    ' Public Overrides Property MinimumSize As Size = _ucBeeingParamterGeneral.MinimumSize
+    Public Overrides Property MinimumSize As Size = New Size(C.WIDTH_CONTROL_EDIT, C.HEIGHT_CONTROL_EDIT)
     Public Property Beeing As BeeingType
 #End Region
 

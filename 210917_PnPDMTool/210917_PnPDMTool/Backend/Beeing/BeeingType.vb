@@ -6,10 +6,11 @@
 #Region "Properties"
     Public Property Name As String = ""
     Public Property Image As String = ""
-    Public Property Skills As SkillCollection = New SkillCollection
-    Public Property SavingThrows As SavingThrowCollection = New SavingThrowCollection
-    Public Property Attributs As AttributCollection = New AttributCollection
-    Public Property Aligment As AligmentType = New AligmentType
+    Public Property Skills As New SkillCollection()
+    Public Property SavingThrows As New SavingThrowCollection()
+    Public Property Attributs As New AttributCollection()
+    Public Property Aligment As New AligmentType()
+    Public Property Immunities As New ImmunitiesCollection()
     Public Property Size As ESize = ESize.Medium
     Public Property SpeedWalk As Integer = 0
     Public Property SpeedBurrowing As Integer = 0
@@ -31,31 +32,16 @@
     Public Property HpDiceD100 As DiceSet = New DiceSet()
     Public Property HPBonus As Integer = 0
 
+
+
+
     ' Lists
     Public Property ActionList As New List(Of ActionType)
-    Public Property DmgImmunities As C.eDmgTypeModifier() = New eDmgTypeModifier() {0}
-    Public Property ConditionImmunities As C.eDmgTypeModifier() = New eDmgTypeModifier() {0}
     Public Property Languages As New List(Of C.eLanguages)
 #End Region
 
 #Region "Init"
     Public Sub New()
-        Dim idx = 0
-
-        ' Create Damage Immunities
-        ReDim DmgImmunities(System.Enum.GetValues(GetType(C.EDmgType)).Length)
-        For Each dmgType In System.Enum.GetValues(GetType(C.EDmgType))
-            DmgImmunities(idx) = eDmgTypeModifier.Normal
-            idx += 1
-        Next
-
-        ' Create Condition Immunities
-        idx = 0
-        ReDim ConditionImmunities(System.Enum.GetValues(GetType(C.ECondidtion)).Length)
-        For Each dmgType In System.Enum.GetValues(GetType(C.ECondidtion))
-            ConditionImmunities(idx) = eDmgTypeModifier.Normal
-            idx += 1
-        Next
 
     End Sub
 #End Region

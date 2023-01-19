@@ -25,81 +25,83 @@ Public Class ucBeeingParameterGeneral
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
+        ' Load Image
+        Try
+            Using fs As New System.IO.FileStream(Beeing.Image, IO.FileMode.Open)
+                PictureBox_image.Image = New Bitmap(Image.FromStream(fs))
+            End Using
+        Catch ex As Exception
+
+        End Try
+
         UcAttributCollection1.AttributeCollectionToEdit = Beeing.Attributs
         UcSavingThrowCollection1.SavingThrowCollectionToEdit = Beeing.SavingThrows
         UcSkillCollection1.SkillCollectionToEdit = Beeing.Skills
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+
+        ' Size
         ComboBox_Size.DataSource = System.Enum.GetValues(GetType(C.ESize))
-        ComboBox_monsterClass.DataSource = System.Enum.GetValues(GetType(C.eMonsterType))
-        ' Condition
-        ComboBox_condBlinded.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condCharmed.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condDeafened.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condExhaustion.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condFightended.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condGrappeled.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condIncapacitatated.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condInvisible.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condParalyzed.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condPoisoned.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condProne.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condRestrained.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condStunned.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_condUnconscious.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ' Dmg Type
-        ComboBox_dmgAcid.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgBludgeoning.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgCold.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgFire.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgForce.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgLightning.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgMagical.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgNecrotic.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgPiercing.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgPoison.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgPsychic.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgRadiant.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgSlashing.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
-        ComboBox_dmgThunder.DataSource = System.Enum.GetValues(GetType(C.eDmgTypeModifier))
         ' Monster Class
         ComboBox_monsterClass.DataSource = System.Enum.GetValues(GetType(C.eMonsterType))
-
+        ' Aligment
+        ComboBox_aligment_behaviour.DataSource = System.Enum.GetValues(GetType(AligmentType.EBehaviour))
+        ' Condition
+        ComboBox_condBlinded.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condCharmed.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condDeafened.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condExhaustion.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condFightended.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condGrappeled.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condIncapacitatated.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condInvisible.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condParalyzed.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condPoisoned.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condProne.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condRestrained.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condStunned.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_condUnconscious.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ' Dmg Type
+        ComboBox_dmgAcid.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgBludgeoning.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgCold.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgFire.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgForce.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgLightning.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgMagical.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgNecrotic.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgPiercing.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgPoison.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgPsychic.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgRadiant.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgSlashing.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+        ComboBox_dmgThunder.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
 
         ' Update data
         UpdateDatabinding()
 
-        ' comboBoxItem = New ComboBoxItemCheck()
-        ' ComboBox_languages.Items.Add(comboBoxItem)
-        'CheckedListBox_languages.DataSource = [Enum].GetNames(GetType(ELanguages))
     End Sub
 
 #End Region
 
 #Region "Private Sub"
+
+
     Private Sub UpdateDatabinding()
-        ' Locals
-        Dim dataSrc = System.Enum.GetNames(GetType(eAttributes))
+
 
         ' Name
         TextBox_name.DataBindings.Clear()
         TextBox_name.DataBindings.Add(New Binding("Text", Beeing, "Name"))
 
-        ' Image
-        PictureBox_image.DataBindings.Clear()
-        PictureBox_image.DataBindings.Add("ImageLocation", Beeing, "Image", True)
-
         ' Monster Class
-        ComboBox_monsterClass.DataBindings.Clear()
-        ComboBox_monsterClass.DataBindings.Add(New Binding("SelectedIndex", Beeing, "MonsterClass"))
+        Dim cBmt As New ComboboxBinder(Of eMonsterType)(ComboBox_monsterClass, Beeing, "MonsterClass")
 
         ' Aligment
-        ComboBox_aligment_behaviour.DataBindings.Clear()
-        ComboBox_aligment_behaviour.DataBindings.Add(New Binding("Text", Beeing.Aligment, "Behaviour"))
+        Dim cBal As New ComboboxBinder(Of AligmentType.EBehaviour)(ComboBox_aligment_behaviour, Beeing.Aligment, "Behaviour")
 
         ' Size
-        ComboBox_Size.DataBindings.Clear()
-        ComboBox_Size.DataBindings.Add(New Binding("SelectedIndex", Beeing, "Size"))
+        Dim cBsize As New ComboboxBinder(Of ESize)(ComboBox_Size, Beeing, "Size")
 
         ' AC
         NumericUpDown_AC.DataBindings.Clear()
@@ -142,35 +144,36 @@ Public Class ucBeeingParameterGeneral
         NumericUpDown_speedWalk.DataBindings.Add(New Binding("Value", Beeing, "SpeedWalk"))
 
         ' Dmg Effects
-        ComboBox_dmgAcid.DataBindings.Clear()
-        ComboBox_dmgAcid.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Acid), "", True))
-        ComboBox_dmgBludgeoning.DataBindings.Clear()
-        ComboBox_dmgBludgeoning.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Bludgeoning), "", True))
-        ComboBox_dmgCold.DataBindings.Clear()
-        ComboBox_dmgCold.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Cold), "", True))
-        ComboBox_dmgFire.DataBindings.Clear()
-        ComboBox_dmgFire.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Fire), "", True))
-        ComboBox_dmgForce.DataBindings.Clear()
-        ComboBox_dmgForce.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Force), "", True))
-        ComboBox_dmgLightning.DataBindings.Clear()
-        ComboBox_dmgLightning.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Lightning), "", True))
-        ComboBox_dmgMagical.DataBindings.Clear()
-        ComboBox_dmgMagical.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Magical), "", True))
-        ComboBox_dmgNecrotic.DataBindings.Clear()
-        ComboBox_dmgNecrotic.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Necrotic), "", True))
-        ComboBox_dmgPiercing.DataBindings.Clear()
-        ComboBox_dmgPiercing.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Piercing), "", True))
-        ComboBox_dmgPoison.DataBindings.Clear()
-        ComboBox_dmgPoison.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Poison), "", True))
-        ComboBox_dmgPsychic.DataBindings.Clear()
-        ComboBox_dmgPsychic.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Psychic), "", True))
-        ComboBox_dmgRadiant.DataBindings.Clear()
-        ComboBox_dmgRadiant.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Radiant), "", True))
-        ComboBox_dmgSlashing.DataBindings.Clear()
-        ComboBox_dmgSlashing.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Slashing), "", True))
-        ComboBox_dmgThunder.DataBindings.Clear()
-        ComboBox_dmgThunder.DataBindings.Add(New Binding("SelectedIndex", Beeing.DmgImmunities(EDmgType.Thunder), "", True))
+        Dim cBi1 As New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgAcid, Beeing.Immunities, "Damage.Acid")
+        Dim cBi2 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgBludgeoning, Beeing.Immunities, "Damage.Bludgeoning")
+        Dim cBi3 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgCold, Beeing.Immunities, "Damage.Cold")
+        Dim cBi4 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgFire, Beeing.Immunities, "Damage.Fire")
+        Dim cBi5 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgForce, Beeing.Immunities, "Damage.Force")
+        Dim cBi6 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgLightning, Beeing.Immunities, "Damage.Lightning")
+        Dim cBi7 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgMagical, Beeing.Immunities, "Damage.Magical")
+        Dim cBi8 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgNecrotic, Beeing.Immunities, "Damage.Necrotic")
+        Dim cBi9 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgPiercing, Beeing.Immunities, "Damage.Piercing")
+        Dim cBi10 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgPoison, Beeing.Immunities, "Damage.Poison")
+        Dim cBi11 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgPsychic, Beeing.Immunities, "Damage.Psychic")
+        Dim cBi12 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgRadiant, Beeing.Immunities, "Damage.Radiant")
+        Dim cBi13 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgSlashing, Beeing.Immunities, "Damage.Slashing")
+        Dim cBi14 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_dmgThunder, Beeing.Immunities, "Damage.Thunder")
 
+        ' Condition Effects
+        Dim cBc1 As New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condBlinded, Beeing.Immunities, "Conditions.Blinded")
+        Dim cBc2 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condCharmed, Beeing.Immunities, "Conditions.Charmed")
+        Dim cBc3 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condDeafened, Beeing.Immunities, "Conditions.Deafened")
+        Dim cBc4 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condExhaustion, Beeing.Immunities, "Conditions.Exhaustion")
+        Dim cBc5 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condFightended, Beeing.Immunities, "Conditions.Fightended")
+        Dim cBc6 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condGrappeled, Beeing.Immunities, "Conditions.Grappeled")
+        Dim cBc7 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condIncapacitatated, Beeing.Immunities, "Conditions.Incapacitatated")
+        Dim cBc8 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condInvisible, Beeing.Immunities, "Conditions.Invisible")
+        Dim cBc9 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condParalyzed, Beeing.Immunities, "Conditions.Paralyzed")
+        Dim cBc10 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condPoisoned, Beeing.Immunities, "Conditions.Poisoned")
+        Dim cBc11 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condProne, Beeing.Immunities, "Conditions.Prone")
+        Dim cBc12 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condRestrained, Beeing.Immunities, "Conditions.Restrained")
+        Dim cBc13 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condStunned, Beeing.Immunities, "Conditions.Stunned")
+        Dim cBc14 = New ComboboxBinder(Of eImmunitiesModifier)(ComboBox_condUnconscious, Beeing.Immunities, "Conditions.Unconscious")
 
 
     End Sub
@@ -208,6 +211,7 @@ Public Class ucBeeingParameterGeneral
             Try
                 Using fs As New System.IO.FileStream(fi.FullName, IO.FileMode.Open)
                     PictureBox_image.Image = New Bitmap(Image.FromStream(fs))
+                    Beeing.Image = fi.FullName
                 End Using
             Catch ex As Exception
                 Dim msg As String = "Filename: " & fi.FullName &
@@ -218,7 +222,6 @@ Public Class ucBeeingParameterGeneral
         End If
 
     End Sub
-
 
 #End Region
 

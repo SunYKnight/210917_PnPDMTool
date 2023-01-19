@@ -32,10 +32,11 @@ Partial Class ucBeeing
         '
         Me.TabControl_beeing.Controls.Add(Me.TabPage_General)
         Me.TabControl_beeing.Controls.Add(Me.TabPage_Actions)
-        Me.TabControl_beeing.Location = New System.Drawing.Point(3, 3)
+        Me.TabControl_beeing.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl_beeing.Location = New System.Drawing.Point(0, 0)
         Me.TabControl_beeing.Name = "TabControl_beeing"
         Me.TabControl_beeing.SelectedIndex = 0
-        Me.TabControl_beeing.Size = New System.Drawing.Size(881, 608)
+        Me.TabControl_beeing.Size = New System.Drawing.Size(1500, 1200)
         Me.TabControl_beeing.TabIndex = 0
         '
         'TabPage_General
@@ -43,7 +44,7 @@ Partial Class ucBeeing
         Me.TabPage_General.Location = New System.Drawing.Point(4, 34)
         Me.TabPage_General.Name = "TabPage_General"
         Me.TabPage_General.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_General.Size = New System.Drawing.Size(873, 570)
+        Me.TabPage_General.Size = New System.Drawing.Size(1492, 1162)
         Me.TabPage_General.TabIndex = 0
         Me.TabPage_General.Text = "General"
         Me.TabPage_General.UseVisualStyleBackColor = True
@@ -64,7 +65,7 @@ Partial Class ucBeeing
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.TabControl_beeing)
         Me.Name = "ucBeeing"
-        Me.Size = New System.Drawing.Size(884, 611)
+        Me.Size = New System.Drawing.Size(1500, 1200)
         Me.TabControl_beeing.ResumeLayout(False)
         Me.ResumeLayout(False)
 

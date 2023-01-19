@@ -32,7 +32,7 @@ Public Class ucAttack
         InitializeComponent()
 
         ' Get Combobox values
-        ComboBox_DmgType.DataSource = System.Enum.GetValues(GetType(EDmgType))
+        ComboBox_DmgType.DataSource = System.Enum.GetValues(GetType(eDmgType))
 
         ' Description
         TextBox_name.DataBindings.Clear()
