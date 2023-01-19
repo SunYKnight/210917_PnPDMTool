@@ -31,7 +31,11 @@ Public Class ucBeeingParameterGeneral
                 PictureBox_image.Image = New Bitmap(Image.FromStream(fs))
             End Using
         Catch ex As Exception
-
+            If (Beeing.Image <> "") Then
+                MsgBox(String.Format("Path not found:\n{0}", Beeing.Image))
+            End If
+            ' Reset Path
+            Beeing.Image = ""
         End Try
 
         UcAttributCollection1.AttributeCollectionToEdit = Beeing.Attributs
@@ -76,6 +80,14 @@ Public Class ucBeeingParameterGeneral
         ComboBox_dmgRadiant.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
         ComboBox_dmgSlashing.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
         ComboBox_dmgThunder.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
+
+        ' Languages
+        For Each language In System.Enum.GetValues(GetType(eLanguages))
+            CheckedListBox_languages.Items.Add(language.ToString)
+        Next
+        For Each language In Beeing.Languages
+            CheckedListBox_languages.SetItemChecked(language, True)
+        Next
 
         ' Update data
         UpdateDatabinding()
@@ -221,6 +233,13 @@ Public Class ucBeeingParameterGeneral
             End Try
         End If
 
+    End Sub
+
+    Private Sub CheckedListBox_languages_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CheckedListBox_languages.ItemCheck
+        Beeing.Languages.Clear()
+        For Each language In CheckedListBox_languages.CheckedIndices
+            Beeing.Languages.Add(language)
+        Next
     End Sub
 
 #End Region
