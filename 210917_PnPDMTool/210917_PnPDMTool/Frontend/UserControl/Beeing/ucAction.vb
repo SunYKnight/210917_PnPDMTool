@@ -51,8 +51,8 @@ Public Class ucAction
         RichTextBox_Description.DataBindings.Add(New Binding("Text", Action, "Description"))
 
         ' Type
-        ComboBox_Type.DataBindings.Clear()
-        ComboBox_Type.DataBindings.Add(New Binding("SelectedIndex", Action, "Type"))
+        ' Damage Type
+        Dim cBat As New ComboboxBinder(Of ActionType.eType)(ComboBox_Type, Action, "Type")
 
         UpdateListView()
     End Sub

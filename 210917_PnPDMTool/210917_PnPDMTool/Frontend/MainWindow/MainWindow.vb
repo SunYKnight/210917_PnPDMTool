@@ -15,9 +15,11 @@ Public Class MainWindow
 #End Region
 
 #Region "Init"
-    Public Sub New()
+    Public Sub New(loadedBeeings As List(Of BeeingType))
         InitializeComponent()
 
+        ' Copy loaded Beeings to Propery
+        BeeingList.AddRange(loadedBeeings)
 
         ' Add to layout
         FlowLayoutPanel_Left.Controls.Add(_ucTabBeeingLists)
@@ -97,6 +99,7 @@ Public Class MainWindow
     Private Sub EditMonsterSaveEvent(obj As Object, type As Type) Handles _ucEditBeeing.Save
         ' Locals
         Dim beeing As BeeingType = CType(obj, BeeingType)
+        Dim x As New xml(Of BeeingType)
 
         ' Close Window
         _ucEditBeeing.Dispose()
@@ -106,6 +109,8 @@ Public Class MainWindow
         End If
         ' Add Element
         BeeingList.Add(beeing)
+        x.Serialize(beeing, "BeeingType", "data/Beeings/" + beeing.Name + ".xml")
+
         ' Update list
         _ucTabBeeingLists.UcMonsterView1.UpdateListView(BeeingList)
 

@@ -28,22 +28,8 @@ Public Class DmgCollection(Of t)
 
 #End Region
 #Region "Init"
-    Public Sub New(defaultValue As t)
-        ' Set default value
-        Bludgeoning = defaultValue
-        Piercing = defaultValue
-        Slashing = defaultValue
-        Acid = defaultValue
-        Poison = defaultValue
-        Fire = defaultValue
-        Cold = defaultValue
-        Force = defaultValue
-        Lightning = defaultValue
-        Thunder = defaultValue
-        Necrotic = defaultValue
-        Psychic = defaultValue
-        Radiant = defaultValue
-        Magical = defaultValue
+    Public Sub New()
+
     End Sub
 #End Region
 

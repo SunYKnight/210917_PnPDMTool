@@ -82,12 +82,18 @@ Public Class ucBeeingParameterGeneral
         ComboBox_dmgThunder.DataSource = System.Enum.GetValues(GetType(C.eImmunitiesModifier))
 
         ' Languages
+        CheckedListBox_languages.CheckOnClick = True
+        CheckedListBox_languages.Items.Clear()
         For Each language In System.Enum.GetValues(GetType(eLanguages))
             CheckedListBox_languages.Items.Add(language.ToString)
         Next
         For Each language In Beeing.Languages
             CheckedListBox_languages.SetItemChecked(language, True)
         Next
+
+        ' Add datahandler
+        AddHandler CheckedListBox_languages.ItemCheck, AddressOf CheckedListBox_languages_SelectedIndexChanged
+
 
         ' Update data
         UpdateDatabinding()
@@ -218,6 +224,7 @@ Public Class ucBeeingParameterGeneral
 
     Private Sub PictureBox_image_Click(sender As Object, e As EventArgs) Handles PictureBox_image.DoubleClick
         Dim dialog As New OpenFileDialog()
+        dialog.InitialDirectory = "data/Images"
         If dialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             Dim fi As New System.IO.FileInfo(dialog.FileName)
             Try
@@ -235,7 +242,7 @@ Public Class ucBeeingParameterGeneral
 
     End Sub
 
-    Private Sub CheckedListBox_languages_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CheckedListBox_languages.ItemCheck
+    Private Sub CheckedListBox_languages_SelectedIndexChanged(sender As Object, e As EventArgs)
         Beeing.Languages.Clear()
         For Each language In CheckedListBox_languages.CheckedIndices
             Beeing.Languages.Add(language)

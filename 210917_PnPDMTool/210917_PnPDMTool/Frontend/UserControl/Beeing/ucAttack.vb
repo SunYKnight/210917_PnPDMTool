@@ -43,8 +43,7 @@ Public Class ucAttack
         RichTextBox_Description.DataBindings.Add(New Binding("Text", Attack, "Description"))
 
         ' Damage Type
-        ComboBox_DmgType.DataBindings.Clear()
-        ComboBox_DmgType.DataBindings.Add(New Binding("SelectedIndex", Attack, "DmgType"))
+        Dim cBdt As New ComboboxBinder(Of eDmgType)(ComboBox_DmgType, Attack, "DmgType")
 
         ' Range
         NumericUpDown_range.DataBindings.Clear()

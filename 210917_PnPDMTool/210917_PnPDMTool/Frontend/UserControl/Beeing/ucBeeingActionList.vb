@@ -92,7 +92,7 @@ Public Class ucBeeingActionList
 
 #Region "GUI Handle"
     Private Sub Button_new_Click(sender As Object, e As EventArgs) Handles Button_new.Click
-        EditAction(New ActionType(ActionType.eType.Attack))
+        EditAction(New ActionType())
     End Sub
 
     Private Sub Button_edit_Click(sender As Object, e As EventArgs) Handles Button_edit.Click

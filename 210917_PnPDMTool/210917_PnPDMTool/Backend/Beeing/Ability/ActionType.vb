@@ -15,15 +15,13 @@
 #Region "Properties"
     Public Property Name As String = ""
     Public Property Description As String = ""
-    Public Property Type As eType
+    Public Property Type As eType = eType.Attack
     Public Property AttackList As New List(Of AttackType)
 
 #End Region
 
 #Region "Init"
-    Public Sub New(t As eType)
-
-        Type = t
+    Public Sub New()
 
     End Sub
 #End Region

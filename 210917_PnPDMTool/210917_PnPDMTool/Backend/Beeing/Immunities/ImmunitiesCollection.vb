@@ -9,10 +9,10 @@
 
 #Region "Properties"
     ' Damage Immunities
-    Public Property Damage As New DmgCollection(Of eImmunitiesModifier)(eImmunitiesModifier.Normal)
+    Public Property Damage As New DmgCollection(Of eImmunitiesModifier)()
 
     ' Condition Immunities
-    Public Property Conditions As New ConditionCollection(Of eImmunitiesModifier)(eImmunitiesModifier.Normal)
+    Public Property Conditions As New ConditionCollection(Of eImmunitiesModifier)()
 #End Region
 
 #Region "Init"

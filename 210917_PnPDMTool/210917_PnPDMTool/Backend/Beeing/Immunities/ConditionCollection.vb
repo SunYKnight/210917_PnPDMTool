@@ -25,22 +25,8 @@
 #End Region
 
 #Region "Init"
-    Public Sub New(defaultValue As t)
-        ' Set default value
-        Blinded = defaultValue
-        Charmed = defaultValue
-        Deafened = defaultValue
-        Exhaustion = defaultValue
-        Fightended = defaultValue
-        Grappeled = defaultValue
-        Incapacitatated = defaultValue
-        Invisible = defaultValue
-        Paralyzed = defaultValue
-        Poisoned = defaultValue
-        Prone = defaultValue
-        Restrained = defaultValue
-        Stunned = defaultValue
-        Unconscious = defaultValue
+    Public Sub New()
+
     End Sub
 #End Region
 
