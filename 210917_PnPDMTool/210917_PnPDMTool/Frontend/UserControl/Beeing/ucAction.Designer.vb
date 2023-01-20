@@ -42,7 +42,7 @@ Partial Class ucAction
         Me.RichTextBox_Description.Location = New System.Drawing.Point(112, 39)
         Me.RichTextBox_Description.MaxLength = 1000
         Me.RichTextBox_Description.Name = "RichTextBox_Description"
-        Me.RichTextBox_Description.Size = New System.Drawing.Size(732, 100)
+        Me.RichTextBox_Description.Size = New System.Drawing.Size(951, 100)
         Me.RichTextBox_Description.TabIndex = 0
         Me.RichTextBox_Description.Text = ""
         '
@@ -92,7 +92,7 @@ Partial Class ucAction
         Me.RichTextBox_name.MaxLength = 100
         Me.RichTextBox_name.Multiline = False
         Me.RichTextBox_name.Name = "RichTextBox_name"
-        Me.RichTextBox_name.Size = New System.Drawing.Size(732, 33)
+        Me.RichTextBox_name.Size = New System.Drawing.Size(951, 33)
         Me.RichTextBox_name.TabIndex = 23
         Me.RichTextBox_name.Text = ""
         '
@@ -112,14 +112,14 @@ Partial Class ucAction
         Me.ListView_attackList.Location = New System.Drawing.Point(112, 184)
         Me.ListView_attackList.MultiSelect = False
         Me.ListView_attackList.Name = "ListView_attackList"
-        Me.ListView_attackList.Size = New System.Drawing.Size(732, 250)
+        Me.ListView_attackList.Size = New System.Drawing.Size(951, 250)
         Me.ListView_attackList.TabIndex = 26
         Me.ListView_attackList.UseCompatibleStateImageBehavior = False
         Me.ListView_attackList.View = System.Windows.Forms.View.Details
         '
         'Button_add
         '
-        Me.Button_add.Location = New System.Drawing.Point(420, 440)
+        Me.Button_add.Location = New System.Drawing.Point(951, 444)
         Me.Button_add.Name = "Button_add"
         Me.Button_add.Size = New System.Drawing.Size(112, 34)
         Me.Button_add.TabIndex = 27
@@ -128,7 +128,7 @@ Partial Class ucAction
         '
         'Button_edit
         '
-        Me.Button_edit.Location = New System.Drawing.Point(302, 440)
+        Me.Button_edit.Location = New System.Drawing.Point(833, 444)
         Me.Button_edit.Name = "Button_edit"
         Me.Button_edit.Size = New System.Drawing.Size(112, 34)
         Me.Button_edit.TabIndex = 28
@@ -137,7 +137,7 @@ Partial Class ucAction
         '
         'Button_remove
         '
-        Me.Button_remove.Location = New System.Drawing.Point(184, 440)
+        Me.Button_remove.Location = New System.Drawing.Point(715, 444)
         Me.Button_remove.Name = "Button_remove"
         Me.Button_remove.Size = New System.Drawing.Size(112, 34)
         Me.Button_remove.TabIndex = 29
@@ -160,7 +160,7 @@ Partial Class ucAction
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RichTextBox_Description)
         Me.Name = "ucAction"
-        Me.Size = New System.Drawing.Size(861, 481)
+        Me.Size = New System.Drawing.Size(1066, 481)
         CType(Me.AttackBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

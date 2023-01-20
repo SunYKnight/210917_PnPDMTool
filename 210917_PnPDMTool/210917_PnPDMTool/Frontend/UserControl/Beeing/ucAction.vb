@@ -62,17 +62,17 @@ Public Class ucAction
         ListView_attackList.Columns.Clear()
         ' Adding ListView Columns
         ListView_attackList.Columns.Add("Name", 40, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("Hit", 40, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Hit", 35, HorizontalAlignment.Left)
         ListView_attackList.Columns.Add("Type", 100, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("Range", 40, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D4", 40, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D6", 40, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D8", 40, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D12", 40, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("D20", 40, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Range", 50, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D4", 30, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D6", 30, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D8", 30, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D12", 35, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("D20", 35, HorizontalAlignment.Left)
         ListView_attackList.Columns.Add("D100", 40, HorizontalAlignment.Left)
         ListView_attackList.Columns.Add("Dmg", 40, HorizontalAlignment.Left)
-        ListView_attackList.Columns.Add("Description", 100, HorizontalAlignment.Left)
+        ListView_attackList.Columns.Add("Description", 200, HorizontalAlignment.Left)
 
         ' Handle Items
         ListView_attackList.Items.Clear()
@@ -119,8 +119,8 @@ Public Class ucAction
         _editWindow.Hide()
         _editUc.Dispose()
         ' Macke sure name is unique
-        If Action.AttackList.FindAll(Function(p) p.Name = Action.Name).Count > 0 Then
-            Action.AttackList.Remove(Action.AttackList.Find(Function(p) p.Name = Action.Name))
+        If Action.AttackList.FindAll(Function(p) p.Name = attack.Name).Count > 0 Then
+            Action.AttackList.Remove(Action.AttackList.Find(Function(p) p.Name = attack.Name))
         End If
         ' Add Element
         Action.AttackList.Add(attack)
