@@ -6,7 +6,6 @@
     Private _dmgRecvModifierType(System.Enum.GetValues(GetType(C.eDmgType)).Length) As C.eImmunitiesModifier
 
 
-
     Private _type As EBattleParticipentType
 
 #End Region

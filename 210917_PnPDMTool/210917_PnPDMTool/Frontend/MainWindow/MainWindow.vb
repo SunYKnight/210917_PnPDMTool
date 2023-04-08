@@ -23,7 +23,7 @@ Public Class MainWindow
 
         ' Add to layout
         FlowLayoutPanel_Left.Controls.Add(_ucTabBeeingLists)
-        FlowLayoutPanel_Left.Controls.Add(_ucTabBeeingDetails)
+        ' FlowLayoutPanel_Left.Controls.Add(_ucTabBeeingDetails)
         FlowLayoutPanel_Center.Controls.Add(_ucMapView)
 
         ' Call resize handler

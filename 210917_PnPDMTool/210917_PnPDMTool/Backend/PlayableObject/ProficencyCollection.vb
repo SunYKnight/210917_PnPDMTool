@@ -62,7 +62,6 @@
     Private _armors As List(Of ProficencyType)
     Private _weapons As List(Of ProficencyType)
     Private _tools As List(Of ProficencyType)
-    Private _languages As C.ELanguages = 0
 
 
 #End Region

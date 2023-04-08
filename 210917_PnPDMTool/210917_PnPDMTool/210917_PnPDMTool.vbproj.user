@@ -22,6 +22,9 @@
     <Compile Update="Frontend\UserControl\Beeing\ucBeeingActionList.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Frontend\UserControl\Beeing\ucItemList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Frontend\UserControl\TabListDetails\ucTabDetails.vb">
       <SubType>UserControl</SubType>
     </Compile>
@@ -32,12 +35,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\ucEdit.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Frontend\UserControl\ucSavingThrowCollection.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Frontend\UserControl\ucSkillCollection.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\TabListLists\ucBattleView.vb">

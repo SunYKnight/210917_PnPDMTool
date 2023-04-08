@@ -1,14 +1,6 @@
 ﻿Public Class ucAttributCollection
 
 #Region "Enum"
-    Public Enum eAttributes
-        Strength
-        Dexterity
-        Constitution
-        Intelligence
-        Wisdom
-        Charisma
-    End Enum
 
 
 #End Region
@@ -73,16 +65,16 @@
         Me.Controls.Add(main_layout)
 
         ' Create empty controlls
-        lbAttr = New Label(System.Enum.GetNames(GetType(eAttributes)).Length) {}
-        tbAttrVal = New TextBox(System.Enum.GetNames(GetType(eAttributes)).Length) {}
+        lbAttr = New Label(System.Enum.GetNames(GetType(eAttributs)).Length) {}
+        tbAttrVal = New TextBox(System.Enum.GetNames(GetType(eAttributs)).Length) {}
 
         ' Load all Arrtibutes
-        For Each attr In System.Enum.GetValues(GetType(eAttributes))
+        For Each attr In System.Enum.GetValues(GetType(eAttributs))
             Dim layout As FlowLayoutPanel = New FlowLayoutPanel
 
             ' Set attribute text
             lbAttr(attr) = New Label()
-            lbAttr(attr).Text = CType(attr, eAttributes).ToString()
+            lbAttr(attr).Text = CType(attr, eAttributs).ToString()
             lbAttr(attr).Size = New Size(110, 30)
 
             ' Set attribute value
@@ -114,12 +106,12 @@
 #Region "Private Sub"
     Private Sub UpdateDatabinding()
         ' Locals
-        Dim dataSrc = System.Enum.GetNames(GetType(eAttributes))
+        Dim dataSrc = System.Enum.GetNames(GetType(eAttributs))
 
         ' Check if UI Exist
         If (Not IsNothing(tbAttrVal)) Then
 
-            For Each attr In System.Enum.GetValues(GetType(eAttributes))
+            For Each attr In System.Enum.GetValues(GetType(eAttributs))
                 ' Clear Values
                 tbAttrVal(attr).DataBindings.Clear()
                 ' Set Databinding

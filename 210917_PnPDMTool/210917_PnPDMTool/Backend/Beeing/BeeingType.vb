@@ -29,15 +29,23 @@ Public Class BeeingType
     Public Property Image As String = ""
 
     ' Collections
-    Public Property Skills As New SkillCollection()
-    Public Property SavingThrows As New SavingThrowCollection()
     Public Property Attributs As New AttributCollection()
 
-    Public Property Immunities As New ImmunitiesCollection()
 
     ' Lists
     Public Property ActionList As New List(Of ActionType)
-    Public Property Languages As New List(Of C.eLanguages)
+
+    Public Property KnownLanguages As New List(Of C.eLanguages)
+    Public Property SavingThrowProficencies As New List(Of C.eAttributs)
+
+    Public Property DmgImmunities As New List(Of C.eDmgType)
+    Public Property DmgResistances As New List(Of C.eDmgType)
+    Public Property DmgVulnerabilites As New List(Of C.eDmgType)
+
+    Public Property ConditionImmunities As New List(Of C.eCondidtion)
+    Public Property SkillProficencies As New List(Of C.eSkills)
+    Public Property SkillExpertieses As New List(Of C.eSkills)
+
 
 
 #End Region

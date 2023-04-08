@@ -27,6 +27,36 @@
         Monster
     End Enum
 
+    Public Enum eAttributs
+        Strength
+        Dexterity
+        Constitution
+        Intelligence
+        Wisdom
+        Charisma
+    End Enum
+
+    Public Enum eSkills
+        Acrobatic
+        AnimalHandling
+        Arcana
+        Athletics
+        Deception
+        History
+        Insight
+        Intimidation
+        Investigation
+        Medicine
+        Nature
+        Perception
+        Performance
+        Persuation
+        Religion
+        SlightOfHand
+        Stealth
+        Survival
+    End Enum
+
     Public Enum eCondidtion
         Blinded
         Charmed
