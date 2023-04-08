@@ -27,7 +27,7 @@
         Monster
     End Enum
 
-    Public Enum eAttributs
+    Public Enum eAttribut
         Strength
         Dexterity
         Constitution
@@ -196,7 +196,7 @@
         Urban
     End Enum
 
-    Public Enum ESize
+    Public Enum eSize
         Tiny
         Small
         Medium

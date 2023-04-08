@@ -28,7 +28,7 @@ Public Class ucAction
 #Region "Private Sub"
     Private Sub NewCommon()
         ' Locals
-        Dim dataSrc = System.Enum.GetNames(GetType(eAttributs))
+        Dim dataSrc = System.Enum.GetNames(GetType(eAttribut))
 
         ' Initilaize components
         InitializeComponent()

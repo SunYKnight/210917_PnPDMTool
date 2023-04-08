@@ -8,7 +8,7 @@ Public Class BeeingType
     Public Property Name As String = ""
 
     Public Property Aligment As New AligmentType()
-    Public Property Size As ESize = ESize.Medium
+    Public Property Size As eSize = eSize.Medium
     Public Property SpeedWalk As Integer = 0
     Public Property SpeedBurrowing As Integer = 0
     Public Property SpeedSwimming As Integer = 0
@@ -25,6 +25,8 @@ Public Class BeeingType
     Public Property HpDiceD20 As DiceSet = New DiceSet()
     Public Property HpDiceD100 As DiceSet = New DiceSet()
     Public Property HPBonus As Integer = 0
+
+    Public Property SpellcastAttribute As eAttribut = eAttribut.Intelligence
     ' Image
     Public Property Image As String = ""
 
@@ -36,7 +38,7 @@ Public Class BeeingType
     Public Property ActionList As New List(Of ActionType)
 
     Public Property KnownLanguages As New List(Of C.eLanguages)
-    Public Property SavingThrowProficencies As New List(Of C.eAttributs)
+    Public Property SavingThrowProficencies As New List(Of C.eAttribut)
 
     Public Property DmgImmunities As New List(Of C.eDmgType)
     Public Property DmgResistances As New List(Of C.eDmgType)

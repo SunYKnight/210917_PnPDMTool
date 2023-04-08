@@ -159,7 +159,7 @@ Partial Class ucAttack
         '
         Me.Label6.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(-3, 266)
+        Me.Label6.Location = New System.Drawing.Point(3, 266)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(95, 25)
         Me.Label6.TabIndex = 10
@@ -325,7 +325,7 @@ Partial Class ucAttack
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RichTextBox_Description)
         Me.Name = "ucAttack"
-        Me.Size = New System.Drawing.Size(538, 317)
+        Me.Size = New System.Drawing.Size(542, 564)
         CType(Me.AttackBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_range, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown_hitBonus, System.ComponentModel.ISupportInitialize).EndInit()

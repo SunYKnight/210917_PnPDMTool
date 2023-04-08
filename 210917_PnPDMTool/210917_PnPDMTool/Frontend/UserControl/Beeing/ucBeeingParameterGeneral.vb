@@ -10,7 +10,7 @@ Public Class ucBeeingParameterGeneral
     Friend WithEvents _ucDmgImmunityList As ucItemList(Of eDmgType)
     Friend WithEvents _ucDmgVunrabilityList As ucItemList(Of eDmgType)
     Friend WithEvents _ucConditionImmunityList As ucItemList(Of eCondidtion)
-    Friend WithEvents _ucSavingThrowProfiecenies As ucItemList(Of eAttributs)
+    Friend WithEvents _ucSavingThrowProfiecenies As ucItemList(Of eAttribut)
     Friend WithEvents _ucSkillProfiecencies As ucItemList(Of eSkills)
     Friend WithEvents _ucSkillExpertieses As ucItemList(Of eSkills)
 #End Region
@@ -51,15 +51,17 @@ Public Class ucBeeingParameterGeneral
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
 
         ' Size
-        ComboBox_Size.DataSource = System.Enum.GetValues(GetType(C.ESize))
+        ComboBox_Size.DataSource = System.Enum.GetValues(GetType(C.eSize))
         ' Monster Class
         ComboBox_monsterClass.DataSource = System.Enum.GetValues(GetType(C.eMonsterType))
         ' Aligment
         ComboBox_aligment_behaviour.DataSource = System.Enum.GetValues(GetType(AligmentType.EBehaviour))
+        ' Spellcast attribute
+        ComboBox_spellcast_attribute.DataSource = System.Enum.GetValues(GetType(eAttribut))
 
 
         ' SavingThrowProficencies
-        _ucSavingThrowProfiecenies = New ucItemList(Of eAttributs)(Beeing.SavingThrowProficencies, "Saving Throws", True)
+        _ucSavingThrowProfiecenies = New ucItemList(Of eAttribut)(Beeing.SavingThrowProficencies, "Saving Throws", True)
         _ucSavingThrowProfiecenies.Location = New Point(150, 260)
         Me.Controls.Add(Me._ucSavingThrowProfiecenies)
 
@@ -125,7 +127,10 @@ Public Class ucBeeingParameterGeneral
         Dim cBal As New ComboboxBinder(Of AligmentType.EBehaviour)(ComboBox_aligment_behaviour, Beeing.Aligment, "Behaviour")
 
         ' Size
-        Dim cBsize As New ComboboxBinder(Of ESize)(ComboBox_Size, Beeing, "Size")
+        Dim cBsize As New ComboboxBinder(Of eSize)(ComboBox_Size, Beeing, "Size")
+
+        ' Spellcast Attribute
+        Dim cBSpellcastAttribute As New ComboboxBinder(Of eAttribut)(ComboBox_spellcast_attribute, Beeing, "SpellcastAttribute")
 
         ' AC
         NumericUpDown_AC.DataBindings.Clear()

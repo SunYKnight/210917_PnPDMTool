@@ -22,13 +22,13 @@ Partial Class ucBeeingParameterGeneral
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim AttributCollection1 As _210917_PnPDMTool.AttributCollection = New _210917_PnPDMTool.AttributCollection()
-        Dim Attribut1 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut2 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut3 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut4 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut5 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut6 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim AttributCollection2 As _210917_PnPDMTool.AttributCollection = New _210917_PnPDMTool.AttributCollection()
+        Dim Attribut7 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut8 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut9 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut10 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut11 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
+        Dim Attribut12 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
         Me.UcAttributCollection1 = New _210917_PnPDMTool.ucAttributCollection()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox_name = New System.Windows.Forms.TextBox()
@@ -71,6 +71,8 @@ Partial Class ucBeeingParameterGeneral
         Me.Label50 = New System.Windows.Forms.Label()
         Me.NumericUpDown_challenge = New System.Windows.Forms.NumericUpDown()
         Me.Label51 = New System.Windows.Forms.Label()
+        Me.ComboBox_spellcast_attribute = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictureBox_image, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_HpDiceD100, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_HpDiceD20, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,25 +93,25 @@ Partial Class ucBeeingParameterGeneral
         '
         'UcAttributCollection1
         '
-        Attribut1.Bonus = 0
-        Attribut1.Value = 0
-        AttributCollection1.Charisma = Attribut1
-        Attribut2.Bonus = 0
-        Attribut2.Value = 0
-        AttributCollection1.Constitution = Attribut2
-        Attribut3.Bonus = 0
-        Attribut3.Value = 0
-        AttributCollection1.Dexterity = Attribut3
-        Attribut4.Bonus = 0
-        Attribut4.Value = 0
-        AttributCollection1.Intelligence = Attribut4
-        Attribut5.Bonus = 0
-        Attribut5.Value = 0
-        AttributCollection1.Strength = Attribut5
-        Attribut6.Bonus = 0
-        Attribut6.Value = 0
-        AttributCollection1.Wisdom = Attribut6
-        Me.UcAttributCollection1.AttributeCollectionToEdit = AttributCollection1
+        Attribut7.Bonus = 0
+        Attribut7.Value = 0
+        AttributCollection2.Charisma = Attribut7
+        Attribut8.Bonus = 0
+        Attribut8.Value = 0
+        AttributCollection2.Constitution = Attribut8
+        Attribut9.Bonus = 0
+        Attribut9.Value = 0
+        AttributCollection2.Dexterity = Attribut9
+        Attribut10.Bonus = 0
+        Attribut10.Value = 0
+        AttributCollection2.Intelligence = Attribut10
+        Attribut11.Bonus = 0
+        Attribut11.Value = 0
+        AttributCollection2.Strength = Attribut11
+        Attribut12.Bonus = 0
+        Attribut12.Value = 0
+        AttributCollection2.Wisdom = Attribut12
+        Me.UcAttributCollection1.AttributeCollectionToEdit = AttributCollection2
         Me.UcAttributCollection1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.UcAttributCollection1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.UcAttributCollection1.Location = New System.Drawing.Point(35, 446)
@@ -473,7 +475,7 @@ Partial Class ucBeeingParameterGeneral
         'NumericUpDown_challenge
         '
         Me.NumericUpDown_challenge.DecimalPlaces = 2
-        Me.NumericUpDown_challenge.Location = New System.Drawing.Point(415, 386)
+        Me.NumericUpDown_challenge.Location = New System.Drawing.Point(500, 817)
         Me.NumericUpDown_challenge.Maximum = New Decimal(New Integer() {30, 0, 0, 0})
         Me.NumericUpDown_challenge.Name = "NumericUpDown_challenge"
         Me.NumericUpDown_challenge.Size = New System.Drawing.Size(83, 31)
@@ -483,17 +485,37 @@ Partial Class ucBeeingParameterGeneral
         '
         Me.Label51.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(415, 358)
+        Me.Label51.Location = New System.Drawing.Point(500, 789)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(93, 25)
         Me.Label51.TabIndex = 113
         Me.Label51.Text = "Challange:"
+        '
+        'ComboBox_spellcast_attribute
+        '
+        Me.ComboBox_spellcast_attribute.FormattingEnabled = True
+        Me.ComboBox_spellcast_attribute.Location = New System.Drawing.Point(411, 390)
+        Me.ComboBox_spellcast_attribute.Name = "ComboBox_spellcast_attribute"
+        Me.ComboBox_spellcast_attribute.Size = New System.Drawing.Size(175, 33)
+        Me.ComboBox_spellcast_attribute.TabIndex = 115
+        '
+        'Label4
+        '
+        Me.Label4.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(415, 362)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(160, 25)
+        Me.Label4.TabIndex = 116
+        Me.Label4.Text = "Spellcast Attribute:"
         '
         'ucBeeingParameterGeneral
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.ComboBox_spellcast_attribute)
         Me.Controls.Add(Me.NumericUpDown_challenge)
         Me.Controls.Add(Me.Label51)
         Me.Controls.Add(Me.NumericUpDown_Proficency)
@@ -601,4 +623,6 @@ Partial Class ucBeeingParameterGeneral
     Friend WithEvents Label50 As Label
     Friend WithEvents NumericUpDown_challenge As NumericUpDown
     Friend WithEvents Label51 As Label
+    Friend WithEvents ComboBox_spellcast_attribute As ComboBox
+    Friend WithEvents Label4 As Label
 End Class

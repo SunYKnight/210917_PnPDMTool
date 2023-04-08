@@ -19,6 +19,8 @@
     Public Property DmgDiceD20 As DiceSet = New DiceSet()
     Public Property DmgDiceD100 As DiceSet = New DiceSet()
 
+    Public Property TriggeredCondition As List(Of eCondidtion)
+
 #End Region
 
 #Region "Init"

@@ -6,7 +6,7 @@ Public Class ucAttack
 #End Region
 
 #Region "Private Var"
-
+    Private _uctriggeredConditionsList As ucItemList(Of eCondidtion)
 #End Region
 
 #Region "Properties"
@@ -27,7 +27,7 @@ Public Class ucAttack
 #Region "Private Sub"
     Private Sub NewCommon()
         ' Locals
-        Dim dataSrc = System.Enum.GetNames(GetType(eAttributs))
+        Dim dataSrc = System.Enum.GetNames(GetType(eAttribut))
 
         InitializeComponent()
 
@@ -75,6 +75,11 @@ Public Class ucAttack
         ' Dmg Dice D100
         NumericUpDown_dmgDiceD100.DataBindings.Clear()
         NumericUpDown_dmgDiceD100.DataBindings.Add(New Binding("Value", Attack.DmgDiceD100, "DiceCount"))
+
+        ' Triggered Condition
+        _uctriggeredConditionsList = New ucItemList(Of eCondidtion)(Attack.TriggeredCondition, "Triggered Conditions", True)
+        _uctriggeredConditionsList.Location = New Point(3, 200)
+        Me.Controls.Add(_uctriggeredConditionsList)
     End Sub
 #End Region
 

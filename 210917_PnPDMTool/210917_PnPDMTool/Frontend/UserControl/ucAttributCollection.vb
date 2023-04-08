@@ -65,16 +65,16 @@
         Me.Controls.Add(main_layout)
 
         ' Create empty controlls
-        lbAttr = New Label(System.Enum.GetNames(GetType(eAttributs)).Length) {}
-        tbAttrVal = New TextBox(System.Enum.GetNames(GetType(eAttributs)).Length) {}
+        lbAttr = New Label(System.Enum.GetNames(GetType(eAttribut)).Length) {}
+        tbAttrVal = New TextBox(System.Enum.GetNames(GetType(eAttribut)).Length) {}
 
         ' Load all Arrtibutes
-        For Each attr In System.Enum.GetValues(GetType(eAttributs))
+        For Each attr In System.Enum.GetValues(GetType(eAttribut))
             Dim layout As FlowLayoutPanel = New FlowLayoutPanel
 
             ' Set attribute text
             lbAttr(attr) = New Label()
-            lbAttr(attr).Text = CType(attr, eAttributs).ToString()
+            lbAttr(attr).Text = CType(attr, eAttribut).ToString()
             lbAttr(attr).Size = New Size(110, 30)
 
             ' Set attribute value
@@ -106,12 +106,12 @@
 #Region "Private Sub"
     Private Sub UpdateDatabinding()
         ' Locals
-        Dim dataSrc = System.Enum.GetNames(GetType(eAttributs))
+        Dim dataSrc = System.Enum.GetNames(GetType(eAttribut))
 
         ' Check if UI Exist
         If (Not IsNothing(tbAttrVal)) Then
 
-            For Each attr In System.Enum.GetValues(GetType(eAttributs))
+            For Each attr In System.Enum.GetValues(GetType(eAttribut))
                 ' Clear Values
                 tbAttrVal(attr).DataBindings.Clear()
                 ' Set Databinding
