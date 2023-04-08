@@ -205,6 +205,15 @@
         Gargantuan
     End Enum
 
+    Public Enum eShape
+        None
+        Cone
+        Cube
+        Cylinder
+        Line
+        Sphere
+    End Enum
+
     Public Enum ESenses
         Blindsight
         Darkvision

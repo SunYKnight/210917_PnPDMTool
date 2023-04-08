@@ -1,25 +1,59 @@
 ﻿Public Class AttackType
+
+#Region "Defines"
+    Public Structure AttackBase
+
+        Public Property DmgType As eDmgType
+        Public Property DmgShape As eShape
+        Public Property HitRange As Integer
+        Public Property AoERange As Integer
+        Public Property NumberOfTargets As Integer
+
+        ' Damage
+        Public Property DmgBonus As Integer
+        Public Property DmgDiceD4 As DiceSet
+        Public Property DmgDiceD6 As DiceSet
+        Public Property DmgDiceD8 As DiceSet
+        Public Property DmgDiceD12 As DiceSet
+        Public Property DmgDiceD20 As DiceSet
+
+    End Structure
+#End Region
+
 #Region "Private Var"
 
 #End Region
 
 
 #Region "Properties"
-    Public Property Name As String = ""
-    Public Property Description As String = ""
-    Public Property DmgType As eDmgType = eDmgType.Bludgeoning
-    Public Property Range As Double = 0
-    Public Property HitBonus As Integer = 0
-    Public Property DmgBonus As Integer = 0
+    Public Property Name As String = "Default Name"
+    Public Property Description As String = "Default Description"
 
-    Public Property DmgDiceD4 As DiceSet = New DiceSet()
-    Public Property DmgDiceD6 As DiceSet = New DiceSet()
-    Public Property DmgDiceD8 As DiceSet = New DiceSet()
-    Public Property DmgDiceD12 As DiceSet = New DiceSet()
-    Public Property DmgDiceD20 As DiceSet = New DiceSet()
-    Public Property DmgDiceD100 As DiceSet = New DiceSet()
+    Public Property PrimaryAttack As AttackBase = New AttackBase With {
+        .DmgType = eDmgType.Bludgeoning,
+        .DmgShape = eShape.None,
+        .HitRange = 5,
+        .AoERange = 5,
+        .NumberOfTargets = 1
+        }
+    Public Property PrimaryAttackHitBonus As Integer = 0
+    Public Property PrimaryAttackHitsAlways As Boolean = False
+    Public Property PrimaryAttackSavingThrow As eAttribut = eAttribut.Charisma
+    Public Property PrimaryAttackUseSavingThrow As Boolean = False
 
-    Public Property TriggeredCondition As List(Of eCondidtion)
+
+    Public Property HasSecondaryAttack As Boolean = False
+    Public Property SecondaryAttack As AttackBase = New AttackBase With {
+        .DmgType = eDmgType.Bludgeoning,
+        .DmgShape = eShape.None,
+        .HitRange = 5,
+        .AoERange = 5,
+        .NumberOfTargets = 1
+        }
+
+    Public Property TriggerConditionOnHit As Boolean = False
+    Public Property TriggeredConditionSavingThrow As eAttribut = eAttribut.Charisma
+    Public Property TriggeredCondition As New List(Of eCondidtion)
 
 #End Region
 
@@ -37,19 +71,14 @@
 #Region "Pubilc Sub"
     Public Function Use(dices As DiceCollection, type As DiceType.EThrowType) As Integer
         ' Make attack throw
-        Return dices.D20.Evaluate(type) + HitBonus
+        Return dices.D20.Evaluate(type) + PrimaryAttackHitBonus
     End Function
 
     Public Function GetDmg(dices As DiceCollection, type As DiceType.EThrowType) As Integer
         ' Locals
         Dim dmg As Integer = 0
-        ' Evaluate all damage dices
-        dmg += DmgDiceD4.Evaluate(dices.D4, type)
-        dmg += DmgDiceD6.Evaluate(dices.D6, type)
-        dmg += DmgDiceD8.Evaluate(dices.D8, type)
-        dmg += DmgDiceD12.Evaluate(dices.D12, type)
-        dmg += DmgDiceD20.Evaluate(dices.D20, type)
-        dmg += DmgDiceD100.Evaluate(dices.D100, type)
+
+        ' TODO
 
         Return dmg
     End Function
@@ -59,28 +88,10 @@
         Dim idx As Integer = 0
         str(idx) = Name
         idx += 1
-        str(idx) = HitBonus.ToString
-        idx += 1
-        str(idx) = DmgType.ToString
-        idx += 1
-        str(idx) = Range.ToString
-        idx += 1
-        str(idx) = DmgDiceD4.DiceCount.ToString
-        idx += 1
-        str(idx) = DmgDiceD6.DiceCount.ToString
-        idx += 1
-        str(idx) = DmgDiceD8.DiceCount.ToString
-        idx += 1
-        str(idx) = DmgDiceD12.DiceCount.ToString
-        idx += 1
-        str(idx) = DmgDiceD20.DiceCount.ToString
-        idx += 1
-        str(idx) = DmgDiceD100.DiceCount.ToString
-        idx += 1
-        str(idx) = DmgBonus.ToString
-        idx += 1
-        str(idx) = Description
-        idx += 1
+
+        ' TODO add other parameter
+
+        str(str.Length - 1) = Description
         Return str
     End Function
 
