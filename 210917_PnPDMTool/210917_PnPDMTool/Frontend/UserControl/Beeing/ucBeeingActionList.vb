@@ -11,11 +11,11 @@ Public Class ucBeeingActionList
 #End Region
 
 #Region "Properties"
-    Public Property ActionList As List(Of ActionType)
+    Public Property ActionList As List(Of BaseAction)
 #End Region
 
 #Region "Init"
-    Public Sub New(actionList As List(Of ActionType))
+    Public Sub New(actionList As List(Of BaseAction))
         InitializeComponent()
 
         Me.ActionList = actionList
@@ -51,7 +51,7 @@ Public Class ucBeeingActionList
         ListView_Actions.Update()
     End Sub
 
-    Private Sub EditAction(action As ActionType)
+    Private Sub EditAction(action As BaseAction)
         ' Update uc Edit 
         _editUc = New ucEdit(Of ucAction)(New ucAction(action))
 
@@ -68,7 +68,7 @@ Public Class ucBeeingActionList
 
 #Region "Events"
     Private Sub editWindowSaveHandle(obj As Object, type As Type) Handles _editUc.Save
-        Dim action As ActionType = CType(obj, ActionType)
+        Dim action As BaseAction = CType(obj, BaseAction)
 
         ' Close Window
         _editWindow.Hide()
@@ -92,7 +92,7 @@ Public Class ucBeeingActionList
 
 #Region "GUI Handle"
     Private Sub Button_new_Click(sender As Object, e As EventArgs) Handles Button_new.Click
-        EditAction(New ActionType())
+        EditAction(New BaseAction())
     End Sub
 
     Private Sub Button_edit_Click(sender As Object, e As EventArgs) Handles Button_edit.Click

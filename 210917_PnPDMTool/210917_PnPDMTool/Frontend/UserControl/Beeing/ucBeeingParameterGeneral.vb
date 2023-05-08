@@ -35,18 +35,16 @@ Public Class ucBeeingParameterGeneral
 
         ' Load Image
         Try
-            Using fs As New System.IO.FileStream(Beeing.Image, IO.FileMode.Open)
+            Using fs As New System.IO.FileStream(Beeing.Metadata.Image, IO.FileMode.Open)
                 PictureBox_image.Image = New Bitmap(Image.FromStream(fs))
             End Using
         Catch ex As Exception
-            If (Beeing.Image <> "") Then
-                MsgBox(String.Format("Path not found:\n{0}", Beeing.Image))
+            If (Beeing.Metadata.Image <> "") Then
+                MsgBox(String.Format("Path not found:\n{0}", Beeing.Metadata.Image))
             End If
             ' Reset Path
-            Beeing.Image = ""
+            Beeing.Metadata.Image = ""
         End Try
-
-        UcAttributCollection1.AttributeCollectionToEdit = Beeing.Attributs
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
 
@@ -55,51 +53,51 @@ Public Class ucBeeingParameterGeneral
         ' Monster Class
         ComboBox_monsterClass.DataSource = System.Enum.GetValues(GetType(C.eMonsterType))
         ' Aligment
-        ComboBox_aligment_behaviour.DataSource = System.Enum.GetValues(GetType(AligmentType.EBehaviour))
+        ComboBox_aligment_behaviour.DataSource = System.Enum.GetValues(GetType(BaseAligment.EBehaviour))
         ' Spellcast attribute
         ComboBox_spellcast_attribute.DataSource = System.Enum.GetValues(GetType(eAttribut))
 
 
         ' SavingThrowProficencies
-        _ucSavingThrowProfiecenies = New ucItemList(Of eAttribut)(Beeing.SavingThrowProficencies, "Saving Throws", True)
+        _ucSavingThrowProfiecenies = New ucItemList(Of eAttribut)(Beeing.Stats.SavingThrowProficencies, "Saving Throws", True)
         _ucSavingThrowProfiecenies.Location = New Point(150, 260)
         Me.Controls.Add(Me._ucSavingThrowProfiecenies)
 
         ' Languages
-        _ucLanguageList = New ucItemList(Of eLanguages)(Beeing.KnownLanguages, "Languages", True)
+        _ucLanguageList = New ucItemList(Of eLanguages)(Beeing.Stats.KnownLanguages, "Languages", True)
         _ucLanguageList.Location = New Point(300, 260)
         Me.Controls.Add(Me._ucLanguageList)
 
 
         ' DmgImmunity
-        _ucDmgImmunityList = New ucItemList(Of eDmgType)(Beeing.DmgImmunities, "DMG Immunities", True)
+        _ucDmgImmunityList = New ucItemList(Of eDmgType)(Beeing.Stats.DmgImmunities, "DMG Immunities", True)
         _ucDmgImmunityList.Location = New Point(650, 20)
         Me.Controls.Add(Me._ucDmgImmunityList)
 
         ' DmgResistance
-        _ucDmgResistanceList = New ucItemList(Of eDmgType)(Beeing.DmgResistances, "DMG Resistance", True)
+        _ucDmgResistanceList = New ucItemList(Of eDmgType)(Beeing.Stats.DmgResistances, "DMG Resistance", True)
         _ucDmgResistanceList.Location = New Point(650, 190)
         Me.Controls.Add(Me._ucDmgResistanceList)
 
         ' DmgVulnerability
-        _ucDmgVunrabilityList = New ucItemList(Of eDmgType)(Beeing.DmgVulnerabilites, "DMG Vulnerability", True)
+        _ucDmgVunrabilityList = New ucItemList(Of eDmgType)(Beeing.Stats.DmgVulnerabilites, "DMG Vulnerability", True)
         _ucDmgVunrabilityList.Location = New Point(650, 360)
         Me.Controls.Add(Me._ucDmgVunrabilityList)
 
 
 
         ' ConditionImmunity
-        _ucConditionImmunityList = New ucItemList(Of eCondidtion)(Beeing.ConditionImmunities, "Condition Immunity", True)
+        _ucConditionImmunityList = New ucItemList(Of eCondidtion)(Beeing.Stats.ConditionImmunities, "Condition Immunity", True)
         _ucConditionImmunityList.Location = New Point(500, 20)
         Me.Controls.Add(Me._ucConditionImmunityList)
 
         ' SkillProficencies
-        _ucSkillProfiecencies = New ucItemList(Of eSkills)(Beeing.SkillProficencies, "Skill Proficencies", True)
+        _ucSkillProfiecencies = New ucItemList(Of eSkills)(Beeing.Stats.SkillProficencies, "Skill Proficencies", True)
         _ucSkillProfiecencies.Location = New Point(500, 190)
         Me.Controls.Add(Me._ucSkillProfiecencies)
 
         ' SkillProficencies
-        _ucSkillExpertieses = New ucItemList(Of eSkills)(Beeing.SkillExpertieses, "Skill Expertieses", True)
+        _ucSkillExpertieses = New ucItemList(Of eSkills)(Beeing.Stats.SkillExpertieses, "Skill Expertieses", True)
         _ucSkillExpertieses.Location = New Point(500, 360)
         Me.Controls.Add(Me._ucSkillExpertieses)
 
@@ -124,7 +122,7 @@ Public Class ucBeeingParameterGeneral
         Dim cBmt As New ComboboxBinder(Of eMonsterType)(ComboBox_monsterClass, Beeing, "MonsterClass")
 
         ' Aligment
-        Dim cBal As New ComboboxBinder(Of AligmentType.EBehaviour)(ComboBox_aligment_behaviour, Beeing.Aligment, "Behaviour")
+        Dim cBal As New ComboboxBinder(Of BaseAligment.EBehaviour)(ComboBox_aligment_behaviour, Beeing.Metadata.Aligment, "Behaviour")
 
         ' Size
         Dim cBsize As New ComboboxBinder(Of eSize)(ComboBox_Size, Beeing, "Size")
@@ -209,7 +207,7 @@ Public Class ucBeeingParameterGeneral
             Try
                 Using fs As New System.IO.FileStream(fi.FullName, IO.FileMode.Open)
                     PictureBox_image.Image = New Bitmap(Image.FromStream(fs))
-                    Beeing.Image = fi.FullName
+                    Beeing.Metadata.Image = fi.FullName
                 End Using
             Catch ex As Exception
                 Dim msg As String = "Filename: " & fi.FullName &

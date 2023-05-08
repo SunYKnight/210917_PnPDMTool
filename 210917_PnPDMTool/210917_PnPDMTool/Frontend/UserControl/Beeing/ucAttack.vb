@@ -10,11 +10,11 @@ Public Class ucAttack
 #End Region
 
 #Region "Properties"
-    Public Property Attack As AttackType
+    Public Property Attack As BaseAttack
 #End Region
 
 #Region "Init"
-    Public Sub New(attack As AttackType)
+    Public Sub New(attack As BaseAttack)
 
         ' Save value
         Me.Attack = attack
@@ -66,19 +66,19 @@ Public Class ucAttack
         NumericUpDown_dmgBonus.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack, "DmgBonus"))
         ' Dmg Dice D4
         NumericUpDown_dmgDiceD4.DataBindings.Clear()
-        NumericUpDown_dmgDiceD4.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDiceD4, "DiceCount"))
+        NumericUpDown_dmgDiceD4.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice.D4Count, "DiceCount"))
         ' Dmg Dice D6
         NumericUpDown_dmgDiceD6.DataBindings.Clear()
-        NumericUpDown_dmgDiceD6.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDiceD6, "DiceCount"))
+        NumericUpDown_dmgDiceD6.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice.D6Count, "DiceCount"))
         ' Dmg Dice D8
         NumericUpDown_dmgDiceD8.DataBindings.Clear()
-        NumericUpDown_dmgDiceD8.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDiceD8, "DiceCount"))
+        NumericUpDown_dmgDiceD8.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice.D8Count, "DiceCount"))
         ' Dmg Dice D12
         NumericUpDown_dmgDiceD12.DataBindings.Clear()
-        NumericUpDown_dmgDiceD12.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDiceD12, "DiceCount"))
+        NumericUpDown_dmgDiceD12.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice.D12Count, "DiceCount"))
         ' Dmg Dice D20
         NumericUpDown_dmgDiceD20.DataBindings.Clear()
-        NumericUpDown_dmgDiceD20.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDiceD20, "DiceCount"))
+        NumericUpDown_dmgDiceD20.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice.D20Count, "DiceCount"))
 
         ' PrimaryAttackHitBonus
         NumericUpDown_hitBonus.DataBindings.Clear()
@@ -91,6 +91,15 @@ Public Class ucAttack
         CheckBox_isSavingThrow.DataBindings.Add(New Binding("CheckedState", Attack, "PrimaryAttackUseSavingThrow"))
         ' PrimaryAttackSavingThrow
         Dim cBpst As New ComboboxBinder(Of eAttribut)(ComboBox_savingThrow, Attack, "PrimaryAttackSavingThrow")
+
+        ' Secondary Attack / Condition
+
+        ' HasSecondaryAttack
+        CheckBox_trigger_secondary_attack.DataBindings.Clear()
+        CheckBox_trigger_secondary_attack.DataBindings.Add(New Binding("CheckedState", Attack, "HasSecondaryAttack"))
+        ' TriggerConditionOnHit
+        CheckBox_trigger_condition.DataBindings.Clear()
+        CheckBox_trigger_condition.DataBindings.Add(New Binding("CheckedState", Attack, "TriggerConditionOnHit"))
 
 
         ' Secondary Attack
@@ -113,25 +122,28 @@ Public Class ucAttack
         NumericUpDown_sec_dmgBonus.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack, "DmgBonus"))
         ' Dmg Dice D4
         NumericUpDown_sec_dmgDiceD4.DataBindings.Clear()
-        NumericUpDown_sec_dmgDiceD4.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDiceD4, "DiceCount"))
+        NumericUpDown_sec_dmgDiceD4.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice.D4Count, "DiceCount"))
         ' Dmg Dice D6
         NumericUpDown_sec_dmgDiceD6.DataBindings.Clear()
-        NumericUpDown_sec_dmgDiceD6.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDiceD6, "DiceCount"))
+        NumericUpDown_sec_dmgDiceD6.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice.D6Count, "DiceCount"))
         ' Dmg Dice D8
         NumericUpDown_sec_dmgDiceD8.DataBindings.Clear()
-        NumericUpDown_sec_dmgDiceD8.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDiceD8, "DiceCount"))
+        NumericUpDown_sec_dmgDiceD8.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice.D8Count, "DiceCount"))
         ' Dmg Dice D12
         NumericUpDown_sec_dmgDiceD12.DataBindings.Clear()
-        NumericUpDown_sec_dmgDiceD12.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDiceD12, "DiceCount"))
+        NumericUpDown_sec_dmgDiceD12.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice.D12Count, "DiceCount"))
         ' Dmg Dice D20
         NumericUpDown_sec_dmgDiceD20.DataBindings.Clear()
-        NumericUpDown_sec_dmgDiceD20.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDiceD20, "DiceCount"))
+        NumericUpDown_sec_dmgDiceD20.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice.D20Count, "DiceCount"))
 
+        ' Triggered Condition
 
         ' Triggered Condition
         _uctriggeredConditionsList = New ucItemList(Of eCondidtion)(Attack.TriggeredCondition, "Triggered Conditions", True)
         _uctriggeredConditionsList.Location = New Point(3, 200)
         Me.Controls.Add(_uctriggeredConditionsList)
+        ' TriggeredConditionSavingThrow
+        Dim cBcst As New ComboboxBinder(Of eAttribut)(ComboBox_condition_savingThrow, Attack, "TriggeredConditionSavingThrow")
     End Sub
 #End Region
 
@@ -141,7 +153,7 @@ Public Class ucAttack
     End Function
 
     Public Function GetOutputType() As Type
-        Return GetType(AttackType)
+        Return GetType(BaseAttack)
     End Function
 #End Region
 

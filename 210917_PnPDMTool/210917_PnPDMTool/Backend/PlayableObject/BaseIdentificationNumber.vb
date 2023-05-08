@@ -1,4 +1,4 @@
-﻿Public Module IdentificationNumber
+﻿Public Module BaseIdentificationNumber
 
 #Region "Private Var"
 

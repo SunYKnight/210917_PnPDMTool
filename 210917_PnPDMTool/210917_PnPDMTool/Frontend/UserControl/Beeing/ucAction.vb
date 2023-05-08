@@ -11,11 +11,11 @@ Public Class ucAction
 #End Region
 
 #Region "Properties"
-    Public Property Action As ActionType
+    Public Property Action As BaseAction
 #End Region
 
 #Region "Init"
-    Public Sub New(action As ActionType)
+    Public Sub New(action As BaseAction)
         ' Save action
         Me.Action = action
 
@@ -37,7 +37,7 @@ Public Class ucAction
         _editWindow.MinimumSize = New Size(WIDTH_CONTROL_EDIT, HEIGHT_CONTROL_EDIT)
 
         ' Get Combobox values
-        ComboBox_Type.DataSource = System.Enum.GetValues(GetType(ActionType.eType))
+        ComboBox_Type.DataSource = System.Enum.GetValues(GetType(BaseAction.eType))
 
         ' Set minimum size
         Me.MinimumSize = New Size(WIDTH_CONTROL_EDIT, HEIGHT_CONTROL_EDIT)
@@ -52,7 +52,7 @@ Public Class ucAction
 
         ' Type
         ' Damage Type
-        Dim cBat As New ComboboxBinder(Of ActionType.eType)(ComboBox_Type, Action, "Type")
+        Dim cBat As New ComboboxBinder(Of BaseAction.eType)(ComboBox_Type, Action, "Type")
 
         UpdateListView()
     End Sub
@@ -88,7 +88,7 @@ Public Class ucAction
         ListView_attackList.Update()
     End Sub
 
-    Private Sub EditAttack(attack As AttackType)
+    Private Sub EditAttack(attack As BaseAttack)
         ' Update uc Edit 
         _editUc = New ucEdit(Of ucAttack)(New ucAttack(attack))
 
@@ -106,14 +106,14 @@ Public Class ucAction
     End Function
 
     Public Function GetOutputType() As Type
-        Return GetType(ActionType)
+        Return GetType(BaseAction)
     End Function
 #End Region
 
 #Region "Events"
     Private Sub editWindowSaveHandle(obj As Object, type As Type) Handles _editUc.Save
         ' Locals
-        Dim attack As AttackType = CType(obj, AttackType)
+        Dim attack As BaseAttack = CType(obj, BaseAttack)
 
         ' Close Window
         _editWindow.Hide()
@@ -136,7 +136,7 @@ Public Class ucAction
 
 #Region "GUI Handle"
     Private Sub Button_new_Click(sender As Object, e As EventArgs) Handles Button_add.Click
-        EditAttack(New AttackType())
+        EditAttack(New BaseAttack())
     End Sub
 
     Private Sub Button_edit_Click(sender As Object, e As EventArgs) Handles Button_edit.Click

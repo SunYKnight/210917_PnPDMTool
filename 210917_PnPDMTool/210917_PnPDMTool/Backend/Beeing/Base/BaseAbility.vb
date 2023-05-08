@@ -1,4 +1,4 @@
-﻿Public Class AbilityType
+﻿Public Class BaseAbility
 #Region "Enum"
 
 #End Region

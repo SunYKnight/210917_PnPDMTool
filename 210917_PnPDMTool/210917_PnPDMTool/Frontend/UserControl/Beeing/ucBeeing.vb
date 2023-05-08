@@ -22,7 +22,7 @@
         Me.Beeing = beeing
 
         _ucBeeingParamterGeneral = New ucBeeingParameterGeneral(beeing)
-        _ucBeeingActionList = New ucBeeingActionList(beeing.ActionList)
+        _ucBeeingActionList = New ucBeeingActionList(beeing.Stats.ActionList)
 
         ' Add Tab pages control
         TabControl_beeing.TabPages.Item(0).Controls.Add(_ucBeeingParamterGeneral)

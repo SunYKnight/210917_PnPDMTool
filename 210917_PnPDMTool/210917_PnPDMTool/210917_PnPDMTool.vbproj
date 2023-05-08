@@ -31,8 +31,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Frontend\UserControl\ucEditMonster\" />
-  </ItemGroup>
-
 </Project>

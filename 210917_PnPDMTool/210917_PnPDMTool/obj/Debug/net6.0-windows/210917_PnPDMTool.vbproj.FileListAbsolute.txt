@@ -6,12 +6,10 @@ C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\b
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\210917_PnPDMTool.vbproj.AssemblyReference.cache
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.MainWindow.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.Resources.resources
-C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucAttributCollection.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.UcBattleView.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.UcMapView.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucMonsterView.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.UcNewMap.resources
-C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.UcPlayer.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\210917_PnPDMTool.vbproj.GenerateResource.cache
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\210917_PnPDMTool.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\210917_PnPDMTool.AssemblyInfoInputs.cache

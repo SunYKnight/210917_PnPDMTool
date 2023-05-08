@@ -1,4 +1,4 @@
-﻿Public Class Attribut
+﻿Public Class BaseAttribut
 
 #Region "Enum"
 
@@ -10,7 +10,6 @@
 
 #Region "Properties"
 
-    Public Property Bonus As Integer = 0
     Public ReadOnly Property Modifier As Integer
         Get
             Return (Value - 10) \ 2
@@ -18,7 +17,7 @@
     End Property
     Public Property Value As Integer
         Get
-            Return _value + Bonus
+            Return _value
         End Get
         Set(value As Integer)
             _value = value

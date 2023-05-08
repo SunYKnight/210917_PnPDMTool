@@ -1,4 +1,4 @@
-﻿Public Class AligmentType
+﻿Public Class BaseAligment
 
 #Region "Enum"
     Enum EBehaviour

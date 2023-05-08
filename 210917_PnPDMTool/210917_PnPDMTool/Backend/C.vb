@@ -21,12 +21,6 @@
 
 #Region "Enum"
 
-    Public Enum EBattleParticipentType
-        Player
-        NPC
-        Monster
-    End Enum
-
     Public Enum eAttribut
         Strength
         Dexterity
@@ -174,7 +168,6 @@
         Magical
     End Enum
 
-
     Public Enum eImmunitiesModifier
         Normal
         Vulnerable
@@ -214,6 +207,64 @@
         Sphere
     End Enum
 
+    Public Enum eArmour
+        Light
+        Medium
+        Heavy
+        Shild
+    End Enum
+
+    Public Enum eWeapon
+        SimpleMeele
+        SimpleRanged
+        MartialMeele
+        MartialRanged
+    End Enum
+
+    Public Enum eTool
+        ' Artisan's tools
+        AlchemistSupplies
+        BrewerSublies
+        CalligrapherSupplies
+        CarpenterTools
+        CartographerTools
+        CobblerTools
+        CookUtensil
+        GlassblowerTools
+        JewelerTools
+        LeatherworkerTools
+        MasonTools
+        PainterSupplies
+        PotterTools
+        SmithTools
+        TinkerTools
+        WeaverTools
+        WoodcarverTools
+        DisguiseKit
+        ForgeryKit
+        ' Gaming Set
+        DiceSet
+        DragonchessSet
+        PlayingCardSet
+        ThreeDragonAnteSet
+        HerbalismKit
+        ' MusicalInstrument
+        Bagpipes
+        Drum
+        Dulcimer
+        Flute
+        Lute
+        Lyre
+        Horn
+        PanFlute
+        Shawm
+        Viol
+        NavigatorTools
+        PoisonerTools
+        ThievesTools
+        ' TODO Vehicles
+    End Enum
+
     Public Enum ESenses
         Blindsight
         Darkvision
@@ -221,7 +272,37 @@
         Truesight
     End Enum
 
+
+    Public Enum eRaceType
+        None
+        Dwarf
+        Elf
+        Halfling
+        Human
+        Dragonborn
+        Gnome
+        Half_Elf
+        Half_Orc
+        Tiefling
+    End Enum
+
+    Public Enum eClassType
+        None
+        Barbarian
+        Bard
+        Cleric
+        Druid
+        Fighter
+        Monk
+        Paladin
+        Rogue
+        Sorcerer
+        Warlock
+        Wizard
+    End Enum
+
     Public Enum eMonsterType
+        None
         Abberation
         Beast
         Celestial

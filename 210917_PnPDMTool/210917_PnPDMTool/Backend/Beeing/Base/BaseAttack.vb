@@ -1,4 +1,4 @@
-﻿Public Class AttackType
+﻿Public Class BaseAttack
 
 #Region "Defines"
     Public Structure AttackBase
@@ -11,11 +11,7 @@
 
         ' Damage
         Public Property DmgBonus As Integer
-        Public Property DmgDiceD4 As DiceSet
-        Public Property DmgDiceD6 As DiceSet
-        Public Property DmgDiceD8 As DiceSet
-        Public Property DmgDiceD12 As DiceSet
-        Public Property DmgDiceD20 As DiceSet
+        Public Property DmgDice As DiceCollection
 
     End Structure
 #End Region
@@ -69,12 +65,12 @@
 #End Region
 
 #Region "Pubilc Sub"
-    Public Function Use(dices As DiceCollection, type As DiceType.EThrowType) As Integer
+    Public Function Use(dices As DiceSet, type As DiceType.EThrowType) As Integer
         ' Make attack throw
-        Return dices.D20.Evaluate(type) + PrimaryAttackHitBonus
+        Return dices.D20.Evaluate(1, type) + PrimaryAttackHitBonus
     End Function
 
-    Public Function GetDmg(dices As DiceCollection, type As DiceType.EThrowType) As Integer
+    Public Function GetDmg(dices As DiceSet, type As DiceType.EThrowType) As Integer
         ' Locals
         Dim dmg As Integer = 0
 

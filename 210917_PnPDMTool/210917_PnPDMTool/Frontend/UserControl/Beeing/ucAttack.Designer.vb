@@ -134,7 +134,7 @@ Partial Class ucAttack
         '
         'AttackBindingSource
         '
-        Me.AttackBindingSource.DataSource = GetType(_210917_PnPDMTool.AttackType)
+        Me.AttackBindingSource.DataSource = GetType(_210917_PnPDMTool.BaseAttack)
         '
         'Label2
         '

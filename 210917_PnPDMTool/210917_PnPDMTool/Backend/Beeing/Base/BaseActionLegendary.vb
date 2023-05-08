@@ -1,14 +1,18 @@
-﻿Public Class ClassType
+﻿Public Class BaseActionLegendary
+#Region "Enum"
+
+#End Region
+
 #Region "Private Var"
 
 #End Region
 
-
 #Region "Properties"
+
 #End Region
 
 #Region "Init"
-    Public Sub Init()
+    Public Sub New()
 
     End Sub
 #End Region
@@ -22,6 +26,10 @@
 #End Region
 
 #Region "Events"
+
+#End Region
+
+#Region "GUI Handle"
 
 #End Region
 End Class

@@ -83,7 +83,7 @@ Public Class MainWindow
             Case ucTabListsControl.eGuiEvent.editMonster
                 ' Check if any item is selected
                 If (_ucTabBeeingLists.UcMonsterView1.listView_Opponents.SelectedItems.Count > 0) Then
-                    Dim beeing = BeeingList.Find(Function(p) p.Name = _ucTabBeeingLists.UcMonsterView1.listView_Opponents.SelectedItems(0).SubItems(0).Text)
+                    Dim beeing = BeeingList.Find(Function(p) p.Metadata.Name = _ucTabBeeingLists.UcMonsterView1.listView_Opponents.SelectedItems(0).SubItems(0).Text)
                     _ucEditBeeing = New ucEdit(Of ucBeeing)(New ucBeeing(beeing))
                     FlowLayoutPanel_Center.Controls.Clear()
                     FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
@@ -104,12 +104,12 @@ Public Class MainWindow
         ' Close Window
         _ucEditBeeing.Dispose()
         ' Macke sure name is unique
-        If BeeingList.FindAll(Function(p) p.Name = beeing.Name).Count > 0 Then
-            BeeingList.Remove(BeeingList.Find(Function(p) p.Name = beeing.Name))
+        If BeeingList.FindAll(Function(p) p.Metadata.Name = beeing.Metadata.Name).Count > 0 Then
+            BeeingList.Remove(BeeingList.Find(Function(p) p.Metadata.Name = beeing.Metadata.Name))
         End If
         ' Add Element
         BeeingList.Add(beeing)
-        x.Serialize(beeing, "BeeingType", "data/Beeings/" + beeing.Name + ".xml")
+        x.Serialize(beeing, "BeeingType", "data/Beeings/" + beeing.Metadata.Name + ".xml")
 
         ' Update list
         _ucTabBeeingLists.UcMonsterView1.UpdateListView(BeeingList)

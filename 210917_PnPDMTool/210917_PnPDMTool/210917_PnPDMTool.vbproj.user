@@ -31,9 +31,6 @@
     <Compile Update="Frontend\UserControl\TabListLists\ucTabListsControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Frontend\UserControl\ucAttributCollection.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Frontend\UserControl\ucEdit.vb">
       <SubType>UserControl</SubType>
     </Compile>
@@ -56,9 +53,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\ucNewMap.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Frontend\UserControl\ucPlayer.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

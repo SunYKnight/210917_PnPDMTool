@@ -37,62 +37,70 @@
 #End Region
 
 #Region "Pubilc Sub"
-    Public Function Evaluate(type As EThrowType) As Integer
+    Public Function Evaluate(count As Integer, type As EThrowType) As Integer
         ' Locals
         Dim Generator As System.Random = New System.Random()
         Dim result As Integer
         Dim result1 As Integer
         Dim result2 As Integer
+        Dim sum As Integer
 
-        ' Get result
-        result1 = Generator.Next(1, Eyes + 1)
+        For i = 0 To count
 
-        ' relect roll type
-        Select Case type
-            Case EThrowType.Advantage
-                ' Get second roll
-                result2 = Generator.Next(1, Eyes + 1)
+            ' Get result
+            result1 = Generator.Next(1, Eyes + 1)
 
-                ' Check result
-                If (result1 > result2) Then
+            ' Save Result
+            roll_history(result1 - 1) += 1
+            ' Notify
+            RaiseEvent DiceRolled(Me, result1)
+
+            ' relect roll type
+            Select Case type
+                Case EThrowType.Advantage
+                    ' Get second roll
+                    result2 = Generator.Next(1, Eyes + 1)
+                    ' Save Result
+                    roll_history(result2 - 1) += 1
+                    ' Notify
+                    RaiseEvent DiceRolled(Me, result2)
+
+                    ' Check result
+                    If (result1 > result2) Then
+                        result = result1
+                    Else
+                        result = result2
+                    End If
+
+
+                Case EThrowType.Disadvantage
+                    ' Get second roll
+                    result2 = Generator.Next(1, Eyes + 1)
+                    ' Save Result
+                    roll_history(result2 - 1) += 1
+                    ' Notify
+                    RaiseEvent DiceRolled(Me, result2)
+
+                    ' Check result
+                    If (result1 < result2) Then
+                        result = result1
+                    Else
+                        result = result2
+                    End If
+
+
+                Case EThrowType.Normal
+                    ' Set result
                     result = result1
-                Else
-                    result = result2
-                End If
-                ' Save Result
-                roll_history(result2 - 1) += 1
-                ' Notify
-                RaiseEvent DiceRolled(Me, result2)
 
+            End Select
 
-            Case EThrowType.Disadvantage
-                ' Get second roll
-                result2 = Generator.Next(1, Eyes + 1)
+            ' Evaluate Set
+            sum += result
 
-                ' Check result
-                If (result1 < result2) Then
-                    result = result1
-                Else
-                    result = result2
-                End If
-                ' Save Result
-                roll_history(result2 - 1) += 1
-                ' Notify
-                RaiseEvent DiceRolled(Me, result2)
+        Next
 
-
-            Case EThrowType.Normal
-                ' Set result
-                result = result1
-
-        End Select
-
-        ' Save Result
-        roll_history(result1 - 1) += 1
-        ' Notify
-        RaiseEvent DiceRolled(Me, result1)
-
-        Return result
+        Return sum
 
     End Function
 
@@ -103,3 +111,6 @@
     Public Event DiceRolled(dice As DiceType, result As Integer)
 #End Region
 End Class
+
+
+

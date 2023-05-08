@@ -22,14 +22,12 @@ Partial Class ucBeeingParameterGeneral
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim AttributCollection2 As _210917_PnPDMTool.AttributCollection = New _210917_PnPDMTool.AttributCollection()
-        Dim Attribut7 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut8 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut9 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut10 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut11 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Dim Attribut12 As _210917_PnPDMTool.Attribut = New _210917_PnPDMTool.Attribut()
-        Me.UcAttributCollection1 = New _210917_PnPDMTool.ucAttributCollection()
+        Dim Attribut7 As _210917_PnPDMTool.BaseAttribut = New _210917_PnPDMTool.BaseAttribut()
+        Dim Attribut8 As _210917_PnPDMTool.BaseAttribut = New _210917_PnPDMTool.BaseAttribut()
+        Dim Attribut9 As _210917_PnPDMTool.BaseAttribut = New _210917_PnPDMTool.BaseAttribut()
+        Dim Attribut10 As _210917_PnPDMTool.BaseAttribut = New _210917_PnPDMTool.BaseAttribut()
+        Dim Attribut11 As _210917_PnPDMTool.BaseAttribut = New _210917_PnPDMTool.BaseAttribut()
+        Dim Attribut12 As _210917_PnPDMTool.BaseAttribut = New _210917_PnPDMTool.BaseAttribut()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox_name = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -90,35 +88,6 @@ Partial Class ucBeeingParameterGeneral
         CType(Me.NumericUpDown_Proficency, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown_challenge, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'UcAttributCollection1
-        '
-        Attribut7.Bonus = 0
-        Attribut7.Value = 0
-        AttributCollection2.Charisma = Attribut7
-        Attribut8.Bonus = 0
-        Attribut8.Value = 0
-        AttributCollection2.Constitution = Attribut8
-        Attribut9.Bonus = 0
-        Attribut9.Value = 0
-        AttributCollection2.Dexterity = Attribut9
-        Attribut10.Bonus = 0
-        Attribut10.Value = 0
-        AttributCollection2.Intelligence = Attribut10
-        Attribut11.Bonus = 0
-        Attribut11.Value = 0
-        AttributCollection2.Strength = Attribut11
-        Attribut12.Bonus = 0
-        Attribut12.Value = 0
-        AttributCollection2.Wisdom = Attribut12
-        Me.UcAttributCollection1.AttributeCollectionToEdit = AttributCollection2
-        Me.UcAttributCollection1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.UcAttributCollection1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.UcAttributCollection1.Location = New System.Drawing.Point(35, 446)
-        Me.UcAttributCollection1.MinimumSize = New System.Drawing.Size(170, 265)
-        Me.UcAttributCollection1.Name = "UcAttributCollection1"
-        Me.UcAttributCollection1.Size = New System.Drawing.Size(170, 265)
-        Me.UcAttributCollection1.TabIndex = 0
         '
         'Label1
         '
@@ -557,7 +526,6 @@ Partial Class ucBeeingParameterGeneral
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox_name)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.UcAttributCollection1)
         Me.Name = "ucBeeingParameterGeneral"
         Me.Size = New System.Drawing.Size(1420, 876)
         CType(Me.PictureBox_image, System.ComponentModel.ISupportInitialize).EndInit()
@@ -581,7 +549,6 @@ Partial Class ucBeeingParameterGeneral
 
     End Sub
 
-    Friend WithEvents UcAttributCollection1 As ucAttributCollection
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox_name As TextBox
     Friend WithEvents Label2 As Label
