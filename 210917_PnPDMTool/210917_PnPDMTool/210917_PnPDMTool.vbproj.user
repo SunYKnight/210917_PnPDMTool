@@ -19,7 +19,10 @@
     <Compile Update="Frontend\UserControl\Beeing\ucBeeing.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Frontend\UserControl\Beeing\ucBeeingActionList.vb">
+    <Compile Update="Frontend\UserControl\Beeing\ucBActionList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Frontend\UserControl\Beeing\ucBMetadata.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\Beeing\ucItemList.vb">
@@ -46,7 +49,7 @@
     <Compile Update="Frontend\UserControl\ucMapView.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Frontend\UserControl\Beeing\ucBeeingParameterGeneral.vb">
+    <Compile Update="Frontend\UserControl\Beeing\ucBStats.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\TabListLists\ucMonsterView.vb">

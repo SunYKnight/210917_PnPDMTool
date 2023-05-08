@@ -4,59 +4,43 @@
 #End Region
 
 #Region "Private Var"
-    Private _baseAC As Integer
-
-    Private _maxBonusStr As Integer = 0
-    Private _maxBonusDex As Integer = 0
-    Private _maxBonusCon As Integer = 0
-    Private _maxBonusWis As Integer = 0
-    Private _maxBonusInt As Integer = 0
-    Private _maxBonusCha As Integer = 0
-
 
 #End Region
 
 #Region "Properties"
-
+    Public Property Base As Integer = 10
+    Public Property MaxBonusStr As Integer = 0
+    Public Property MaxBonusDex As Integer = 0
+    Public Property MaxBonusCon As Integer = 0
+    Public Property MaxBonusWis As Integer = 0
+    Public Property MaxBonusInt As Integer = 0
+    Public Property MaxBonusCha As Integer = 0
 #End Region
 
 #Region "Init"
 
     Public Sub New()
-        ' Set base value
-        _baseAC = 10
-        ' Set bonus
-        _maxBonusStr = 0
-        _maxBonusDex = cUNLIMITED_BONUS
-        _maxBonusCon = 0
-        _maxBonusWis = 0
-        _maxBonusInt = 0
-        _maxBonusCha = 0
+
     End Sub
 
     Public Sub New(baseAC As Integer)
         ' Set base value
-        _baseAC = baseAC
-        ' Set bonus
-        _maxBonusStr = 0
-        _maxBonusDex = 0
-        _maxBonusCon = 0
-        _maxBonusWis = 0
-        _maxBonusInt = 0
-        _maxBonusCha = 0
+        Base = baseAC
     End Sub
 
     Public Sub New(baseAC As Integer, maxBonusStr As Integer, maxBonusDex As Integer,
                    maxBonusCon As Integer, maxBonusWis As Integer, maxBonusInt As Integer, maxBonusCha As Integer)
+
         ' Set base value
-        _baseAC = baseAC
+        Base = baseAC
         ' Set bonus
-        _maxBonusStr = maxBonusStr
-        _maxBonusDex = maxBonusDex
-        _maxBonusCon = maxBonusCon
-        _maxBonusWis = maxBonusWis
-        _maxBonusInt = maxBonusInt
-        _maxBonusCha = maxBonusCha
+        Me.MaxBonusStr = maxBonusStr
+        Me.MaxBonusDex = maxBonusDex
+        Me.MaxBonusCon = maxBonusCon
+        Me.MaxBonusWis = maxBonusWis
+        Me.MaxBonusInt = maxBonusInt
+        Me.MaxBonusCha = maxBonusCha
+
     End Sub
 #End Region
 
@@ -66,46 +50,46 @@
 
 #Region "Pubilc Sub"
     Public Function GetValue(strMod As Integer, dexMod As Integer,
-                             conMod As Integer, intMod As Integer,
-                             wisMod As Integer, chaMod As Integer)
+                             conMod As Integer, wisMod As Integer,
+                             intMod As Integer, chaMod As Integer)
         ' Locals
-        Dim ret_val As Integer = _baseAC
+        Dim ret_val As Integer = Base
 
         ' Add bonus
-        If (strMod < _maxBonusStr) Then
+        If (strMod < MaxBonusStr) Then
             ret_val += strMod
         Else
-            ret_val += _maxBonusStr
+            ret_val += MaxBonusStr
         End If
 
-        If (dexMod < _maxBonusDex) Then
+        If (dexMod < MaxBonusDex) Then
             ret_val += dexMod
         Else
-            ret_val += _maxBonusDex
+            ret_val += MaxBonusDex
         End If
 
-        If (conMod < _maxBonusCon) Then
+        If (conMod < MaxBonusCon) Then
             ret_val += conMod
         Else
-            ret_val += _maxBonusCon
+            ret_val += MaxBonusCon
         End If
 
-        If (intMod < _maxBonusInt) Then
-            ret_val += intMod
-        Else
-            ret_val += _maxBonusInt
-        End If
-
-        If (wisMod < _maxBonusWis) Then
+        If (wisMod < MaxBonusWis) Then
             ret_val += wisMod
         Else
-            ret_val += _maxBonusWis
+            ret_val += MaxBonusWis
         End If
 
-        If (chaMod < _maxBonusCha) Then
+        If (intMod < MaxBonusInt) Then
+            ret_val += wisMod
+        Else
+            ret_val += MaxBonusInt
+        End If
+
+        If (chaMod < MaxBonusCha) Then
             ret_val += chaMod
         Else
-            ret_val += _maxBonusCha
+            ret_val += MaxBonusCha
         End If
 
         Return ret_val

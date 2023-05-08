@@ -66,29 +66,29 @@ Public Class ucAttack
         NumericUpDown_dmgBonus.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack, "DmgBonus"))
         ' Dmg Dice D4
         NumericUpDown_dmgDiceD4.DataBindings.Clear()
-        NumericUpDown_dmgDiceD4.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice.D4Count, "DiceCount"))
+        NumericUpDown_dmgDiceD4.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice, "D4Count"))
         ' Dmg Dice D6
         NumericUpDown_dmgDiceD6.DataBindings.Clear()
-        NumericUpDown_dmgDiceD6.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice.D6Count, "DiceCount"))
+        NumericUpDown_dmgDiceD6.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice, "D6Count"))
         ' Dmg Dice D8
         NumericUpDown_dmgDiceD8.DataBindings.Clear()
-        NumericUpDown_dmgDiceD8.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice.D8Count, "DiceCount"))
+        NumericUpDown_dmgDiceD8.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice, "D8Count"))
         ' Dmg Dice D12
         NumericUpDown_dmgDiceD12.DataBindings.Clear()
-        NumericUpDown_dmgDiceD12.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice.D12Count, "DiceCount"))
+        NumericUpDown_dmgDiceD12.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice, "D12Count"))
         ' Dmg Dice D20
         NumericUpDown_dmgDiceD20.DataBindings.Clear()
-        NumericUpDown_dmgDiceD20.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice.D20Count, "DiceCount"))
+        NumericUpDown_dmgDiceD20.DataBindings.Add(New Binding("Value", Attack.PrimaryAttack.DmgDice, "D20Count"))
 
         ' PrimaryAttackHitBonus
         NumericUpDown_hitBonus.DataBindings.Clear()
         NumericUpDown_hitBonus.DataBindings.Add(New Binding("Value", Attack, "PrimaryAttackHitBonus"))
         ' PrimaryAttackHitsAlways
         CheckBox_hitAlways.DataBindings.Clear()
-        CheckBox_hitAlways.DataBindings.Add(New Binding("CheckedState", Attack, "PrimaryAttackHitsAlways"))
+        CheckBox_hitAlways.DataBindings.Add(New Binding("Checked", Attack, "PrimaryAttackHitsAlways"))
         ' PrimaryAttackUseSavingThrow
         CheckBox_isSavingThrow.DataBindings.Clear()
-        CheckBox_isSavingThrow.DataBindings.Add(New Binding("CheckedState", Attack, "PrimaryAttackUseSavingThrow"))
+        CheckBox_isSavingThrow.DataBindings.Add(New Binding("Checked", Attack, "PrimaryAttackUseSavingThrow"))
         ' PrimaryAttackSavingThrow
         Dim cBpst As New ComboboxBinder(Of eAttribut)(ComboBox_savingThrow, Attack, "PrimaryAttackSavingThrow")
 
@@ -96,10 +96,10 @@ Public Class ucAttack
 
         ' HasSecondaryAttack
         CheckBox_trigger_secondary_attack.DataBindings.Clear()
-        CheckBox_trigger_secondary_attack.DataBindings.Add(New Binding("CheckedState", Attack, "HasSecondaryAttack"))
+        CheckBox_trigger_secondary_attack.DataBindings.Add(New Binding("Checked", Attack, "HasSecondaryAttack"))
         ' TriggerConditionOnHit
         CheckBox_trigger_condition.DataBindings.Clear()
-        CheckBox_trigger_condition.DataBindings.Add(New Binding("CheckedState", Attack, "TriggerConditionOnHit"))
+        CheckBox_trigger_condition.DataBindings.Add(New Binding("Checked", Attack, "TriggerConditionOnHit"))
 
 
         ' Secondary Attack
@@ -122,19 +122,19 @@ Public Class ucAttack
         NumericUpDown_sec_dmgBonus.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack, "DmgBonus"))
         ' Dmg Dice D4
         NumericUpDown_sec_dmgDiceD4.DataBindings.Clear()
-        NumericUpDown_sec_dmgDiceD4.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice.D4Count, "DiceCount"))
+        NumericUpDown_sec_dmgDiceD4.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice, "D4Count"))
         ' Dmg Dice D6
         NumericUpDown_sec_dmgDiceD6.DataBindings.Clear()
-        NumericUpDown_sec_dmgDiceD6.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice.D6Count, "DiceCount"))
+        NumericUpDown_sec_dmgDiceD6.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice, "D6Count"))
         ' Dmg Dice D8
         NumericUpDown_sec_dmgDiceD8.DataBindings.Clear()
-        NumericUpDown_sec_dmgDiceD8.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice.D8Count, "DiceCount"))
+        NumericUpDown_sec_dmgDiceD8.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice, "D8Count"))
         ' Dmg Dice D12
         NumericUpDown_sec_dmgDiceD12.DataBindings.Clear()
-        NumericUpDown_sec_dmgDiceD12.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice.D12Count, "DiceCount"))
+        NumericUpDown_sec_dmgDiceD12.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice, "D12Count"))
         ' Dmg Dice D20
         NumericUpDown_sec_dmgDiceD20.DataBindings.Clear()
-        NumericUpDown_sec_dmgDiceD20.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice.D20Count, "DiceCount"))
+        NumericUpDown_sec_dmgDiceD20.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack.DmgDice, "D20Count"))
 
         ' Triggered Condition
 

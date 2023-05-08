@@ -22,56 +22,68 @@ Partial Class ucBeeing
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl_beeing = New System.Windows.Forms.TabControl()
-        Me.TabPage_General = New System.Windows.Forms.TabPage()
-        Me.TabPage_Actions = New System.Windows.Forms.TabPage()
-        Me.TabControl_beeing.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'TabControl_beeing
-        '
-        Me.TabControl_beeing.Controls.Add(Me.TabPage_General)
-        Me.TabControl_beeing.Controls.Add(Me.TabPage_Actions)
-        Me.TabControl_beeing.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl_beeing.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl_beeing.Name = "TabControl_beeing"
-        Me.TabControl_beeing.SelectedIndex = 0
-        Me.TabControl_beeing.Size = New System.Drawing.Size(1500, 1200)
-        Me.TabControl_beeing.TabIndex = 0
-        '
-        'TabPage_General
-        '
-        Me.TabPage_General.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage_General.Name = "TabPage_General"
-        Me.TabPage_General.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_General.Size = New System.Drawing.Size(1492, 1162)
-        Me.TabPage_General.TabIndex = 0
-        Me.TabPage_General.Text = "General"
-        Me.TabPage_General.UseVisualStyleBackColor = True
-        '
-        'TabPage_Actions
-        '
-        Me.TabPage_Actions.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage_Actions.Name = "TabPage_Actions"
-        Me.TabPage_Actions.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_Actions.Size = New System.Drawing.Size(873, 570)
-        Me.TabPage_Actions.TabIndex = 1
-        Me.TabPage_Actions.Text = "Actions"
-        Me.TabPage_Actions.UseVisualStyleBackColor = True
-        '
-        'ucBeeing
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.TabControl_beeing)
-        Me.Name = "ucBeeing"
-        Me.Size = New System.Drawing.Size(1500, 1200)
-        Me.TabControl_beeing.ResumeLayout(False)
-        Me.ResumeLayout(False)
-
+        TabControl_beeing = New TabControl()
+        TabPage_Stats = New TabPage()
+        TabPage_Actions = New TabPage()
+        TabPage_Meta = New TabPage()
+        TabControl_beeing.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' TabControl_beeing
+        ' 
+        TabControl_beeing.Controls.Add(TabPage_Meta)
+        TabControl_beeing.Controls.Add(TabPage_Stats)
+        TabControl_beeing.Controls.Add(TabPage_Actions)
+        TabControl_beeing.Dock = DockStyle.Fill
+        TabControl_beeing.Location = New Point(0, 0)
+        TabControl_beeing.Name = "TabControl_beeing"
+        TabControl_beeing.SelectedIndex = 0
+        TabControl_beeing.Size = New Size(1500, 1200)
+        TabControl_beeing.TabIndex = 0
+        ' 
+        ' TabPage_Stats
+        ' 
+        TabPage_Stats.Location = New Point(4, 34)
+        TabPage_Stats.Name = "TabPage_Stats"
+        TabPage_Stats.Padding = New Padding(3)
+        TabPage_Stats.Size = New Size(1492, 1162)
+        TabPage_Stats.TabIndex = 0
+        TabPage_Stats.Text = "Stats"
+        TabPage_Stats.UseVisualStyleBackColor = True
+        ' 
+        ' TabPage_Actions
+        ' 
+        TabPage_Actions.Location = New Point(4, 34)
+        TabPage_Actions.Name = "TabPage_Actions"
+        TabPage_Actions.Padding = New Padding(3)
+        TabPage_Actions.Size = New Size(1492, 1162)
+        TabPage_Actions.TabIndex = 1
+        TabPage_Actions.Text = "Actions"
+        TabPage_Actions.UseVisualStyleBackColor = True
+        ' 
+        ' TabPage_Meta
+        ' 
+        TabPage_Meta.Location = New Point(4, 34)
+        TabPage_Meta.Name = "TabPage_Meta"
+        TabPage_Meta.Padding = New Padding(3)
+        TabPage_Meta.Size = New Size(1492, 1162)
+        TabPage_Meta.TabIndex = 2
+        TabPage_Meta.Text = "Meta"
+        TabPage_Meta.UseVisualStyleBackColor = True
+        ' 
+        ' ucBeeing
+        ' 
+        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleMode = AutoScaleMode.Font
+        Controls.Add(TabControl_beeing)
+        Name = "ucBeeing"
+        Size = New Size(1500, 1200)
+        TabControl_beeing.ResumeLayout(False)
+        ResumeLayout(False)
     End Sub
 
     Friend WithEvents TabControl_beeing As TabControl
-    Friend WithEvents TabPage_General As TabPage
+    Friend WithEvents TabPage_Stats As TabPage
     Friend WithEvents TabPage_Actions As TabPage
+    Friend WithEvents TabPage_Meta As TabPage
 End Class

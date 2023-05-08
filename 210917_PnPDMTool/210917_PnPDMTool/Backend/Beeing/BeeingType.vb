@@ -6,8 +6,8 @@ Public Class CollectonMetadata
     Public Property Image As String = ""
     Public Property Aligment As New BaseAligment()
     Public Property Size As eSize = eSize.Medium
-    Public Property Proficency As Integer = 2
     Public Property SpellcastAttribute As eAttribut = eAttribut.Wisdom
+    Public Property Proficency As Integer = 2
 
 End Class
 
@@ -17,16 +17,22 @@ Public Class CollectonStat
     Public Property BonusHP As Integer = 0
     Public Property BonusSpeed As New SpeedCollection
     Public Property BonusAC As Integer = 0
+    Public Property BonusStrength As New Integer
+    Public Property BonusDexterity As New Integer
+    Public Property BonusConstitution As New Integer
+    Public Property BonusIntelligence As New Integer
+    Public Property BonusWisdom As New Integer
+    Public Property BonusCharisma As New Integer
 
     ' Base Stats
     Public Property AC As New BaseAC
     Public Property Strength As New BaseAttribut
     Public Property Dexterity As New BaseAttribut
     Public Property Constitution As New BaseAttribut
-    Public Property Intelligence As New BaseAttribut
     Public Property Wisdom As New BaseAttribut
+    Public Property Intelligence As New BaseAttribut
     Public Property Charisma As New BaseAttribut
-    Public Property SpeedBase As New SpeedCollection
+    Public Property BaseSpeed As New SpeedCollection
 
     ' Lists
     Public Property ActionList As New List(Of BaseAction)
@@ -38,15 +44,24 @@ Public Class CollectonStat
     Public Property ConditionImmunities As New List(Of C.eCondidtion)
     Public Property SkillProficencies As New List(Of C.eSkills)
     Public Property SkillExpertieses As New List(Of C.eSkills)
-    Public Property ArmourProficencies As New List(Of C.eArmour)
-    Public Property WeaponProficencies As New List(Of C.eWeapon)
-    Public Property ToolsProficencies As New List(Of C.eTool)
+    Public Property ArmourProficencies As New List(Of C.eArmours)
+    Public Property WeaponProficencies As New List(Of C.eWeapons)
+    Public Property ToolsProficencies As New List(Of C.eTools)
 
 End Class
 
 
 <Serializable()>
 Public Class BeeingType
+
+#Region "Enum"
+    Public Enum eBType
+        Player
+        Monster
+        NPC
+    End Enum
+
+#End Region
 
 #Region "Private Var"
 
@@ -55,12 +70,21 @@ Public Class BeeingType
 
 #Region "Properties"
 
+    ' Type
+    Public Property BType As eBType
+
+
+    ' Monster Parameter
     Public Property MonsterType As eMonsterType = eMonsterType.None
+    Public Property Challenge As Single = 0
+    Public Property HpDice As New DiceCollection
+
+    ' Player / NPC
     Public Property RaceType As eRaceType = eRaceType.None
     Public Property ClassType As eClassType = eClassType.None
-    Public Property Challenge As Single = 0
     Public Property Level As Integer = 0
-    Public Property HpDice As New DiceCollection
+    Public Property BaseHP As Integer
+
 
     ' Type Specific
     Public Property Metadata As New CollectonMetadata

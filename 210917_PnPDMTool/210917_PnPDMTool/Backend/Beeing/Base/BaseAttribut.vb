@@ -5,7 +5,7 @@
 #End Region
 
 #Region "Private Var"
-    Private _value As Integer
+
 #End Region
 
 #Region "Properties"
@@ -16,13 +16,6 @@
         End Get
     End Property
     Public Property Value As Integer
-        Get
-            Return _value
-        End Get
-        Set(value As Integer)
-            _value = value
-        End Set
-    End Property
 
 #End Region
 

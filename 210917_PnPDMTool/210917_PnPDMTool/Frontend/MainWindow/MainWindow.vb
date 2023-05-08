@@ -76,7 +76,7 @@ Public Class MainWindow
             Case ucTabListsControl.eGuiEvent.removePlayableObject
             Case ucTabListsControl.eGuiEvent.newPlayableObject
             Case ucTabListsControl.eGuiEvent.newMonster
-                _ucEditBeeing = New ucEdit(Of ucBeeing)(New ucBeeing(New BeeingType))
+                _ucEditBeeing = New ucEdit(Of ucBeeing)(New ucBeeing(New BeeingType()))
                 FlowLayoutPanel_Center.Controls.Clear()
                 FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
                 FlowLayoutPanel_Center.Update()

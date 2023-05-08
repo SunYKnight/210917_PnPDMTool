@@ -1,6 +1,6 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
-Public Class ucBeeingActionList
+Public Class ucBActionList
 #Region "Enum"
 
 #End Region

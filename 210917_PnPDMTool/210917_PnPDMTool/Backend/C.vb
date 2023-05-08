@@ -207,21 +207,21 @@
         Sphere
     End Enum
 
-    Public Enum eArmour
+    Public Enum eArmours
         Light
         Medium
         Heavy
         Shild
     End Enum
 
-    Public Enum eWeapon
+    Public Enum eWeapons
         SimpleMeele
         SimpleRanged
         MartialMeele
         MartialRanged
     End Enum
 
-    Public Enum eTool
+    Public Enum eTools
         ' Artisan's tools
         AlchemistSupplies
         BrewerSublies
