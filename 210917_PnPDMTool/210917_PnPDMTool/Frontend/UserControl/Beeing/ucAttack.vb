@@ -37,6 +37,8 @@ Public Class ucAttack
         ComboBox_savingThrow.DataSource = System.Enum.GetValues(GetType(eAttribut))
         ComboBox_sec_savingThrow.DataSource = System.Enum.GetValues(GetType(eAttribut))
         ComboBox_condition_savingThrow.DataSource = System.Enum.GetValues(GetType(eAttribut))
+        ComboBox_dmgShape.DataSource = System.Enum.GetValues(GetType(eShape))
+        ComboBox_sec_dmg_shape.DataSource = System.Enum.GetValues(GetType(eShape))
 
         ' Description
         TextBox_name.DataBindings.Clear()
@@ -100,14 +102,21 @@ Public Class ucAttack
         ' TriggerConditionOnHit
         CheckBox_trigger_condition.DataBindings.Clear()
         CheckBox_trigger_condition.DataBindings.Add(New Binding("Checked", Attack, "TriggerConditionOnHit"))
+        ' CheckBox_sec_dmg_always
+        CheckBox_sec_dmg_always.DataBindings.Clear()
+        CheckBox_sec_dmg_always.DataBindings.Add(New Binding("Checked", Attack, "SecondaryAttackHitsAlways"))
+        ' CheckBox_sec_dmg_always
+        CheckBox_cond_trigger_always.DataBindings.Clear()
+        CheckBox_cond_trigger_always.DataBindings.Add(New Binding("Checked", Attack, "ConditionTriggersAlways"))
+
 
 
         ' Secondary Attack
 
         ' Damage Type
-        Dim cBsdt As New ComboboxBinder(Of eDmgType)(ComboBox_DmgType, Attack.SecondaryAttack, "DmgType")
+        Dim cBsdt As New ComboboxBinder(Of eDmgType)(ComboBox_sec_dmgType, Attack.SecondaryAttack, "DmgType")
         ' Shape
-        Dim cBssh As New ComboboxBinder(Of eShape)(ComboBox_dmgShape, Attack.SecondaryAttack, "DmgShape")
+        Dim cBssh As New ComboboxBinder(Of eShape)(ComboBox_sec_dmg_shape, Attack.SecondaryAttack, "DmgShape")
         ' HitRange
         NumericUpDown_sec_hitRange.DataBindings.Clear()
         NumericUpDown_sec_hitRange.DataBindings.Add(New Binding("Value", Attack.SecondaryAttack, "HitRange"))
@@ -140,8 +149,8 @@ Public Class ucAttack
 
         ' Triggered Condition
         _uctriggeredConditionsList = New ucItemList(Of eCondidtion)(Attack.TriggeredCondition, "Triggered Conditions", True)
-        _uctriggeredConditionsList.Location = New Point(3, 200)
-        Me.Controls.Add(_uctriggeredConditionsList)
+        _uctriggeredConditionsList.Location = New Point(10, 90)
+        Me.GroupBox_cond.Controls.Add(_uctriggeredConditionsList)
         ' TriggeredConditionSavingThrow
         Dim cBcst As New ComboboxBinder(Of eAttribut)(ComboBox_condition_savingThrow, Attack, "TriggeredConditionSavingThrow")
     End Sub

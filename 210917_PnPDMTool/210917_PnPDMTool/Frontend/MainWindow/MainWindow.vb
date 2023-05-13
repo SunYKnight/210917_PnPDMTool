@@ -1,4 +1,5 @@
-﻿Imports _210917_PnPDMTool.C
+﻿Imports _210917_PnPDMTool.BaseAction
+Imports _210917_PnPDMTool.C
 
 Public Class MainWindow
 #Region "Private Var"
@@ -12,6 +13,7 @@ Public Class MainWindow
 
 #Region "Properties"
     Public Property BeeingList As New List(Of BeeingType)
+    Public Property POList As New List(Of PlayableObject)
 #End Region
 
 #Region "Init"
@@ -72,18 +74,31 @@ Public Class MainWindow
 
     Private Sub TabListEventHandle(evt As ucTabListsControl.eGuiEvent, arg As Object) Handles _ucTabBeeingLists.guiEvent
         Select Case evt
+
             Case ucTabListsControl.eGuiEvent.nextTurn
+
+
             Case ucTabListsControl.eGuiEvent.removePlayableObject
+                Dim po = POList.Find(Function(p) p.Beeing.Metadata.Name = _ucTabBeeingLists.UcBattleView1.listViewBattle.SelectedItems(0).SubItems(0).Text)
+                POList.Remove(po)
+                _ucTabBeeingLists.UcBattleView1.UpdateListView(POList)
+
+
             Case ucTabListsControl.eGuiEvent.newPlayableObject
+
+
             Case ucTabListsControl.eGuiEvent.newMonster
-                _ucEditBeeing = New ucEdit(Of ucBeeing)(New ucBeeing(New BeeingType()))
+                _ucEditBeeing = New ucEdit(Of ucBeeing)(New ucBeeing(New BeeingType() With {.BType = BeeingType.eBType.Monster}))
                 FlowLayoutPanel_Center.Controls.Clear()
                 FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
                 FlowLayoutPanel_Center.Update()
+
+
             Case ucTabListsControl.eGuiEvent.editMonster
                 ' Check if any item is selected
                 If (_ucTabBeeingLists.UcMonsterView1.listView_Opponents.SelectedItems.Count > 0) Then
                     Dim beeing = BeeingList.Find(Function(p) p.Metadata.Name = _ucTabBeeingLists.UcMonsterView1.listView_Opponents.SelectedItems(0).SubItems(0).Text)
+                    beeing.BType = BeeingType.eBType.Monster
                     _ucEditBeeing = New ucEdit(Of ucBeeing)(New ucBeeing(beeing))
                     FlowLayoutPanel_Center.Controls.Clear()
                     FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
@@ -91,8 +106,33 @@ Public Class MainWindow
                 End If
                 ' Todo change to selected Beeing
 
+
+            Case ucTabListsControl.eGuiEvent.addToBattle
+                ' Get beeing va name
+                Dim beeing = BeeingList.Find(Function(p) p.Metadata.Name = _ucTabBeeingLists.UcMonsterView1.listView_Opponents.SelectedItems(0).SubItems(0).Text)
+                ' Add to list
+                POList.Add(New PlayableObject(beeing))
+                ' Update list
+                _ucTabBeeingLists.UcBattleView1.UpdateListView(POList)
+
+
             Case ucTabListsControl.eGuiEvent.endBattle
+
+                Dim po As PlayableObject
+                po = POList.Find(Function(p) p.Beeing.BType <> BeeingType.eBType.Player)
+
+                While (Not IsNothing(po))
+                    POList.Remove(po)
+                    po = POList.Find(Function(p) p.Beeing.BType <> BeeingType.eBType.Player)
+                End While
+
+                ' Update list
+                _ucTabBeeingLists.UcBattleView1.UpdateListView(POList)
+
+
             Case Else
+
+
         End Select
     End Sub
 

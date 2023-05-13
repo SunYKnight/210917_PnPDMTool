@@ -83,7 +83,7 @@ Public Class BeeingType
     Public Property RaceType As eRaceType = eRaceType.None
     Public Property ClassType As eClassType = eClassType.None
     Public Property Level As Integer = 0
-    Public Property BaseHP As Integer
+    Public Property BaseHP As Integer = 0
 
 
     ' Type Specific
@@ -104,9 +104,10 @@ Public Class BeeingType
 #End Region
 
 #Region "Pubilc Sub"
-    Public Function ToListString() As String()
-        Dim str(1) As String
+    Public Function ToListString(cnt As Integer) As String()
+        Dim str(cnt) As String
         str(0) = Metadata.Name
+        str(1) = Challenge.ToString("F2")
         Return str
     End Function
 #End Region

@@ -54,7 +54,7 @@ Public Class DiceSet
 #End Region
 
 #Region "Init"
-    Public Sub Init()
+    Public Sub New()
         ' Create dices
         _d4 = New DiceType(4)
         _d6 = New DiceType(6)

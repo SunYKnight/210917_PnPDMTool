@@ -44,11 +44,13 @@ Public Class ucMonsterView
 #End Region
 
 #Region "Pubilc Sub"
+
     Public Sub UpdateListView(monsterList As List(Of BeeingType))
         ' Handle Header
         listView_Opponents.Columns.Clear()
         ' Adding ListView Columns
         listView_Opponents.Columns.Add("Name", 60, HorizontalAlignment.Left)
+        listView_Opponents.Columns.Add("CR", 60, HorizontalAlignment.Left)
 
         ' Handle Items
         listView_Opponents.Items.Clear()
@@ -57,7 +59,7 @@ Public Class ucMonsterView
         If (monsterList.Count > 0) Then
             ' Create Items
             For Each monster In monsterList
-                listView_Opponents.Items.Add(New ListViewItem(monster.ToListString))
+                listView_Opponents.Items.Add(New ListViewItem(monster.ToListString(listView_Opponents.Columns.Count)))
             Next
         End If
 

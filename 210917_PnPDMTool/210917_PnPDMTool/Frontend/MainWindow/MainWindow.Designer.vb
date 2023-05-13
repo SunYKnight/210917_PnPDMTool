@@ -22,34 +22,33 @@ Partial Class MainWindow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainWindow))
-        Me.FlowLayoutPanel_Left = New System.Windows.Forms.FlowLayoutPanel()
-        Me.FlowLayoutPanel_Center = New System.Windows.Forms.FlowLayoutPanel()
-        Me.SuspendLayout()
-        '
-        'FlowLayoutPanel_Left
-        '
-        resources.ApplyResources(Me.FlowLayoutPanel_Left, "FlowLayoutPanel_Left")
-        Me.FlowLayoutPanel_Left.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.FlowLayoutPanel_Left.Name = "FlowLayoutPanel_Left"
-        '
-        'FlowLayoutPanel_Center
-        '
-        resources.ApplyResources(Me.FlowLayoutPanel_Center, "FlowLayoutPanel_Center")
-        Me.FlowLayoutPanel_Center.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.FlowLayoutPanel_Center.Name = "FlowLayoutPanel_Center"
-        '
-        'MainWindow
-        '
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(MainWindow))
+        FlowLayoutPanel_Left = New FlowLayoutPanel()
+        FlowLayoutPanel_Center = New FlowLayoutPanel()
+        SuspendLayout()
+        ' 
+        ' FlowLayoutPanel_Left
+        ' 
+        resources.ApplyResources(FlowLayoutPanel_Left, "FlowLayoutPanel_Left")
+        FlowLayoutPanel_Left.BackColor = SystemColors.ControlDark
+        FlowLayoutPanel_Left.Name = "FlowLayoutPanel_Left"
+        ' 
+        ' FlowLayoutPanel_Center
+        ' 
+        resources.ApplyResources(FlowLayoutPanel_Center, "FlowLayoutPanel_Center")
+        FlowLayoutPanel_Center.BackColor = SystemColors.ControlDark
+        FlowLayoutPanel_Center.Name = "FlowLayoutPanel_Center"
+        ' 
+        ' MainWindow
+        ' 
         resources.ApplyResources(Me, "$this")
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Controls.Add(Me.FlowLayoutPanel_Center)
-        Me.Controls.Add(Me.FlowLayoutPanel_Left)
-        Me.Name = "MainWindow"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ControlDarkDark
+        Controls.Add(FlowLayoutPanel_Center)
+        Controls.Add(FlowLayoutPanel_Left)
+        Name = "MainWindow"
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
     Friend WithEvents FlowLayoutPanel_Left As FlowLayoutPanel
     Friend WithEvents FlowLayoutPanel_Center As FlowLayoutPanel

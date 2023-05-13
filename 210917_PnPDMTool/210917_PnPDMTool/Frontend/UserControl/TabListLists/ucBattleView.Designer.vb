@@ -57,11 +57,16 @@ Partial Class UcBattleView
         '
         'listViewBattle
         '
+        Me.listViewBattle.Activation = System.Windows.Forms.ItemActivation.OneClick
         Me.listViewBattle.BackColor = System.Drawing.Color.White
         Me.listViewBattle.BorderStyle = System.Windows.Forms.BorderStyle.None
-        resources.ApplyResources(Me.listViewBattle, "listViewBattle")
-        Me.listViewBattle.Name = "listViewBattle"
+        Me.listViewBattle.Location = New System.Drawing.Point(21, 92)
+        Me.listViewBattle.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.listViewBattle.Name = "listView_Opponents"
+        Me.listViewBattle.Size = New System.Drawing.Size(400, 568)
+        Me.listViewBattle.TabIndex = 4
         Me.listViewBattle.UseCompatibleStateImageBehavior = False
+        Me.listViewBattle.View = System.Windows.Forms.View.Details
         '
         'btnEditPlayer
         '

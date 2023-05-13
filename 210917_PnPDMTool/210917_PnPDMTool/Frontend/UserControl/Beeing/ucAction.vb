@@ -117,7 +117,7 @@ Public Class ucAction
 
         ' Close Window
         _editWindow.Hide()
-        _editUc.Dispose()
+        ' _editUc.Dispose()
         ' Macke sure name is unique
         If Action.AttackList.FindAll(Function(p) p.Name = attack.Name).Count > 0 Then
             Action.AttackList.Remove(Action.AttackList.Find(Function(p) p.Name = attack.Name))
@@ -127,10 +127,11 @@ Public Class ucAction
         ' Update list
         UpdateListView()
     End Sub
+
     Private Sub editWindowDiscardHandle(obj As Object) Handles _editUc.Discard
         ' Close Window
         _editWindow.Hide()
-        _editUc.Dispose()
+        ' _editUc.Dispose()
     End Sub
 #End Region
 

@@ -50,7 +50,31 @@ Public Class UcBattleView
 #End Region
 
 #Region "Pubilc Sub"
+    Public Sub UpdateListView(poList As List(Of PlayableObject))
+        ' Locals
+        Dim idx As Integer = 0
 
+        ' Handle Header
+        listViewBattle.Columns.Clear()
+        ' Adding ListView Columns
+        listViewBattle.Columns.Add("Name", 60, HorizontalAlignment.Left)
+        listViewBattle.Columns.Add("Initative", 60, HorizontalAlignment.Left)
+        listViewBattle.Columns.Add("Hp", 60, HorizontalAlignment.Left)
+
+        ' Handle Items
+        listViewBattle.Items.Clear()
+
+        ' Check for empty list 
+        If (poList.Count > 0) Then
+            ' Create Items
+            For Each po In poList
+                listViewBattle.Items.Add(New ListViewItem(po.ToListString(listViewBattle.Columns.Count, idx)))
+                idx += 1
+            Next
+        End If
+
+        listViewBattle.Update()
+    End Sub
 #End Region
 
 #Region "Events"

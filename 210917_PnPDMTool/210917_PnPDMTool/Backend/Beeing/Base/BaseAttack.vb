@@ -30,7 +30,9 @@
         .DmgShape = eShape.None,
         .HitRange = 5,
         .AoERange = 5,
-        .NumberOfTargets = 1
+        .NumberOfTargets = 1,
+        .DmgDice = New DiceCollection,
+        .DmgBonus = 0
         }
     Public Property PrimaryAttackHitBonus As Integer = 0
     Public Property PrimaryAttackHitsAlways As Boolean = False
@@ -44,10 +46,14 @@
         .DmgShape = eShape.None,
         .HitRange = 5,
         .AoERange = 5,
-        .NumberOfTargets = 1
+        .NumberOfTargets = 1,
+        .DmgDice = New DiceCollection,
+        .DmgBonus = 0
         }
 
     Public Property TriggerConditionOnHit As Boolean = False
+    Public Property ConditionTriggersAlways As Boolean = False
+    Public Property SecondaryAttackHitsAlways As Boolean = False
     Public Property TriggeredConditionSavingThrow As eAttribut = eAttribut.Charisma
     Public Property TriggeredCondition As New List(Of eCondidtion)
 

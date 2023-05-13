@@ -17,9 +17,15 @@ Public Class PlayableObject
 
 #Region "Properties"
 
-    Public Property BaseHP As Integer
+    Public ReadOnly Property Beeing As BeeingType
         Get
-            Return _rollHP + BonusHP
+            Return _beeing
+        End Get
+    End Property
+
+    Public Property MaxHp As Integer
+        Get
+            Return _rollHP + BonusHP + _beeing.BaseHP
         End Get
         Set(value As Integer)
 
@@ -49,16 +55,18 @@ Public Class PlayableObject
         End Set
     End Property
 
+    Public Property CurrentHp As Integer = 0
+
     ' Bonus
     Public Property BonusHP As Integer = 0
     Public Property BonusAC As Integer = 0
-    Public Property BonusSpeed As SpeedCollection
-    Public Property BonusStrength As New Integer
-    Public Property BonusDexterity As New Integer
-    Public Property BonusConstitution As New Integer
-    Public Property BonusIntelligence As New Integer
-    Public Property BonusWisdom As New Integer
-    Public Property BonusCharisma As New Integer
+    Public Property BonusSpeed As New SpeedCollection
+    Public Property BonusStrength As Integer = 0
+    Public Property BonusDexterity As Integer = 0
+    Public Property BonusConstitution As Integer = 0
+    Public Property BonusIntelligence As Integer = 0
+    Public Property BonusWisdom As Integer = 0
+    Public Property BonusCharisma As Integer = 0
 
     ' Lists
     Public Property ListAC As New List(Of BaseAC)
@@ -97,6 +105,9 @@ Public Class PlayableObject
         ' Generate Battle Paramter
         _rollInitative = _diceSet.D20.Evaluate(1, DiceType.EThrowType.Normal)
 
+        ' Set current data
+        CurrentHp = MaxHp
+
         ' Generate ID
         _id = BaseIdentificationNumber.GetNewID()
 
@@ -123,6 +134,7 @@ Public Class PlayableObject
         ' Roll HP 
         _rollHP = _beeing.HpDice.Evaluate(_diceSet, DiceType.EThrowType.Normal)
     End Sub
+
     Private Sub NewStatsAdd(stats As CollectonStat)
 
         ' Check for nothing
@@ -228,7 +240,13 @@ Public Class PlayableObject
 #End Region
 
 #Region "Pubilc Sub"
-
+    Public Function ToListString(cnt As Integer, idx As Integer) As String()
+        Dim str(cnt) As String
+        str(0) = idx.ToString & _beeing.Metadata.Name
+        str(1) = Initiative.ToString()
+        str(2) = CurrentHp.ToString & "/" & MaxHp.ToString()
+        Return str
+    End Function
 #End Region
 
 #Region "Events"

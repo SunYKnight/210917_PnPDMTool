@@ -5,6 +5,7 @@
         editPlayableObject
         removePlayableObject
         nextTurn
+        addToBattle
         endBattle
         newMonster
         editMonster
@@ -54,6 +55,7 @@
             Case ucMonsterView.eGuiEvent.editMonster
                 RaiseEvent guiEvent(eGuiEvent.editMonster, arg)
             Case ucMonsterView.eGuiEvent.addToBattle
+                RaiseEvent guiEvent(eGuiEvent.addToBattle, arg)
             Case Else
         End Select
     End Sub

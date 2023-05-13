@@ -43,9 +43,9 @@
         Dim result As Integer
         Dim result1 As Integer
         Dim result2 As Integer
-        Dim sum As Integer
+        Dim sum As Integer = 0
 
-        For i = 0 To count
+        For i = 0 To count - 1
 
             ' Get result
             result1 = Generator.Next(1, Eyes + 1)
@@ -99,6 +99,8 @@
             sum += result
 
         Next
+
+        System.Console.WriteLine(count.ToString & " D" & Eyes.ToString & "rolled: " & sum.ToString())
 
         Return sum
 
