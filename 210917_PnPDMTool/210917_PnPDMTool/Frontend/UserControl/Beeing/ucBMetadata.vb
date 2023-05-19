@@ -94,6 +94,14 @@ Public Class ucBMetadata
         ' Spellcast Attribute
         Dim cBSpellcastAttribute As New ComboboxBinder(Of eAttribut)(ComboBox_spellcast_attribute, Beeing, prop_name + "SpellcastAttribute")
 
+        ' Proficency
+        NumericUpDown_Proficency.DataBindings.Clear()
+        NumericUpDown_Proficency.DataBindings.Add(New Binding("Value", Beeing.Metadata, "Proficency"))
+
+        ' CR
+        NumericUpDown_challenge.DataBindings.Clear()
+        NumericUpDown_challenge.DataBindings.Add(New Binding("Value", Beeing, "Challenge"))
+
 
     End Sub
 #End Region

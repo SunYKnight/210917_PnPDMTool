@@ -25,7 +25,7 @@ Public Class PlayableObject
 
     Public Property MaxHp As Integer
         Get
-            Return _rollHP + BonusHP + _beeing.BaseHP
+            Return _rollHP + BonusHP
         End Get
         Set(value As Integer)
 
@@ -104,6 +104,8 @@ Public Class PlayableObject
 
         ' Generate Battle Paramter
         _rollInitative = _diceSet.D20.Evaluate(1, DiceType.EThrowType.Normal)
+        ' Roll HP 
+        _rollHP = _beeing.HpDice.Evaluate(_diceSet, DiceType.EThrowType.Normal)
 
         ' Set current data
         CurrentHp = MaxHp
@@ -118,21 +120,17 @@ Public Class PlayableObject
 #Region "Private Sub"
 
     Private Sub GeneratePlayer()
-        _rollHP = _beeing.BaseHP
-
         ' TODO Handle Class / Race
     End Sub
 
     Private Sub GenerateNPC()
-        _rollHP = _beeing.BaseHP
 
         ' TODO Handle Class / Race
 
     End Sub
 
     Private Sub GenerateMonster()
-        ' Roll HP 
-        _rollHP = _beeing.HpDice.Evaluate(_diceSet, DiceType.EThrowType.Normal)
+
     End Sub
 
     Private Sub NewStatsAdd(stats As CollectonStat)

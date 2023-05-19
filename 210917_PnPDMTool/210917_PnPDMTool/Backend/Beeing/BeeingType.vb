@@ -82,8 +82,6 @@ Public Class BeeingType
     ' Player / NPC
     Public Property RaceType As eRaceType = eRaceType.None
     Public Property ClassType As eClassType = eClassType.None
-    Public Property Level As Integer = 0
-    Public Property BaseHP As Integer = 0
 
 
     ' Type Specific

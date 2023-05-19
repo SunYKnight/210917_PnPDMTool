@@ -32,11 +32,11 @@ Public Class DiceCollection
 
         ' Roll all dice
         ret_val += diceSet.D4.Evaluate(D4Count, type)
-        ret_val += diceSet.D6.Evaluate(D4Count, type)
-        ret_val += diceSet.D8.Evaluate(D4Count, type)
-        ret_val += diceSet.D12.Evaluate(D4Count, type)
-        ret_val += diceSet.D20.Evaluate(D4Count, type)
-        ret_val += diceSet.D100.Evaluate(D4Count, type)
+        ret_val += diceSet.D6.Evaluate(D6Count, type)
+        ret_val += diceSet.D8.Evaluate(D8Count, type)
+        ret_val += diceSet.D12.Evaluate(D12Count, type)
+        ret_val += diceSet.D20.Evaluate(D20Count, type)
+        ret_val += diceSet.D100.Evaluate(D100Count, type)
 
         Return ret_val
 
