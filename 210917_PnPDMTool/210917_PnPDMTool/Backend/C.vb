@@ -346,10 +346,9 @@
         Return New Point(parentSize.Width * facWidth - ownSize.Width / 2, parentSize.Height * facHeight - ownSize.Height / 2)
     End Function
 
-    Public Function ResizeImage(ByVal InputImage As Image, w As Integer, h As Integer) As Image
-        Return New Bitmap(InputImage, New Size(w, h))
-    End Function
-
+    Public Sub setMapFromPath(ByRef img As Image, path As String, width As Integer, heigth As Integer)
+        img = New Bitmap(Image.FromFile(path), New Size(width, heigth))
+    End Sub
 
 
 #End Region

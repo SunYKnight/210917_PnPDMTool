@@ -27,7 +27,8 @@ Public Class UcBattleMapView
 #Region "Pubilc Sub"
 
     Public Sub setMap(path As String)
-        Me.Panel_map.BackgroundImage = ResizeImage(Image.FromFile(path), Me.Panel_map.Width, Me.Panel_map.Height)
+        ' Display Image
+        setMapFromPath(Me.Panel_map.BackgroundImage, path, Me.Panel_map.Width, Me.Panel_map.Height)
     End Sub
 
     Public Sub changeSize(newSize As Size)
