@@ -77,7 +77,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="btnRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 50</value>
+    <value>425, 50</value>
   </data>
   <data name="btnRemove.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -113,7 +113,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="btnNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 50</value>
+    <value>425, 50</value>
   </data>
   <data name="btnNext.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -149,7 +149,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="btnEndBattle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 50</value>
+    <value>425, 50</value>
   </data>
   <data name="btnEndBattle.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -179,7 +179,7 @@
     <value>0, 0</value>
   </data>
   <data name="lbBattle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 67</value>
+    <value>425, 67</value>
   </data>
   <data name="lbBattle.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -202,17 +202,14 @@
   <data name="&gt;&gt;lbBattle.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="listViewBattle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="listViewBattle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 67</value>
+    <value>21, 97</value>
   </data>
   <data name="listViewBattle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
   <data name="listViewBattle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 283</value>
+    <value>400, 146</value>
   </data>
   <data name="listViewBattle.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -248,7 +245,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="btnEditPlayer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 50</value>
+    <value>425, 50</value>
   </data>
   <data name="btnEditPlayer.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -287,7 +284,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="btnNewPlayer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 50</value>
+    <value>425, 50</value>
   </data>
   <data name="btnNewPlayer.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -326,7 +323,7 @@
     <value>300, 500</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 500</value>
+    <value>425, 500</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UcBattleView</value>

@@ -2,7 +2,7 @@
     Public Sub Main()
         Dim mainWindow As MainWindow
         Dim loadedBeeings As New List(Of BeeingType)
-        Dim x As New xml(Of BeeingType)
+        Dim beeingLoader As New xml(Of BeeingType)
 
         ' Do compatibility stuff
         Application.EnableVisualStyles()
@@ -27,7 +27,7 @@
 
         ' Load all saved beeings
         For Each file In IO.Directory.GetFiles("Data/Beeings")
-            loadedBeeings.Add(x.Deserialize(file, "BeeingType"))
+            loadedBeeings.Add(beeingLoader.Deserialize(file, "BeeingType"))
         Next
 
         ' Create MainWindow element

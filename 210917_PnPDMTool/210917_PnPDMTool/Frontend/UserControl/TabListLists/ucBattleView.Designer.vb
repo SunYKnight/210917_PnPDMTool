@@ -22,80 +22,76 @@ Partial Class UcBattleView
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UcBattleView))
-        Me.btnRemove = New System.Windows.Forms.Button()
-        Me.btnNext = New System.Windows.Forms.Button()
-        Me.btnEndBattle = New System.Windows.Forms.Button()
-        Me.lbBattle = New System.Windows.Forms.Label()
-        Me.listViewBattle = New System.Windows.Forms.ListView()
-        Me.btnEditPlayer = New System.Windows.Forms.Button()
-        Me.btnNewPlayer = New System.Windows.Forms.Button()
-        Me.SuspendLayout()
-        '
-        'btnRemove
-        '
-        resources.ApplyResources(Me.btnRemove, "btnRemove")
-        Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.UseVisualStyleBackColor = True
-        '
-        'btnNext
-        '
-        resources.ApplyResources(Me.btnNext, "btnNext")
-        Me.btnNext.Name = "btnNext"
-        Me.btnNext.UseVisualStyleBackColor = True
-        '
-        'btnEndBattle
-        '
-        resources.ApplyResources(Me.btnEndBattle, "btnEndBattle")
-        Me.btnEndBattle.Name = "btnEndBattle"
-        Me.btnEndBattle.UseVisualStyleBackColor = True
-        '
-        'lbBattle
-        '
-        resources.ApplyResources(Me.lbBattle, "lbBattle")
-        Me.lbBattle.Name = "lbBattle"
-        '
-        'listViewBattle
-        '
-        Me.listViewBattle.Activation = System.Windows.Forms.ItemActivation.OneClick
-        Me.listViewBattle.BackColor = System.Drawing.Color.White
-        Me.listViewBattle.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.listViewBattle.Location = New System.Drawing.Point(21, 92)
-        Me.listViewBattle.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.listViewBattle.Name = "listView_Opponents"
-        Me.listViewBattle.Size = New System.Drawing.Size(400, 568)
-        Me.listViewBattle.TabIndex = 4
-        Me.listViewBattle.UseCompatibleStateImageBehavior = False
-        Me.listViewBattle.View = System.Windows.Forms.View.Details
-        '
-        'btnEditPlayer
-        '
-        resources.ApplyResources(Me.btnEditPlayer, "btnEditPlayer")
-        Me.btnEditPlayer.Name = "btnEditPlayer"
-        Me.btnEditPlayer.UseVisualStyleBackColor = True
-        '
-        'btnNewPlayer
-        '
-        resources.ApplyResources(Me.btnNewPlayer, "btnNewPlayer")
-        Me.btnNewPlayer.Name = "btnNewPlayer"
-        Me.btnNewPlayer.UseVisualStyleBackColor = True
-        '
-        'UcBattleView
-        '
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(UcBattleView))
+        btnRemove = New Button()
+        btnNext = New Button()
+        btnEndBattle = New Button()
+        lbBattle = New Label()
+        listViewBattle = New ListView()
+        btnEditPlayer = New Button()
+        btnNewPlayer = New Button()
+        SuspendLayout()
+        ' 
+        ' btnRemove
+        ' 
+        resources.ApplyResources(btnRemove, "btnRemove")
+        btnRemove.Name = "btnRemove"
+        btnRemove.UseVisualStyleBackColor = True
+        ' 
+        ' btnNext
+        ' 
+        resources.ApplyResources(btnNext, "btnNext")
+        btnNext.Name = "btnNext"
+        btnNext.UseVisualStyleBackColor = True
+        ' 
+        ' btnEndBattle
+        ' 
+        resources.ApplyResources(btnEndBattle, "btnEndBattle")
+        btnEndBattle.Name = "btnEndBattle"
+        btnEndBattle.UseVisualStyleBackColor = True
+        ' 
+        ' lbBattle
+        ' 
+        resources.ApplyResources(lbBattle, "lbBattle")
+        lbBattle.Name = "lbBattle"
+        ' 
+        ' listViewBattle
+        ' 
+        listViewBattle.Activation = ItemActivation.OneClick
+        listViewBattle.BackColor = Color.White
+        listViewBattle.BorderStyle = BorderStyle.None
+        resources.ApplyResources(listViewBattle, "listViewBattle")
+        listViewBattle.Name = "listViewBattle"
+        listViewBattle.UseCompatibleStateImageBehavior = False
+        listViewBattle.View = View.Details
+        ' 
+        ' btnEditPlayer
+        ' 
+        resources.ApplyResources(btnEditPlayer, "btnEditPlayer")
+        btnEditPlayer.Name = "btnEditPlayer"
+        btnEditPlayer.UseVisualStyleBackColor = True
+        ' 
+        ' btnNewPlayer
+        ' 
+        resources.ApplyResources(btnNewPlayer, "btnNewPlayer")
+        btnNewPlayer.Name = "btnNewPlayer"
+        btnNewPlayer.UseVisualStyleBackColor = True
+        ' 
+        ' UcBattleView
+        ' 
         resources.ApplyResources(Me, "$this")
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Controls.Add(Me.btnNewPlayer)
-        Me.Controls.Add(Me.btnEditPlayer)
-        Me.Controls.Add(Me.listViewBattle)
-        Me.Controls.Add(Me.lbBattle)
-        Me.Controls.Add(Me.btnEndBattle)
-        Me.Controls.Add(Me.btnNext)
-        Me.Controls.Add(Me.btnRemove)
-        Me.Name = "UcBattleView"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ActiveCaption
+        Controls.Add(btnNewPlayer)
+        Controls.Add(btnEditPlayer)
+        Controls.Add(listViewBattle)
+        Controls.Add(lbBattle)
+        Controls.Add(btnEndBattle)
+        Controls.Add(btnNext)
+        Controls.Add(btnRemove)
+        Name = "UcBattleView"
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents btnRemove As Button

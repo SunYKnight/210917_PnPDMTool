@@ -9,6 +9,8 @@
         endBattle
         newMonster
         editMonster
+        newMap
+        editMap
     End Enum
 
 #End Region
@@ -48,13 +50,23 @@
 #End Region
 
 #Region "Event Handle"
-    Private Sub MonsterViewUiEventHandle(evt As ucMonsterView.eGuiEvent, arg As Object) Handles UcMonsterView1.guiEvent
+    Private Sub MapListiEventHandle(evt As ucOpponentList.eGuiEvent, arg As Object) Handles UcMapList1.guiEvent
         Select Case evt
-            Case ucMonsterView.eGuiEvent.newMonster
+            Case ucMapList.eGuiEvent.newMap
+                RaiseEvent guiEvent(eGuiEvent.newMap, arg)
+            Case ucMapList.eGuiEvent.newMap
+                RaiseEvent guiEvent(eGuiEvent.editMap, arg)
+            Case Else
+        End Select
+    End Sub
+
+    Private Sub MonsterViewUiEventHandle(evt As ucOpponentList.eGuiEvent, arg As Object) Handles UcOpponentList1.guiEvent
+        Select Case evt
+            Case ucOpponentList.eGuiEvent.newMonster
                 RaiseEvent guiEvent(eGuiEvent.newMonster, arg)
-            Case ucMonsterView.eGuiEvent.editMonster
+            Case ucOpponentList.eGuiEvent.editMonster
                 RaiseEvent guiEvent(eGuiEvent.editMonster, arg)
-            Case ucMonsterView.eGuiEvent.addToBattle
+            Case ucOpponentList.eGuiEvent.addToBattle
                 RaiseEvent guiEvent(eGuiEvent.addToBattle, arg)
             Case Else
         End Select

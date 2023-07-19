@@ -18,6 +18,8 @@
     Public WIDTH_CONTROL_EDIT As Integer = 1500
     Public HEIGHT_CONTROL_EDIT As Integer = 1200
 
+    Public MAP_FILES As String = "Map Files | *.jpg;*.jepg;*.gif;*png"
+
 
 #Region "Enum"
 
@@ -49,6 +51,12 @@
         SlightOfHand
         Stealth
         Survival
+    End Enum
+
+    Public Enum eLightIntensity
+        ShineBright
+        ShineDim
+        ShineNone
     End Enum
 
     Public Enum eCondidtion
@@ -272,7 +280,6 @@
         Truesight
     End Enum
 
-
     Public Enum eRaceType
         None
         Dwarf
@@ -338,6 +345,11 @@
     Public Function CalcRelativeLocation(parentSize As Size, ownSize As Size, facWidth As Double, facHeight As Double) As Point
         Return New Point(parentSize.Width * facWidth - ownSize.Width / 2, parentSize.Height * facHeight - ownSize.Height / 2)
     End Function
+
+    Public Function ResizeImage(ByVal InputImage As Image, w As Integer, h As Integer) As Image
+        Return New Bitmap(InputImage, New Size(w, h))
+    End Function
+
 
 
 #End Region

@@ -16,7 +16,7 @@
     <Compile Update="Frontend\UserControl\Beeing\ucAttack.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Frontend\UserControl\Beeing\ucBeeing.vb">
+    <Compile Update="Frontend\UserControl\Beeing\ucEditBeeing.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\Beeing\ucBActionList.vb">
@@ -29,6 +29,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\TabListDetails\ucTabDetails.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Frontend\UserControl\TabListLists\ucMapList.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\TabListLists\ucTabListsControl.vb">
@@ -46,16 +49,16 @@
     <Compile Update="Frontend\UserControl\TabListDetails\ucCharDetailsActions.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Frontend\UserControl\ucMapView.vb">
+    <Compile Update="Frontend\UserControl\ucBattleMapView.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\Beeing\ucBStats.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Frontend\UserControl\TabListLists\ucMonsterView.vb">
+    <Compile Update="Frontend\UserControl\TabListLists\ucOpponentList.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Frontend\UserControl\ucNewMap.vb">
+    <Compile Update="Frontend\UserControl\Maps\ucEditMap.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

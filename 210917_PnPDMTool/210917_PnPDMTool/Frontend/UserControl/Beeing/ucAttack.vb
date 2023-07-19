@@ -19,6 +19,8 @@ Public Class ucAttack
         ' Save value
         Me.Attack = attack
 
+        InitializeComponent()
+
         ' Update databinding
         NewCommon()
     End Sub
@@ -28,8 +30,6 @@ Public Class ucAttack
     Private Sub NewCommon()
         ' Locals
         Dim dataSrc = System.Enum.GetNames(GetType(eAttribut))
-
-        InitializeComponent()
 
         ' Get Combobox values
         ComboBox_DmgType.DataSource = System.Enum.GetValues(GetType(eDmgType))
@@ -164,6 +164,7 @@ Public Class ucAttack
     Public Function GetOutputType() As Type
         Return GetType(BaseAttack)
     End Function
+
 #End Region
 
 #Region "Events"

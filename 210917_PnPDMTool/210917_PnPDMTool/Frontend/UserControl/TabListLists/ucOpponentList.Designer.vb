@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ucMonsterView
+Partial Class ucOpponentList
     Inherits System.Windows.Forms.UserControl
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -23,10 +23,10 @@ Partial Class ucMonsterView
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnAddToBattle = New System.Windows.Forms.Button()
-        Me.btnEditOpponent = New System.Windows.Forms.Button()
-        Me.btnNewOpponent = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnNew = New System.Windows.Forms.Button()
         Me.lbOpponents = New System.Windows.Forms.Label()
-        Me.listView_Opponents = New System.Windows.Forms.ListView()
+        Me.listView_Items = New System.Windows.Forms.ListView()
         Me.SuspendLayout()
         '
         'btnAddToBattle
@@ -42,25 +42,25 @@ Partial Class ucMonsterView
         '
         'btnEditOpponent
         '
-        Me.btnEditOpponent.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnEditOpponent.Location = New System.Drawing.Point(219, 683)
-        Me.btnEditOpponent.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnEditOpponent.Name = "btnEditOpponent"
-        Me.btnEditOpponent.Size = New System.Drawing.Size(203, 55)
-        Me.btnEditOpponent.TabIndex = 1
-        Me.btnEditOpponent.Text = "edit Opponent"
-        Me.btnEditOpponent.UseVisualStyleBackColor = True
+        Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnEdit.Location = New System.Drawing.Point(219, 683)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnEdit.Name = "btnEditOpponent"
+        Me.btnEdit.Size = New System.Drawing.Size(203, 55)
+        Me.btnEdit.TabIndex = 1
+        Me.btnEdit.Text = "edit Opponent"
+        Me.btnEdit.UseVisualStyleBackColor = True
         '
         'btnNewOpponent
         '
-        Me.btnNewOpponent.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnNewOpponent.Location = New System.Drawing.Point(21, 683)
-        Me.btnNewOpponent.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnNewOpponent.Name = "btnNewOpponent"
-        Me.btnNewOpponent.Size = New System.Drawing.Size(191, 55)
-        Me.btnNewOpponent.TabIndex = 2
-        Me.btnNewOpponent.Text = "new Opponent"
-        Me.btnNewOpponent.UseVisualStyleBackColor = True
+        Me.btnNew.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnNew.Location = New System.Drawing.Point(21, 683)
+        Me.btnNew.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnNew.Name = "btnNewOpponent"
+        Me.btnNew.Size = New System.Drawing.Size(191, 55)
+        Me.btnNew.TabIndex = 2
+        Me.btnNew.Text = "new Opponent"
+        Me.btnNew.UseVisualStyleBackColor = True
         '
         'lbOpponents
         '
@@ -74,26 +74,26 @@ Partial Class ucMonsterView
         '
         'listView_Opponents
         '
-        Me.listView_Opponents.Activation = System.Windows.Forms.ItemActivation.OneClick
-        Me.listView_Opponents.BackColor = System.Drawing.Color.White
-        Me.listView_Opponents.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.listView_Opponents.Location = New System.Drawing.Point(21, 92)
-        Me.listView_Opponents.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.listView_Opponents.Name = "listView_Opponents"
-        Me.listView_Opponents.Size = New System.Drawing.Size(400, 568)
-        Me.listView_Opponents.TabIndex = 4
-        Me.listView_Opponents.UseCompatibleStateImageBehavior = False
-        Me.listView_Opponents.View = System.Windows.Forms.View.Details
+        Me.listView_Items.Activation = System.Windows.Forms.ItemActivation.OneClick
+        Me.listView_Items.BackColor = System.Drawing.Color.White
+        Me.listView_Items.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.listView_Items.Location = New System.Drawing.Point(21, 92)
+        Me.listView_Items.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.listView_Items.Name = "listView_Opponents"
+        Me.listView_Items.Size = New System.Drawing.Size(400, 568)
+        Me.listView_Items.TabIndex = 4
+        Me.listView_Items.UseCompatibleStateImageBehavior = False
+        Me.listView_Items.View = System.Windows.Forms.View.Details
         '
         'ucMonsterView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Controls.Add(Me.listView_Opponents)
+        Me.Controls.Add(Me.listView_Items)
         Me.Controls.Add(Me.lbOpponents)
-        Me.Controls.Add(Me.btnNewOpponent)
-        Me.Controls.Add(Me.btnEditOpponent)
+        Me.Controls.Add(Me.btnNew)
+        Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnAddToBattle)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "ucMonsterView"
@@ -103,8 +103,8 @@ Partial Class ucMonsterView
     End Sub
 
     Friend WithEvents btnAddToBattle As Button
-    Friend WithEvents btnEditOpponent As Button
-    Friend WithEvents btnNewOpponent As Button
+    Friend WithEvents btnEdit As Button
+    Friend WithEvents btnNew As Button
     Friend WithEvents lbOpponents As Label
-    Friend WithEvents listView_Opponents As ListView
+    Friend WithEvents listView_Items As ListView
 End Class

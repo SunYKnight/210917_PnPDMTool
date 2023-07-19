@@ -1,4 +1,4 @@
-﻿Public Class ucBeeing
+﻿Public Class ucEditBeeing
 #Region "Enum"
 
 #End Region

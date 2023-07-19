@@ -22,106 +22,134 @@ Partial Class ucTabListsControl
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage_Battle = New System.Windows.Forms.TabPage()
-        Me.UcBattleView1 = New _210917_PnPDMTool.UcBattleView()
-        Me.TabPage_Monster = New System.Windows.Forms.TabPage()
-        Me.UcMonsterView1 = New _210917_PnPDMTool.ucMonsterView()
-        Me.TabPage_NPC = New System.Windows.Forms.TabPage()
-        Me.TabPage_Player = New System.Windows.Forms.TabPage()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage_Battle.SuspendLayout()
-        Me.TabPage_Monster.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.TabPage_Battle)
-        Me.TabControl1.Controls.Add(Me.TabPage_Monster)
-        Me.TabControl1.Controls.Add(Me.TabPage_NPC)
-        Me.TabControl1.Controls.Add(Me.TabPage_Player)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(453, 857)
-        Me.TabControl1.TabIndex = 0
-        '
-        'TabPage_Battle
-        '
-        Me.TabPage_Battle.Controls.Add(Me.UcBattleView1)
-        Me.TabPage_Battle.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage_Battle.Name = "TabPage_Battle"
-        Me.TabPage_Battle.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_Battle.Size = New System.Drawing.Size(445, 819)
-        Me.TabPage_Battle.TabIndex = 0
-        Me.TabPage_Battle.Text = "Battle"
-        Me.TabPage_Battle.UseVisualStyleBackColor = True
-        '
-        'UcBattleView1
-        '
-        Me.UcBattleView1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.UcBattleView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.UcBattleView1.Location = New System.Drawing.Point(3, 3)
-        Me.UcBattleView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.UcBattleView1.Name = "UcBattleView1"
-        Me.UcBattleView1.Size = New System.Drawing.Size(439, 813)
-        Me.UcBattleView1.TabIndex = 0
-        '
-        'TabPage_Monster
-        '
-        Me.TabPage_Monster.Controls.Add(Me.UcMonsterView1)
-        Me.TabPage_Monster.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage_Monster.Name = "TabPage_Monster"
-        Me.TabPage_Monster.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage_Monster.Size = New System.Drawing.Size(445, 819)
-        Me.TabPage_Monster.TabIndex = 1
-        Me.TabPage_Monster.Text = "Monster"
-        Me.TabPage_Monster.UseVisualStyleBackColor = True
-        '
-        'UcMonsterView1
-        '
-        Me.UcMonsterView1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.UcMonsterView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.UcMonsterView1.Location = New System.Drawing.Point(3, 3)
-        Me.UcMonsterView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.UcMonsterView1.Name = "UcMonsterView1"
-        Me.UcMonsterView1.Size = New System.Drawing.Size(439, 813)
-        Me.UcMonsterView1.TabIndex = 0
-        '
-        'TabPage_NPC
-        '
-        Me.TabPage_NPC.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage_NPC.Name = "TabPage_NPC"
-        Me.TabPage_NPC.Size = New System.Drawing.Size(445, 819)
-        Me.TabPage_NPC.TabIndex = 2
-        Me.TabPage_NPC.Text = "NPC"
-        Me.TabPage_NPC.UseVisualStyleBackColor = True
-        '
-        'TabPage_Player
-        '
-        Me.TabPage_Player.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage_Player.Name = "TabPage_Player"
-        Me.TabPage_Player.Size = New System.Drawing.Size(445, 819)
-        Me.TabPage_Player.TabIndex = 3
-        Me.TabPage_Player.Text = "Player"
-        Me.TabPage_Player.UseVisualStyleBackColor = True
-        '
-        'ucTabListsControl
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.Controls.Add(Me.TabControl1)
-        Me.MinimumSize = New System.Drawing.Size(100, 100)
-        Me.Name = "ucTabListsControl"
-        Me.Size = New System.Drawing.Size(453, 857)
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage_Battle.ResumeLayout(False)
-        Me.TabPage_Monster.ResumeLayout(False)
-        Me.ResumeLayout(False)
-
+        TabControl1 = New TabControl()
+        TabPage_Battle = New TabPage()
+        UcBattleView1 = New UcBattleView()
+        TabPage_Monster = New TabPage()
+        TabPage_NPC = New TabPage()
+        TabPage_Player = New TabPage()
+        TabPage_Map = New TabPage()
+        UcMapList1 = New ucMapList()
+        UcOpponentList1 = New ucOpponentList()
+        TabControl1.SuspendLayout()
+        TabPage_Battle.SuspendLayout()
+        TabPage_Monster.SuspendLayout()
+        TabPage_Map.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' TabControl1
+        ' 
+        TabControl1.Controls.Add(TabPage_Battle)
+        TabControl1.Controls.Add(TabPage_Monster)
+        TabControl1.Controls.Add(TabPage_NPC)
+        TabControl1.Controls.Add(TabPage_Player)
+        TabControl1.Controls.Add(TabPage_Map)
+        TabControl1.Dock = DockStyle.Fill
+        TabControl1.Location = New Point(0, 0)
+        TabControl1.Name = "TabControl1"
+        TabControl1.SelectedIndex = 0
+        TabControl1.Size = New Size(453, 857)
+        TabControl1.TabIndex = 0
+        ' 
+        ' TabPage_Battle
+        ' 
+        TabPage_Battle.Controls.Add(UcBattleView1)
+        TabPage_Battle.Location = New Point(4, 34)
+        TabPage_Battle.Name = "TabPage_Battle"
+        TabPage_Battle.Padding = New Padding(3)
+        TabPage_Battle.Size = New Size(445, 819)
+        TabPage_Battle.TabIndex = 0
+        TabPage_Battle.Text = "Battle"
+        TabPage_Battle.UseVisualStyleBackColor = True
+        ' 
+        ' UcBattleView1
+        ' 
+        UcBattleView1.AutoSize = True
+        UcBattleView1.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        UcBattleView1.BackColor = SystemColors.ActiveCaption
+        UcBattleView1.Dock = DockStyle.Fill
+        UcBattleView1.Location = New Point(3, 3)
+        UcBattleView1.Margin = New Padding(4, 5, 4, 5)
+        UcBattleView1.MinimumSize = New Size(300, 500)
+        UcBattleView1.Name = "UcBattleView1"
+        UcBattleView1.Size = New Size(439, 813)
+        UcBattleView1.TabIndex = 0
+        ' 
+        ' TabPage_Monster
+        ' 
+        TabPage_Monster.Controls.Add(UcOpponentList1)
+        TabPage_Monster.Location = New Point(4, 34)
+        TabPage_Monster.Name = "TabPage_Monster"
+        TabPage_Monster.Padding = New Padding(3)
+        TabPage_Monster.Size = New Size(445, 819)
+        TabPage_Monster.TabIndex = 1
+        TabPage_Monster.Text = "Monster"
+        TabPage_Monster.UseVisualStyleBackColor = True
+        ' 
+        ' TabPage_NPC
+        ' 
+        TabPage_NPC.Location = New Point(4, 34)
+        TabPage_NPC.Name = "TabPage_NPC"
+        TabPage_NPC.Size = New Size(445, 819)
+        TabPage_NPC.TabIndex = 2
+        TabPage_NPC.Text = "NPC"
+        TabPage_NPC.UseVisualStyleBackColor = True
+        ' 
+        ' TabPage_Player
+        ' 
+        TabPage_Player.Location = New Point(4, 34)
+        TabPage_Player.Name = "TabPage_Player"
+        TabPage_Player.Size = New Size(445, 819)
+        TabPage_Player.TabIndex = 3
+        TabPage_Player.Text = "Player"
+        TabPage_Player.UseVisualStyleBackColor = True
+        ' 
+        ' TabPage_Map
+        ' 
+        TabPage_Map.Controls.Add(UcMapList1)
+        TabPage_Map.Location = New Point(4, 34)
+        TabPage_Map.Name = "TabPage_Map"
+        TabPage_Map.Size = New Size(445, 819)
+        TabPage_Map.TabIndex = 4
+        TabPage_Map.Text = "Map"
+        TabPage_Map.UseVisualStyleBackColor = True
+        ' 
+        ' UcMapList1
+        ' 
+        UcMapList1.BackColor = SystemColors.ActiveCaption
+        UcMapList1.Dock = DockStyle.Fill
+        UcMapList1.Location = New Point(0, 0)
+        UcMapList1.Margin = New Padding(4, 5, 4, 5)
+        UcMapList1.Name = "UcMapList1"
+        UcMapList1.Size = New Size(445, 819)
+        UcMapList1.TabIndex = 0
+        ' 
+        ' UcOpponentList1
+        ' 
+        UcOpponentList1.BackColor = SystemColors.ActiveCaption
+        UcOpponentList1.Dock = DockStyle.Fill
+        UcOpponentList1.Location = New Point(3, 3)
+        UcOpponentList1.Margin = New Padding(4, 5, 4, 5)
+        UcOpponentList1.Name = "UcOpponentList1"
+        UcOpponentList1.Size = New Size(439, 813)
+        UcOpponentList1.TabIndex = 0
+        ' 
+        ' ucTabListsControl
+        ' 
+        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleMode = AutoScaleMode.Font
+        AutoSizeMode = AutoSizeMode.GrowAndShrink
+        BackColor = SystemColors.ControlDark
+        Controls.Add(TabControl1)
+        MinimumSize = New Size(100, 100)
+        Name = "ucTabListsControl"
+        Size = New Size(453, 857)
+        TabControl1.ResumeLayout(False)
+        TabPage_Battle.ResumeLayout(False)
+        TabPage_Battle.PerformLayout()
+        TabPage_Monster.ResumeLayout(False)
+        TabPage_Map.ResumeLayout(False)
+        ResumeLayout(False)
     End Sub
 
     Friend WithEvents TabControl1 As TabControl
@@ -130,5 +158,7 @@ Partial Class ucTabListsControl
     Friend WithEvents TabPage_NPC As TabPage
     Friend WithEvents TabPage_Player As TabPage
     Friend WithEvents UcBattleView1 As UcBattleView
-    Friend WithEvents UcMonsterView1 As ucMonsterView
+    Friend WithEvents TabPage_Map As TabPage
+    Friend WithEvents UcMapList1 As ucMapList
+    Friend WithEvents UcOpponentList1 As ucOpponentList
 End Class
