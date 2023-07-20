@@ -19,7 +19,7 @@ Public Class MainWindow
 #End Region
 
 #Region "Init"
-    Public Sub New(loadedBeeings As List(Of BeeingType))
+    Public Sub New(loadedBeeings As List(Of BeeingType), loadedMaps As List(Of MapType))
         ' Load designer
         InitializeComponent()
 
@@ -29,10 +29,11 @@ Public Class MainWindow
         FlowLayoutPanel_Center.AutoSize = True
         FlowLayoutPanel_Center.AutoSizeMode = AutoSizeMode.GrowAndShrink
 
-
-
         ' Copy loaded Beeings to Propery
         BeeingList.AddRange(loadedBeeings)
+
+        ' Copy loaded Beeings to Propery
+        MapList.AddRange(loadedMaps)
 
         ' Add to layout
         FlowLayoutPanel_Left.Controls.Add(_ucTabBeeingLists)
@@ -42,14 +43,16 @@ Public Class MainWindow
         ' Call resize handler
         Me.Size = Me.Size
 
-        ' Notification
-        LoggingNotificationHandle("MainWindow Load Complete!")
-
         ' Load Data 
         ' TODO
 
         ' Update Data
         _ucTabBeeingLists.UcOpponentList1.UpdateListView(BeeingList)
+        ' Update Data
+        _ucTabBeeingLists.UcMapList1.UpdateListView(MapList)
+
+        ' Notification
+        LoggingNotificationHandle("MainWindow Load Complete!")
 
     End Sub
 #End Region
@@ -180,7 +183,7 @@ Public Class MainWindow
         End If
         ' Add Element
         MapList.Add(m)
-        x.Serialize(m, "BeeingType", "data/Maps/" + m.Name + ".xml")
+        x.Serialize(m, "MapType", "data/Maps/" + m.Name + ".xml")
 
         ' Update list
         _ucTabBeeingLists.UcMapList1.UpdateListView(MapList)

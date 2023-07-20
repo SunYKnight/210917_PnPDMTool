@@ -36,7 +36,7 @@ Public Class ucEditMap
     Private Sub updateMapTiles(cols As Integer, rows As Integer)
         Dim layout As FlowLayoutPanel
 
-        SuspendLayout()
+        TableLayoutPanel_Map.SuspendLayout()
 
         ' Clear current Layout
         Me.TableLayoutPanel_Map.Controls.Clear()
@@ -54,6 +54,7 @@ Public Class ucEditMap
         For i As Integer = 0 To rows - 1
             Me.TableLayoutPanel_Map.RowStyles().Add(New RowStyle(SizeType.Percent, 100.0F / rows))
         Next
+
         For r As Integer = 0 To rows - 1
             For c As Integer = 0 To cols - 1
                 layout = New FlowLayoutPanel With {
@@ -66,8 +67,10 @@ Public Class ucEditMap
             Next
         Next
 
-        ResumeLayout(False)
-        PerformLayout()
+        TableLayoutPanel_Map.ResumeLayout(True)
+
+        ' Create Tiles
+        Map.UpdateTiles(cols, rows)
 
         ' Set border stile
         Me.TableLayoutPanel_Map.BorderStyle = BorderStyle.FixedSingle
@@ -118,19 +121,15 @@ Public Class ucEditMap
     Private Sub NumericUpDown_width_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown_width.ValueChanged
         ' Save Value
         Map.Width = NumericUpDown_width.Value
-
-        ' Check size
-        If (Map.Width > 0 And Map.Height > 0) Then
-            ' Update Tiles
-            updateMapTiles(Map.Width, Map.Height)
-        End If
-
-
     End Sub
 
     Private Sub NumericUpDown_height_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown_height.ValueChanged
         ' Save Value
         Map.Height = NumericUpDown_height.Value
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ' Check size
         If (Map.Width > 0 And Map.Height > 0) Then
             ' Update Tiles

@@ -1,19 +1,36 @@
-﻿Public Class TileType
+﻿<Serializable()>
+Public Class TileType
 #Region "Enum"
+    Public Enum eGroundType
+        Soil
+        Water
+        Stone
+        Void
+    End Enum
+
+    Public Enum eWallType
+        None
+        Weak
+        Stable
+        Climable
+    End Enum
 
 #End Region
 
 #Region "Private Var"
-    Public Property AllowWalk As Boolean
-    Public Property AllowFly As Boolean
-    Public Property AllowBurrow As Boolean
-    Public Property AllowClimb As Boolean
-    Public Property AllowSwim As Boolean
-    Public Property IsDifficultTerrain As Boolean
-    Public Property IsTrap As Boolean
-    Public Property IsTemporaryDifficultTerrain As Boolean
-    Public Property CausedCondition As List(Of eCondidtion)
-    Public Property LightIntensity As eLightIntensity
+    Public Property Location_R As Integer
+    Public Property Location_C As Integer
+    Public Property groundMaterial As eGroundType = eGroundType.Soil
+    Public Property freeSky_ft As Integer = 1000
+    Public Property WallNorth As eWallType = eWallType.None
+    Public Property WallEast As eWallType = eWallType.None
+    Public Property WallSouth As eWallType = eWallType.None
+    Public Property WallWest As eWallType = eWallType.None
+    Public Property Elevation As Integer = 0
+    Public Property IsDifficultTerrain As Boolean = False
+    Public Property IsTrap As Boolean = False
+    Public Property CausedCondition As New List(Of eCondidtion)
+    Public Property LightIntensity As eLightIntensity = eLightIntensity.Bright
 #End Region
 
 #Region "Properties"

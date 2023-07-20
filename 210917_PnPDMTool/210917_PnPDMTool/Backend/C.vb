@@ -54,9 +54,9 @@
     End Enum
 
     Public Enum eLightIntensity
-        ShineBright
-        ShineDim
-        ShineNone
+        Bright
+        Weak
+        None
     End Enum
 
     Public Enum eCondidtion

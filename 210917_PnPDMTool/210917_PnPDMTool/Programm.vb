@@ -3,6 +3,8 @@
         Dim mainWindow As MainWindow
         Dim loadedBeeings As New List(Of BeeingType)
         Dim beeingLoader As New xml(Of BeeingType)
+        Dim loadedMaps As New List(Of MapType)
+        Dim mapLoader As New xml(Of MapType)
 
         ' Do compatibility stuff
         Application.EnableVisualStyles()
@@ -30,8 +32,14 @@
             loadedBeeings.Add(beeingLoader.Deserialize(file, "BeeingType"))
         Next
 
+        ' Load all saved beeings
+        For Each file In IO.Directory.GetFiles("Data/Maps")
+            loadedMaps.Add(mapLoader.Deserialize(file, "MapType"))
+        Next
+
+
         ' Create MainWindow element
-        mainWindow = New MainWindow(loadedBeeings)
+        mainWindow = New MainWindow(loadedBeeings, loadedMaps)
 
         ' Run MainWindow
         Application.Run(mainWindow)

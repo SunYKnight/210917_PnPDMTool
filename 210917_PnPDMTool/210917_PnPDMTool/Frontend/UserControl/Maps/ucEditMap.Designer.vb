@@ -30,6 +30,7 @@ Partial Class ucEditMap
         Label1 = New Label()
         Label2 = New Label()
         TableLayoutPanel_Map = New TableLayoutPanel()
+        Button1 = New Button()
         CType(NumericUpDown_width, ComponentModel.ISupportInitialize).BeginInit()
         CType(NumericUpDown_height, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -67,19 +68,19 @@ Partial Class ucEditMap
         ' 
         ' NumericUpDown_width
         ' 
-        NumericUpDown_width.Location = New Point(1199, 174)
+        NumericUpDown_width.Location = New Point(1202, 174)
         NumericUpDown_width.Minimum = New [Decimal](New Integer() {1, 0, 0, 0})
         NumericUpDown_width.Name = "NumericUpDown_width"
-        NumericUpDown_width.Size = New Size(75, 31)
+        NumericUpDown_width.Size = New Size(59, 31)
         NumericUpDown_width.TabIndex = 103
         NumericUpDown_width.Value = New [Decimal](New Integer() {10, 0, 0, 0})
         ' 
         ' NumericUpDown_height
         ' 
-        NumericUpDown_height.Location = New Point(1317, 174)
+        NumericUpDown_height.Location = New Point(1291, 174)
         NumericUpDown_height.Minimum = New [Decimal](New Integer() {1, 0, 0, 0})
         NumericUpDown_height.Name = "NumericUpDown_height"
-        NumericUpDown_height.Size = New Size(75, 31)
+        NumericUpDown_height.Size = New Size(63, 31)
         NumericUpDown_height.TabIndex = 104
         NumericUpDown_height.Value = New [Decimal](New Integer() {10, 0, 0, 0})
         ' 
@@ -97,7 +98,7 @@ Partial Class ucEditMap
         ' Label2
         ' 
         Label2.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(1284, 164)
+        Label2.Location = New Point(1268, 164)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(26, 45)
@@ -108,16 +109,19 @@ Partial Class ucEditMap
         ' TableLayoutPanel_Map
         ' 
         TableLayoutPanel_Map.ColumnCount = 10
-        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
         TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.GrowStyle = TableLayoutPanelGrowStyle.FixedSize
+        TableLayoutPanel_Map.Location = New Point(19, 73)
+        TableLayoutPanel_Map.Name = "TableLayoutPanel_Map"
         TableLayoutPanel_Map.RowCount = 10
         TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
         TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
@@ -129,19 +133,25 @@ Partial Class ucEditMap
         TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
         TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
         TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
-        TableLayoutPanel_Map.Location = New Point(19, 73)
-        TableLayoutPanel_Map.Name = "TableLayoutPanel_Map"
         TableLayoutPanel_Map.Size = New Size(1000, 1000)
         TableLayoutPanel_Map.TabIndex = 107
-        TableLayoutPanel_Map.GrowStyle = TableLayoutPanelGrowStyle.FixedSize
-
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(1360, 174)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(66, 34)
+        Button1.TabIndex = 108
+        Button1.Text = "Set"
+        Button1.UseVisualStyleBackColor = True
         ' 
         ' ucEditMap
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         AutoSizeMode = AutoSizeMode.GrowAndShrink
+        Controls.Add(Button1)
         Controls.Add(TableLayoutPanel_Map)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -166,4 +176,5 @@ Partial Class ucEditMap
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents TableLayoutPanel_Map As TableLayoutPanel
+    Friend WithEvents Button1 As Button
 End Class
