@@ -207,15 +207,20 @@ Partial Class UcBattleMapView
         ' 
         ' Panel_map
         ' 
+        Panel_map.AutoSize = True
+        Panel_map.AutoSizeMode = AutoSizeMode.GrowAndShrink
         Panel_map.Location = New Point(0, 70)
+        Panel_map.MinimumSize = New Size(1000, 10)
         Panel_map.Name = "Panel_map"
-        Panel_map.Size = New Size(1771, 1173)
+        Panel_map.Size = New Size(1000, 10)
         Panel_map.TabIndex = 18
         ' 
         ' UcBattleMapView
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
+        AutoSizeMode = AutoSizeMode.GrowAndShrink
         BackColor = SystemColors.ActiveCaption
         Controls.Add(pictureBoxInitiative14)
         Controls.Add(pictureBoxInitiative13)
@@ -235,7 +240,7 @@ Partial Class UcBattleMapView
         Controls.Add(lbMap)
         Margin = New Padding(4, 5, 4, 5)
         Name = "UcBattleMapView"
-        Size = New Size(1771, 1235)
+        Size = New Size(1775, 177)
         CType(pictureBoxInitiative1, ComponentModel.ISupportInitialize).EndInit()
         CType(pictureBoxInitiative2, ComponentModel.ISupportInitialize).EndInit()
         CType(pictureBoxInitiative3, ComponentModel.ISupportInitialize).EndInit()
@@ -251,6 +256,7 @@ Partial Class UcBattleMapView
         CType(pictureBoxInitiative13, ComponentModel.ISupportInitialize).EndInit()
         CType(pictureBoxInitiative14, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents lbMap As Label

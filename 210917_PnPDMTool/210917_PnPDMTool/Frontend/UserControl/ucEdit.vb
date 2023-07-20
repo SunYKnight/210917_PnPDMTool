@@ -17,6 +17,14 @@
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
+        ' Set autosize Properties
+        Me.AutoSize = True
+        Me.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        uc.AutoSize = True
+        uc.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        FlowLayoutPanel_editUC.AutoSize = True
+        FlowLayoutPanel_editUC.AutoSizeMode = AutoSizeMode.GrowAndShrink
+
         ' Add Usercontrol
         _uc = uc
         Me.FlowLayoutPanel_editUC.Controls.Add(uc)

@@ -33,3 +33,4 @@ C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\o
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucEditMap.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucEditBeeing.resources
 C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.UcBattleMapView.resources
+C:\Users\jens3\source\repos\210917_PnPDMTool\210917_PnPDMTool\210917_PnPDMTool\obj\Debug\net6.0-windows\_210917_PnPDMTool.ucTile.resources

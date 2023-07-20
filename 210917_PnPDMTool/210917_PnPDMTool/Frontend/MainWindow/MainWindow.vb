@@ -20,7 +20,16 @@ Public Class MainWindow
 
 #Region "Init"
     Public Sub New(loadedBeeings As List(Of BeeingType))
+        ' Load designer
         InitializeComponent()
+
+        ' Set Layout Dock
+        FlowLayoutPanel_Left.Dock = DockStyle.Left
+        FlowLayoutPanel_Center.Dock = DockStyle.Fill
+        FlowLayoutPanel_Center.AutoSize = True
+        FlowLayoutPanel_Center.AutoSizeMode = AutoSizeMode.GrowAndShrink
+
+
 
         ' Copy loaded Beeings to Propery
         BeeingList.AddRange(loadedBeeings)

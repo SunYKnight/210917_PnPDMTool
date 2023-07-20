@@ -48,7 +48,7 @@ Partial Class ucEditMap
         ' lbLocation
         ' 
         lbLocation.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        lbLocation.Location = New Point(1150, 73)
+        lbLocation.Location = New Point(1026, 72)
         lbLocation.Margin = New Padding(4, 0, 4, 0)
         lbLocation.Name = "lbLocation"
         lbLocation.Size = New Size(174, 45)
@@ -59,7 +59,7 @@ Partial Class ucEditMap
         ' TextBox_Name
         ' 
         TextBox_Name.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_Name.Location = New Point(1150, 123)
+        TextBox_Name.Location = New Point(1026, 122)
         TextBox_Name.Margin = New Padding(4, 5, 4, 5)
         TextBox_Name.Name = "TextBox_Name"
         TextBox_Name.Size = New Size(464, 37)
@@ -67,7 +67,7 @@ Partial Class ucEditMap
         ' 
         ' NumericUpDown_width
         ' 
-        NumericUpDown_width.Location = New Point(1323, 175)
+        NumericUpDown_width.Location = New Point(1199, 174)
         NumericUpDown_width.Minimum = New [Decimal](New Integer() {1, 0, 0, 0})
         NumericUpDown_width.Name = "NumericUpDown_width"
         NumericUpDown_width.Size = New Size(75, 31)
@@ -76,7 +76,7 @@ Partial Class ucEditMap
         ' 
         ' NumericUpDown_height
         ' 
-        NumericUpDown_height.Location = New Point(1441, 175)
+        NumericUpDown_height.Location = New Point(1317, 174)
         NumericUpDown_height.Minimum = New [Decimal](New Integer() {1, 0, 0, 0})
         NumericUpDown_height.Name = "NumericUpDown_height"
         NumericUpDown_height.Size = New Size(75, 31)
@@ -86,7 +86,7 @@ Partial Class ucEditMap
         ' Label1
         ' 
         Label1.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(1150, 165)
+        Label1.Location = New Point(1026, 164)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(174, 45)
@@ -97,7 +97,7 @@ Partial Class ucEditMap
         ' Label2
         ' 
         Label2.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(1408, 165)
+        Label2.Location = New Point(1284, 164)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(26, 45)
@@ -117,28 +117,31 @@ Partial Class ucEditMap
         TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
         TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
         TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.GrowStyle = TableLayoutPanelGrowStyle.FixedSize
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.RowCount = 10
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10.0F))
         TableLayoutPanel_Map.Location = New Point(19, 73)
         TableLayoutPanel_Map.Name = "TableLayoutPanel_Map"
-        TableLayoutPanel_Map.RowCount = 10
-        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
-        TableLayoutPanel_Map.Size = New Size(1124, 1057)
+        TableLayoutPanel_Map.Size = New Size(1000, 1000)
         TableLayoutPanel_Map.TabIndex = 107
+        TableLayoutPanel_Map.GrowStyle = TableLayoutPanelGrowStyle.FixedSize
+
         ' 
         ' ucEditMap
         ' 
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
+        AutoSizeMode = AutoSizeMode.GrowAndShrink
         Controls.Add(TableLayoutPanel_Map)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -149,7 +152,7 @@ Partial Class ucEditMap
         Controls.Add(lbMap)
         Margin = New Padding(4, 5, 4, 5)
         Name = "ucEditMap"
-        Size = New Size(1633, 1145)
+        Size = New Size(1494, 1076)
         CType(NumericUpDown_width, ComponentModel.ISupportInitialize).EndInit()
         CType(NumericUpDown_height, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

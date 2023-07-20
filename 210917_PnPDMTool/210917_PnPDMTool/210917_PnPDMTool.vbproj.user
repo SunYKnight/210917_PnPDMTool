@@ -28,6 +28,9 @@
     <Compile Update="Frontend\UserControl\Beeing\ucItemList.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Frontend\UserControl\Maps\ucTile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Frontend\UserControl\TabListDetails\ucTabDetails.vb">
       <SubType>UserControl</SubType>
     </Compile>
@@ -60,6 +63,9 @@
     </Compile>
     <Compile Update="Frontend\UserControl\Maps\ucEditMap.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Frontend\UserControl\VerticalProgressBar.vb">
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -33,20 +33,41 @@ Public Class ucEditMap
 #End Region
 
 #Region "Private Sub"
-    Private Sub updateMapTiles(width As Integer, heigth As Integer)
+    Private Sub updateMapTiles(cols As Integer, rows As Integer)
+        Dim layout As FlowLayoutPanel
+
+        SuspendLayout()
 
         ' Clear current Layout
+        Me.TableLayoutPanel_Map.Controls.Clear()
         Me.TableLayoutPanel_Map.RowStyles().Clear()
         Me.TableLayoutPanel_Map.ColumnStyles().Clear()
 
+        Me.TableLayoutPanel_Map.ColumnCount = cols
+        Me.TableLayoutPanel_Map.RowCount = rows
+
         ' Build columns
-        For i As Integer = 0 To width - 1
-            Me.TableLayoutPanel_Map.ColumnStyles().Add(New ColumnStyle(SizeType.Percent, 100.0F / width))
+        For i As Integer = 0 To cols - 1
+            Me.TableLayoutPanel_Map.ColumnStyles().Add(New ColumnStyle(SizeType.Percent, 100.0F / cols))
         Next
         ' Build rows
-        For i As Integer = 0 To heigth - 1
-            Me.TableLayoutPanel_Map.RowStyles().Add(New RowStyle(SizeType.Percent, 100.0F / heigth))
+        For i As Integer = 0 To rows - 1
+            Me.TableLayoutPanel_Map.RowStyles().Add(New RowStyle(SizeType.Percent, 100.0F / rows))
         Next
+        For r As Integer = 0 To rows - 1
+            For c As Integer = 0 To cols - 1
+                layout = New FlowLayoutPanel With {
+               .Dock = DockStyle.Fill,
+               .BorderStyle = BorderStyle.FixedSingle,
+               .Margin = New Padding(0),
+               .BackColor = Color.Transparent}
+                layout.Controls.Add(New ucTile())
+                Me.TableLayoutPanel_Map.Controls.Add(layout, c, r)
+            Next
+        Next
+
+        ResumeLayout(False)
+        PerformLayout()
 
         ' Set border stile
         Me.TableLayoutPanel_Map.BorderStyle = BorderStyle.FixedSingle
@@ -97,16 +118,24 @@ Public Class ucEditMap
     Private Sub NumericUpDown_width_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown_width.ValueChanged
         ' Save Value
         Map.Width = NumericUpDown_width.Value
-        ' Update Tiles
-        updateMapTiles(Map.Width, Map.Height)
+
+        ' Check size
+        If (Map.Width > 0 And Map.Height > 0) Then
+            ' Update Tiles
+            updateMapTiles(Map.Width, Map.Height)
+        End If
+
 
     End Sub
 
     Private Sub NumericUpDown_height_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown_height.ValueChanged
         ' Save Value
         Map.Height = NumericUpDown_height.Value
-        ' Update Tiles
-        updateMapTiles(Map.Width, Map.Height)
+        ' Check size
+        If (Map.Width > 0 And Map.Height > 0) Then
+            ' Update Tiles
+            updateMapTiles(Map.Width, Map.Height)
+        End If
     End Sub
 
 
