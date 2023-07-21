@@ -26,7 +26,7 @@ Public Class MapType
 
 #Region "Private Sub"
 
-    Private Function getTileIdx(col As Integer, row As Integer)
+    Private Function getTileIdx(col As Integer, row As Integer) As Integer
         Return row + col * Height
     End Function
 
@@ -34,7 +34,7 @@ Public Class MapType
 
 #Region "Pubilc Sub"
 
-    Public Function getTile(col As Integer, row As Integer)
+    Public Function getTile(col As Integer, row As Integer) As TileType
         Return Tiles(getTileIdx(col, row))
     End Function
 

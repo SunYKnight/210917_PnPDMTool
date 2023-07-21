@@ -6,6 +6,7 @@ Public Class ucMapList
     Public Enum eGuiEvent
         newMap
         editMap
+        loadMap
     End Enum
 #End Region
 
@@ -30,13 +31,16 @@ Public Class ucMapList
 
 #Region "Private Sub"
     Private Sub btnNewOpponent_Click(sender As Object, e As EventArgs) Handles btnNew.Click
-        RaiseEvent guiEvent(eGuiEvent.newMap, New MapType())
+        RaiseEvent guiEvent(eGuiEvent.newMap, Nothing)
     End Sub
 
     Private Sub btnEditOpponent_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         RaiseEvent guiEvent(eGuiEvent.editMap, listView_Items.SelectedItems(0))
     End Sub
 
+    Private Sub btnLoadOpponent_Click(sender As Object, e As EventArgs) Handles Button_load.Click
+        RaiseEvent guiEvent(eGuiEvent.loadMap, listView_Items.SelectedItems(0))
+    End Sub
 #End Region
 
 #Region "Pubilc Sub"
@@ -45,7 +49,7 @@ Public Class ucMapList
         ' Handle Header
         listView_Items.Columns.Clear()
         ' Adding ListView Columns
-        listView_Items.Columns.Add("Name", 60, HorizontalAlignment.Left)
+        listView_Items.Columns.Add("Name", 200, HorizontalAlignment.Left)
         listView_Items.Columns.Add("WxH", 60, HorizontalAlignment.Left)
 
         ' Handle Items

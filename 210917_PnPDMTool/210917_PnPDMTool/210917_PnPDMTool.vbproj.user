@@ -7,7 +7,7 @@
     <ActiveDebugProfile>210917_PnPDMTool</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Frontend\MainWindow\MainWindow.vb">
+    <Compile Update="MainWindow.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Frontend\UserControl\Beeing\ucAction.vb">

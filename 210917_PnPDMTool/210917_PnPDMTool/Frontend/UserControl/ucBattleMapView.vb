@@ -2,7 +2,7 @@
 
 Public Class UcBattleMapView
 #Region "Private Var"
-
+    Private _map As MapType
 #End Region
 
 #Region "Properties"
@@ -21,14 +21,88 @@ Public Class UcBattleMapView
 #End Region
 
 #Region "Private Sub"
+    Private Sub updateMapTiles(cols As Integer, rows As Integer)
+        Dim layout As FlowLayoutPanel
 
+        ' Pause Control draw
+        TableLayoutPanel_Map.SuspendLayout()
+
+        ' Clear current Layout
+        Me.TableLayoutPanel_Map.Controls.Clear()
+        Me.TableLayoutPanel_Map.RowStyles().Clear()
+        Me.TableLayoutPanel_Map.ColumnStyles().Clear()
+
+        Me.TableLayoutPanel_Map.ColumnCount = cols
+        Me.TableLayoutPanel_Map.RowCount = rows
+
+        ' Build columns
+        For i As Integer = 0 To cols - 1
+            Me.TableLayoutPanel_Map.ColumnStyles().Add(New ColumnStyle(SizeType.Percent, 100.0F / cols))
+        Next
+        ' Build rows
+        For i As Integer = 0 To rows - 1
+            Me.TableLayoutPanel_Map.RowStyles().Add(New RowStyle(SizeType.Percent, 100.0F / rows))
+        Next
+
+        For r As Integer = 0 To rows - 1
+            For c As Integer = 0 To cols - 1
+                layout = New FlowLayoutPanel With {
+               .Dock = DockStyle.Fill,
+               .BorderStyle = BorderStyle.FixedSingle,
+               .Margin = New Padding(0),
+               .BackColor = Color.Transparent,
+               .Name = c.ToString + "," + r.ToString}
+                layout.Controls.Add(New ucTile())
+                Me.TableLayoutPanel_Map.Controls.Add(layout, c, r)
+
+                ' Fast forward mouse click
+                AddHandler layout.MouseClick, AddressOf PanelClickHandle
+            Next
+        Next
+
+        ' Continue Control draw
+        TableLayoutPanel_Map.ResumeLayout(True)
+
+        ' Set border stile
+        Me.TableLayoutPanel_Map.BorderStyle = BorderStyle.FixedSingle
+        Me.TableLayoutPanel_Map.Update()
+
+    End Sub
+
+    Private Sub PanelClickHandle(sender As Object, e As EventArgs) Handles TableLayoutPanel_Map.MouseClick
+        Dim a As Integer = 0
+        Dim row As Integer = -1
+        Dim col As Integer = -1
+        Dim raw_data As String()
+        Dim layout As FlowLayoutPanel = CType(sender, FlowLayoutPanel)
+        Dim selected_tile As TileType
+
+        ' Split index data
+        raw_data = Split(layout.Name, ",")
+
+        ' Check success
+        If raw_data.Length = 2 Then
+            col = CType(raw_data(0), Integer?)
+            row = CType(raw_data(1), Integer?)
+            selected_tile = _map.getTile(col, row)
+        End If
+
+        ' Check success
+        If (col >= 0 And row >= 0) Then
+
+        End If
+
+    End Sub
 #End Region
 
 #Region "Pubilc Sub"
 
-    Public Sub setMap(path As String)
+    Public Sub setMap(m As MapType)
+        _map = m
         ' Display Image
-        setMapFromPath(Me.Panel_map.BackgroundImage, path, Me.Panel_map.Width, Me.Panel_map.Height)
+        setMapFromPath(TableLayoutPanel_Map.BackgroundImage, _map.Path, TableLayoutPanel_Map.Width, TableLayoutPanel_Map.Height)
+        ' Draw tiles
+        updateMapTiles(_map.Width, _map.Height)
     End Sub
 
     Public Sub changeSize(newSize As Size)
@@ -71,6 +145,7 @@ Public Class UcBattleMapView
         'Me.pictureBoxInitiative13.Location = New Point(15 * GAP_SMALL + 14 * Me.pictureBoxInitiative1.Width, Me.pictureBoxMap.Location.Y)
         'Me.pictureBoxInitiative14.Location = New Point(16 * GAP_SMALL + 15 * Me.pictureBoxInitiative1.Width, Me.pictureBoxMap.Location.Y)
     End Sub
+
 #End Region
 
 #Region "Events"

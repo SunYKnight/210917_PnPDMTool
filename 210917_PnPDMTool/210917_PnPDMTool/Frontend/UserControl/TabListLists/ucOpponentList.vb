@@ -50,7 +50,7 @@ Public Class ucOpponentList
         ' Handle Header
         listView_Items.Columns.Clear()
         ' Adding ListView Columns
-        listView_Items.Columns.Add("Name", 60, HorizontalAlignment.Left)
+        listView_Items.Columns.Add("Name", 200, HorizontalAlignment.Left)
         listView_Items.Columns.Add("CR", 60, HorizontalAlignment.Left)
 
         ' Handle Items

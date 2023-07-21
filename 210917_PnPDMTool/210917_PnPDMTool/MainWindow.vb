@@ -92,23 +92,23 @@ Public Class MainWindow
             Case ucTabListsControl.eGuiEvent.nextTurn
 
 
-            Case ucTabListsControl.eGuiEvent.removePlayableObject
+            Case ucTabListsControl.eGuiEvent.PORemove
                 Dim po = POList.Find(Function(p) p.Beeing.Metadata.Name = _ucTabBeeingLists.UcBattleView1.listViewBattle.SelectedItems(0).SubItems(0).Text)
                 POList.Remove(po)
                 _ucTabBeeingLists.UcBattleView1.UpdateListView(POList)
 
 
-            Case ucTabListsControl.eGuiEvent.newPlayableObject
+            Case ucTabListsControl.eGuiEvent.PONew
 
 
-            Case ucTabListsControl.eGuiEvent.newMonster
+            Case ucTabListsControl.eGuiEvent.MonsterNew
                 _ucEditBeeing = New ucEdit(Of ucEditBeeing)(New ucEditBeeing(CType(arg, BeeingType)))
                 FlowLayoutPanel_Center.Controls.Clear()
                 FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
                 FlowLayoutPanel_Center.Update()
 
 
-            Case ucTabListsControl.eGuiEvent.editMonster
+            Case ucTabListsControl.eGuiEvent.MonsterEdit
                 ' Get object from list
                 Dim beeing = BeeingList.Find(Function(p) p.Metadata.Name = arg.Text)
                 ' Check if any item is selected
@@ -122,14 +122,14 @@ Public Class MainWindow
                 End If
 
 
-            Case ucTabListsControl.eGuiEvent.newMap
-                _ucEditMap = New ucEdit(Of ucEditMap)(New ucEditMap(CType(arg, MapType)))
+            Case ucTabListsControl.eGuiEvent.MapNew
+                _ucEditMap = New ucEdit(Of ucEditMap)(New ucEditMap())
                 FlowLayoutPanel_Center.Controls.Clear()
                 FlowLayoutPanel_Center.Controls.Add(_ucEditMap)
                 FlowLayoutPanel_Center.Update()
 
 
-            Case ucTabListsControl.eGuiEvent.editMap
+            Case ucTabListsControl.eGuiEvent.MapEdit
                 ' Get object from list
                 Dim map = MapList.Find(Function(p) p.Name = arg.Text)
                 ' Check if any item is selected
@@ -138,9 +138,15 @@ Public Class MainWindow
                     _ucEditMap = New ucEdit(Of ucEditMap)(New ucEditMap(map))
                     ' Show edit control
                     FlowLayoutPanel_Center.Controls.Clear()
-                    FlowLayoutPanel_Center.Controls.Add(_ucEditBeeing)
+                    FlowLayoutPanel_Center.Controls.Add(_ucEditMap)
                     FlowLayoutPanel_Center.Update()
                 End If
+
+            Case ucTabListsControl.eGuiEvent.MapLoad
+                ' Get object from list
+                Dim map = MapList.Find(Function(p) p.Name = arg.Text)
+                ' Load Battlemap
+                _ucBattleMapView.setMap(map)
 
 
             Case ucTabListsControl.eGuiEvent.addToBattle

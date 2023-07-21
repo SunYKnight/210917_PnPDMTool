@@ -16,18 +16,54 @@ Public Class ucEditMap
 
 #Region "Init"
 
-    Public Sub New(m As MapType)
+    Public Sub New()
 
         ' Dieser Aufruf ist für den Designer erforderlich.
-        InitializeComponent()
+        NewCommon()
 
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+        Me.Map = New MapType()
+
+        Map.Width = DEF_WIDTH
+        Map.Height = DEF_HEIGHT
+
+        ' Check size
+        If (Map.Width > 0 And Map.Height > 0) Then
+            ' Update Tiles
+            updateMapTiles(Map.Width, Map.Height)
+        End If
+
+    End Sub
+
+    Public Sub New(m As MapType)
+
+        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
+        NewCommon()
 
         ' Save beeing
         Me.Map = m
 
-        ' Set border stile
-        Me.TableLayoutPanel_Map.BorderStyle = BorderStyle.FixedSingle
+        NumericUpDown_width.Value = Map.Width
+        NumericUpDown_height.Value = Map.Height
+
+        ' Check size
+        If (Map.Width > 0 And Map.Height > 0) Then
+            ' Update Tiles
+            updateMapTiles(Map.Width, Map.Height)
+        End If
+
+        ' Update Map display
+        updateMap()
+
+    End Sub
+
+    Private Sub NewCommon()
+
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        InitializeComponent()
+
+        ' Reset selection
+        resetSelectedTiles()
 
         ' Set combobox data
         ComboBox_wall_north.DataSource = System.Enum.GetValues(GetType(eWallType))
@@ -36,16 +72,17 @@ Public Class ucEditMap
         ComboBox_wall_south.DataSource = System.Enum.GetValues(GetType(eWallType))
         ComboBox_light.DataSource = System.Enum.GetValues(GetType(eLightIntensity))
         ComboBox_gound.DataSource = System.Enum.GetValues(GetType(eGroundType))
-
-
     End Sub
+
 
 #End Region
 
 #Region "Private Sub"
+
     Private Sub updateMapTiles(cols As Integer, rows As Integer)
         Dim layout As FlowLayoutPanel
 
+        ' Pause Control draw
         TableLayoutPanel_Map.SuspendLayout()
 
         ' Clear current Layout
@@ -81,10 +118,8 @@ Public Class ucEditMap
             Next
         Next
 
+        ' Continue Control draw
         TableLayoutPanel_Map.ResumeLayout(True)
-
-        ' Create Tiles
-        Map.UpdateTiles(cols, rows)
 
         ' Set border stile
         Me.TableLayoutPanel_Map.BorderStyle = BorderStyle.FixedSingle
@@ -92,12 +127,19 @@ Public Class ucEditMap
 
     End Sub
 
+    Private Sub updateMap()
+        If (Map.Name <> "" And Map.Path <> "") Then
+            ' Display Image
+            setMapFromPath(Me.TableLayoutPanel_Map.BackgroundImage, Map.Path, Me.TableLayoutPanel_Map.Width, Me.TableLayoutPanel_Map.Height)
+            ' Display Name
+            TextBox_Name.Text = Map.Name
+        End If
+    End Sub
+
 
 #End Region
 
 #Region "Pubilc Sub"
-
-
 
     Public Function Save() As Object
         Return Map
@@ -126,10 +168,8 @@ Public Class ucEditMap
             Map.Path = fs.Path
             ' Save Name
             Map.Name = Map.Path.Split("\").Last()
-            ' Display Image
-            setMapFromPath(Me.TableLayoutPanel_Map.BackgroundImage, Map.Path, Me.TableLayoutPanel_Map.Width, Me.TableLayoutPanel_Map.Height)
-            ' Display Name
-            TextBox_Name.Text = Map.Name
+            ' Update Map display
+            updateMap()
         End If
 
     End Sub
@@ -145,11 +185,14 @@ Public Class ucEditMap
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button_set_Click(sender As Object, e As EventArgs) Handles Button_set.Click
         ' Check size
         If (Map.Width > 0 And Map.Height > 0) Then
             ' Update Tiles
             updateMapTiles(Map.Width, Map.Height)
+
+            ' Create Tiles
+            Map.UpdateTiles(Map.Width, Map.Height)
         End If
     End Sub
 
@@ -170,10 +213,21 @@ Public Class ucEditMap
             row = CType(raw_data(1), Integer?)
             selected_tile = Map.getTile(col, row)
             getTileParameter(selected_tile)
+            If CheckBox_set_start_tile.Checked Then
+                NumericUpDown_start_height.Value = row
+                NumericUpDown_start_width.Value = col
+            Else
+                NumericUpDown_stop_height.Value = row
+                NumericUpDown_stop_width.Value = col
+            End If
+
         End If
 
         ' Check success
         If (col >= 0 And row >= 0) Then
+            If (Not CheckBox_multiselect.Checked) Then
+                resetSelectedTiles()
+            End If
             selcted_tiles.Add(selected_tile)
             layout.BorderStyle = BorderStyle.Fixed3D
         End If
@@ -204,18 +258,6 @@ Public Class ucEditMap
         NumericUpDown_free_sky.Enabled = True
         CheckBox_is_difficult_terrain.Enabled = True
         CheckBox_is_trap.Enabled = True
-
-        ' Set event
-        AddHandler ComboBox_wall_east.SelectedIndexChanged, AddressOf TileParameterChanged
-        AddHandler ComboBox_wall_west.SelectedIndexChanged, AddressOf TileParameterChanged
-        AddHandler ComboBox_wall_north.SelectedIndexChanged, AddressOf TileParameterChanged
-        AddHandler ComboBox_wall_south.SelectedIndexChanged, AddressOf TileParameterChanged
-        AddHandler ComboBox_light.SelectedIndexChanged, AddressOf TileParameterChanged
-        AddHandler ComboBox_gound.SelectedIndexChanged, AddressOf TileParameterChanged
-        AddHandler NumericUpDown_elevation.ValueChanged, AddressOf TileParameterChanged
-        AddHandler NumericUpDown_free_sky.ValueChanged, AddressOf TileParameterChanged
-        AddHandler CheckBox_is_difficult_terrain.CheckedChanged, AddressOf TileParameterChanged
-        AddHandler CheckBox_is_trap.CheckedChanged, AddressOf TileParameterChanged
     End Sub
 
     Private Sub setTileParameter(tile As TileType)
@@ -267,10 +309,17 @@ Public Class ucEditMap
     Private Sub resetSelectedTiles()
         ' Clear list
         selcted_tiles.Clear()
+
+        ' Pause Control draw
+        TableLayoutPanel_Map.SuspendLayout()
+
         ' Reser View
         For Each c In TableLayoutPanel_Map.Controls
             c.BorderStyle = BorderStyle.FixedSingle
         Next
+
+        ' Continue Control draw
+        TableLayoutPanel_Map.ResumeLayout(True)
 
         ' Enable controls
         ComboBox_wall_east.Enabled = False
@@ -284,29 +333,32 @@ Public Class ucEditMap
         CheckBox_is_difficult_terrain.Enabled = False
         CheckBox_is_trap.Enabled = False
 
-
-        ' Set event
-        RemoveHandler ComboBox_wall_east.SelectedIndexChanged, AddressOf TileParameterChanged
-        RemoveHandler ComboBox_wall_west.SelectedIndexChanged, AddressOf TileParameterChanged
-        RemoveHandler ComboBox_wall_north.SelectedIndexChanged, AddressOf TileParameterChanged
-        RemoveHandler ComboBox_wall_south.SelectedIndexChanged, AddressOf TileParameterChanged
-        RemoveHandler ComboBox_light.SelectedIndexChanged, AddressOf TileParameterChanged
-        RemoveHandler ComboBox_gound.SelectedIndexChanged, AddressOf TileParameterChanged
-        RemoveHandler NumericUpDown_elevation.ValueChanged, AddressOf TileParameterChanged
-        RemoveHandler NumericUpDown_free_sky.ValueChanged, AddressOf TileParameterChanged
-        RemoveHandler CheckBox_is_difficult_terrain.CheckedChanged, AddressOf TileParameterChanged
-        RemoveHandler CheckBox_is_trap.CheckedChanged, AddressOf TileParameterChanged
-
     End Sub
 
-    Private Sub TileParameterChanged(sender As Object, e As EventArgs)
-        For Each t In selcted_tiles
-            setTileParameter(t)
-        Next
-    End Sub
 
     Private Sub Button_reset_Click(sender As Object, e As EventArgs) Handles Button_reset.Click
         resetSelectedTiles()
+    End Sub
+
+    Private Sub Button_apply_selection_Click(sender As Object, e As EventArgs) Handles Button_apply_to_area.Click
+        ' Check values
+        If (NumericUpDown_start_height.Value <= NumericUpDown_stop_height.Value) Then
+            If (NumericUpDown_start_width.Value <= NumericUpDown_stop_width.Value) Then
+                For c As Integer = NumericUpDown_start_width.Value To NumericUpDown_stop_width.Value
+                    For r As Integer = NumericUpDown_start_height.Value To NumericUpDown_stop_height.Value
+                        setTileParameter(Map.getTile(c, r))
+                    Next
+                Next
+            End If
+        End If
+        ' Reset selection
+        resetSelectedTiles()
+    End Sub
+
+    Private Sub Button_apply_to_selection_Click(sender As Object, e As EventArgs) Handles Button_apply_to_selection.Click
+        For Each t In selcted_tiles
+            setTileParameter(t)
+        Next
     End Sub
 
 

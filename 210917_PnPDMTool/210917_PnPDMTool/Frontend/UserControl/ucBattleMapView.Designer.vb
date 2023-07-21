@@ -37,7 +37,7 @@ Partial Class UcBattleMapView
         pictureBoxInitiative12 = New PictureBox()
         pictureBoxInitiative13 = New PictureBox()
         pictureBoxInitiative14 = New PictureBox()
-        Panel_map = New Panel()
+        TableLayoutPanel_Map = New TableLayoutPanel()
         CType(pictureBoxInitiative1, ComponentModel.ISupportInitialize).BeginInit()
         CType(pictureBoxInitiative2, ComponentModel.ISupportInitialize).BeginInit()
         CType(pictureBoxInitiative3, ComponentModel.ISupportInitialize).BeginInit()
@@ -205,15 +205,35 @@ Partial Class UcBattleMapView
         pictureBoxInitiative14.TabIndex = 16
         pictureBoxInitiative14.TabStop = False
         ' 
-        ' Panel_map
+        ' TableLayoutPanel_Map
         ' 
-        Panel_map.AutoSize = True
-        Panel_map.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        Panel_map.Location = New Point(0, 70)
-        Panel_map.MinimumSize = New Size(1000, 10)
-        Panel_map.Name = "Panel_map"
-        Panel_map.Size = New Size(1000, 10)
-        Panel_map.TabIndex = 18
+        TableLayoutPanel_Map.ColumnCount = 10
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.GrowStyle = TableLayoutPanelGrowStyle.FixedSize
+        TableLayoutPanel_Map.Location = New Point(3, 70)
+        TableLayoutPanel_Map.Name = "TableLayoutPanel_Map"
+        TableLayoutPanel_Map.RowCount = 10
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.RowStyles.Add(New RowStyle(SizeType.Percent, 10F))
+        TableLayoutPanel_Map.Size = New Size(1800, 1400)
+        TableLayoutPanel_Map.TabIndex = 108
         ' 
         ' UcBattleMapView
         ' 
@@ -236,11 +256,11 @@ Partial Class UcBattleMapView
         Controls.Add(pictureBoxInitiative3)
         Controls.Add(pictureBoxInitiative2)
         Controls.Add(pictureBoxInitiative1)
-        Controls.Add(Panel_map)
+        Controls.Add(TableLayoutPanel_Map)
         Controls.Add(lbMap)
         Margin = New Padding(4, 5, 4, 5)
         Name = "UcBattleMapView"
-        Size = New Size(1775, 177)
+        Size = New Size(1806, 1473)
         CType(pictureBoxInitiative1, ComponentModel.ISupportInitialize).EndInit()
         CType(pictureBoxInitiative2, ComponentModel.ISupportInitialize).EndInit()
         CType(pictureBoxInitiative3, ComponentModel.ISupportInitialize).EndInit()
@@ -256,7 +276,6 @@ Partial Class UcBattleMapView
         CType(pictureBoxInitiative13, ComponentModel.ISupportInitialize).EndInit()
         CType(pictureBoxInitiative14, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents lbMap As Label
@@ -274,5 +293,5 @@ Partial Class UcBattleMapView
     Friend WithEvents pictureBoxInitiative12 As PictureBox
     Friend WithEvents pictureBoxInitiative13 As PictureBox
     Friend WithEvents pictureBoxInitiative14 As PictureBox
-    Friend WithEvents Panel_map As Panel
+    Friend WithEvents TableLayoutPanel_Map As TableLayoutPanel
 End Class
