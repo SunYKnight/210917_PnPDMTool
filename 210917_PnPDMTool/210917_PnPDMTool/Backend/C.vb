@@ -57,6 +57,7 @@
         Bright
         Weak
         None
+        MagicalDarkness
     End Enum
 
     Public Enum eCondidtion

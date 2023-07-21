@@ -15,22 +15,58 @@ Public Class TileType
         Climable
     End Enum
 
+    Public Class Metadata
+        Public Location_R As Integer
+        Public Location_C As Integer
+    End Class
+
+    Public Class TileData
+        Public GroundMaterial As eGroundType
+        Public FreeSky_ft As Integer
+        Public WallNorth As eWallType
+        Public WallEast As eWallType
+        Public WallSouth As eWallType
+        Public WallWest As eWallType
+        Public Elevation As Integer
+        Public IsDifficultTerrain As Boolean
+        Public IsTrap As Boolean
+        Public CauseCondition As List(Of eCondidtion)
+        Public LightIntensity As eLightIntensity
+    End Class
+
 #End Region
 
 #Region "Private Var"
-    Public Property Location_R As Integer
-    Public Property Location_C As Integer
-    Public Property groundMaterial As eGroundType = eGroundType.Soil
-    Public Property freeSky_ft As Integer = 1000
-    Public Property WallNorth As eWallType = eWallType.None
-    Public Property WallEast As eWallType = eWallType.None
-    Public Property WallSouth As eWallType = eWallType.None
-    Public Property WallWest As eWallType = eWallType.None
-    Public Property Elevation As Integer = 0
-    Public Property IsDifficultTerrain As Boolean = False
-    Public Property IsTrap As Boolean = False
-    Public Property CausedCondition As New List(Of eCondidtion)
-    Public Property LightIntensity As eLightIntensity = eLightIntensity.Bright
+    Public Property Meta As Metadata = New Metadata With {
+        .Location_C = -1,
+        .Location_R = -1}
+
+    Public Property Base As TileData = New TileData With {
+        .GroundMaterial = eGroundType.Soil,
+        .FreeSky_ft = 1000,
+        .WallEast = eWallType.None,
+        .WallNorth = eWallType.None,
+        .WallSouth = eWallType.None,
+        .WallWest = eWallType.None,
+        .CauseCondition = New List(Of eCondidtion),
+        .Elevation = 100,
+        .IsDifficultTerrain = False,
+        .IsTrap = False,
+        .LightIntensity = eLightIntensity.Bright}
+
+    Public Property Temp As TileData = New TileData With {
+        .GroundMaterial = eGroundType.Soil,
+        .FreeSky_ft = 1000,
+        .WallEast = eWallType.None,
+        .WallNorth = eWallType.None,
+        .WallSouth = eWallType.None,
+        .WallWest = eWallType.None,
+        .CauseCondition = New List(Of eCondidtion),
+        .Elevation = 100,
+        .IsDifficultTerrain = False,
+        .IsTrap = False,
+        .LightIntensity = eLightIntensity.Bright}
+
 #End Region
 
 #Region "Properties"

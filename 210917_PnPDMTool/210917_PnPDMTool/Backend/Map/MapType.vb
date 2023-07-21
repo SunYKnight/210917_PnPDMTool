@@ -45,8 +45,8 @@ Public Class MapType
         For c As Integer = 0 To cols - 1
             For r As Integer = 0 To rows - 1
                 Tiles(getTileIdx(c, r)) = New TileType()
-                Tiles(getTileIdx(c, r)).Location_C = c
-                Tiles(getTileIdx(c, r)).Location_R = r
+                Tiles(getTileIdx(c, r)).Meta.Location_C = c
+                Tiles(getTileIdx(c, r)).Meta.Location_R = r
             Next
         Next
     End Sub
