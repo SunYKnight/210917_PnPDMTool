@@ -15,8 +15,8 @@
     Public WIDTH_TEXT_MEDIUM As Int32 = 70
     Public WIDTH_TEXT_BIG As Int32 = 170
 
-    Public WIDTH_CONTROL_EDIT As Integer = 1500
-    Public HEIGHT_CONTROL_EDIT As Integer = 1200
+    Public WIDTH_CONTROL_EDIT As Integer = 1800
+    Public HEIGHT_CONTROL_EDIT As Integer = 1400
 
     Public MAP_FILES As String = "Map Files | *.jpg;*.jepg;*.gif;*png"
 

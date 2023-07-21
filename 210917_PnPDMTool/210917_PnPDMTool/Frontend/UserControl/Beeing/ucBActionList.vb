@@ -6,7 +6,7 @@ Public Class ucBActionList
 #End Region
 
 #Region "Private Var"
-    Private _editWindow As New Form()
+    Private WithEvents _editWindow As Form
     Private WithEvents _editUc As ucEdit(Of ucAction)
 #End Region
 
@@ -19,9 +19,6 @@ Public Class ucBActionList
         InitializeComponent()
 
         Me.ActionList = actionList
-
-        ' Set edit window Size
-        _editWindow.MinimumSize = New Size(WIDTH_CONTROL_EDIT, HEIGHT_CONTROL_EDIT)
 
         UpdateListView()
     End Sub
@@ -55,7 +52,8 @@ Public Class ucBActionList
         ' Update uc Edit 
         _editUc = New ucEdit(Of ucAction)(New ucAction(action))
 
-        _editWindow.Controls.Clear()
+        _editWindow = New Form() With {
+            .MinimumSize = New Size(WIDTH_CONTROL_EDIT, HEIGHT_CONTROL_EDIT)}
         _editWindow.Controls.Add(_editUc)
         _editWindow.Show()
 
@@ -67,6 +65,11 @@ Public Class ucBActionList
 #End Region
 
 #Region "Events"
+
+    Private Sub WindowCLoseHandle(sender As Object, e As EventArgs) Handles _editWindow.Closed
+        _editWindow.Dispose()
+    End Sub
+
     Private Sub editWindowSaveHandle(obj As Object, type As Type) Handles _editUc.Save
         Dim action As BaseAction = CType(obj, BaseAction)
 

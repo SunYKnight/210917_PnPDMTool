@@ -25,7 +25,15 @@
     Public Property Name As String = "Default Name"
     Public Property Description As String = "Default Description"
 
-    Public Property PrimaryAttack As AttackBase
+    Public Property PrimaryAttack As AttackBase = New AttackBase With {
+        .DmgType = eDmgType.Bludgeoning,
+        .DmgShape = eShape.None,
+        .HitRange = 5,
+        .AoERange = 5,
+        .NumberOfTargets = 1,
+        .DmgDice = New DiceCollection,
+        .DmgBonus = 0
+        }
     Public Property PrimaryAttackHitBonus As Integer = 0
     Public Property PrimaryAttackHitsAlways As Boolean = False
     Public Property PrimaryAttackSavingThrow As eAttribut = eAttribut.Charisma
@@ -33,7 +41,15 @@
 
 
     Public Property HasSecondaryAttack As Boolean = False
-    Public Property SecondaryAttack As AttackBase
+    Public Property SecondaryAttack As AttackBase = New AttackBase With {
+        .DmgType = eDmgType.Bludgeoning,
+        .DmgShape = eShape.None,
+        .HitRange = 5,
+        .AoERange = 5,
+        .NumberOfTargets = 1,
+        .DmgDice = New DiceCollection,
+        .DmgBonus = 0
+        }
 
     Public Property TriggerConditionOnHit As Boolean = False
     Public Property ConditionTriggersAlways As Boolean = False
@@ -44,26 +60,8 @@
 #End Region
 
 #Region "Init"
-    Public Sub Init()
-        PrimaryAttack = New AttackBase With {
-        .DmgType = eDmgType.Bludgeoning,
-        .DmgShape = eShape.None,
-        .HitRange = 5,
-        .AoERange = 5,
-        .NumberOfTargets = 1,
-        .DmgDice = New DiceCollection,
-        .DmgBonus = 0
-        }
+    Public Sub New()
 
-        SecondaryAttack = New AttackBase With {
-        .DmgType = eDmgType.Bludgeoning,
-        .DmgShape = eShape.None,
-        .HitRange = 5,
-        .AoERange = 5,
-        .NumberOfTargets = 1,
-        .DmgDice = New DiceCollection,
-        .DmgBonus = 0
-        }
     End Sub
 
 #End Region

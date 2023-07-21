@@ -6,7 +6,7 @@ Public Class ucAction
 #End Region
 
 #Region "Private Var"
-    Private _editWindow As New Form()
+    Private WithEvents _editWindow As Form
     Private WithEvents _editUc As ucEdit(Of ucAttack)
 #End Region
 
@@ -32,9 +32,6 @@ Public Class ucAction
 
         ' Initilaize components
         InitializeComponent()
-
-        ' Set edit window Size
-        _editWindow.MinimumSize = New Size(WIDTH_CONTROL_EDIT, HEIGHT_CONTROL_EDIT)
 
         ' Get Combobox values
         ComboBox_Type.DataSource = System.Enum.GetValues(GetType(BaseAction.eType))
@@ -93,7 +90,8 @@ Public Class ucAction
         _editUc = New ucEdit(Of ucAttack)(New ucAttack(attack))
 
         ' Update edit Window
-        _editWindow.Controls.Clear()
+        _editWindow = New Form() With {
+        .MinimumSize = New Size(WIDTH_CONTROL_EDIT, HEIGHT_CONTROL_EDIT)}
         _editWindow.Controls.Add(_editUc)
         _editWindow.Show()
     End Sub
@@ -111,6 +109,10 @@ Public Class ucAction
 #End Region
 
 #Region "Events"
+    Private Sub WindowCLoseHandle(sender As Object, e As EventArgs) Handles _editWindow.Closed
+        _editWindow.Dispose()
+    End Sub
+
     Private Sub editWindowSaveHandle(obj As Object, type As Type) Handles _editUc.Save
         ' Locals
         Dim attack As BaseAttack = CType(obj, BaseAttack)

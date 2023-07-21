@@ -15,12 +15,12 @@
             Return (Value - 10) \ 2
         End Get
     End Property
-    Public Property Value As Integer
+    Public Property Value As Integer = 8
 
 #End Region
 
 #Region "Init"
-    Public Sub Init()
+    Public Sub New()
 
     End Sub
 #End Region

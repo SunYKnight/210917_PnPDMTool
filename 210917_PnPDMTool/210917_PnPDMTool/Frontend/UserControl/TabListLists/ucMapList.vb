@@ -35,11 +35,20 @@ Public Class ucMapList
     End Sub
 
     Private Sub btnEditOpponent_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        RaiseEvent guiEvent(eGuiEvent.editMap, listView_Items.SelectedItems(0))
+        Try
+            RaiseEvent guiEvent(eGuiEvent.editMap, listView_Items.SelectedItems(0))
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btnLoadOpponent_Click(sender As Object, e As EventArgs) Handles Button_load.Click
-        RaiseEvent guiEvent(eGuiEvent.loadMap, listView_Items.SelectedItems(0))
+
+        Try
+            RaiseEvent guiEvent(eGuiEvent.loadMap, listView_Items.SelectedItems(0))
+        Catch ex As Exception
+
+        End Try
     End Sub
 #End Region
 

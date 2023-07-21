@@ -36,11 +36,19 @@ Public Class ucOpponentList
     End Sub
 
     Private Sub btnEditOpponent_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        RaiseEvent guiEvent(eGuiEvent.editMonster, listView_Items.SelectedItems(0))
+        Try
+            RaiseEvent guiEvent(eGuiEvent.editMonster, listView_Items.SelectedItems(0))
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btnAddToBattle_Click(sender As Object, e As EventArgs) Handles btnAddToBattle.Click
-        RaiseEvent guiEvent(eGuiEvent.addToBattle, listView_Items.SelectedItems(0))
+        Try
+            RaiseEvent guiEvent(eGuiEvent.addToBattle, listView_Items.SelectedItems(0))
+        Catch ex As Exception
+
+        End Try
     End Sub
 #End Region
 

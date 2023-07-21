@@ -18,16 +18,19 @@
         InitializeComponent()
 
         ' Set autosize Properties
-        Me.AutoSize = True
-        Me.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        Me.AutoSize = False
+        Me.AutoSizeMode = AutoSizeMode.GrowOnly
         uc.AutoSize = True
         uc.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        FlowLayoutPanel_editUC.AutoSize = True
-        FlowLayoutPanel_editUC.AutoSizeMode = AutoSizeMode.GrowAndShrink
 
         ' Add Usercontrol
         _uc = uc
         Me.FlowLayoutPanel_editUC.Controls.Add(uc)
+
+        FlowLayoutPanel_editUC.AutoSize = True
+        FlowLayoutPanel_editUC.AutoSizeMode = AutoSizeMode.GrowAndShrink
+
+
     End Sub
 
 
