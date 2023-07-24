@@ -7,11 +7,13 @@ Public Class PlayableObject
 
     Private _beeing As BeeingType
     Private _diceSet As New DiceSet
-    Private _id As Long
+    Private _id As UInt32 = 0
 
     ' Initial rolls
     Private _rollInitative As Integer
     Private _rollHP As Integer
+
+    Private Shared _idList As New List(Of UInt32)
 
 #End Region
 
@@ -58,7 +60,7 @@ Public Class PlayableObject
     Public Property CurrentHp As Integer = 0
 
     ' Bonus
-    Public Property BonusHP As Integer = 0
+    Public Property BonusHP As Integer = 1
     Public Property BonusAC As Integer = 0
     Public Property BonusSpeed As New SpeedCollection
     Public Property BonusStrength As Integer = 0
@@ -107,11 +109,14 @@ Public Class PlayableObject
         ' Roll HP 
         _rollHP = _beeing.HpDice.Evaluate(_diceSet, DiceType.EThrowType.Normal)
 
+        ' Generate ID
+        While (_idList.Contains(_id))
+            _id += 1
+        End While
+        _idList.Add(_id)
+
         ' Set current data
         CurrentHp = MaxHp
-
-        ' Generate ID
-        _id = BaseIdentificationNumber.GetNewID()
 
     End Sub
 
@@ -238,9 +243,12 @@ Public Class PlayableObject
 #End Region
 
 #Region "Pubilc Sub"
-    Public Function ToListString(cnt As Integer, idx As Integer) As String()
+    Public Function GetUniqueName() As String
+        Return _id.ToString & _beeing.Metadata.Name
+    End Function
+    Public Function ToListString(cnt As Integer) As String()
         Dim str(cnt) As String
-        str(0) = idx.ToString & _beeing.Metadata.Name
+        str(0) = GetUniqueName()
         str(1) = Initiative.ToString()
         str(2) = CurrentHp.ToString & "/" & MaxHp.ToString()
         Return str

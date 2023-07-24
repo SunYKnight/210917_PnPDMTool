@@ -69,7 +69,7 @@ Public Class UcBattleView
         If (poList.Count > 0) Then
             ' Create Items
             For Each po In poList
-                listViewBattle.Items.Add(New ListViewItem(po.ToListString(listViewBattle.Columns.Count, idx)))
+                listViewBattle.Items.Add(New ListViewItem(po.ToListString(listViewBattle.Columns.Count)))
                 idx += 1
             Next
         End If

@@ -22,6 +22,7 @@ Partial Class ucPOStats
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(ucPOStats))
         NumericUpDown_hp_current = New NumericUpDown()
         Label1 = New Label()
         NumericUpDown_hp_max = New NumericUpDown()
@@ -70,11 +71,13 @@ Partial Class ucPOStats
         Label2.TabIndex = 3
         Label2.Text = "of"
         ' 
-        ' PictureBox1
+        ' PictureBox_po
         ' 
+        PictureBox_po.Image = CType(resources.GetObject("PictureBox_po.Image"), Image)
         PictureBox_po.Location = New Point(30, 27)
-        PictureBox_po.Name = "PictureBox1"
+        PictureBox_po.Name = "PictureBox_po"
         PictureBox_po.Size = New Size(164, 182)
+        PictureBox_po.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox_po.TabIndex = 4
         PictureBox_po.TabStop = False
         ' 

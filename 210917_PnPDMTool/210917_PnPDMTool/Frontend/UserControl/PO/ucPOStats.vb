@@ -33,7 +33,7 @@
 
         ' ConditionImmunity
         _ucConditionImmunityList = New ucItemList(Of eCondidtion)(_po.ActiveConditions, "Active Conditions", True)
-        _ucConditionImmunityList.Location = New Point(300, 20)
+        _ucConditionImmunityList.Location = New Point(150, 5)
         Me.Controls.Add(Me._ucConditionImmunityList)
 
     End Sub
