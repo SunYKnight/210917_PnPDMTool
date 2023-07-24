@@ -31,6 +31,8 @@
         NumericUpDown_hp_max.DataBindings.Clear()
         NumericUpDown_hp_max.DataBindings.Add(New Binding("Value", _po, "MaxHp"))
 
+        Label_name.Text = _po.UniqueName
+
         ' ConditionImmunity
         _ucConditionImmunityList = New ucItemList(Of eCondidtion)(_po.ActiveConditions, "Active Conditions", True)
         _ucConditionImmunityList.Location = New Point(150, 5)

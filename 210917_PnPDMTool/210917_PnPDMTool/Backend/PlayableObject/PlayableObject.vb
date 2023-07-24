@@ -19,6 +19,12 @@ Public Class PlayableObject
 
 #Region "Properties"
 
+    Public ReadOnly Property UniqueName As String
+        Get
+            Return _id.ToString & _beeing.Metadata.Name
+        End Get
+    End Property
+
     Public ReadOnly Property Beeing As BeeingType
         Get
             Return _beeing
@@ -26,13 +32,6 @@ Public Class PlayableObject
     End Property
 
     Public Property MaxHp As Integer
-        Get
-            Return _rollHP + BonusHP
-        End Get
-        Set(value As Integer)
-
-        End Set
-    End Property
 
     Public Property Initiative As Integer
         Get
@@ -108,6 +107,8 @@ Public Class PlayableObject
         _rollInitative = _diceSet.D20.Evaluate(1, DiceType.EThrowType.Normal)
         ' Roll HP 
         _rollHP = _beeing.HpDice.Evaluate(_diceSet, DiceType.EThrowType.Normal)
+
+        MaxHp = _rollHP + BonusHP
 
         ' Generate ID
         While (_idList.Contains(_id))
@@ -243,12 +244,9 @@ Public Class PlayableObject
 #End Region
 
 #Region "Pubilc Sub"
-    Public Function GetUniqueName() As String
-        Return _id.ToString & _beeing.Metadata.Name
-    End Function
     Public Function ToListString(cnt As Integer) As String()
         Dim str(cnt) As String
-        str(0) = GetUniqueName()
+        str(0) = Me.UniqueName
         str(1) = Initiative.ToString()
         str(2) = CurrentHp.ToString & "/" & MaxHp.ToString()
         Return str

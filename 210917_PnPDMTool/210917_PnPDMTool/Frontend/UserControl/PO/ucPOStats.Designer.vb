@@ -28,7 +28,7 @@ Partial Class ucPOStats
         NumericUpDown_hp_max = New NumericUpDown()
         Label2 = New Label()
         PictureBox_po = New PictureBox()
-        Label3 = New Label()
+        Label_name = New Label()
         Button_use_action = New Button()
         CType(NumericUpDown_hp_current, ComponentModel.ISupportInitialize).BeginInit()
         CType(NumericUpDown_hp_max, ComponentModel.ISupportInitialize).BeginInit()
@@ -81,14 +81,14 @@ Partial Class ucPOStats
         PictureBox_po.TabIndex = 4
         PictureBox_po.TabStop = False
         ' 
-        ' Label3
+        ' Label_name
         ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(30, 212)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(83, 25)
-        Label3.TabIndex = 5
-        Label3.Text = "<Name>"
+        Label_name.AutoSize = True
+        Label_name.Location = New Point(30, 212)
+        Label_name.Name = "Label_name"
+        Label_name.Size = New Size(83, 25)
+        Label_name.TabIndex = 5
+        Label_name.Text = "<Name>"
         ' 
         ' Button_use_action
         ' 
@@ -104,7 +104,7 @@ Partial Class ucPOStats
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(Button_use_action)
-        Controls.Add(Label3)
+        Controls.Add(Label_name)
         Controls.Add(PictureBox_po)
         Controls.Add(Label2)
         Controls.Add(NumericUpDown_hp_max)
@@ -124,6 +124,6 @@ Partial Class ucPOStats
     Friend WithEvents NumericUpDown_hp_max As NumericUpDown
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox_po As PictureBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents Label_name As Label
     Friend WithEvents Button_use_action As Button
 End Class

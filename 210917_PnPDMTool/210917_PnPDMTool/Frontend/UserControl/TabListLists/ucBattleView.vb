@@ -78,7 +78,10 @@ Public Class UcBattleView
     End Sub
 
     Private Sub listViewBattle_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listViewBattle.SelectedIndexChanged
-        RaiseEvent guiEvent(eGuiEvent.changeSelectedPo, listViewBattle.SelectedItems.Item(0))
+        ' CHeck selction length
+        If (listViewBattle.SelectedItems.Count > 0) Then
+            RaiseEvent guiEvent(eGuiEvent.changeSelectedPo, listViewBattle.SelectedItems.Item(0))
+        End If
     End Sub
 #End Region
 

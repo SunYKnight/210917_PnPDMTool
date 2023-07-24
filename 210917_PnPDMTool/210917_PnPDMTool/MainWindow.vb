@@ -152,7 +152,7 @@ Public Class MainWindow
 
             Case ucTabListsControl.eGuiEvent.POSelectionChanged
                 ' Get object from list
-                Dim po = POList.Find(Function(p) p.GetUniqueName() = arg.Text)
+                Dim po = POList.Find(Function(p) p.UniqueName = arg.Text)
                 ' Show details
                 _ucPOStats.updatePo(po)
 
