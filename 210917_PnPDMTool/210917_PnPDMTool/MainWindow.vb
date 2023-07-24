@@ -10,6 +10,7 @@ Public Class MainWindow
     Private WithEvents _ucBattleMapView As UcBattleMapView = New UcBattleMapView
     Private WithEvents _ucEditBeeing As ucEdit(Of ucEditBeeing)
     Private WithEvents _ucEditMap As ucEdit(Of ucEditMap)
+    Private WithEvents _ucPOStats As New ucPOStats
 #End Region
 
 #Region "Properties"
@@ -37,7 +38,7 @@ Public Class MainWindow
 
         ' Add to layout
         FlowLayoutPanel_Left.Controls.Add(_ucTabBeeingLists)
-        ' FlowLayoutPanel_Left.Controls.Add(_ucTabBeeingDetails)
+        FlowLayoutPanel_Left.Controls.Add(_ucPOStats)
         FlowLayoutPanel_Center.Controls.Add(_ucBattleMapView)
 
         ' Call resize handler
@@ -149,9 +150,18 @@ Public Class MainWindow
                 _ucBattleMapView.setMap(map)
 
 
+            Case ucTabListsControl.eGuiEvent.POSelectionChanged
+                ' Get object from list
+                Dim po = POList.Find(Function(p) p.Beeing.Metadata.Name = arg.Text)
+                ' Show details
+                _ucPOStats.updatePo(po)
+
+
             Case ucTabListsControl.eGuiEvent.addToBattle
+                ' Get object from list
+                Dim beeing = BeeingList.Find(Function(p) p.Metadata.Name = arg.Text)
                 ' Add to list
-                POList.Add(New PlayableObject(CType(arg, BeeingType)))
+                POList.Add(New PlayableObject(beeing))
                 ' Update list
                 _ucTabBeeingLists.UcBattleView1.UpdateListView(POList)
 

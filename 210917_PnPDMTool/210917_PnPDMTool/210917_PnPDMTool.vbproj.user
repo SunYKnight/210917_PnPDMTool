@@ -7,6 +7,9 @@
     <ActiveDebugProfile>210917_PnPDMTool</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="Frontend\UserControl\PO\ucPOStats.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="MainWindow.vb">
       <SubType>Form</SubType>
     </Compile>

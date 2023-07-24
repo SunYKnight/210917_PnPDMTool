@@ -39,7 +39,7 @@ Public Class ucOpponentList
         Try
             RaiseEvent guiEvent(eGuiEvent.editMonster, listView_Items.SelectedItems(0))
         Catch ex As Exception
-
+            MsgBox(ex.Message, MsgBoxStyle.Critical Or MsgBoxStyle.OkOnly)
         End Try
     End Sub
 
@@ -47,7 +47,7 @@ Public Class ucOpponentList
         Try
             RaiseEvent guiEvent(eGuiEvent.addToBattle, listView_Items.SelectedItems(0))
         Catch ex As Exception
-
+            MsgBox(ex.Message, MsgBoxStyle.Critical Or MsgBoxStyle.OkOnly)
         End Try
     End Sub
 #End Region

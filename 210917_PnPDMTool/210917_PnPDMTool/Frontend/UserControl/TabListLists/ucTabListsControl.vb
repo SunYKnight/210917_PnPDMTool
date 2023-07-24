@@ -9,6 +9,7 @@
         PONew
         POEdit
         PORemove
+        POSelectionChanged
         nextTurn
         addToBattle
         endBattle
@@ -87,6 +88,8 @@
                 RaiseEvent guiEvent(eGuiEvent.endBattle, arg)
             Case UcBattleView.eGuiEvent.removePlayableObject
                 RaiseEvent guiEvent(eGuiEvent.PORemove, arg)
+            Case UcBattleView.eGuiEvent.changeSelectedPo
+                RaiseEvent guiEvent(eGuiEvent.POSelectionChanged, arg)
             Case Else
         End Select
     End Sub

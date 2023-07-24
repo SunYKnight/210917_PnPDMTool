@@ -6,6 +6,7 @@ Public Class UcBattleView
         newPlayableObject
         editPlayableObject
         removePlayableObject
+        changeSelectedPo
         nextTurn
         endBattle
     End Enum
@@ -74,6 +75,10 @@ Public Class UcBattleView
         End If
 
         listViewBattle.Update()
+    End Sub
+
+    Private Sub listViewBattle_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listViewBattle.SelectedIndexChanged
+        RaiseEvent guiEvent(eGuiEvent.changeSelectedPo, listViewBattle.SelectedItems.Item(0))
     End Sub
 #End Region
 
